@@ -16,6 +16,11 @@ output_path = root_path/'output'
 train_data_path = data_path/'training_data'
 
 train_file = {
+	'eng': data_path/'semeval_2021_task_11_trial_data.txt'
+}
+
+validate_file = {
+	'eng': data_path/'semeval_2021_task_11_trial_data.txt'
 }
 
 
