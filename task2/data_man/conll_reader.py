@@ -46,15 +46,16 @@ class BaselineDataset(ConllDataset):
     def encode_input(self, item: ConllItem):
         id, tokens, labels = item.id, item.tokens, item.labels
         new_tokens, new_labels, input_ids, attention_mask, label_ids = [], [], [], [], []
-        if labels is not None:
-            pass
-        for token, tag in zip(tokens, labels):
+        
+        for i, token in enumerate(tokens):
             outputs = self.tokenizer(token.lower())
             subtoken_len = len(outputs['input_ids']) - 2
             input_ids.extend(outputs['input_ids'][1:-1])
             attention_mask.extend(outputs['attention_mask'][1:-1])
-            sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
-            label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
+            if labels is not None:
+                tag = labels[i]
+                sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
+                label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
 
         return id, input_ids, attention_mask, label_ids
 
