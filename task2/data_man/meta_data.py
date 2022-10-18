@@ -11,16 +11,17 @@ import gzip, os
 
 LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-GRP', 'I-GRP', 'B-LOC', 'I-LOC', 'O']
 
-def get_id_to_type():
-    return_map = dict()
-    for i, ele in enumerate(LABEL_NAME):
-        return_map[i] = ele
-    return return_map
+return_map = dict()
+for i, ele in enumerate(LABEL_NAME):
+    return_map[ele] = i
 
 def get_type_by_id(id):
     if id >= len(LABEL_NAME) or id < 0:
         raise ValueError('id should not more than {}'.format(len(LABEL_NAME)-1))
     return LABEL_NAME[id]
+
+def get_id_by_type(type):
+    return return_map[type]
 
 
 @dataclass
@@ -53,6 +54,7 @@ def _is_divider(line: str) -> bool:
 def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
     file = Path(file).as_posix()
     fin = gzip.open(file, 'rt') if file.endswith('.gz') else open(file, 'rt')
+    ans = []
     for is_divider, lines in itertools.groupby(fin, _is_divider):
         if is_divider:
             continue
@@ -61,11 +63,14 @@ def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
         metadata = lines[0].strip() if lines[0].strip().startswith('# id') else None
         fields = [line.split() for line in lines if not line.startswith('# id')]
         fields = [list(field) for field in zip(*fields)]
-        yield ConllItem.from_dict({
-            'id': metadata,
-            'tokens': fields[0],
-            'labels': fields[-1] if len(fields) == 4 else None
-        })
+        ans.append(
+            ConllItem.from_dict({
+                'id': metadata,
+                'tokens': fields[0],
+                'labels': fields[-1] if len(fields) == 4 else None
+                })
+        )
+    return ans
 
 if __name__ == '__main__':
     for conll_item in read_conll_item_from_file('./task2/data/semeval_2021_task_11_trial_data.txt'):
