@@ -15,8 +15,6 @@ output_path = root_path/'output'
 
 train_data_path = data_path/'training_data'
 
-
-
 train_file = {
 }
 
