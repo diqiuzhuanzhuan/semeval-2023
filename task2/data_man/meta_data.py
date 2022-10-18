@@ -3,10 +3,13 @@
 # email: diqiuzhuanzhuan@gmail.com
 
 from dataclasses import dataclass
-from typing import AnyStr, Dict, List
+import itertools
+from pathlib import Path
+from typing import AnyStr, Dict, List, Union
+import gzip, os
 
 
-LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-LOC', 'I-LOC', 'O']
+LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-GRP', 'I-GRP', 'B-LOC', 'I-LOC', 'O']
 
 def get_id_to_type():
     return_map = dict()
@@ -33,3 +36,37 @@ class ConllItem:
             tokens = json_dict['tokens'],
             labels = json_dict['labels']
         )
+
+
+def _is_divider(line: str) -> bool:
+    empty_line = line.strip() == ''
+    if empty_line:
+        return True
+
+    first_token = line.split()[0]
+    if first_token == "-DOCSTART-":# or line.startswith('# id'):  # pylint: disable=simplifiable-if-statement
+        return True
+
+    return False
+
+
+def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
+    file = Path(file).as_posix()
+    fin = gzip.open(file, 'rt') if file.endswith('.gz') else open(file, 'rt')
+    for is_divider, lines in itertools.groupby(fin, _is_divider):
+        if is_divider:
+            continue
+        lines = [line.strip().replace('\u200d', '').replace('\u200c', '') for line in lines]
+
+        metadata = lines[0].strip() if lines[0].strip().startswith('# id') else None
+        fields = [line.split() for line in lines if not line.startswith('# id')]
+        fields = [list(field) for field in zip(*fields)]
+        yield ConllItem.from_dict({
+            'id': metadata,
+            'tokens': fields[0],
+            'labels': fields[-1] if len(fields) == 4 else None
+        })
+
+if __name__ == '__main__':
+    for conll_item in read_conll_item_from_file('./task2/data/semeval_2021_task_11_trial_data.txt'):
+        print(conll_item)
