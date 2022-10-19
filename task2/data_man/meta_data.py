@@ -23,6 +23,9 @@ def get_type_by_id(id):
 def get_id_by_type(type):
     return return_map[type]
 
+def get_num_labels():
+    return len(LABEL_NAME)
+
 
 @dataclass
 class ConllItem:
