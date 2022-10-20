@@ -74,7 +74,7 @@ class BaselineNerModel(NerModel):
             input_ids=input_ids,
             token_type_ids=token_type_ids,
             attention_mask=attention_mask,
-            label=label_ids
+            labels=label_ids
         )
         preds = torch.argmax(outputs.logits, -1)
         return_dict = {
