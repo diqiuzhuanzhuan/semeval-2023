@@ -107,7 +107,7 @@ def get_lr_logger():
 
 def get_trainer(args):
     pl.seed_everything(42)
-    callbacks = [get_model_earlystopping_callback(monitor='micro@F1'), get_model_best_checkpoint_callback(monitor='micro@F1')]
+    callbacks = [get_model_earlystopping_callback(monitor='val_micro@F1'), get_model_best_checkpoint_callback(monitor='val_micro@F1')]
 
     if torch.cuda.is_available():
         trainer = pl.Trainer(accelerator='gpu', devices=args.gpus, deterministic=True, max_epochs=args.max_epochs, callbacks=callbacks)
@@ -137,7 +137,7 @@ if __name__ == '__main__':
     ner_model = NerModel.from_params(params=params)
     trainer.fit(model=ner_model, datamodule=dm)
     _, best_checkpoint = save_model(trainer, model_name=args.model_type)
-    val_f1 = get_best_value(best_checkpoint, monitor='micro@F1')
-    write_eval_performance(args, {'micro@F1': val_f1}, config.performance_log)
+    val_f1 = get_best_value(best_checkpoint, monitor='val_micro@F1')
+    write_eval_performance(args, {'val_micro@F1': val_f1}, config.performance_log)
     argument_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
     trainer.test(argument_model, datamodule=dm)

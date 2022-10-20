@@ -131,3 +131,4 @@ dmypy.json
 
 #ide
 .vscode
+lightning_logs

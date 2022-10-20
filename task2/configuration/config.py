@@ -23,6 +23,7 @@ validate_file = {
 	'eng': data_path/'semeval_2021_task_11_trial_data.txt'
 }
 
+performance_log = log_path/'performance.csv'
 
 ###### for log ######
 formatter = ColoredFormatter(

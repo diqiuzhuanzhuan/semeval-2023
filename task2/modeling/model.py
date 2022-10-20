@@ -47,6 +47,9 @@ class NerModel(Registrable, pl.LightningModule):
 
         return [optimizer], [scheduler]
 
+    def forward_step(self, batch):
+        raise NotImplementedError()
+
        
 @NerModel.register('baseline_ner_model')  
 class BaselineNerModel(NerModel):
@@ -81,7 +84,7 @@ class BaselineNerModel(NerModel):
             'preds': preds
         }
         if label_ids is not None:
-            return_dict['loss'] = outputs['loss']
+            return_dict['loss'] = outputs.loss
         return_dict.update(self._compute_token_tags(preds=preds, gold_spans=gold_spans))
         
         return return_dict
@@ -98,11 +101,11 @@ class BaselineNerModel(NerModel):
             'token_tags': pred_tags
         }
         if gold_spans is not None:
-            self.span_f1(pred_results, gold_spans)
+            self.metric(pred_results, gold_spans)
             output["metric"] = self.metric.compute()
 
         return output 
-
+    
     def training_step(self, batch: Any, batch_idx: int):
         outputs = self.forward_step(batch)
         self.log_metrics(outputs['metric'], outputs['loss'], suffix='train_', on_step=True, on_epoch=False)
@@ -113,7 +116,7 @@ class BaselineNerModel(NerModel):
         return super().on_train_epoch_start()
 
     def training_epoch_end(self, outputs) -> None:
-        average_loss = torch.mean(torch.tensor(outputs, device=self.device))
+        average_loss = torch.mean(torch.tensor([item['loss'] for item in outputs], device=self.device))
         metric = self.metric.compute()
         self.log_metrics(metric, average_loss, suffix='train_', on_step=False, on_epoch=True)
         return super().on_validation_epoch_end()
