@@ -85,6 +85,9 @@ class SpanF1(Metric):
             self.reset()
         return all_metrics
 
+    def compute(self):
+        return self.get_metric()
+
     @staticmethod
     def compute_prf_metrics(true_positives: int, false_positives: int, false_negatives: int):
         precision = float(true_positives) / float(true_positives + false_positives + 1e-13)

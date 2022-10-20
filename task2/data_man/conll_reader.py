@@ -2,7 +2,7 @@
 # author: Feynman
 # email: diqiuzhuanzhuan@gmail.com
 
-from typing import Any, AnyStr, Union, Optional
+from typing import Any, AnyStr, Union, Optional, overload
 from torch.utils.data import Dataset
 from allennlp.common.registrable import Registrable
 from transformers import AutoTokenizer
@@ -11,7 +11,7 @@ import pytorch_lightning as pl
 from task2.configuration import config
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id
-
+from task2.data_man.meta_data import _assign_ner_tags, extract_spans
 
 
 class ConllDataset(Dataset, Registrable):
@@ -23,12 +23,13 @@ class ConllDataset(Dataset, Registrable):
         super().__init__()
         self.instances = []
         self.tokenizer = AutoTokenizer.from_pretrained(encoder_model, add_prefix_space=True)
-
+    @overload
     def __getitem__(self, index: Any) -> Any:
-        raise NotImplemented('')
+        ...
 
-    def encode_input(self, item):
-        raise NotImplemented('')
+    @overload
+    def encode_input(self, item) -> Any:
+        ...
 
     def __len__(self) -> int:
         return len(self.instances)
@@ -47,12 +48,14 @@ class BaselineDataset(ConllDataset):
 
     def encode_input(self, item: ConllItem):
         id, tokens, labels = item.id, item.tokens, item.labels
-        new_tokens, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
+        token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
 
         input_ids.append(self.tokenizer.cls_token_id)
         label_ids.append(get_id_by_type('O'))
         attention_mask.append(1)
         token_type_ids.append(0)
+        token_masks.append(False)
+
         
         for i, token in enumerate(tokens):
             outputs = self.tokenizer(token.lower())
@@ -60,17 +63,21 @@ class BaselineDataset(ConllDataset):
             input_ids.extend(outputs['input_ids'][1:-1])
             attention_mask.extend(outputs['attention_mask'][1:-1])
             token_type_ids.extend([0] * subtoken_len)
+            token_masks.extend([True]+ [False] * (subtoken_len-1))
             if labels is not None:
                 tag = labels[i]
                 sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
                 label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
 
+
         input_ids.append(self.tokenizer.sep_token_id)
         label_ids.append(get_id_by_type('O'))
         attention_mask.append(1)
         token_type_ids.append(0)
+        token_masks.append(False)
+        gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
 
-        return id, input_ids, token_type_ids, attention_mask, label_ids
+        return id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans
 
         
         
@@ -107,27 +114,27 @@ class BaselineDataModule(ConllDataModule):
     def collate_batch(self, batch):
         batch_size = len(batch)
         batch_ = list(zip(*batch))
-        id, input_ids_batch, token_type_ids_batch, attention_mask_batch, label_ids_batch = batch_
-        max_len = max([len(_) for _ in input_ids_batch])
+        id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch_
+        max_len = max([len(_) for _ in input_ids])
         input_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         token_type_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         attention_mask_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
-        if label_ids_batch:
-            max_label_len = max([len(_) for _ in label_ids_batch])
-            label_ids_tensor = torch.empty(size=[batch_size, max_label_len], dtype=torch.float).fill_(0)
+        if label_ids:
+            max_label_len = max([len(_) for _ in label_ids])
+            label_ids_tensor = torch.empty(size=[batch_size, max_label_len], dtype=torch.long).fill_(0)
         else:
             label_ids_tensor = None
+            gold_spans = None
         for i in range(batch_size):
-            _, input_ids, token_type_ids, attention_mask, label_ids = batch[i]
-            available_length = len(input_ids)
-            input_ids_tensor[i][0:available_length] = torch.tensor(input_ids, dtype=torch.long)
-            token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids, dtype=torch.long)
-            attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask, dtype=torch.long)
+            available_length = len(input_ids[i])
+            input_ids_tensor[i][0:available_length] = torch.tensor(input_ids[i], dtype=torch.long)
+            token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids[i], dtype=torch.long)
+            attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
             if label_ids_tensor is not None:
-                label_ids_length = len(label_ids)
-                label_ids_tensor[i][:label_ids_length] = torch.tensor(label_ids, dtype=torch.float)
+                label_ids_length = len(label_ids[i])
+                label_ids_tensor[i][:label_ids_length] = torch.tensor(label_ids[i], dtype=torch.long)
 
-        return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, label_ids_tensor
+        return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, label_ids_tensor, gold_spans
 
     def train_dataloader(self):
         return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True)

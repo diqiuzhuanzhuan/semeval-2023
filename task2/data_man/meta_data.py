@@ -16,12 +16,17 @@ for i, ele in enumerate(LABEL_NAME):
     return_map[ele] = i
 
 def get_type_by_id(id):
-    if id >= len(LABEL_NAME) or id < 0:
+    if not is_id_legal(id):
         raise ValueError('id should not more than {}'.format(len(LABEL_NAME)-1))
     return LABEL_NAME[id]
 
 def get_id_by_type(type):
     return return_map[type]
+
+def is_id_legal(id):
+    if id >= len(LABEL_NAME) or id < 0:
+        return False
+    return True
 
 def get_num_labels():
     return len(LABEL_NAME)
@@ -74,6 +79,62 @@ def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
                 })
         )
     return ans
+
+
+def _assign_ner_tags(ner_tag, rep_):
+    '''
+    Changing the token_masks so that only the first sub_word of a token has a True value, while the rest is False. This will be used for storing the predictions.
+    :param ner_tag:
+    :param rep_:
+    :return:
+    '''
+    ner_tags_rep = []
+
+    sub_token_len = len(rep_)
+    mask_ = [False] * sub_token_len
+
+    if len(mask_):
+        mask_[0] = True
+
+    if ner_tag[0] == 'B':
+        in_tag = 'I' + ner_tag[1:]
+
+        ner_tags_rep.append(ner_tag)
+        ner_tags_rep.extend([in_tag] * (sub_token_len - 1))
+    else:
+        ner_tags_rep.extend([ner_tag] * sub_token_len)
+    return ner_tags_rep, mask_
+
+
+def extract_spans(tags):
+    cur_tag = None
+    cur_start = None
+    gold_spans = {}
+
+    def _save_span(_cur_tag, _cur_start, _cur_id, _gold_spans):
+        if _cur_start is None:
+            return _gold_spans
+        _gold_spans[(_cur_start, _cur_id - 1)] = _cur_tag  # inclusive start & end, accord with conll-coref settings
+        return _gold_spans
+
+    # iterate over the tags
+    for _id, nt in enumerate(tags):
+        indicator = nt[0]
+        if indicator == 'B':
+            gold_spans = _save_span(cur_tag, cur_start, _id, gold_spans)
+            cur_start = _id
+            cur_tag = nt[2:]
+            pass
+        elif indicator == 'I':
+            # do nothing
+            pass
+        elif indicator == 'O':
+            gold_spans = _save_span(cur_tag, cur_start, _id, gold_spans)
+            cur_tag = 'O'
+            cur_start = _id
+            pass
+    _save_span(cur_tag, cur_start, _id + 1, gold_spans)
+    return gold_spans
 
 if __name__ == '__main__':
     for conll_item in read_conll_item_from_file('./task2/data/semeval_2021_task_11_trial_data.txt'):
