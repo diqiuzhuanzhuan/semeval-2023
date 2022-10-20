@@ -1,7 +1,10 @@
 #!/bin/bash
 
 SHELL_FOLDER=$(dirname "$0")
-cd "$SHELL_FOLDER/.."
+cd $SHELL_FOLDER
+PYTHONPATH=$(dirname $(dirname $(pwd)}))
+export PYTHONPATH=$PYTHONPATH
+cd ".."
 echo "当前工作路径: $(pwd)"
 
 
