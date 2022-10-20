@@ -89,18 +89,20 @@ class BaselineDataModule(ConllDataModule):
     def __init__(
         self,
         reader: ConllDataset,
+        lang: AnyStr='English',
         batch_size: int=16
         ) -> None:
         super().__init__()
         self.reader = reader
         self.batch_size = batch_size
+        self.lang = lang
 
     
     def setup(self, stage: Optional[str] = None) -> None:
         if stage == 'fit':
-            self.reader.read_data(config.train_file['eng'])
+            self.reader.read_data(config.train_file[self.lang])
         if stage == 'validate':
-            self.reader.read_data(config.validate_file[''])
+            self.reader.read_data(config.validate_file[self.lang])
 
         if stage == 'test':
             pass
@@ -149,8 +151,6 @@ class BaselineDataModule(ConllDataModule):
         return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch)
 
 
-
-
         
 if __name__ == '__main__':
     params = Params({
@@ -169,6 +169,7 @@ if __name__ == '__main__':
             'type': 'baseline_dataset',
             'encoder_model': 'xlm-roberta-base' 
             }),
+        'lang': 'English',
         'batch_size': 2
     })
     dm = ConllDataModule.from_params(params=params)

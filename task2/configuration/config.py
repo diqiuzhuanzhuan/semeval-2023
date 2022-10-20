@@ -16,11 +16,33 @@ output_path = root_path/'output'
 train_data_path = data_path/'training_data'
 
 train_file = {
-	'eng': data_path/'semeval_2021_task_11_trial_data.txt'
+    'English': data_path/'semeval_2021_task_11_trial_data.txt',
+ 	'Spanish': data_path/'semeval_2021_task_11_trial_data.txt',
+    'Hindi': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Bangla': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Chinese': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Swedish': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Farsi': data_path/'semeval_2021_task_11_trial_data.txt',
+	'French': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Italian': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Portugese': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Ukranian': data_path/'semeval_2021_task_11_trial_data.txt',
+	'German': data_path/'semeval_2021_task_11_trial_data.txt',
 }
 
 validate_file = {
-	'eng': data_path/'semeval_2021_task_11_trial_data.txt'
+    'English': data_path/'semeval_2021_task_11_trial_data.txt',
+ 	'Spanish': data_path/'semeval_2021_task_11_trial_data.txt',
+    'Hindi': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Bangla': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Chinese': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Swedish': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Farsi': data_path/'semeval_2021_task_11_trial_data.txt',
+	'French': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Italian': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Portugese': data_path/'semeval_2021_task_11_trial_data.txt',
+	'Ukranian': data_path/'semeval_2021_task_11_trial_data.txt',
+	'German': data_path/'semeval_2021_task_11_trial_data.txt',
 }
 
 performance_log = log_path/'performance.csv'

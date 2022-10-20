@@ -8,29 +8,42 @@ cd ".."
 echo "当前工作路径: $(pwd)"
 
 
-for encoder_model in  'xlm-roberta-base'
-do
-    for max_epochs in 20
+run()
+{
+
+    for encoder_model in  'xlm-roberta-base'
     do
-        for batch_size in 16
+        for max_epochs in 20
         do
-            for model_type in 'baseline_ner_model'
+            for batch_size in 16
             do
-                for dataset_type in 'baseline_dataset'
+                for model_type in 'baseline_ner_model'
                 do
-                    for data_module_type in 'baseline_data_module'
+                    for dataset_type in 'baseline_dataset'
                     do
-                        python apps/main.py \
-                        --encoder_model $encoder_model \
-                        --max_epochs $max_epochs \
-                        --batch_size $batch_size \
-                        --model_type $model_type \
-                        --dataset_type $dataset_type \
-                        --data_module_type $data_module_type \
-                        --gpus 1
+                        for data_module_type in 'baseline_data_module'
+                        do
+                            python apps/main.py \
+                            --encoder_model $encoder_model \
+                            --max_epochs $max_epochs \
+                            --batch_size $batch_size \
+                            --model_type $model_type \
+                            --dataset_type $dataset_type \
+                            --data_module_type $data_module_type \
+                            --gpus -1 \
+                            --lang $1
+
+                        done
                     done
-                done
-            done            
-        done
-    done 
+                done            
+            done
+        done 
+    done
+}
+
+for lang in 'English' 'Spanish' 'Hindi' 'Bangla' 'Chinese' 'Swedish' 'Farsi' 'French' 'Italian' 'Portugese' 'Ukranian' 'German'
+do
+    echo "run for $lang"
+    run $lang
+    echo "finish for $lang"
 done

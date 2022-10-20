@@ -28,7 +28,8 @@ def parse_arguments():
     parser.add_argument('--encoder_model', type=str, default='xlm-roberta-base', help='')
     parser.add_argument('--batch_size', type=int, default=16, help='')
     parser.add_argument('--max_epochs', type=int, default=1, help='')
-    parser.add_argument('--gpus', type=int, default=1, help='')
+    parser.add_argument('--lang', type=str, default='English', help='')
+    parser.add_argument('--gpus', type=int, default=-1, help='')
     
     args = parser.parse_args()
 
@@ -127,6 +128,7 @@ if __name__ == '__main__':
         'reader': Params({
             'type': args.dataset_type
         }),
+        'lang': args.lang,
         'batch_size': args.batch_size
     }))
 
