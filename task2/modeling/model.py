@@ -97,7 +97,7 @@ class BaselineNerModel(NerModel):
         preds = preds.cpu().numpy()
         pred_results, pred_tags = [], []
         for i in range(batch_size):
-            tag_len = len(attention_mask[i])
+            tag_len = sum(attention_mask[i])
             tag_seq = preds[i][:tag_len]
             pred_tags.append([get_type_by_id(x) for x in tag_seq])
             pred_results.append(extract_spans(pred_tags[-1]))
