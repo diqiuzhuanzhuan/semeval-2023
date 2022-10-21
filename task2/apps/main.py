@@ -24,7 +24,7 @@ def parse_arguments():
 
     parser.add_argument('--data_module_type', type=str, default='baseline_data_module',help='')
     parser.add_argument('--dataset_type', type=str, default='baseline_dataset', help='')
-    parser.add_argument('--model_type', type=str, default='baseline_ner_model', help='')
+    parser.add_argument('--model_type', type=str, default='baseline_ne_model', help='')
     parser.add_argument('--encoder_model', type=str, default='xlm-roberta-base', help='')
     parser.add_argument('--batch_size', type=int, default=16, help='')
     parser.add_argument('--max_epochs', type=int, default=1, help='')

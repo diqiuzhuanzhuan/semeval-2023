@@ -3,6 +3,7 @@
 # email: diqiuzhuanzhuan@gmail.com
 
 import functools
+from importlib.metadata import metadata
 from itertools import compress
 import pytorch_lightning as pl
 from allennlp.common.registrable import Registrable
@@ -10,8 +11,10 @@ from allennlp.common.params import Params
 from typing import Any, AnyStr
 from transformers import AutoModelForTokenClassification
 import torch
-from task2.data_man.meta_data import get_num_labels, get_type_by_id, extract_spans
+from task2.data_man.meta_data import get_num_labels, get_type_by_id, extract_spans, get_id_to_labes_map, is_id_legal
 from task2.metric.span_metric import SpanF1
+from allennlp.modules import ConditionalRandomField
+from allennlp.modules.conditional_random_field import allowed_transitions
 
 
 class NerModel(Registrable, pl.LightningModule):
@@ -149,6 +152,46 @@ class BaselineNerModel(NerModel):
 
     def predict_tags(self, batch: Any):
         return self.test_step(batch=batch, batch_idx=0)
+
+
+@NerModel.register('baseline_crf_model') 
+class BaselineCrfModel(BaselineNerModel): 
+
+    def __init__(
+        self,
+        encoder_model: AnyStr = 'xlm-roberta-base', 
+        lr: float = 0.00001, 
+        warmup_steps: int = 1000
+        ) -> None:
+        super().__init__(encoder_model, lr, warmup_steps)
+        self.crf_layer = ConditionalRandomField(
+            num_tags=get_num_labels(),
+            constraints=allowed_transitions(constraint_type="BIO", labels=get_id_to_labes_map())
+            )
+
+    def forward_step(self, batch: Any):
+        id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch
+        outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask, labels=label_ids, output_hidden_states=True)
+        token_scores = outputs.logits
+        #token_scores = torch.log_softmax(outputs.logits, dim=-1)  # try or not try
+         
+        batch_size = len(id)
+        return_dict = dict()
+        if label_ids is not None:
+            loss = -self.crf_layer(token_scores, label_ids, attention_mask) / float(batch_size)
+            return_dict['loss'] = loss
+        best_path = self.crf_layer.viterbi_tags(token_scores, attention_mask)
+
+        pred_results, pred_tags = [], []
+        for i in range(batch_size):
+            tag_seq, _ = best_path[i]
+            pred_tags.append([get_type_by_id(x) for x in tag_seq])
+            pred_results.append(extract_spans([get_type_by_id(x) for x in tag_seq if is_id_legal(x)]))
+        return_dict['token_tags'] = pred_tags
+        if gold_spans is not None:
+            self.metric(pred_results, gold_spans)
+            return_dict['metric'] = self.metric.compute()
+        return return_dict 
 
     
 if __name__ == "__main__":

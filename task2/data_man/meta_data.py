@@ -23,6 +23,9 @@ def get_type_by_id(id):
 def get_id_by_type(type):
     return return_map[type]
 
+def get_id_to_labes_map():
+    return {id: label for id, label in enumerate(LABEL_NAME)}
+
 def is_id_legal(id):
     if id >= len(LABEL_NAME) or id < 0:
         return False

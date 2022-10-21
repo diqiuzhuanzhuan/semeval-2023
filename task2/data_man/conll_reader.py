@@ -10,7 +10,7 @@ import os, torch
 import pytorch_lightning as pl
 from task2.configuration import config
 from allennlp.common.params import Params
-from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id
+from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
 from task2.data_man.meta_data import _assign_ner_tags, extract_spans
 
 
