@@ -88,16 +88,17 @@ class BaselineNerModel(NerModel):
         }
         if label_ids is not None:
             return_dict['loss'] = outputs.loss
-        return_dict.update(self._compute_token_tags(preds=preds, gold_spans=gold_spans))
+        return_dict.update(self._compute_token_tags(preds=preds, attention_mask=attention_mask, gold_spans=gold_spans))
         
         return return_dict
 
-    def _compute_token_tags(self, preds: torch.Tensor, gold_spans: Any):
+    def _compute_token_tags(self, preds: torch.Tensor, attention_mask: torch.Tensor, gold_spans: Any):
         batch_size = len(preds)
         preds = preds.cpu().numpy()
         pred_results, pred_tags = [], []
         for i in range(batch_size):
-            tag_seq = preds[i]
+            tag_len = len(attention_mask[i])
+            tag_seq = preds[i][:tag_len]
             pred_tags.append([get_type_by_id(x) for x in tag_seq])
             pred_results.append(extract_spans(pred_tags[-1]))
         output = {
