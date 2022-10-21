@@ -13,6 +13,9 @@ data_path = root_path/'data'
 log_path = root_path/'logs'
 output_path = root_path/'output'
 
+wikigaz_file = data_path/'wiki_def'/'wikigaz.tsv.zip'
+
+
 train_data_path = data_path/'training_data'
 
 train_file = {

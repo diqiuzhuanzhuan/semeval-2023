@@ -7,6 +7,8 @@ import itertools
 from pathlib import Path
 from typing import AnyStr, Dict, List, Union
 import gzip, os
+import zipfile
+from task2.configuration import config
 
 
 LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-GRP', 'I-GRP', 'B-LOC', 'I-LOC', 'O']
@@ -139,6 +141,42 @@ def extract_spans(tags):
     _save_span(cur_tag, cur_start, _id + 1, gold_spans)
     return gold_spans
 
+human_readble_words_by_type = {
+    "LOC": "location",
+    "CORP": "corperation",
+    "GRP": "group",
+    "PER": "person",
+    "CW": "creative work",
+    "PROD": "product"
+}
+
+def get_human_readble_words_by_type(type: AnyStr):
+    return human_readble_words_by_type[type]
+
+def read_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
+    file = Path(file)
+    entity_vocab = dict()
+    with zipfile.ZipFile(file=str(file)) as myzip:
+        with myzip.open(os.path.basename(str(file).strip(".zip"))) as f:
+            for line in f:
+                fields = line.decode("utf-8").strip("\n").strip("\r").split("\t")
+                if len(fields) != 4:
+                    continue
+                entity, entity_type = fields[3].lower(), get_human_readble_words_by_type(fields[1])
+                if entity in entity_vocab:
+                    if not isinstance(entity_vocab[entity.lower()], str):
+                        entity_vocab[entity.lower()] = entity_type
+                        if entity_type not in entity_vocab[entity]:
+                            entity_vocab[entity.lower()] = entity_vocab[entity.lower()] + "|" + entity_type
+                else:
+                    entity_vocab[entity.lower()] = entity_type
+    return entity_vocab
+
+
 if __name__ == '__main__':
     for conll_item in read_conll_item_from_file('./task2/data/semeval_2021_task_11_trial_data.txt'):
         print(conll_item)
+        break
+
+    entity_vocab = read_wiki_knowledge(config.wikigaz_file)
+    print(len(entity_vocab))
