@@ -132,3 +132,6 @@ dmypy.json
 #ide
 .vscode
 lightning_logs
+
+# os
+.DS_Store
