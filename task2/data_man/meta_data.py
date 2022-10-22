@@ -4,6 +4,7 @@
 
 from dataclasses import dataclass
 import itertools
+import logging
 from pathlib import Path
 from typing import AnyStr, Dict, List, Union
 import gzip, os
@@ -153,7 +154,7 @@ human_readble_words_by_type = {
 def get_human_readble_words_by_type(type: AnyStr):
     return human_readble_words_by_type[type]
 
-def read_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
+def get_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
     file = Path(file)
     entity_vocab = dict()
     with zipfile.ZipFile(file=str(file)) as myzip:
@@ -170,6 +171,7 @@ def read_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
                             entity_vocab[entity.lower()] = entity_vocab[entity.lower()] + "|" + entity_type
                 else:
                     entity_vocab[entity.lower()] = entity_type
+    logging.info('read wikigaz entity: {} '.format(len(entity_vocab)))
     return entity_vocab
 
 
@@ -178,5 +180,5 @@ if __name__ == '__main__':
         print(conll_item)
         break
 
-    entity_vocab = read_wiki_knowledge(config.wikigaz_file)
+    entity_vocab = get_wiki_knowledge(config.wikigaz_file)
     print(len(entity_vocab))
