@@ -2,16 +2,18 @@
 # author: Feynman
 # email: diqiuzhuanzhuan@gmail.com
 
+import logging
 from typing import Any, AnyStr, Union, Optional, overload
 from torch.utils.data import Dataset
 from allennlp.common.registrable import Registrable
 from transformers import AutoTokenizer
 import os, torch
 import pytorch_lightning as pl
+import ahocorasick
 from task2.configuration import config
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
-from task2.data_man.meta_data import _assign_ner_tags, extract_spans
+from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge
 
 
 class ConllDataset(Dataset, Registrable):
@@ -23,6 +25,7 @@ class ConllDataset(Dataset, Registrable):
         super().__init__()
         self.instances = []
         self.tokenizer = AutoTokenizer.from_pretrained(encoder_model, add_prefix_space=True)
+
     @overload
     def __getitem__(self, index: Any) -> Any:
         ...
@@ -150,6 +153,37 @@ class BaselineDataModule(ConllDataModule):
     def predict_dataloader(self):
         return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=4)
 
+
+@ConllDataset.register('dictionary_fused_dataset')        
+class DictionaryFusedDataset(ConllDataset):
+
+    def __init__(
+        self, 
+        encoder_model='bert-base-uncased'
+        ) -> None:
+        super().__init__(encoder_model)
+        self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
+        self._make_entity_automation()
+
+        
+    def _make_entity_automation(self):
+        logging.info('start to build automation with all external entities')
+        self.entity_automation = ahocorasick.Automaton()
+        tmp = dict()
+        for k in self.entity_vocab:
+            self.entity_automation.add_word(k.lower(), (self.entity_vocab[k], k.lower()))
+            tmp[k.lower()] = self.entity_vocab[k]
+        for k in tmp:
+            self.entity_vocab[k] = tmp[k]
+        self.entity_automation.make_automaton()
+        logging.info('automation is built successfully')
+        
+
+    def __getitem__(self, index: Any) -> Any:
+        pass
+
+    def encode_input(self, item) -> Any:
+        pass
 
         
 if __name__ == '__main__':
