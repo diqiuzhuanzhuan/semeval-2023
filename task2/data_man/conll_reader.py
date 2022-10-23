@@ -164,7 +164,6 @@ class DictionaryFusedDataset(ConllDataset):
         super().__init__(encoder_model)
         self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
         self._make_entity_automation()
-
         
     def _make_entity_automation(self):
         logging.info('start to build automation with all external entities')
@@ -177,7 +176,9 @@ class DictionaryFusedDataset(ConllDataset):
             self.entity_vocab[k] = tmp[k]
         self.entity_automation.make_automaton()
         logging.info('automation is built successfully')
-        
+
+    def _search_entity(self, sentence_str: AnyStr):
+        pass
 
     def __getitem__(self, index: Any) -> Any:
         pass

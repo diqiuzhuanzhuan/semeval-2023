@@ -172,14 +172,16 @@ def get_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
         with myzip.open(os.path.basename(str(file).strip(".zip"))) as f:
             for line in f:
                 fields = line.decode("utf-8").strip("\n").strip("\r").split("\t")
-                if len(fields) != 4:
+                if len(fields) < 4:
+                    fields = line.decode("utf-8").strip("\n").strip("\r").split(",")
+                if len(fields) < 4:
                     continue
                 entity, entity_type = fields[3].lower(), get_human_readble_words_by_type(fields[1])
                 if entity in entity_vocab:
                     if not isinstance(entity_vocab[entity.lower()], str):
                         entity_vocab[entity.lower()] = entity_type
-                        if entity_type not in entity_vocab[entity]:
-                            entity_vocab[entity.lower()] = entity_vocab[entity.lower()] + "|" + entity_type
+                    if entity_type not in entity_vocab[entity]:
+                        entity_vocab[entity.lower()] = entity_vocab[entity.lower()] + "|" + entity_type
                 else:
                     entity_vocab[entity.lower()] = entity_type
     logging.info('read wikigaz entity: {} '.format(len(entity_vocab)))
