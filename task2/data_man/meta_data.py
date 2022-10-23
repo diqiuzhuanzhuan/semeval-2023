@@ -12,7 +12,18 @@ import zipfile
 from task2.configuration import config
 
 
-LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-GRP', 'I-GRP', 'B-LOC', 'I-LOC', 'O']
+#LABEL_NAME = ['B-PER', 'I-PER', 'B-CW', 'I-CW', 'B-PROD', 'I-PROD', 'B-CORP', 'I-CORP', 'B-GRP', 'I-GRP', 'B-LOC', 'I-LOC', 'O']
+LABEL_NAME = [
+    'B-AerospaceManufacturer', 'B-AnatomicalStructure', 'B-ArtWork', 'B-Artist', 'B-Athlete', 'B-CarManufacturer', 'B-Cleric', 'B-Clothing',
+    'B-Disease', 'B-Drink', 'B-Facility', 'B-Food', 'B-HumanSettlement', 'B-MedicalProcedure', 'B-Medication/Vaccine', 'B-MusicalGRP',
+    'B-MusicalWork', 'B-ORG', 'B-OtherLOC', 'B-OtherPER', 'B-OtherPROD', 'B-Politician', 'B-PrivateCorp', 'B-PublicCorp',
+    'B-Scientist', 'B-Software', 'B-SportsGRP', 'B-SportsManager', 'B-Station', 'B-Symptom', 'B-Vehicle', 'B-VisualWork',
+    'B-WrittenWork', 'I-AerospaceManufacturer', 'I-AnatomicalStructure', 'I-ArtWork', 'I-Artist', 'I-Athlete', 'I-CarManufacturer',
+    'I-Cleric', 'I-Clothing', 'I-Disease', 'I-Drink', 'I-Facility', 'I-Food', 'I-HumanSettlement', 'I-MedicalProcedure',
+    'I-Medication/Vaccine', 'I-MusicalGRP', 'I-MusicalWork', 'I-ORG', 'I-OtherLOC', 'I-OtherPER', 'I-OtherPROD',
+    'I-Politician', 'I-PrivateCorp', 'I-PublicCorp', 'I-Scientist', 'I-Software', 'I-SportsGRP', 'I-SportsManager', 'I-Station',
+    'I-Symptom', 'I-Vehicle', 'I-VisualWork', 'I-WrittenWork', 'O'
+    ]
 
 return_map = dict()
 for i, ele in enumerate(LABEL_NAME):
