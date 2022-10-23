@@ -1,0 +1,9038 @@
+
+# id 0d88e010-c6e8-4409-9dec-a785e43eac16	domain=de
+sie _ _ O
+war _ _ O
+die _ _ O
+erste _ _ O
+frau _ _ O
+die _ _ O
+beim _ _ O
+großes _ _ B-Facility
+auge _ _ I-Facility
+beobachtet _ _ O
+durfte _ _ O
+. _ _ O
+
+
+# id 277279fc-a7f1-4623-8351-3962972c5625	domain=de
+in _ _ O
+der _ _ O
+yala-nationalpark _ _ B-Facility
+schienen _ _ O
+viele _ _ O
+tiere _ _ O
+in _ _ O
+höhere _ _ O
+regionen _ _ O
+zu _ _ O
+wechseln _ _ O
+um _ _ O
+der _ _ O
+katastrophe _ _ O
+zu _ _ O
+entkommen _ _ O
+. _ _ O
+
+
+# id a8aef682-5e1d-411f-b678-6f1b0670bc03	domain=de
+die _ _ O
+credits _ _ O
+wurden _ _ O
+später _ _ O
+aktualisiert _ _ O
+als _ _ O
+der _ _ O
+millennium _ _ B-Facility
+dome _ _ I-Facility
+gebaut _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 4ba7fa91-a28f-4498-a9dc-d32e04898aac	domain=de
+seine _ _ O
+sterblichen _ _ O
+sterblichen _ _ O
+wurden _ _ O
+1948 _ _ O
+geborgen _ _ O
+und _ _ O
+zum _ _ O
+arnhem _ _ B-Facility
+oosterbeek _ _ I-Facility
+war _ _ I-Facility
+cemetery _ _ I-Facility
+hinzugefügt _ _ O
+. _ _ O
+
+
+# id 823150e7-abe4-4b02-96cc-9503f74f23a3	domain=de
+die _ _ O
+preisverleihung _ _ O
+fand _ _ O
+im _ _ O
+jahr _ _ O
+2000 _ _ O
+im _ _ O
+millennium _ _ B-Facility
+dome _ _ I-Facility
+in _ _ O
+london _ _ B-HumanSettlement
+statt _ _ O
+. _ _ O
+
+
+# id d620d0ef-b1dd-48b9-b030-938127c0fe82	domain=de
+er _ _ O
+wurde _ _ O
+bei _ _ O
+winchester _ _ B-Facility
+college _ _ I-Facility
+ausgebildet _ _ O
+wo _ _ O
+er _ _ O
+cricket _ _ O
+für _ _ O
+die _ _ O
+schule _ _ O
+1840 _ _ O
+- _ _ O
+42 _ _ O
+und _ _ O
+new _ _ B-Facility
+college _ _ I-Facility
+(oxford) _ _ I-Facility
+immatrikulierte _ _ O
+1841 _ _ O
+spielte _ _ O
+. _ _ O
+
+
+# id c078a970-a355-4683-881e-9804ab5d3761	domain=de
+die _ _ O
+erste _ _ O
+kirche _ _ O
+war _ _ O
+wahrscheinlich _ _ O
+ein _ _ O
+stabkirche _ _ B-Facility
+und _ _ O
+befand _ _ O
+sich _ _ O
+im _ _ O
+südwesten _ _ O
+des _ _ O
+heutigen _ _ O
+kirche _ _ O
+. _ _ O
+
+
+# id 48ae2418-2540-49f3-b068-0dc835ce8fa4	domain=de
+sockeye _ _ O
+-lachs _ _ O
+während _ _ O
+des _ _ O
+lachslaufs _ _ O
+tsútswecw _ _ B-Facility
+provincial _ _ I-Facility
+park _ _ I-Facility
+
+
+# id 6919ee24-e092-4d94-b833-77c9cc3d6baa	domain=de
+er _ _ O
+schloss _ _ O
+sich _ _ O
+1935 _ _ O
+bei _ _ O
+god's _ _ B-Facility
+house _ _ I-Facility
+bei _ _ O
+der _ _ O
+sich _ _ O
+für _ _ O
+den _ _ O
+zweiten _ _ O
+teil _ _ O
+seines _ _ O
+abschlusses _ _ O
+auf _ _ O
+biochemie _ _ O
+spezialisiert _ _ O
+hatte _ _ O
+. _ _ O
+
+
+# id 8d5ed985-2a8b-47fa-bbd1-c8047022138a	domain=de
+von _ _ O
+1992 _ _ O
+bis _ _ O
+1995 _ _ O
+arbeitete _ _ O
+sie _ _ O
+als _ _ O
+kunstberaterin _ _ O
+bei _ _ O
+der _ _ O
+atatürk-kulturzentrum _ _ B-Facility
+. _ _ O
+
+
+# id 895536d9-121d-444f-8a87-56a10deb78d2	domain=de
+der _ _ O
+royal _ _ B-Facility
+national _ _ I-Facility
+orthopaedic _ _ I-Facility
+hospital _ _ I-Facility
+ist _ _ O
+seit _ _ O
+1907 _ _ O
+auf _ _ O
+der _ _ O
+straße _ _ O
+anwesend _ _ O
+. _ _ O
+
+
+# id a157dfff-0586-41cc-b3fd-6855ca9fc5f2	domain=de
+ihr _ _ O
+heimgelände _ _ O
+seit _ _ O
+1888 _ _ O
+war _ _ O
+oakwell _ _ B-Facility
+stadium _ _ I-Facility
+. _ _ O
+
+
+# id 1cd7e21c-c0a4-4def-b862-ee4463eb9c5b	domain=de
+sein _ _ O
+haupt _ _ O
+dzamija _ _ B-Facility
+befand _ _ O
+sich _ _ O
+im _ _ O
+zentrum _ _ O
+seines _ _ O
+marktes _ _ O
+. _ _ O
+
+
+# id 89fcb9b8-f056-4816-b27d-37f831b7a033	domain=de
+zu _ _ O
+den _ _ O
+einrichtungen _ _ O
+gehören _ _ O
+ein _ _ O
+besucherzentrum _ _ O
+eine _ _ O
+bootsrampe _ _ O
+campingplätze _ _ O
+hütten _ _ O
+jurte _ _ B-Facility
+und _ _ O
+picknickplätze _ _ O
+. _ _ O
+
+
+# id f4a62aaa-761d-4925-9cac-2fb07735263b	domain=de
+er _ _ O
+beauftragte _ _ O
+den _ _ O
+bau _ _ O
+des _ _ O
+ersten _ _ O
+opernhauses _ _ O
+des _ _ O
+komödienhaus _ _ B-Facility
+am _ _ I-Facility
+taschenberg _ _ I-Facility
+. _ _ O
+
+
+# id 814307c7-c36e-4bf7-bfd6-5755928346e6	domain=de
+courtright _ _ O
+wurde _ _ O
+in _ _ O
+saginaw _ _ B-Facility
+geboren _ _ O
+. _ _ O
+
+
+# id b8bb946a-e630-4e56-bb33-c1e054c97d05	domain=de
+er _ _ O
+wurde _ _ O
+von _ _ O
+1637 _ _ O
+bis _ _ O
+1632 _ _ O
+unter _ _ O
+eton _ _ B-Facility
+college _ _ I-Facility
+ausgebildet _ _ O
+und _ _ O
+1632 _ _ O
+von _ _ O
+emmanuel _ _ B-Facility
+college _ _ I-Facility
+(cambridge) _ _ I-Facility
+immatrikuliert _ _ O
+. _ _ O
+
+
+# id 153ac0a7-ec29-47e7-a8db-d78eed7ac7c7	domain=de
+asterix _ _ B-VisualWork
+- _ _ I-VisualWork
+operation _ _ I-VisualWork
+hinkelstein _ _ I-VisualWork
+als _ _ O
+obelix _ _ B-OtherPER
+( _ _ O
+englische _ _ O
+version _ _ O
+stimme _ _ O
+) _ _ O
+
+
+# id 570fb3d5-9dac-449b-8b8b-f4d482dfcaa1	domain=de
+die _ _ O
+art _ _ O
+war _ _ O
+1785 _ _ O
+erstbeschreibung _ _ B-WrittenWork
+von _ _ O
+eugen _ _ B-OtherPER
+johann _ _ I-OtherPER
+christoph _ _ I-OtherPER
+esper _ _ I-OtherPER
+. _ _ O
+
+
+# id 414481a6-9a32-43af-96b4-fd4ec006f884	domain=de
+immer _ _ O
+noch _ _ O
+als _ _ O
+marineoffizier _ _ O
+begann _ _ O
+er _ _ O
+1868 _ _ O
+seine _ _ O
+kunststudien _ _ O
+unter _ _ O
+der _ _ O
+aufsicht _ _ O
+von _ _ O
+alexei _ _ B-OtherPER
+petrowitsch _ _ I-OtherPER
+bogoljubow _ _ I-OtherPER
+. _ _ O
+
+
+# id 058b7e9a-ead9-48a5-ad7d-3310d488fb5d	domain=de
+in _ _ O
+den _ _ O
+jahren _ _ O
+2003 _ _ O
+- _ _ O
+2004 _ _ O
+entstand _ _ O
+eine _ _ O
+kontroverse _ _ O
+insbesondere _ _ O
+zwischen _ _ O
+dem _ _ O
+stuhl _ _ O
+oluf _ _ B-Politician
+arntsen _ _ I-Politician
+und _ _ O
+dem _ _ O
+geschäftsführer _ _ O
+steinar _ _ B-OtherPER
+stokke _ _ I-OtherPER
+. _ _ O
+
+
+# id 323870ea-fa3c-45c2-b1de-30c993a071e6	domain=de
+annes _ _ O
+tochter _ _ O
+susanna _ _ B-OtherPER
+cole _ _ I-OtherPER
+war _ _ O
+der _ _ O
+einzige _ _ O
+überlebende _ _ O
+. _ _ O
+
+
+# id 0fb81559-5761-4461-a1cf-ac6c3705f4aa	domain=de
+die _ _ O
+serie _ _ O
+und _ _ O
+der _ _ O
+hauptcharakter _ _ O
+sind _ _ O
+von _ _ O
+cecil _ _ B-Artist
+scott _ _ I-Artist
+forester _ _ I-Artist
+inspiriert _ _ O
+von _ _ O
+romanen _ _ O
+über _ _ O
+horatio _ _ B-OtherPER
+hornblower _ _ I-OtherPER
+. _ _ O
+
+
+# id 95e96b00-1646-4574-bd44-60decbdd92aa	domain=de
+seine _ _ O
+großmutter _ _ O
+mütterlicherseits _ _ O
+helen _ _ B-OtherPER
+valentine _ _ I-OtherPER
+wurde _ _ O
+seventeen _ _ B-WrittenWork
+magazine _ _ O
+gegründet _ _ O
+. _ _ O
+
+
+# id 45ee5320-54f8-418f-9bd5-1489f8c8e5c7	domain=de
+leopold _ _ B-Politician
+iii. _ _ I-Politician
+( _ _ O
+bis _ _ O
+16 _ _ O
+. _ _ O
+juli _ _ O
+) _ _ O
+mit _ _ O
+baudouin _ _ B-OtherPER
+(belgien) _ _ I-OtherPER
+als _ _ O
+regent _ _ O
+
+
+# id 91a151a5-b758-4aac-bddc-7062bd09f22c	domain=de
+der _ _ O
+titel _ _ O
+des _ _ O
+buches _ _ O
+führte _ _ O
+dazu _ _ O
+dass _ _ O
+es _ _ O
+durch _ _ O
+charles _ _ B-OtherPER
+mudie _ _ I-OtherPER
+zirkulierende _ _ O
+bibliothek _ _ O
+verboten _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id e4a9b015-31f3-475b-a755-9523cfb14534	domain=de
+pjetër _ _ B-OtherPER
+bogdani _ _ I-OtherPER
+schreibt _ _ O
+1672 _ _ O
+die _ _ O
+gemeinde _ _ O
+habe _ _ O
+keinen _ _ O
+priester _ _ O
+und _ _ O
+brauchte _ _ O
+missionare _ _ O
+und _ _ O
+einen _ _ O
+schullehrer _ _ O
+. _ _ O
+
+
+# id 0fb41f99-5840-4dae-9c5b-ee35c75cc545	domain=de
+während _ _ O
+er _ _ O
+aussagte _ _ O
+verwies _ _ O
+er _ _ O
+und _ _ O
+staatsanwalt _ _ O
+christopher _ _ B-OtherPER
+darden _ _ I-OtherPER
+regelmäßig _ _ O
+auf _ _ O
+die _ _ O
+tatsächlichen _ _ O
+handschuhe _ _ O
+die _ _ O
+im _ _ O
+gerichtssaal _ _ O
+vorhanden _ _ O
+waren _ _ O
+. _ _ O
+
+
+# id 550fe09c-079b-4be0-a8ba-ca430f199d8c	domain=de
+oberst _ _ O
+davon _ _ O
+wenn _ _ O
+angus _ _ B-OtherPER
+mcdonald _ _ I-OtherPER
+dieses _ _ O
+angebot _ _ O
+ablehnt _ _ O
+. _ _ O
+
+
+# id a0fc6905-1259-4af8-a5eb-db3b68c2c358	domain=de
+laut _ _ O
+the _ _ B-WrittenWork
+new _ _ I-WrittenWork
+yorker _ _ I-WrittenWork
+haben _ _ O
+philosophen _ _ O
+peter _ _ B-Politician
+albert _ _ I-Politician
+david _ _ I-Politician
+singer _ _ I-Politician
+und _ _ O
+parfit _ _ B-OtherPER
+es _ _ O
+als _ _ O
+wichtiger _ _ O
+arbeit _ _ O
+erhalten _ _ O
+. _ _ O
+
+
+# id 26148401-da57-4f00-a145-2cad126663cc	domain=de
+nach _ _ O
+dem _ _ O
+tod _ _ O
+von _ _ O
+ethirimana _ _ B-OtherPER
+cinkam _ _ I-OtherPER
+dem _ _ O
+könig _ _ O
+von _ _ O
+königreich _ _ B-HumanSettlement
+jaffna _ _ I-HumanSettlement
+waren _ _ O
+drei _ _ O
+antragsteller _ _ O
+auf _ _ O
+dem _ _ O
+thron _ _ O
+. _ _ O
+
+
+# id 74947ef6-91fe-43da-b0de-67b6a5c1b266	domain=de
+systematische _ _ B-MedicalProcedure
+desensibilisierung _ _ I-MedicalProcedure
+ist _ _ O
+eine _ _ O
+von _ _ O
+joseph _ _ B-OtherPER
+wolpe _ _ I-OtherPER
+entwickelte _ _ O
+angstreduktionstechnik _ _ O
+. _ _ O
+
+
+# id 69f8d7aa-ad1f-4e6a-acd0-bbb0083438f7	domain=de
+das _ _ O
+clemens _ _ B-Cleric
+iv. _ _ I-Cleric
+und _ _ O
+der _ _ O
+könig _ _ O
+philipp _ _ B-OtherPER
+vi. _ _ I-OtherPER
+(frankreich) _ _ I-OtherPER
+intervenierten _ _ O
+und _ _ O
+setzen _ _ O
+die _ _ O
+begriffe _ _ O
+des _ _ O
+kompromisses _ _ O
+. _ _ O
+
+
+# id 8a31f876-f2c2-41ea-bff3-3b196ebd4da0	domain=de
+1878 _ _ O
+wurde _ _ O
+beschlossen _ _ O
+die _ _ O
+kirche _ _ O
+wiederherzustellen _ _ O
+und _ _ O
+es _ _ O
+wurde _ _ O
+vom _ _ O
+architekten _ _ O
+edwin _ _ B-OtherPER
+seward _ _ I-OtherPER
+umfassend _ _ O
+renoviert _ _ O
+. _ _ O
+
+
+# id 6f3cbf34-e3dc-4bcd-b2a1-594908e12345	domain=de
+er _ _ O
+war _ _ O
+von _ _ O
+1939 _ _ O
+bis _ _ O
+1957 _ _ O
+mit _ _ O
+emelyn _ _ B-OtherPER
+whiton _ _ I-OtherPER
+verheiratet _ _ O
+. _ _ O
+
+
+# id 15b2240e-5c55-4375-8754-735b39f3f659	domain=de
+6 _ _ O
+- _ _ O
+john _ _ B-OtherPER
+r. _ _ I-OtherPER
+velazquez _ _ I-OtherPER
+( _ _ O
+2000 _ _ O
+2003 _ _ O
+2004 _ _ O
+2009 _ _ O
+2017 _ _ O
+2021 _ _ O
+) _ _ O
+
+
+# id b5555371-7579-4568-a08d-6077ca3ed9e6	domain=de
+es _ _ O
+wurde _ _ O
+1887 _ _ O
+von _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+beschrieben _ _ O
+. _ _ O
+
+
+# id 9238b6fb-d6e7-4884-8c25-64dd1abcb5f6	domain=de
+er _ _ O
+begann _ _ O
+seine _ _ O
+ersten _ _ O
+zeichnungsstunden _ _ O
+von _ _ O
+jacques-françois _ _ B-OtherPER
+ochard _ _ I-OtherPER
+einem _ _ O
+ehemaligen _ _ O
+schüler _ _ O
+von _ _ O
+david _ _ B-Politician
+jak _ _ I-Politician
+lui _ _ I-Politician
+. _ _ O
+
+
+# id eb028226-8076-4de0-9d80-5d0e282ca269	domain=de
+der _ _ O
+leichenbeschau _ _ B-MedicalProcedure
+kam _ _ O
+zu _ _ O
+dem _ _ O
+schluss _ _ O
+dass _ _ O
+er _ _ O
+an _ _ O
+akute _ _ B-Symptom
+organdysfunktion _ _ I-Symptom
+gestorben _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id 02cfd25d-9d59-4f4c-9a5c-b21849fb7b7a	domain=de
+die _ _ O
+verbesserung _ _ O
+kann _ _ O
+durch _ _ O
+sehschärfe _ _ O
+perimetrie _ _ B-MedicalProcedure
+und _ _ O
+durch _ _ O
+ophthalmoskopische _ _ O
+untersuchung _ _ O
+bestimmt _ _ O
+werden _ _ O
+. _ _ O
+
+
+# id 7134638e-a0b3-47fd-be8a-8e29956b2cf6	domain=de
+sie _ _ O
+wurden _ _ O
+als _ _ O
+infiltrate _ _ O
+in _ _ O
+1 _ _ O
+9 _ _ O
+% _ _ O
+der _ _ O
+leberbiopsien _ _ O
+und _ _ O
+0 _ _ O
+4 _ _ O
+% _ _ O
+der _ _ O
+bei _ _ O
+prostataentfernung _ _ B-MedicalProcedure
+erhaltenen _ _ O
+prostatagewebe _ _ O
+identifiziert _ _ O
+. _ _ O
+
+
+# id 581feb80-ad49-4c59-ad52-b41ff0e395eb	domain=de
+positronen-emissions-tomographie _ _ B-MedicalProcedure
+eine _ _ O
+medizinische _ _ O
+bildgebungstechnik _ _ O
+
+
+# id 4192b4a8-4d6f-46b1-a60d-86c6d2ba81d3	domain=de
+es _ _ O
+gibt _ _ O
+keine _ _ O
+hinweise _ _ O
+auf _ _ O
+einen _ _ O
+leichenbeschau _ _ B-MedicalProcedure
+. _ _ O
+
+
+# id 3799f28a-8b43-4805-914c-9cbe0d5976f6	domain=de
+obwohl _ _ O
+ein _ _ O
+leichenbeschau _ _ B-MedicalProcedure
+durchgeführt _ _ O
+wurde _ _ O
+war _ _ O
+die _ _ O
+todesursache _ _ O
+nicht _ _ O
+sofort _ _ O
+bekannt _ _ O
+. _ _ O
+
+
+# id 774121bf-42a6-461a-bd06-ad656c620a1d	domain=de
+kleine _ _ O
+mengen _ _ O
+an _ _ O
+blutungen _ _ O
+können _ _ O
+durch _ _ O
+fob-test _ _ B-MedicalProcedure
+test _ _ O
+festgestellt _ _ O
+werden _ _ O
+. _ _ O
+
+
+# id f36664a2-58bc-4d56-b91f-66723f169ce3	domain=de
+leider _ _ O
+hat _ _ O
+diese _ _ O
+praxis _ _ O
+der _ _ O
+offensichtlichen _ _ O
+soziale _ _ B-MedicalProcedure
+inzucht _ _ I-MedicalProcedure
+schließlich _ _ O
+zur _ _ O
+geburt _ _ O
+zunehmend _ _ O
+krankerer _ _ O
+kinder _ _ O
+geführt _ _ O
+. _ _ O
+
+
+# id 93410f06-4fce-44c8-aa65-914ed42b5896	domain=de
+dem _ _ O
+patient _ _ O
+sollte _ _ O
+auch _ _ O
+empfohlen _ _ O
+werden _ _ O
+den _ _ O
+bereich _ _ O
+zu _ _ O
+vermeiden _ _ O
+in _ _ O
+dem _ _ O
+das _ _ O
+chirurgie _ _ B-MedicalProcedure
+beim _ _ O
+kauen _ _ O
+während _ _ O
+der _ _ O
+anfänglichen _ _ O
+heilungsphase _ _ O
+durchgeführt _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id b42775f0-3f4c-4f18-a0fe-34f465823f78	domain=de
+details _ _ O
+zu _ _ O
+diesen _ _ O
+weichteilen _ _ O
+wurden _ _ O
+aus _ _ O
+den _ _ O
+eigenschaften _ _ O
+des _ _ O
+schädels _ _ O
+und _ _ O
+schädelausguss _ _ B-MedicalProcedure
+oder _ _ O
+den _ _ O
+formen _ _ O
+seines _ _ O
+innenraums _ _ O
+abgeleitet _ _ O
+. _ _ O
+
+
+# id 765cc430-ecda-4ade-8e91-826d44b5bb18	domain=de
+er _ _ O
+wurde _ _ O
+auch _ _ O
+zu _ _ O
+tadschikistan _ _ B-HumanSettlement
+akkreditiert _ _ O
+. _ _ O
+
+
+# id 710551c7-6fa9-4603-bb47-579b06742722	domain=de
+es _ _ O
+befindet _ _ O
+sich _ _ O
+etwa _ _ O
+12 _ _ O
+km _ _ O
+südwestlich _ _ O
+der _ _ O
+stadt _ _ O
+bochum _ _ B-HumanSettlement
+. _ _ O
+
+
+# id bcbbeb31-ad70-4e9b-9953-7ff866f94d44	domain=de
+ihre _ _ O
+familie _ _ O
+zog _ _ O
+ungefähr _ _ O
+einen _ _ O
+monat _ _ O
+nach _ _ O
+ihrer _ _ O
+geburt _ _ O
+zu _ _ O
+sudbury _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 71704876-3009-4be9-96aa-442b97d30eb5	domain=de
+das _ _ O
+dorf _ _ O
+liegt _ _ O
+westlich _ _ O
+südwestlich _ _ O
+von _ _ O
+falkirk _ _ B-HumanSettlement
+östlich _ _ O
+nordöstlich _ _ O
+von _ _ O
+kilsyth _ _ B-HumanSettlement
+und _ _ O
+nordöstlich _ _ O
+von _ _ O
+cumbernauld _ _ B-HumanSettlement
+. _ _ O
+
+
+# id a9bc99b6-0780-403d-8e73-c4ddf9935a4e	domain=de
+anton _ _ B-Politician
+cermak _ _ I-Politician
+bürgermeister _ _ O
+von _ _ O
+1931 _ _ O
+- _ _ O
+1933 _ _ O
+geboren _ _ O
+in _ _ O
+kladno _ _ B-HumanSettlement
+österreichisch-ungarische _ _ B-HumanSettlement
+doppelmonarchie _ _ I-HumanSettlement
+
+
+# id fa0a4584-384e-4869-b298-4e3a516d8c54	domain=de
+zwischen _ _ O
+1916 _ _ O
+und _ _ O
+1925 _ _ O
+besuchte _ _ O
+er _ _ O
+die _ _ O
+grund- _ _ O
+und _ _ O
+sekundarschule _ _ O
+in _ _ O
+lisboa _ _ B-HumanSettlement
+. _ _ O
+
+
+# id e6297620-18dc-40f8-b7e1-7aa3cfbd73e3	domain=de
+er _ _ O
+wurde _ _ O
+in _ _ O
+buenos _ _ B-HumanSettlement
+aires _ _ I-HumanSettlement
+geboren _ _ O
+und _ _ O
+trat _ _ O
+zwischen _ _ O
+1932 _ _ O
+und _ _ O
+1981 _ _ O
+194 _ _ O
+filme _ _ O
+auf _ _ O
+. _ _ O
+
+
+# id 18c0d17d-f584-4e73-a592-29f285ea650f	domain=de
+die _ _ O
+nationale _ _ O
+blume _ _ O
+von _ _ O
+bt _ _ B-HumanSettlement
+ist _ _ O
+die _ _ O
+blaue _ _ O
+mohn _ _ O
+. _ _ O
+
+
+# id f086ab0d-a76d-4d2c-b3da-f0674eaf8f59	domain=de
+australien _ _ O
+hat _ _ O
+eine _ _ O
+botschaft _ _ O
+in _ _ O
+santiago _ _ B-HumanSettlement
+de _ _ I-HumanSettlement
+chile _ _ I-HumanSettlement
+. _ _ O
+
+
+# id ff027cd1-0aea-407d-8530-18f1c1102eaf	domain=de
+issa _ _ O
+verbrachte _ _ O
+seine _ _ O
+ruhestandsjahre _ _ O
+in _ _ O
+rom _ _ B-HumanSettlement
+it _ _ B-HumanSettlement
+. _ _ O
+
+
+# id fc568c3b-98e5-47c2-92e1-03385d8e82c5	domain=de
+bayern _ _ O
+hatte _ _ O
+training _ _ O
+in _ _ O
+katar _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 9c879668-c37c-42c0-a72c-fa56d8cc4b03	domain=de
+im _ _ O
+jahr _ _ O
+2001 _ _ O
+wurde _ _ O
+eine _ _ O
+fernsehshow _ _ O
+namens _ _ O
+der _ _ B-VisualWork
+sattelclub _ _ I-VisualWork
+in _ _ O
+commonwealth _ _ B-HumanSettlement
+von _ _ I-HumanSettlement
+australien _ _ I-HumanSettlement
+gedreht _ _ O
+. _ _ O
+
+
+# id da7ae105-a000-4921-a959-a07db7dfc6ff	domain=de
+er _ _ O
+schaffte _ _ O
+es _ _ O
+bis _ _ O
+zu _ _ O
+östermyra _ _ B-HumanSettlement
+wurde _ _ O
+aber _ _ O
+vor _ _ O
+dem _ _ O
+finale _ _ O
+beseitigt _ _ O
+. _ _ O
+
+
+# id 0ee0b625-047f-4eaf-86d1-4df68601d5b2	domain=de
+ist _ _ O
+ein _ _ O
+bahnhof _ _ O
+in _ _ O
+der _ _ O
+stadt _ _ O
+komoro _ _ B-HumanSettlement
+japan _ _ B-HumanSettlement
+betrieben _ _ O
+von _ _ O
+higashi-nihon _ _ B-PublicCorp
+ryokaku _ _ I-PublicCorp
+tetsudō _ _ I-PublicCorp
+( _ _ O
+jr _ _ O
+east _ _ O
+) _ _ O
+. _ _ O
+
+
+# id c7638052-4068-4612-8250-94b45f3f8727	domain=de
+es _ _ O
+liegt _ _ O
+22 _ _ O
+5 _ _ O
+km _ _ O
+nordöstlich _ _ O
+von _ _ O
+swansea _ _ B-HumanSettlement
+und _ _ O
+253 _ _ O
+km _ _ O
+westlich _ _ O
+von _ _ O
+london _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 6ccf7c84-3e36-4b29-9144-4eac439c6f3a	domain=de
+seit _ _ O
+2010 _ _ O
+beteiligt _ _ O
+sich _ _ O
+die _ _ O
+band _ _ O
+an _ _ O
+projekten _ _ O
+mit _ _ O
+la _ _ B-HumanSettlement
+france _ _ I-HumanSettlement
+und _ _ O
+königreich _ _ B-HumanSettlement
+schweden _ _ I-HumanSettlement
+metal _ _ O
+-künstlern _ _ O
+um _ _ O
+an _ _ O
+ihrem _ _ O
+kommenden _ _ O
+album _ _ O
+zu _ _ O
+arbeiten _ _ O
+. _ _ O
+
+
+# id 15abb2bf-d05d-4f2e-97bf-23629e743991	domain=de
+currie _ _ O
+ist _ _ O
+in _ _ O
+republik _ _ B-HumanSettlement
+singapur _ _ I-HumanSettlement
+malaysia _ _ B-HumanSettlement
+und _ _ O
+republik _ _ B-HumanSettlement
+mauritius _ _ I-HumanSettlement
+gefahren _ _ O
+und _ _ O
+basiert _ _ O
+jetzt _ _ O
+in _ _ O
+melbourne _ _ B-HumanSettlement
+. _ _ O
+
+
+# id ad65d42b-4e72-436b-8afc-4fcf0d9db324	domain=de
+von _ _ O
+dort _ _ O
+setzte _ _ O
+er _ _ O
+segel _ _ O
+für _ _ O
+chalkedon _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 4564dbfa-68d2-44eb-a6b0-3b9391ed3d63	domain=de
+anschließend _ _ O
+wechselte _ _ O
+er _ _ O
+zu _ _ O
+südzypern _ _ B-HumanSettlement
+und _ _ O
+unterschrieb _ _ O
+bei _ _ O
+keravnos _ _ B-SportsGRP
+strovolou _ _ I-SportsGRP
+. _ _ O
+
+
+# id 9b367ac3-826f-44e8-8964-1a7706849e39	domain=de
+trentham _ _ O
+( _ _ O
+) _ _ O
+ist _ _ O
+der _ _ O
+bevölkerungsreichste _ _ O
+vorort _ _ O
+upper _ _ B-HumanSettlement
+hutt _ _ I-HumanSettlement
+einer _ _ O
+stadt _ _ O
+in _ _ O
+der _ _ O
+region _ _ O
+windy _ _ B-HumanSettlement
+wellington _ _ I-HumanSettlement
+von _ _ O
+new _ _ B-HumanSettlement
+zealand _ _ I-HumanSettlement
+. _ _ O
+
+
+# id 237fd93a-546d-47d2-9b91-4011a3b41d2a	domain=de
+äthiopien _ _ B-HumanSettlement
+grenzt _ _ O
+an _ _ O
+das _ _ O
+land _ _ O
+im _ _ O
+westen _ _ O
+und _ _ O
+im _ _ O
+süden _ _ O
+. _ _ O
+
+
+# id 6a9ae9ef-45c8-4701-b616-496e50e80764	domain=de
+der _ _ O
+zweites _ _ B-HumanSettlement
+türk-kaganat _ _ I-HumanSettlement
+führte _ _ O
+regelmäßige _ _ O
+razzien _ _ O
+von _ _ O
+693 _ _ O
+bis _ _ O
+702 _ _ O
+unter _ _ O
+qapagan _ _ B-Politician
+durch _ _ O
+bis _ _ O
+wu _ _ B-Artist
+zetian _ _ I-Artist
+seinen _ _ O
+heiratsantrag _ _ O
+im _ _ O
+jahr _ _ O
+703 _ _ O
+akzeptierte _ _ O
+. _ _ O
+
+
+# id 0667bbbb-4a18-4220-b59d-659938ed178a	domain=de
+es _ _ O
+wurde _ _ O
+ursprünglich _ _ O
+von _ _ O
+państwowe _ _ B-AerospaceManufacturer
+zakłady _ _ I-AerospaceManufacturer
+lotnicze _ _ I-AerospaceManufacturer
+in _ _ O
+seiner _ _ O
+fabrik _ _ O
+in _ _ O
+swidnik _ _ B-HumanSettlement
+gebaut _ _ O
+und _ _ O
+wurde _ _ O
+1993 _ _ O
+erstmals _ _ O
+geflogen _ _ O
+. _ _ O
+
+
+# id c4f68b48-c7b4-4389-bbe2-a78d5dc0c3b1	domain=de
+1997 _ _ O
+wechselte _ _ O
+sie _ _ O
+zu _ _ O
+minneapolis _ _ B-HumanSettlement
+und _ _ O
+beitstellte _ _ O
+the _ _ B-MusicalGRP
+jayhawks _ _ I-MusicalGRP
+. _ _ O
+
+
+# id c1dc83ec-9c9f-48ba-8d05-1709974cf02f	domain=de
+die _ _ O
+gemeinde _ _ O
+ist _ _ O
+auf _ _ O
+straßen _ _ O
+von _ _ O
+memel _ _ B-HumanSettlement
+und _ _ O
+szawle _ _ B-HumanSettlement
+zugänglich _ _ O
+. _ _ O
+
+
+# id 41b04e54-f2f9-413f-a2c4-8246e86639fe	domain=de
+es _ _ O
+liegt _ _ O
+ungefähr _ _ O
+südöstlich _ _ O
+von _ _ O
+neumarkt _ _ B-HumanSettlement
+und _ _ O
+südöstlich _ _ O
+der _ _ O
+regionalen _ _ O
+hauptstadt _ _ O
+posen _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 3084ce90-6b15-4b23-a367-62c0eb6878e6	domain=de
+es _ _ O
+liegt _ _ O
+ungefähr _ _ O
+südwestlich _ _ O
+von _ _ O
+zduńska _ _ B-HumanSettlement
+wola _ _ I-HumanSettlement
+und _ _ O
+südwestlich _ _ O
+der _ _ O
+regionalen _ _ O
+hauptstadt _ _ O
+litzmannstadt _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 6864b221-3e9f-4739-9211-fc11f87e3360	domain=de
+es _ _ O
+befand _ _ O
+sich _ _ O
+am _ _ O
+südwestlichen _ _ O
+rand _ _ O
+von _ _ O
+reedley _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 05cb0706-8b87-4d30-a2e4-1c6bc9fcfe39	domain=de
+eaker _ _ O
+wurde _ _ O
+1970 _ _ O
+in _ _ O
+national _ _ B-OtherLOC
+aviation _ _ I-OtherLOC
+hall _ _ I-OtherLOC
+of _ _ I-OtherLOC
+fame _ _ I-OtherLOC
+in _ _ O
+dayton _ _ B-HumanSettlement
+(ohio) _ _ I-HumanSettlement
+aufgenommen _ _ O
+. _ _ O
+
+
+# id ca7fdd13-1f60-478b-b861-394fe1941dd3	domain=de
+rick _ _ B-Athlete
+blangiardi _ _ I-Athlete
+( _ _ O
+m _ _ O
+. _ _ O
+a _ _ O
+. _ _ O
+1973 _ _ O
+) _ _ O
+15 _ _ O
+. _ _ O
+bürgermeister _ _ O
+von _ _ O
+honolulu _ _ B-HumanSettlement
+
+
+# id 47a16a84-86b7-4431-87ae-9efcaea7e689	domain=de
+krung _ _ B-HumanSettlement
+thep _ _ I-HumanSettlement
+mahanakhon _ _ I-HumanSettlement
+amon _ _ I-HumanSettlement
+rattanakosin _ _ I-HumanSettlement
+mahinthara _ _ I-HumanSettlement
+ayuthaya _ _ I-HumanSettlement
+mahadilok _ _ I-HumanSettlement
+phop _ _ I-HumanSettlement
+noppharat _ _ I-HumanSettlement
+ratchathani _ _ I-HumanSettlement
+burirom _ _ I-HumanSettlement
+udomratchaniwet _ _ I-HumanSettlement
+mahasathan _ _ I-HumanSettlement
+amon _ _ I-HumanSettlement
+piman _ _ I-HumanSettlement
+awatan _ _ I-HumanSettlement
+sathit _ _ I-HumanSettlement
+sakkathattiya _ _ I-HumanSettlement
+witsanukam _ _ I-HumanSettlement
+prasit _ _ I-HumanSettlement
+18 _ _ O
+. _ _ O
+jahrhundert _ _ O
+anwesend _ _ O
+
+
+# id aedef522-ad43-49b0-aa21-c39437af1d27	domain=de
+đỗ _ _ B-Artist
+my _ _ I-Artist
+linh _ _ I-Artist
+hồng _ _ B-Artist
+nhung _ _ I-Artist
+und _ _ O
+quốc _ _ B-SportsManager
+trung _ _ I-SportsManager
+ersetzt _ _ O
+thu _ _ B-Artist
+minh _ _ I-Artist
+chó _ _ I-Artist
+cái _ _ I-Artist
+trần _ _ B-Artist
+lập _ _ I-Artist
+hồ _ _ B-Artist
+ngọc _ _ I-Artist
+hà _ _ I-Artist
+als _ _ O
+trainer _ _ O
+. _ _ O
+
+
+# id 4d95d265-59a7-4986-a695-61934c0fe74a	domain=de
+es _ _ O
+spielt _ _ O
+warner _ _ B-Artist
+leroy _ _ I-Artist
+baxter _ _ I-Artist
+myrna _ _ B-Artist
+loy _ _ I-Artist
+und _ _ O
+beery _ _ B-Artist
+senior _ _ I-Artist
+. _ _ O
+
+
+# id 3b525802-dc95-4c96-aef9-9d11a38b5e8f	domain=de
+er _ _ O
+tourte _ _ O
+2017 _ _ O
+mit _ _ O
+vielen _ _ O
+künstlern _ _ O
+darunter _ _ O
+nicholas _ _ B-Artist
+d. _ _ I-Artist
+miller _ _ I-Artist
+seven _ _ B-Artist
+lions _ _ I-Artist
+tritonal _ _ B-MusicalGRP
+und _ _ O
+kill _ _ B-Artist
+the _ _ I-Artist
+noise _ _ I-Artist
+. _ _ O
+
+
+# id 7f5cc484-06cb-4129-b2ad-8ae0561f37ad	domain=de
+der _ _ O
+toran _ _ O
+war _ _ O
+von _ _ O
+2012 _ _ O
+bis _ _ O
+2020 _ _ O
+mit _ _ O
+der _ _ O
+schauspielerin _ _ O
+jaclyn _ _ B-Artist
+betham _ _ I-Artist
+verheiratet _ _ O
+. _ _ O
+
+
+# id b8ae760d-62e8-4374-8ee0-8d5df8f1377d	domain=de
+skylar _ _ B-Artist
+astin _ _ I-Artist
+star _ _ O
+von _ _ O
+zoey’s _ _ B-VisualWork
+extraordinary _ _ I-VisualWork
+playlist _ _ I-VisualWork
+würde _ _ O
+die _ _ O
+nationalhymne _ _ O
+singen _ _ O
+. _ _ O
+
+
+# id 51daa9eb-3725-4a0c-af43-6d19c910990f	domain=de
+es _ _ O
+basiert _ _ O
+auf _ _ O
+den _ _ O
+büchern _ _ O
+elric _ _ B-OtherPER
+von _ _ I-OtherPER
+melniboné _ _ I-OtherPER
+von _ _ O
+mike _ _ B-Artist
+moorcock _ _ I-Artist
+. _ _ O
+
+
+# id 0970b615-91cc-42d5-a005-7f205fd8fa6f	domain=de
+matthew _ _ B-Artist
+heafy _ _ I-Artist
+sänger _ _ O
+und _ _ O
+gitarrist _ _ O
+( _ _ O
+trivium _ _ B-MusicalGRP
+) _ _ O
+
+
+# id 38a8a67a-6222-4726-a871-910e7003f970	domain=de
+die _ _ O
+hollywood _ _ O
+-schauspielerin _ _ O
+jean _ _ B-Artist
+wallace _ _ I-Artist
+akzeptierte _ _ O
+die _ _ O
+weibliche _ _ O
+hauptrolle _ _ O
+möglicherweise _ _ O
+weil _ _ O
+ihre _ _ O
+karriere _ _ O
+aufgrund _ _ O
+persönlicher _ _ O
+probleme _ _ O
+ins _ _ O
+stocken _ _ O
+geraten _ _ O
+war _ _ O
+. _ _ O
+
+
+# id cb40fd35-06ca-4c3d-8064-80e8f06ae2ab	domain=de
+hannah _ _ B-Artist
+blilie _ _ I-Artist
+spielt _ _ O
+weiterhin _ _ O
+schlagzeug _ _ O
+mit _ _ O
+gossip _ _ B-MusicalGRP
+(band) _ _ I-MusicalGRP
+. _ _ O
+
+
+# id 1956ab0a-d767-409b-9414-5682cbbd319b	domain=de
+two _ _ B-MusicalWork
+by _ _ I-MusicalWork
+two _ _ I-MusicalWork
+- _ _ O
+lyrik _ _ O
+; _ _ O
+musik _ _ O
+von _ _ O
+richard _ _ B-Artist
+rogers _ _ I-Artist
+buch _ _ O
+von _ _ O
+peter _ _ B-Artist
+stone _ _ I-Artist
+(drehbuchautor) _ _ I-Artist
+
+
+# id d6641b1a-f555-4b15-aec1-4798da6663e6	domain=de
+ruben _ _ B-Artist
+rada _ _ I-Artist
+und _ _ O
+illya _ _ B-MusicalGRP
+kuryaki _ _ I-MusicalGRP
+and _ _ I-MusicalGRP
+the _ _ I-MusicalGRP
+valderramas _ _ I-MusicalGRP
+wurden _ _ O
+ebenfalls _ _ O
+voraussichtlich _ _ O
+auftreten _ _ O
+mussten _ _ O
+jedoch _ _ O
+aufgrund _ _ O
+von _ _ O
+kalenderproblemen _ _ O
+absagen _ _ O
+. _ _ O
+
+
+# id b8705b32-3f0c-4735-a84d-b23f2cf30112	domain=de
+der _ _ O
+song _ _ O
+wurde _ _ O
+von _ _ O
+leadsänger _ _ O
+david _ _ B-Artist
+coverdale _ _ I-Artist
+und _ _ O
+gitarrist _ _ O
+john _ _ B-Artist
+sykes _ _ I-Artist
+geschrieben _ _ O
+und _ _ O
+erwies _ _ O
+sich _ _ O
+als _ _ O
+eines _ _ O
+der _ _ O
+beliebtesten _ _ O
+songs _ _ O
+der _ _ O
+band _ _ O
+. _ _ O
+
+
+# id aadaa83b-04d9-4274-8600-84a22133a544	domain=de
+michael _ _ B-Artist
+eliot _ _ I-Artist
+gordon _ _ I-Artist
+- _ _ O
+bassgitarre _ _ O
+backing _ _ O
+-vocals _ _ O
+
+
+# id efe1f85e-b9a4-4a81-9199-5f3595cf7f3f	domain=de
+ebenfalls _ _ O
+im _ _ O
+selben _ _ O
+jahr _ _ O
+kehrt _ _ O
+direktor _ _ O
+jan _ _ B-Artist
+troell _ _ I-Artist
+mit _ _ O
+einem _ _ O
+weiteren _ _ O
+periodendrama _ _ O
+zurück _ _ O
+die _ _ B-VisualWork
+ewigen _ _ I-VisualWork
+momente _ _ I-VisualWork
+der _ _ I-VisualWork
+maria _ _ I-VisualWork
+larsson _ _ I-VisualWork
+( _ _ O
+maria _ _ O
+larsons _ _ O
+eviga _ _ O
+ögonblick _ _ O
+) _ _ O
+. _ _ O
+
+
+# id ee90e82d-e28c-414c-a95a-31293119426f	domain=de
+swift _ _ O
+schrieb _ _ O
+den _ _ O
+song _ _ O
+im _ _ O
+jahr _ _ O
+2006 _ _ O
+mit _ _ O
+the _ _ B-MusicalGRP
+warren _ _ I-MusicalGRP
+brothers _ _ I-MusicalGRP
+und _ _ O
+produzierte _ _ O
+ihn _ _ O
+im _ _ O
+jahr _ _ O
+2021 _ _ O
+mit _ _ O
+jack _ _ B-Artist
+antonoff _ _ I-Artist
+. _ _ O
+
+
+# id ed568363-3be7-41b1-9ba4-07641b204c9d	domain=de
+die _ _ O
+show _ _ O
+wurde _ _ O
+vom _ _ O
+fotografen _ _ O
+/ _ _ O
+filmemacher _ _ O
+paul _ _ B-Artist
+cox _ _ I-Artist
+eröffnet _ _ O
+. _ _ O
+
+
+# id acb43fac-d5ec-41d7-a422-7388f1f3efc5	domain=de
+julia _ _ B-Artist
+o'hara _ _ I-Artist
+stiles _ _ I-Artist
+stern _ _ O
+von _ _ O
+save _ _ B-VisualWork
+the _ _ I-VisualWork
+last _ _ I-VisualWork
+dance _ _ I-VisualWork
+und _ _ O
+mona _ _ B-VisualWork
+lisas _ _ I-VisualWork
+lächeln _ _ I-VisualWork
+
+
+# id fba14268-8aa5-4a3d-9226-4e2535e880c8	domain=de
+die _ _ O
+band _ _ O
+spielte _ _ O
+shows _ _ O
+mit _ _ O
+earth _ _ B-MusicalGRP
+crisis _ _ I-MusicalGRP
+hatebreed _ _ B-MusicalGRP
+strife _ _ B-MusicalGRP
+shelter _ _ B-MusicalGRP
+und _ _ O
+brian _ _ B-Artist
+hugh _ _ I-Artist
+warner _ _ I-Artist
+. _ _ O
+
+
+# id 57e7cc06-eeee-4acf-80ab-2c0fbaaad982	domain=de
+bassist _ _ O
+dirnt _ _ B-Artist
+hat _ _ O
+erklärt _ _ O
+dass _ _ O
+das _ _ O
+berühmte _ _ O
+bass _ _ O
+-line _ _ O
+-intro _ _ O
+in _ _ O
+diesem _ _ O
+song _ _ O
+eine _ _ O
+nacht _ _ O
+geschrieben _ _ O
+wurde _ _ O
+während _ _ O
+er _ _ O
+auf _ _ O
+lysergsäurediethylamid _ _ B-Medication/Vaccine
+hoch _ _ O
+war _ _ O
+. _ _ O
+
+
+# id 5be9598b-be06-4fc4-9b8e-3c7442325a9e	domain=de
+er _ _ O
+arbeitete _ _ O
+gemeinsam _ _ O
+mit _ _ O
+anderen _ _ O
+künstlern _ _ O
+wie _ _ O
+jean-michel _ _ B-Artist
+basquiat _ _ I-Artist
+und _ _ O
+andy _ _ B-Artist
+warhol _ _ I-Artist
+zusammen _ _ O
+. _ _ O
+
+
+# id 07768c72-87ad-41a4-8bef-47a3c321117a	domain=de
+hintergrundgesang _ _ O
+: _ _ O
+darlene _ _ B-Artist
+love _ _ I-Artist
+the _ _ B-MusicalGRP
+blossoms _ _ I-MusicalGRP
+the _ _ B-MusicalGRP
+blossoms _ _ I-MusicalGRP
+the _ _ B-MusicalGRP
+blossoms _ _ I-MusicalGRP
+clydie _ _ B-Artist
+mae _ _ I-Artist
+king _ _ I-Artist
+
+
+# id 5562c728-abf0-4b90-b97e-6f078c8013dd	domain=de
+bryan _ _ B-Artist
+hitch _ _ I-Artist
+: _ _ O
+x _ _ O
+force _ _ O
+vol _ _ O
+. _ _ O
+3 _ _ O
+1 _ _ O
+( _ _ O
+variante _ _ O
+) _ _ O
+
+
+# id f169b297-f09b-4b8e-aaab-f7a4a64bb7e5	domain=de
+peppers _ _ O
+endgültige _ _ O
+aufführung _ _ O
+war _ _ O
+in _ _ O
+jerry, _ _ B-VisualWork
+der _ _ I-VisualWork
+herzpatient _ _ I-VisualWork
+in _ _ O
+dem _ _ O
+sie _ _ O
+jerry _ _ B-Artist
+lewis _ _ I-Artist
+sekretärin _ _ O
+spielte _ _ O
+. _ _ O
+
+
+# id d3576fd7-68ea-4c6e-9b15-51a8b0e784c6	domain=de
+laura _ _ B-MusicalWork
+david _ _ B-Artist
+raksin _ _ I-Artist
+) _ _ O
+4 _ _ O
+: _ _ O
+42 _ _ O
+
+
+# id 649554f1-12d0-489a-b65f-b1ea3820e3e7	domain=de
+die _ _ O
+liste _ _ O
+enthielt _ _ O
+auch _ _ O
+beliebte _ _ O
+künstler _ _ O
+wie _ _ O
+the _ _ B-MusicalWork
+john _ _ I-MusicalWork
+coltrane _ _ I-MusicalWork
+quartet _ _ I-MusicalWork
+plays _ _ I-MusicalWork
+und _ _ O
+björk _ _ B-Artist
+guðmundsdóttir _ _ I-Artist
+. _ _ O
+
+
+# id 4fe181e9-5ea2-4b8b-aa74-f1f14fe86559	domain=de
+barbarella _ _ O
+spielte _ _ O
+auch _ _ O
+auf _ _ O
+destiny _ _ B-Artist
+cyrus _ _ I-Artist
+album _ _ O
+breakout _ _ B-MusicalWork
+. _ _ O
+
+
+# id e3135f1a-5897-4b3d-a6d3-95d9d42fdafd	domain=de
+a. _ _ B-Artist
+igoni _ _ I-Artist
+barrett _ _ I-Artist
+( _ _ O
+geb _ _ O
+. _ _ O
+1979 _ _ O
+) _ _ O
+schriftsteller _ _ O
+kurzgeschichtenschreiber _ _ O
+
+
+# id f8eb7e96-599e-4b09-a43a-7b5a864ec134	domain=de
+life _ _ B-VisualWork
+is _ _ I-VisualWork
+sweet _ _ I-VisualWork
+inszeniert _ _ O
+von _ _ O
+mike _ _ B-Artist
+leigh _ _ I-Artist
+hauptrolle _ _ O
+jim _ _ B-Artist
+broadbent _ _ I-Artist
+
+
+# id 5f5371e3-95a0-48d9-bc21-7cb6bcf354d9	domain=de
+das _ _ O
+von _ _ O
+dj _ _ B-Artist
+skee _ _ I-Artist
+gehostete _ _ O
+mixtape _ _ O
+wurde _ _ O
+in _ _ O
+der _ _ O
+promotion _ _ O
+der _ _ O
+wiederholt _ _ O
+verzögerten _ _ O
+veröffentlichung _ _ O
+seines _ _ O
+vierten _ _ O
+studioalbums _ _ O
+the _ _ B-MusicalWork
+r.e.d. _ _ I-MusicalWork
+album _ _ I-MusicalWork
+erstellt _ _ O
+. _ _ O
+
+
+# id 0c73be72-6846-40e2-b65d-7be16e94bd93	domain=de
+regan _ _ O
+ist _ _ O
+am _ _ O
+bekanntesten _ _ O
+für _ _ O
+die _ _ O
+verdoppelung _ _ O
+chris _ _ B-Artist
+tucker _ _ I-Artist
+in _ _ O
+rush _ _ B-VisualWork
+hour _ _ I-VisualWork
+ii _ _ I-VisualWork
+. _ _ O
+
+
+# id 76e14f31-fb36-47a0-a417-d4b8aa3da982	domain=de
+gespielt _ _ O
+von _ _ O
+vivica _ _ B-Artist
+anjanetta _ _ I-Artist
+fox _ _ I-Artist
+in _ _ O
+die _ _ B-VisualWork
+bibel _ _ I-VisualWork
+– _ _ I-VisualWork
+salomon _ _ I-VisualWork
+
+
+# id 84267cc0-fdae-4eaa-9bff-b83a4b2352c2	domain=de
+der _ _ O
+park _ _ O
+wurde _ _ O
+im _ _ O
+film _ _ O
+allen _ _ B-Artist
+stewart _ _ I-Artist
+königsberg _ _ I-Artist
+vorgestellt _ _ O
+vicky _ _ B-VisualWork
+cristina _ _ I-VisualWork
+barcelona _ _ I-VisualWork
+. _ _ O
+
+
+# id 78769ffd-2c06-4e48-a7a1-0f685ce5b680	domain=de
+michel _ _ B-Artist
+blanc _ _ I-Artist
+( _ _ O
+nur _ _ O
+stimme _ _ O
+) _ _ O
+als _ _ O
+obszöner _ _ O
+kurbelanrufer _ _ O
+
+
+# id e889fddb-176d-4f7a-8c75-d895301ddb28	domain=de
+phil _ _ B-Artist
+ochs _ _ I-Artist
+1960er _ _ O
+und _ _ O
+70er _ _ O
+jahre _ _ O
+und _ _ O
+protestsänger _ _ O
+und _ _ O
+progressive _ _ O
+aktivist _ _ O
+( _ _ O
+besuchte _ _ O
+die _ _ O
+journalismus _ _ O
+-schule _ _ O
+aber _ _ O
+nicht _ _ O
+abgeschlossen _ _ O
+) _ _ O
+
+
+# id 11970030-d939-4279-891d-015a60b2d4fb	domain=de
+bob _ _ B-Artist
+marshall _ _ I-Artist
+: _ _ O
+chef _ _ O
+der _ _ O
+erholung _ _ O
+und _ _ O
+länder _ _ O
+für _ _ O
+die _ _ O
+usfs _ _ B-ORG
+; _ _ O
+
+
+# id 9462d622-c3a8-4457-afe1-f84735b457bc	domain=de
+fantasie _ _ O
+durch _ _ O
+einojuhani _ _ B-Artist
+rautavaara _ _ I-Artist
+( _ _ O
+single _ _ O
+) _ _ O
+mit _ _ O
+kristjan _ _ B-Artist
+järvi _ _ I-Artist
+und _ _ O
+dem _ _ O
+new _ _ B-MusicalGRP
+philharmonia _ _ I-MusicalGRP
+orchestra _ _ I-MusicalGRP
+london _ _ I-MusicalGRP
+
+
+# id 3887bd0a-6cdc-4584-91bf-431977a44356	domain=de
+sein _ _ O
+ph _ _ O
+. _ _ O
+d _ _ O
+. _ _ O
+berater _ _ O
+war _ _ O
+david _ _ B-Scientist
+e. _ _ I-Scientist
+muller _ _ I-Scientist
+. _ _ O
+
+
+# id 4feb5fdf-6abd-4b1a-90ee-6d861140a88e	domain=de
+henry _ _ B-Scientist
+g. _ _ I-Scientist
+booker _ _ I-Scientist
+physiker _ _ O
+und _ _ O
+elektroingenieur _ _ O
+
+
+# id bef6819f-b451-4bfa-93c8-31aa33b1bb97	domain=de
+edward _ _ B-Scientist
+novick _ _ I-Scientist
+( _ _ O
+produktionsmischer _ _ O
+) _ _ O
+; _ _ O
+lora _ _ B-Scientist
+hirschberg _ _ I-Scientist
+gary _ _ B-Scientist
+a. _ _ I-Scientist
+rizzo _ _ I-Scientist
+( _ _ O
+re _ _ O
+-aufzeichnungsmischer _ _ O
+) _ _ O
+
+
+# id 3d3d7769-7797-4b61-b51b-68c9c43bb4a1	domain=de
+es _ _ O
+wurde _ _ O
+1903 _ _ O
+von _ _ O
+karl _ _ B-Scientist
+jordan _ _ I-Scientist
+(zoologe) _ _ I-Scientist
+beschrieben _ _ O
+. _ _ O
+
+
+# id 5c1a533a-84e4-468f-815a-3f2d4554a452	domain=de
+der _ _ O
+fünfter _ _ B-Scientist
+doktor _ _ I-Scientist
+macht _ _ O
+einen _ _ O
+unbenannten _ _ O
+cameo _ _ O
+als _ _ O
+fremder _ _ O
+in _ _ O
+einer _ _ O
+bar _ _ O
+die _ _ O
+dem _ _ O
+protagonisten _ _ O
+aus _ _ O
+einer _ _ O
+klebrigen _ _ O
+situation _ _ O
+hilft _ _ O
+. _ _ O
+
+
+# id 3f6eb2f4-752f-4982-a31c-78a4a3f30cac	domain=de
+roger _ _ B-Artist
+nichols _ _ I-Artist
+elliot _ _ B-Scientist
+scheiner _ _ I-Scientist
+albert _ _ B-Scientist
+harry _ _ I-Scientist
+schmitt _ _ I-Scientist
+& _ _ O
+bill _ _ B-Artist
+schnee _ _ I-Artist
+ingenieure _ _ O
+
+
+# id d3305952-b79c-40ee-9bb7-a5a9554aecee	domain=de
+steven _ _ B-Scientist
+j. _ _ I-Scientist
+sasson _ _ I-Scientist
+der _ _ O
+erfinder _ _ O
+des _ _ O
+digitale _ _ B-OtherPROD
+kamera _ _ I-OtherPROD
+
+
+# id 2b1e7b51-dab9-4a2b-9659-f13cea8bfefa	domain=de
+alexander _ _ B-Scientist
+bain _ _ I-Scientist
+(uhrmacher) _ _ I-Scientist
+führte _ _ O
+die _ _ O
+faksimile _ _ O
+-maschine _ _ O
+von _ _ O
+1843 _ _ O
+bis _ _ O
+1846 _ _ O
+ein _ _ O
+. _ _ O
+
+
+# id 93e1d612-523e-451c-97bf-4a0ecaa724b8	domain=de
+es _ _ O
+hat _ _ O
+viele _ _ O
+erfolgreiche _ _ O
+pionierflugzeuge _ _ O
+angetrieben _ _ O
+darunter _ _ O
+die _ _ O
+von _ _ O
+alliott _ _ B-Scientist
+verdon _ _ I-Scientist
+roe _ _ I-Scientist
+. _ _ O
+
+
+# id a91d0daa-3417-4dbf-b0b5-99149d64b1ce	domain=de
+dreiballlot _ _ O
+ist _ _ O
+ein _ _ O
+voting _ _ O
+-protokoll _ _ O
+das _ _ O
+2006 _ _ O
+von _ _ O
+ronald _ _ B-Scientist
+linn _ _ I-Scientist
+rivest _ _ I-Scientist
+erfunden _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 55447ab8-e723-496f-bf36-9a3edfe36f99	domain=de
+hans _ _ B-Scientist
+reiser _ _ I-Scientist
+(informatiker) _ _ I-Scientist
+computerprogrammierer _ _ O
+und _ _ O
+verurteilter _ _ O
+mörder _ _ O
+
+
+# id 72b24d1c-9d1e-404e-a7c7-e7802fdd44d7	domain=de
+hildeby _ _ O
+spielte _ _ O
+in _ _ O
+seiner _ _ O
+jugend _ _ O
+für _ _ O
+åker _ _ O
+/ _ _ O
+stränngnäs _ _ O
+hudiksvall _ _ B-SportsGRP
+hc _ _ I-SportsGRP
+hud _ _ O
+/ _ _ O
+alf _ _ O
+/ _ _ O
+bol _ _ O
+/ _ _ O
+sik _ _ O
+/ _ _ O
+sl _ _ O
+tik _ _ B-SportsGRP
+und _ _ O
+färjestad _ _ B-SportsGRP
+bk _ _ I-SportsGRP
+. _ _ O
+
+
+# id d6948539-2eb1-402d-bd72-05e98a6e8ef5	domain=de
+er _ _ O
+ist _ _ O
+auch _ _ O
+präsidentschaftsmitglied _ _ O
+von _ _ O
+kk _ _ B-SportsGRP
+roter _ _ I-SportsGRP
+stern _ _ I-SportsGRP
+belgrad _ _ I-SportsGRP
+. _ _ O
+
+
+# id 768b5ca4-4492-4813-8729-636fb600b53d	domain=de
+im _ _ O
+alter _ _ O
+von _ _ O
+13 _ _ O
+jahren _ _ O
+schloss _ _ O
+er _ _ O
+sich _ _ O
+gimnasia _ _ B-SportsGRP
+y _ _ I-SportsGRP
+esgrima _ _ I-SportsGRP
+la _ _ I-SportsGRP
+plata _ _ I-SportsGRP
+jugendrang _ _ O
+an _ _ O
+. _ _ O
+
+
+# id a957c1b3-51f0-4074-91ff-123e0993881d	domain=de
+golden _ _ B-SportsGRP
+state _ _ I-SportsGRP
+warriors _ _ I-SportsGRP
+/ _ _ O
+philadelphia _ _ B-SportsGRP
+76ers _ _ I-SportsGRP
+/ _ _ O
+los _ _ B-SportsGRP
+angeles _ _ I-SportsGRP
+lakers _ _ I-SportsGRP
+
+
+# id cbae5c25-1a82-408c-a3a7-5ac220ff32a7	domain=de
+rect _ _ O
+0 _ _ O
+422 _ _ O
+710 _ _ O
+441 _ _ O
+new _ _ B-SportsGRP
+england _ _ I-SportsGRP
+whalers _ _ I-SportsGRP
+
+
+# id 8e66e22c-76ef-43ab-899c-0b898f5bf68d	domain=de
+jaap _ _ B-Athlete
+van _ _ I-Athlete
+lagen _ _ I-Athlete
+nahm _ _ O
+nicht _ _ O
+an _ _ O
+der _ _ O
+sitzung _ _ O
+teil _ _ O
+da _ _ O
+der _ _ O
+motor _ _ O
+in _ _ O
+seinem _ _ O
+lada _ _ B-SportsGRP
+sport _ _ I-SportsGRP
+lada _ _ B-Vehicle
+110 _ _ I-Vehicle
+geändert _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id e83ab733-01b9-47cf-b0ea-ed03bde5c5ae	domain=de
+alle _ _ O
+spiele _ _ O
+wurden _ _ O
+im _ _ O
+host _ _ O
+hcd _ _ B-SportsGRP
+zu _ _ O
+hause _ _ O
+vaillant-arena _ _ B-Facility
+gespielt _ _ O
+. _ _ O
+
+
+# id 3fe6613f-30c9-4d1d-a78e-3038b8e832d4	domain=de
+alvin _ _ B-Athlete
+davis _ _ I-Athlete
+† _ _ O
+6 _ _ O
+. _ _ O
+runde _ _ O
+insgesamt _ _ O
+144 _ _ O
+. _ _ O
+durch _ _ O
+die _ _ O
+oakland _ _ B-SportsGRP
+a's _ _ I-SportsGRP
+jedoch _ _ O
+nicht _ _ O
+unterzeichnet _ _ O
+
+
+# id 66ebbe49-5414-45da-932f-2b7add4579aa	domain=de
+mcswain _ _ O
+wurde _ _ O
+als _ _ O
+teil _ _ O
+des _ _ O
+ersatzteams _ _ O
+boston _ _ B-SportsGRP
+patriots _ _ I-SportsGRP
+unterzeichnet _ _ O
+. _ _ O
+
+
+# id 80d2a66b-f9ce-40e2-b15a-83a90297890c	domain=de
+die _ _ O
+majors _ _ O
+final _ _ O
+all _ _ O
+white _ _ O
+bastion _ _ O
+die _ _ O
+boston _ _ B-SportsGRP
+red _ _ I-SportsGRP
+sox _ _ I-SportsGRP
+fügte _ _ O
+1959 _ _ O
+einen _ _ O
+schwarzen _ _ O
+spieler _ _ O
+hinzu _ _ O
+. _ _ O
+
+
+# id 45a4efad-1942-4ee8-823c-71301465070c	domain=de
+vaitai _ _ O
+wurde _ _ O
+in _ _ O
+der _ _ O
+fünften _ _ O
+runde _ _ O
+164 _ _ O
+. _ _ O
+insgesamt _ _ O
+vom _ _ O
+philadelphia _ _ B-SportsGRP
+eagles _ _ I-SportsGRP
+eingezogen _ _ O
+. _ _ O
+
+
+# id d94607ec-cfbf-4ff2-9ef9-1516ede3a075	domain=de
+mills _ _ O
+war _ _ O
+2008 _ _ O
+mitglied _ _ O
+der _ _ O
+pga _ _ B-SportsGRP
+tour _ _ I-SportsGRP
+aber _ _ O
+nicht _ _ O
+hoch _ _ O
+genug _ _ O
+auf _ _ O
+der _ _ O
+geldliste _ _ O
+um _ _ O
+seine _ _ O
+karte _ _ O
+für _ _ O
+2009 _ _ O
+zu _ _ O
+behalten _ _ O
+. _ _ O
+
+
+# id 4caf5bef-c12a-46e2-94ff-56963be404fe	domain=de
+er _ _ O
+spielte _ _ O
+club _ _ O
+rugby _ _ O
+für _ _ O
+london _ _ B-SportsGRP
+welsh _ _ I-SportsGRP
+rfc _ _ I-SportsGRP
+und _ _ O
+swansea _ _ B-SportsGRP
+rfc _ _ I-SportsGRP
+. _ _ O
+
+
+# id f27b881e-7726-4e14-97a6-5bbcfce0a9b8	domain=de
+zwischen _ _ O
+2005 _ _ O
+und _ _ O
+2006 _ _ O
+spielte _ _ O
+er _ _ O
+für _ _ O
+estudiantes _ _ B-SportsGRP
+de _ _ I-SportsGRP
+la _ _ I-SportsGRP
+plata _ _ I-SportsGRP
+. _ _ O
+
+
+# id fd96a6fe-b4a2-4de6-8947-c24288f8aa11	domain=de
+nazor _ _ O
+begann _ _ O
+seine _ _ O
+trainerkarriere _ _ O
+anfang _ _ O
+zwanzig _ _ O
+als _ _ O
+trainer _ _ O
+der _ _ O
+jugendteams _ _ O
+kk _ _ B-SportsGRP
+split _ _ I-SportsGRP
+. _ _ O
+
+
+# id ab192ecc-9774-4379-bcb7-5a3515986986	domain=de
+jeff _ _ B-Athlete
+gordon _ _ I-Athlete
+von _ _ O
+hendrick _ _ B-SportsGRP
+motorsports, _ _ I-SportsGRP
+inc. _ _ I-SportsGRP
+wurde _ _ O
+zum _ _ O
+vierten _ _ O
+mal _ _ O
+in _ _ O
+sieben _ _ O
+jahren _ _ O
+zum _ _ O
+serien _ _ O
+-champion _ _ O
+erklärt _ _ O
+. _ _ O
+
+
+# id 2873aa31-26ff-4fea-8d5c-d66cf9bb9aeb	domain=de
+er _ _ O
+trat _ _ O
+auch _ _ O
+als _ _ O
+grand _ _ B-ORG
+old _ _ I-ORG
+party _ _ I-ORG
+in _ _ O
+die _ _ O
+politik _ _ O
+ein _ _ O
+. _ _ O
+
+
+# id 3244454c-ffe7-4e21-9e91-21947e2c522a	domain=de
+fernsehjahr _ _ B-WrittenWork
+1944 _ _ I-WrittenWork
+: _ _ O
+american _ _ B-ORG
+broadcasting _ _ I-ORG
+company _ _ I-ORG
+american _ _ B-ORG
+broadcasting _ _ I-ORG
+company _ _ I-ORG
+) _ _ O
+wird _ _ O
+gebildet _ _ O
+. _ _ O
+
+
+# id 874db744-3b10-4ab5-b167-62d5e5b8a12e	domain=de
+tecnifibre _ _ B-ORG
+→ _ _ O
+decathlon _ _ B-ORG
+(unternehmen) _ _ I-ORG
+( _ _ O
+schläger _ _ O
+) _ _ O
+; _ _ O
+niketown _ _ B-ORG
+→ _ _ O
+adidas _ _ B-PublicCorp
+( _ _ O
+bekleidung _ _ O
+& _ _ O
+schuhe _ _ O
+) _ _ O
+| _ _ O
+
+
+# id e0998bde-ba8b-4d17-8f51-7c475118c85d	domain=de
+diese _ _ O
+liste _ _ O
+enthält _ _ O
+bemerkenswerte _ _ O
+personenverband _ _ B-ORG
+mit _ _ O
+der _ _ O
+grundschule _ _ O
+hauptquartier _ _ B-OtherLOC
+im _ _ O
+land _ _ O
+. _ _ O
+
+
+# id 897a03ca-efde-4bad-be1b-1a7147330c89	domain=de
+rumänien _ _ O
+hat _ _ O
+einen _ _ O
+botschaft _ _ B-ORG
+in _ _ O
+achuzat _ _ B-HumanSettlement
+bajit _ _ I-HumanSettlement
+drei _ _ O
+ehrenkonsulate _ _ O
+in _ _ O
+al-quds _ _ B-HumanSettlement
+beerschewa _ _ B-HumanSettlement
+und _ _ O
+haifa _ _ B-HumanSettlement
+und _ _ O
+ein _ _ O
+kulturinstitut _ _ O
+in _ _ O
+achuzat _ _ B-HumanSettlement
+bajit _ _ I-HumanSettlement
+. _ _ O
+
+
+# id 8c56eb77-7a4b-49f2-b79c-0d72fece61aa	domain=de
+1905 _ _ O
+wurde _ _ O
+er _ _ O
+zum _ _ O
+fellow _ _ O
+der _ _ O
+ras _ _ B-ORG
+gewählt _ _ O
+. _ _ O
+
+
+# id d89746b5-a9c8-4015-a202-f6929e7c3664	domain=de
+oligarchie _ _ B-ORG
+als _ _ O
+nur _ _ O
+die _ _ O
+szlachta _ _ O
+( _ _ O
+adel _ _ O
+) _ _ O
+rund _ _ O
+15 _ _ O
+% _ _ O
+der _ _ O
+politischen _ _ O
+rechte _ _ O
+der _ _ O
+bevölkerung _ _ O
+; _ _ O
+
+
+# id ef39e0de-d063-40c3-8c33-bcb226916e4b	domain=de
+er _ _ O
+ist _ _ O
+mitglied _ _ O
+des _ _ O
+jehovas _ _ B-ORG
+zeugen _ _ I-ORG
+. _ _ O
+
+
+# id e80074dc-a9e8-40bd-aa32-dfa119cd8b29	domain=de
+sie _ _ O
+protestierte _ _ O
+1976 _ _ O
+gegen _ _ O
+ddr _ _ B-HumanSettlement
+ausschluss _ _ O
+von _ _ O
+wolf _ _ B-Artist
+biermann _ _ I-Artist
+was _ _ O
+zu _ _ O
+ihrem _ _ O
+ausschluss _ _ O
+aus _ _ O
+dem _ _ O
+sozialistische _ _ B-ORG
+einheitspartei _ _ I-ORG
+deutschlands _ _ I-ORG
+( _ _ O
+sed _ _ O
+) _ _ O
+führte _ _ O
+. _ _ O
+
+
+# id 81b738dd-1c05-4fe7-b432-3aae6f3a8e1b	domain=de
+es _ _ O
+wird _ _ O
+von _ _ O
+der _ _ O
+kpch _ _ B-ORG
+angeführt _ _ O
+und _ _ O
+es _ _ O
+fehlt _ _ O
+die _ _ O
+unabhängigkeit _ _ O
+. _ _ O
+
+
+# id 34b7d1f6-c3d7-40f2-b52b-09bedb879cee	domain=de
+anschließend _ _ O
+trat _ _ O
+er _ _ O
+in _ _ O
+zwei _ _ O
+spielen _ _ O
+für _ _ O
+fmw _ _ B-ORG
+an _ _ O
+. _ _ O
+
+
+# id 62d31c3a-7f89-44a6-80f4-721b85bd8625	domain=de
+moses _ _ B-Politician
+( _ _ O
+nagriamel _ _ B-ORG
+) _ _ O
+gewann _ _ O
+die _ _ O
+anschlüsse _ _ O
+durch _ _ O
+wahl _ _ O
+
+
+# id f5ccfe19-d1f6-4b18-ad77-dc982b69bcff	domain=de
+vorher _ _ O
+sind _ _ O
+diese _ _ O
+pausen _ _ O
+offensichtlich _ _ O
+wenn _ _ O
+sie _ _ O
+aus _ _ O
+ohio _ _ B-ORG
+valley _ _ I-ORG
+wrestling _ _ I-ORG
+oder _ _ O
+wenn _ _ O
+sie _ _ O
+in _ _ O
+den _ _ O
+ruhestand _ _ O
+sind _ _ O
+. _ _ O
+
+
+# id 7e46baed-9a27-441f-9d11-ab0701810ec1	domain=de
+flugzeughersteller _ _ O
+wright-martin _ _ B-ORG
+aircraft _ _ I-ORG
+company _ _ I-ORG
+änderte _ _ O
+seinen _ _ O
+namen _ _ O
+in _ _ O
+wright _ _ B-ORG
+aeronautical _ _ I-ORG
+nach _ _ O
+dem _ _ O
+partner _ _ O
+glenn _ _ B-Scientist
+luther _ _ I-Scientist
+martin _ _ I-Scientist
+vom _ _ O
+unternehmen _ _ O
+zurückgetreten _ _ O
+. _ _ O
+
+
+# id a0de88b2-ef71-41cd-9a5d-c25fd483c8d4	domain=de
+man _ _ B-ORG
+u. _ _ I-ORG
+- _ _ O
+1968 _ _ O
+1999 _ _ O
+2008 _ _ O
+
+
+# id d3fa8526-fff0-479e-aef8-f1d2cadfaa25	domain=de
+ellen _ _ B-Scientist
+stofan _ _ I-Scientist
+unterstaatssekretär _ _ O
+für _ _ O
+wissenschaft _ _ O
+und _ _ O
+forschung _ _ O
+am _ _ O
+smithsonian _ _ B-ORG
+
+
+# id c81242b3-76e0-41c4-b902-29a3d3339e70	domain=de
+der _ _ O
+film _ _ O
+wurde _ _ O
+von _ _ O
+john _ _ B-Athlete
+wayne _ _ I-Athlete
+batjac _ _ B-ORG
+productions _ _ I-ORG
+produziert _ _ O
+. _ _ O
+
+
+# id 4bca473f-2128-475c-a68e-69368f8d559e	domain=de
+hrw _ _ O
+stellte _ _ O
+fest _ _ O
+dass _ _ O
+manmohan _ _ B-Politician
+singh _ _ I-Politician
+dann _ _ O
+premierminister _ _ B-ORG
+indiens _ _ I-ORG
+eine _ _ O
+parallele _ _ O
+zwischen _ _ O
+dem _ _ O
+system _ _ O
+apartheid _ _ O
+und _ _ O
+unberührbar _ _ O
+sah _ _ O
+. _ _ O
+
+
+# id ab5828eb-cc55-44ea-96b6-8cd8b68c9b06	domain=de
+zwischen _ _ O
+1984 _ _ O
+und _ _ O
+1987 _ _ O
+studierte _ _ O
+sie _ _ O
+fine _ _ O
+arts _ _ O
+am _ _ O
+school _ _ B-ORG
+of _ _ I-ORG
+visual _ _ I-ORG
+arts _ _ I-ORG
+in _ _ O
+nyc _ _ B-HumanSettlement
+. _ _ O
+
+
+# id de0a41ec-9ab0-47d9-a8e5-ef8723ca59b0	domain=de
+weiß _ _ O
+war _ _ O
+an _ _ O
+freimaurersymbole _ _ B-ORG
+beteiligt _ _ O
+. _ _ O
+
+
+# id 85f88ed1-a11c-4548-847b-c167d88f2dad	domain=de
+die _ _ O
+wichtigste _ _ O
+unabhängige _ _ O
+institution _ _ O
+die _ _ O
+für _ _ O
+die _ _ O
+stabilität _ _ O
+des _ _ O
+euro _ _ O
+verantwortlich _ _ O
+ist _ _ O
+ist _ _ O
+die _ _ O
+europäischen _ _ B-ORG
+zentralbank _ _ I-ORG
+( _ _ O
+ezb _ _ O
+) _ _ O
+. _ _ O
+
+
+# id 286895bc-a20a-4e69-ae9c-ff0bbc8ec679	domain=de
+dieser _ _ O
+artikel _ _ O
+enthält _ _ O
+informationen _ _ O
+aus _ _ O
+dem _ _ O
+frwiki _ _ B-ORG
+. _ _ O
+
+
+# id f333b389-b987-43bb-8322-94ef35af672d	domain=de
+er _ _ O
+tourte _ _ O
+mit _ _ O
+mika _ _ B-Artist
+penniman _ _ I-Artist
+broods _ _ B-MusicalGRP
+und _ _ O
+mø _ _ B-Artist
+. _ _ O
+
+
+# id e52c70e5-7e02-478d-b3c1-841717915648	domain=de
+tony _ _ B-Artist
+kanal _ _ I-Artist
+von _ _ O
+no _ _ B-MusicalGRP
+doubt _ _ I-MusicalGRP
+auch _ _ O
+der _ _ O
+co _ _ O
+-autor _ _ O
+und _ _ O
+der _ _ O
+produzent _ _ O
+des _ _ O
+songs _ _ O
+erscheint _ _ O
+im _ _ O
+musikvideo _ _ O
+das _ _ O
+ein _ _ O
+klavier _ _ O
+spielt _ _ O
+. _ _ O
+
+
+# id 24798aa5-e252-4f94-a31c-6871cafc935c	domain=de
+beta _ _ B-MusicalGRP
+band _ _ I-MusicalGRP
+- _ _ O
+the _ _ B-MusicalWork
+beta _ _ I-MusicalWork
+band _ _ I-MusicalWork
+( _ _ O
+album _ _ O
+capitol _ _ O
+/ _ _ O
+emi _ _ O
+) _ _ O
+- _ _ O
+p _ _ O
+/ _ _ O
+m _ _ O
+/ _ _ O
+e _ _ O
+
+
+# id 8253af8d-27bb-42aa-9deb-8bf1046bae42	domain=de
+es _ _ O
+wurde _ _ O
+mit _ _ O
+daft _ _ B-MusicalGRP
+punk _ _ I-MusicalGRP
+guy-manuel _ _ B-Artist
+de _ _ I-Artist
+homem _ _ I-Artist
+christo _ _ I-Artist
+produziert _ _ O
+und _ _ O
+durch _ _ O
+elektronischen _ _ O
+künstler _ _ O
+sébastien _ _ B-Artist
+akchoté _ _ I-Artist
+gemischt _ _ O
+. _ _ O
+
+
+# id 6f94de62-3c6b-42bc-83ce-dd3a062b866f	domain=de
+neil _ _ B-Artist
+hennessy _ _ I-Artist
+hatte _ _ O
+in _ _ O
+der _ _ O
+zwischenzeit _ _ O
+in _ _ O
+einer _ _ O
+band _ _ O
+namens _ _ O
+baxter _ _ B-MusicalGRP
+gespielt _ _ O
+. _ _ O
+
+
+# id 1e7e1fad-0f8c-4e69-a25d-997df9dfb24a	domain=de
+2002 _ _ O
+: _ _ O
+stone _ _ B-MusicalWork
+sour _ _ I-MusicalWork
+(album) _ _ I-MusicalWork
+( _ _ O
+stone _ _ B-MusicalGRP
+sour _ _ I-MusicalGRP
+) _ _ O
+turntables _ _ O
+auf _ _ O
+tracks _ _ O
+2 _ _ O
+3 _ _ O
+und _ _ O
+6 _ _ O
+
+
+# id 9eb31850-57da-4afd-9eca-674cfa34f2af	domain=de
+sie _ _ O
+produzierte _ _ O
+auch _ _ O
+konzertkostüme _ _ O
+für _ _ O
+john _ _ B-Artist
+michael _ _ I-Artist
+stipe _ _ I-Artist
+für _ _ O
+die _ _ O
+twisted _ _ B-MusicalGRP
+kites _ _ I-MusicalGRP
+green _ _ B-MusicalWork
+(r.e.m.-album) _ _ I-MusicalWork
+tour _ _ O
+. _ _ O
+
+
+# id 21b87ddc-3d39-4dd7-b2f6-4585250c455c	domain=de
+zu _ _ O
+den _ _ O
+einflüssen _ _ O
+gehören _ _ O
+beach _ _ B-MusicalGRP
+boys _ _ I-MusicalGRP
+311 _ _ B-MusicalGRP
+guns _ _ B-MusicalGRP
+n’ _ _ I-MusicalGRP
+roses _ _ I-MusicalGRP
+mastodon _ _ B-MusicalGRP
+und _ _ O
+mehr _ _ O
+. _ _ O
+
+
+# id c45697af-ed72-4560-ac70-f2c472745db2	domain=de
+das _ _ O
+lied _ _ O
+huldigt _ _ O
+king _ _ B-MusicalGRP
+crimson _ _ I-MusicalGRP
+21st _ _ B-MusicalWork
+century _ _ I-MusicalWork
+schizoid _ _ I-MusicalWork
+man _ _ I-MusicalWork
+und _ _ O
+enthält _ _ O
+sogar _ _ O
+einige _ _ O
+seiner _ _ O
+texte _ _ O
+gegen _ _ O
+ende _ _ O
+: _ _ O
+
+
+# id 5e9f79e2-a119-4d47-87cc-df1d853a9d6f	domain=de
+ein _ _ O
+weiteres _ _ O
+beispiel _ _ O
+ist _ _ O
+der _ _ O
+musikjahr _ _ B-WrittenWork
+1981 _ _ I-WrittenWork
+song _ _ O
+867-5309/jenny _ _ B-MusicalWork
+von _ _ O
+tommy _ _ B-MusicalGRP
+tutone _ _ I-MusicalGRP
+was _ _ O
+die _ _ O
+ursache _ _ O
+für _ _ O
+eine _ _ O
+große _ _ O
+anzahl _ _ O
+von _ _ O
+streichanrufen _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id 7e3806fa-d8a1-45ba-a3a5-16723210b213	domain=de
+jackson _ _ O
+war _ _ O
+gründungsmitglied _ _ O
+von _ _ O
+the _ _ B-MusicalGRP
+headhunters _ _ I-MusicalGRP
+. _ _ O
+
+
+# id 84371829-b126-43dd-98b4-28f97bdc295e	domain=de
+mit _ _ O
+per _ _ B-Artist
+gessle _ _ I-Artist
+des _ _ O
+beliebten _ _ O
+pop _ _ O
+-rock _ _ O
+-duos _ _ O
+roxette _ _ B-MusicalGRP
+mit _ _ O
+dem _ _ O
+sie _ _ O
+auf _ _ O
+einer _ _ O
+welttournee _ _ O
+aktionen _ _ O
+eröffnen _ _ O
+sollten _ _ O
+. _ _ O
+
+
+# id b6c0524d-538d-4fe6-9b79-fdf0d76f5bb8	domain=de
+der _ _ O
+datensatz _ _ O
+enthält _ _ O
+songs _ _ O
+die _ _ O
+ursprünglich _ _ O
+von _ _ O
+billy _ _ B-Artist
+joel _ _ I-Artist
+queen _ _ B-MusicalGRP
+kinks _ _ B-MusicalGRP
+brian _ _ B-MusicalGRP
+setzer _ _ I-MusicalGRP
+and _ _ I-MusicalGRP
+the _ _ I-MusicalGRP
+tomcats _ _ I-MusicalGRP
+und _ _ O
+mehr _ _ O
+. _ _ O
+
+
+# id f72a3dd9-7332-47ea-9a2e-92df432996ca	domain=de
+yeasayer _ _ B-MusicalGRP
+erstes _ _ O
+album _ _ O
+all _ _ B-MusicalWork
+hour _ _ I-MusicalWork
+cymbals _ _ I-MusicalWork
+wurde _ _ O
+2007 _ _ O
+zum _ _ O
+kritischen _ _ O
+lob _ _ O
+veröffentlicht _ _ O
+. _ _ O
+
+
+# id 037614e6-06bf-4183-aa09-1b8f4917bd15	domain=de
+travis _ _ B-Artist
+meeks _ _ I-Artist
+namen _ _ O
+dead _ _ B-MusicalGRP
+can _ _ I-MusicalGRP
+dance _ _ I-MusicalGRP
+als _ _ O
+inspiration _ _ O
+beim _ _ O
+arbeiten _ _ O
+am _ _ O
+album _ _ O
+. _ _ O
+
+
+# id e33544ca-9a17-4254-8c06-c81762256635	domain=de
+oasis _ _ B-MusicalGRP
+als _ _ O
+bonus _ _ O
+-track _ _ O
+in _ _ O
+der _ _ O
+deluxe _ _ O
+edition _ _ O
+neuauflage _ _ O
+ihres _ _ O
+albums _ _ O
+wtsmg? _ _ B-MusicalWork
+ab _ _ O
+2014 _ _ O
+. _ _ O
+
+
+# id ee47991a-f3c1-48a6-8848-f78fdbab269b	domain=de
+1702 _ _ O
+wurde _ _ O
+er _ _ O
+generalstaatsanwalt _ _ O
+und _ _ O
+wurde _ _ O
+von _ _ O
+anne _ _ B-Politician
+stuart _ _ I-Politician
+zum _ _ O
+ritter _ _ O
+geschlagen _ _ O
+. _ _ O
+
+
+# id 9eeade6d-8e9a-48e9-b7ff-8d9d8b24344f	domain=de
+er _ _ O
+ist _ _ O
+ein _ _ O
+enger _ _ O
+berater _ _ O
+von _ _ O
+silvio _ _ B-Politician
+berlusconi _ _ I-Politician
+und _ _ O
+mitglied _ _ O
+des _ _ O
+beirats _ _ O
+von _ _ O
+goldman _ _ B-PublicCorp
+sachs _ _ I-PublicCorp
+asset _ _ I-PublicCorp
+management _ _ I-PublicCorp
+. _ _ O
+
+
+# id 2a32c4f3-e0a7-4849-b387-677f3361925c	domain=de
+es _ _ O
+wurde _ _ O
+nach _ _ O
+edward _ _ B-Politician
+pellew, _ _ I-Politician
+1. _ _ I-Politician
+viscount _ _ I-Politician
+exmouth _ _ I-Politician
+von _ _ O
+phillip _ _ B-Politician
+parker _ _ I-Politician
+king _ _ I-Politician
+im _ _ O
+jahr _ _ O
+1818 _ _ O
+benannt _ _ O
+. _ _ O
+
+
+# id 1120b701-4509-4652-9e31-1986813098b3	domain=de
+andere _ _ O
+songs _ _ O
+basieren _ _ O
+oder _ _ O
+referenzieren _ _ O
+wie _ _ O
+ayn _ _ B-Artist
+rand _ _ I-Artist
+o'connor _ _ I-Artist
+delillo _ _ B-Artist
+john _ _ B-Politician
+milton _ _ I-Politician
+und _ _ O
+leon _ _ B-Artist
+marcus _ _ I-Artist
+uris _ _ I-Artist
+. _ _ O
+
+
+# id 50cf8713-dd08-4b1c-a9f8-5a4c88995a1e	domain=de
+23 _ _ O
+. _ _ O
+juni _ _ O
+charles _ _ B-Politician
+keith _ _ I-Politician
+taylor _ _ I-Politician
+politiker _ _ O
+
+
+# id 78f8d697-7bdb-4616-a80c-1f7cf3f98953	domain=de
+general _ _ O
+martín _ _ B-Politician
+balza _ _ I-Politician
+und _ _ O
+mariano _ _ B-OtherPER
+grondona _ _ I-OtherPER
+: _ _ O
+dejo _ _ O
+constancia _ _ O
+: _ _ O
+memorias _ _ O
+de _ _ O
+un _ _ O
+allgemein _ _ O
+argentino _ _ O
+. _ _ O
+
+
+# id 1f1bf372-3f37-48ac-9dbe-2b0ea8ca6509	domain=de
+levingston _ _ B-Politician
+( _ _ O
+brigadier _ _ O
+general _ _ O
+) _ _ O
+( _ _ O
+in _ _ O
+amt _ _ O
+1970 _ _ O
+- _ _ O
+1971 _ _ O
+) _ _ O
+
+
+# id 4412d603-a8b0-4a83-9888-0ef87ad99310	domain=de
+sie _ _ O
+wurde _ _ O
+eine _ _ O
+tänzerin _ _ O
+flamenco _ _ O
+und _ _ O
+traf _ _ O
+den _ _ O
+gründungsverlag _ _ O
+von _ _ O
+clarín _ _ B-WrittenWork
+(argentinien) _ _ I-WrittenWork
+roberto _ _ B-Politician
+noble _ _ I-Politician
+um _ _ O
+1950 _ _ O
+. _ _ O
+
+
+# id dfcef1c2-e55b-40be-b5d4-5c2bc31d226f	domain=de
+sein _ _ O
+politischer _ _ O
+rivale _ _ O
+aʻeau _ _ B-Politician
+peniamina _ _ I-Politician
+lehnte _ _ O
+später _ _ O
+die _ _ O
+verantwortung _ _ O
+für _ _ O
+die _ _ O
+schießerei _ _ O
+ab _ _ O
+. _ _ O
+
+
+# id 6fcaad29-9db5-4246-8867-b99358f0f3b5	domain=de
+er _ _ O
+erhielt _ _ O
+2008 _ _ O
+705 _ _ O
+stimmen _ _ O
+( _ _ O
+2 _ _ O
+86 _ _ O
+% _ _ O
+) _ _ O
+und _ _ O
+wurde _ _ O
+vierter _ _ O
+gegen _ _ O
+parti _ _ B-ORG
+québécois _ _ I-ORG
+amtsinhaber _ _ O
+sylvain _ _ B-Politician
+simard _ _ I-Politician
+. _ _ O
+
+
+# id 93087c87-7df1-4f55-92ff-54a45b73e917	domain=de
+hãn _ _ O
+war _ _ O
+ein _ _ O
+enkel _ _ O
+von _ _ O
+kieu _ _ B-Politician
+cong _ _ I-Politician
+tien _ _ I-Politician
+. _ _ O
+
+
+# id c9c3280d-7fb7-4f67-8ed6-b9c4e45e6cff	domain=de
+fisichella _ _ O
+ersetzte _ _ O
+in _ _ O
+der _ _ O
+post _ _ O
+alberto _ _ B-Politician
+ronchey _ _ I-Politician
+. _ _ O
+
+
+# id b2743aad-820c-4676-ae05-90f8f8e02bd2	domain=de
+ab _ _ O
+2021 _ _ O
+hat _ _ O
+inzwischen _ _ O
+nur _ _ O
+eine _ _ O
+andere _ _ O
+person _ _ O
+nur _ _ O
+eine _ _ O
+amtszeit _ _ O
+als _ _ O
+bürgermeisterin _ _ O
+gedient _ _ O
+: _ _ O
+william _ _ B-Politician
+joseph _ _ I-Politician
+green _ _ I-Politician
+iii _ _ I-Politician
+der _ _ O
+1979 _ _ O
+gewählt _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 665b7925-c1c9-4614-a63a-ce3297499542	domain=de
+carlos _ _ B-Politician
+delgado _ _ I-Politician
+chalbaud _ _ I-Politician
+( _ _ O
+oberst _ _ O
+) _ _ O
+( _ _ O
+im _ _ O
+amt _ _ O
+1948 _ _ O
+- _ _ O
+1950 _ _ O
+) _ _ O
+
+
+# id 31bcc2e8-4f88-4902-9a4a-3ec36dff1a28	domain=de
+er _ _ O
+ist _ _ O
+der _ _ O
+bruder _ _ O
+von _ _ O
+politiker _ _ O
+bob _ _ B-Politician
+skelly _ _ I-Politician
+. _ _ O
+
+
+# id 54dff27e-1461-4f29-bbf7-2190aad8dfd5	domain=de
+durch _ _ O
+seinen _ _ O
+ältesten _ _ O
+sohn _ _ O
+ist _ _ O
+er _ _ O
+ein _ _ O
+großvater _ _ O
+von _ _ O
+john _ _ B-Politician
+herbert, _ _ I-Politician
+8th _ _ I-Politician
+earl _ _ I-Politician
+of _ _ I-Politician
+powis _ _ I-Politician
+. _ _ O
+
+
+# id 5b5d36f5-ff6f-4587-9dd4-04b591849a24	domain=de
+robinson _ _ O
+schloss _ _ O
+sich _ _ O
+der _ _ O
+rechten _ _ O
+und _ _ O
+faschistischen _ _ O
+politischen _ _ O
+partei _ _ O
+british _ _ B-ORG
+national _ _ I-ORG
+party _ _ I-ORG
+( _ _ O
+bnp _ _ O
+) _ _ O
+an _ _ O
+die _ _ O
+2004 _ _ O
+von _ _ O
+nick _ _ B-Politician
+griffin _ _ I-Politician
+angeführt _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id ab9f0750-1218-47fd-b109-7e4a82ee2c73	domain=de
+zhang _ _ B-Politician
+jun _ _ I-Politician
+ist _ _ O
+von _ _ O
+links _ _ O
+vierter _ _ O
+. _ _ O
+]]] _ _ O
+
+
+# id abb3aa2e-9f79-4207-8e4d-c477265d347a	domain=de
+während _ _ O
+der _ _ O
+regierung _ _ O
+von _ _ O
+yingluck _ _ B-Politician
+shinawatra _ _ I-Politician
+ging _ _ O
+die _ _ O
+anzahl _ _ O
+der _ _ O
+verhaftungen _ _ O
+und _ _ O
+verurteilungen _ _ O
+für _ _ O
+lèse _ _ O
+majesté _ _ O
+-straftaten _ _ O
+erheblich _ _ O
+zurück _ _ O
+. _ _ O
+
+
+# id b497160a-3148-455a-9f88-942c9e8646f2	domain=de
+sie _ _ O
+ist _ _ O
+auch _ _ O
+für _ _ O
+ihre _ _ O
+hauptaufgabe _ _ O
+in _ _ O
+der _ _ O
+serie _ _ O
+netflix _ _ B-PublicCorp
+sense8 _ _ B-VisualWork
+bekannt _ _ O
+. _ _ O
+
+
+# id 628a45b9-14ca-443b-bb5e-5fcfdd7974bd	domain=de
+er _ _ O
+war _ _ O
+in _ _ O
+ausländischen _ _ O
+unternehmen _ _ O
+wie _ _ O
+bombardier _ _ B-AerospaceManufacturer
+inc. _ _ I-AerospaceManufacturer
+und _ _ O
+siemens _ _ B-PublicCorp
+in _ _ O
+mehreren _ _ O
+bauprojekten _ _ O
+beteiligt _ _ O
+. _ _ O
+
+
+# id bcdd192d-b444-4c59-9ace-7d79719f460e	domain=de
+es _ _ O
+wurde _ _ O
+von _ _ O
+joongang _ _ B-WrittenWork
+ilbo _ _ I-WrittenWork
+präsentiert _ _ O
+und _ _ O
+auf _ _ O
+seoul _ _ B-PublicCorp
+broadcasting _ _ I-PublicCorp
+system _ _ I-PublicCorp
+ausgestrahlt _ _ O
+. _ _ O
+
+
+# id 8c8f1abc-800a-4f13-af42-8bda2566ace2	domain=de
+im _ _ O
+jahr _ _ O
+2016 _ _ O
+wurde _ _ O
+seine _ _ O
+musik _ _ O
+im _ _ O
+gesamten _ _ O
+mockumentary _ _ O
+trailer _ _ B-VisualWork
+park _ _ I-VisualWork
+boys _ _ I-VisualWork
+staffel _ _ O
+6 _ _ O
+vorgestellt _ _ O
+der _ _ O
+unter _ _ O
+netflix _ _ B-PublicCorp
+zu _ _ O
+sehen _ _ O
+war _ _ O
+. _ _ O
+
+
+# id 71c2cc34-b578-4c23-9bd5-5a6e6e24cb98	domain=de
+toshiba _ _ B-PublicCorp
+verfügt _ _ O
+über _ _ O
+eine _ _ O
+fabrik _ _ O
+für _ _ O
+die _ _ O
+herstellung _ _ O
+von _ _ O
+halbleitern _ _ O
+und _ _ O
+verwandten _ _ O
+produkten _ _ O
+. _ _ O
+
+
+# id 04de1908-da70-44e4-9824-948650180268	domain=de
+das _ _ O
+gebäude _ _ O
+und _ _ O
+etwa _ _ O
+20 _ _ O
+morgen _ _ O
+immobilien _ _ O
+wurden _ _ O
+an _ _ O
+das _ _ O
+pharmazeutische _ _ O
+forschungsunternehmen _ _ O
+incyte _ _ B-PublicCorp
+verkauft _ _ O
+. _ _ O
+
+
+# id 8fb2dcd3-d81b-4523-9d16-dfed9737b65d	domain=de
+besonderer _ _ O
+blick _ _ O
+in _ _ O
+lge _ _ B-PublicCorp
+hauptsitz _ _ O
+( _ _ O
+hoermann _ _ O
+) _ _ O
+
+
+# id eb3392ec-d64c-4fd6-a36a-a919178f9657	domain=de
+20 _ _ O
+. _ _ O
+dezember _ _ O
+- _ _ O
+ea _ _ B-PublicCorp
+sports _ _ I-PublicCorp
+einkäufe _ _ O
+20 _ _ O
+% _ _ O
+beteiligung _ _ O
+an _ _ O
+ubi _ _ B-PublicCorp
+soft _ _ I-PublicCorp
+. _ _ O
+
+
+# id 329adf20-12e3-4c15-bea8-5d6c2a5c70a1	domain=de
+während _ _ O
+des _ _ O
+rückgangs _ _ O
+verlagerte _ _ O
+u.s. _ _ B-PublicCorp
+bancorp _ _ I-PublicCorp
+seine _ _ O
+geldtransferdienste _ _ O
+auf _ _ O
+joseph _ _ B-OtherPER
+maunoury _ _ I-OtherPER
+. _ _ O
+
+
+# id ad1c929b-0bdb-4188-8025-f40a4d077d5e	domain=de
+die _ _ O
+kamerun _ _ O
+-nationalfußballmannschaft _ _ O
+hatte _ _ O
+eine _ _ O
+langfristige _ _ O
+partnerschaft _ _ O
+mit _ _ O
+puma _ _ B-PublicCorp
+se _ _ I-PublicCorp
+. _ _ O
+
+
+# id dfb8e127-d6e8-4835-a319-8ad13230c896	domain=de
+noriega _ _ O
+hat _ _ O
+für _ _ O
+marken _ _ O
+wie _ _ O
+d _ _ B-ORG
+& _ _ I-ORG
+g _ _ I-ORG
+calvin _ _ B-Artist
+klein _ _ I-Artist
+roberto _ _ B-Artist
+cavalli _ _ I-Artist
+louis _ _ B-ORG
+vuitton _ _ I-ORG
+und _ _ O
+hugo _ _ B-PublicCorp
+boss _ _ I-PublicCorp
+modelliert _ _ O
+. _ _ O
+
+
+# id 5b97bc4b-ea7e-4a9c-b40a-5f829ff99c40	domain=de
+kisx _ _ O
+ist _ _ O
+derzeit _ _ O
+im _ _ O
+besitz _ _ O
+von _ _ O
+regent _ _ B-PublicCorp
+communications _ _ I-PublicCorp
+. _ _ O
+
+
+# id 43253c47-664d-4429-8e74-5d307317542c	domain=de
+pronovost _ _ O
+hatte _ _ O
+eine _ _ O
+gewisse _ _ O
+unterstützung _ _ O
+für _ _ O
+das _ _ O
+unternehmen _ _ O
+von _ _ O
+microsoft _ _ B-PublicCorp
+corp. _ _ I-PublicCorp
+. _ _ O
+
+
+# id a9ff0992-2cfc-44f5-95f3-bc6d442dd38b	domain=de
+ötzis _ _ O
+kupfer _ _ O
+axt _ _ B-OtherPROD
+war _ _ O
+von _ _ O
+besonderem _ _ O
+interesse _ _ O
+. _ _ O
+
+
+# id 6f84a778-76d5-4493-ad86-ba815b149e27	domain=de
+coolblue _ _ O
+bietet _ _ O
+derzeit _ _ O
+eine _ _ O
+breite _ _ O
+auswahl _ _ O
+an _ _ O
+heimelektronik _ _ B-OtherPROD
+. _ _ O
+
+
+# id aad1d124-a63a-4f53-8618-112fc43ea3b1	domain=de
+stealthbomber _ _ B-OtherPROD
+flugzeuge _ _ O
+die _ _ O
+stealth _ _ O
+-technologie _ _ O
+verwenden _ _ O
+
+
+# id 23d38b0b-4a2b-4cb1-93ea-43124429bd30	domain=de
+atari _ _ B-ORG
+corporation _ _ I-ORG
+veröffentlichte _ _ O
+1990 _ _ O
+einen _ _ O
+atari _ _ B-OtherPROD
+7800 _ _ I-OtherPROD
+-port _ _ O
+der _ _ O
+funktionen _ _ O
+beider _ _ O
+spiele _ _ O
+enthält _ _ O
+und _ _ O
+andere _ _ O
+fehlt _ _ O
+. _ _ O
+
+
+# id 97eee0dc-d8d8-45c5-92fa-fffdb0c21518	domain=de
+sie _ _ O
+war _ _ O
+mit _ _ O
+sg _ _ B-OtherPROD
+herbst _ _ O
+/ _ _ O
+winter _ _ O
+-look _ _ O
+-buch _ _ O
+mit _ _ O
+ju _ _ B-OtherPER
+xiaowen _ _ I-OtherPER
+mitgespielt _ _ O
+das _ _ O
+sowohl _ _ O
+technologie _ _ O
+als _ _ O
+auch _ _ O
+mode _ _ O
+umfasste _ _ O
+. _ _ O
+
+
+# id fba9f24f-d6fd-4042-8b1c-9c34c55b3eba	domain=de
+neben _ _ O
+den _ _ O
+motorzyklen _ _ O
+wurden _ _ O
+andere _ _ O
+fahrzeuge _ _ O
+verwendet _ _ O
+die _ _ O
+rolls-royce _ _ B-CarManufacturer
+und _ _ O
+ford _ _ B-OtherPROD
+modell _ _ I-OtherPROD
+tf-c _ _ I-OtherPROD
+eingeschlossen _ _ O
+wurden _ _ O
+. _ _ O
+
+
+# id 06c86e1c-d1d3-4c77-a13f-1446e3b9494f	domain=de
+traditionelle _ _ O
+fermentierte _ _ O
+gewürzherstellung _ _ O
+mit _ _ O
+onggi _ _ B-OtherPROD
+wie _ _ O
+gochujang _ _ B-Food
+
+
+# id aeedb0d0-0feb-4a46-853d-6d6ed0e7d096	domain=de
+in _ _ O
+diesem _ _ O
+fall _ _ O
+ist _ _ O
+transcodierung _ _ O
+aufgrund _ _ O
+der _ _ O
+vielfalt _ _ O
+von _ _ O
+mobilgerät _ _ B-OtherPROD
+und _ _ O
+deren _ _ O
+fähigkeiten _ _ O
+ein _ _ O
+muss _ _ O
+. _ _ O
+
+
+# id d391a42f-682b-4860-a409-697dfeb842ca	domain=de
+netapp _ _ O
+konkurriert _ _ O
+in _ _ O
+der _ _ O
+hardwarebranche _ _ O
+computerspeicher _ _ B-OtherPROD
+. _ _ O
+
+
+# id 940e1b7e-f955-4519-ac95-0ddcede883ed	domain=de
+das _ _ O
+früheste _ _ O
+rendering _ _ O
+wurde _ _ O
+in _ _ O
+einem _ _ O
+flötenkessel _ _ B-OtherPROD
+über _ _ O
+ein _ _ O
+offenes _ _ O
+feuer _ _ O
+durchgeführt _ _ O
+. _ _ O
+
+
+# id 51ce6f32-bc50-4685-bc75-edfe3199aa13	domain=de
+sechs _ _ O
+zylinder _ _ O
+knight-motor _ _ B-OtherPROD
+sie _ _ O
+wissen _ _ O
+dass _ _ O
+nur _ _ O
+sechs _ _ O
+davon _ _ O
+gemacht _ _ O
+wurden _ _ O
+. _ _ O
+
+
+# id e1ff838e-3b10-4b6a-b46c-179cddcf81cd	domain=de
+ein _ _ O
+neuheitslager _ _ O
+ist _ _ O
+ein _ _ O
+feuerzeug _ _ B-OtherPROD
+das _ _ O
+wie _ _ O
+ein _ _ O
+anderes _ _ O
+objekt _ _ O
+geformt _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id f2640ce8-c1ad-4a18-917a-83afd84bfa3c	domain=de
+scammell _ _ B-OtherPROD
+pioneer _ _ I-OtherPROD
+schwere _ _ O
+6x4 _ _ O
+-traktoreinheit _ _ O
+
+
+# id ff99c0c9-c2e6-48c3-bbfe-0ed890a875b1	domain=de
+sie _ _ O
+wurde _ _ O
+später _ _ O
+auf _ _ O
+18 _ _ O
+kanonen _ _ O
+reduziert _ _ O
+und _ _ O
+1814 _ _ O
+in _ _ O
+truppentransporter _ _ B-OtherPROD
+bei _ _ O
+woolwich _ _ B-Facility
+dockyard _ _ I-Facility
+umgewandelt _ _ O
+. _ _ O
+
+
+# id 09d1a446-b5b6-4be1-9429-9e7006beffeb	domain=de
+dieses _ _ O
+gerät _ _ O
+war _ _ O
+ein _ _ O
+prototyp _ _ O
+von _ _ O
+a _ _ O
+strahlungsmessgerät _ _ B-OtherPROD
+und _ _ O
+wurde _ _ O
+in _ _ O
+den _ _ O
+1930er _ _ O
+jahren _ _ O
+gebaut _ _ O
+. _ _ O
+
+
+# id dcd2dfbe-b298-40d9-83d2-eaf25c850ebe	domain=de
+das _ _ O
+unternehmen _ _ O
+konzentrierte _ _ O
+sich _ _ O
+zunächst _ _ O
+auf _ _ O
+elektrofahrzeug _ _ B-OtherPROD
+begann _ _ O
+jedoch _ _ O
+bald _ _ O
+mit _ _ O
+der _ _ O
+herstellung _ _ O
+von _ _ O
+benzinmotorautos _ _ O
+. _ _ O
+
+
+# id d2fdfcc9-3ca8-4348-9d9d-ce1051a63631	domain=de
+in _ _ O
+der _ _ O
+ersten _ _ O
+runde _ _ O
+schlug _ _ O
+sie _ _ O
+in _ _ O
+geraden _ _ O
+sätzen _ _ O
+carina _ _ B-Athlete
+witthöft _ _ I-Athlete
+. _ _ O
+
+
+# id f085aa46-3993-49aa-9f55-f9fc30318b1d	domain=de
+marcel _ _ B-Athlete
+felder _ _ I-Athlete
+und _ _ O
+veic _ _ B-Athlete
+waren _ _ O
+die _ _ O
+verteidigenden _ _ O
+champions _ _ O
+beschlossen _ _ O
+jedoch _ _ O
+nicht _ _ O
+teilzunehmen _ _ O
+. _ _ O
+
+
+# id 2292c10f-1e21-4ed1-ad37-7afa5511edfe	domain=de
+belgischer _ _ O
+rik _ _ B-Athlete
+van _ _ I-Athlete
+looy _ _ I-Athlete
+gewann _ _ O
+das _ _ O
+rennen _ _ O
+in _ _ O
+einem _ _ O
+drei _ _ O
+-mann _ _ O
+-sprint _ _ O
+mit _ _ O
+frans _ _ B-Athlete
+schoubben _ _ I-Athlete
+und _ _ O
+gilbert _ _ B-Athlete
+desmet _ _ I-Athlete
+. _ _ O
+58 _ _ O
+von _ _ O
+143 _ _ O
+fahrern _ _ O
+beendeten _ _ O
+. _ _ O
+
+
+# id e5a0b3d9-8021-4698-bdd4-c6bf4c81455e	domain=de
+shelley _ _ B-Athlete
+smith _ _ I-Athlete
+( _ _ O
+geb _ _ O
+. _ _ O
+1987 _ _ O
+) _ _ O
+- _ _ O
+wache _ _ O
+für _ _ O
+die _ _ O
+houston _ _ B-SportsGRP
+texans _ _ I-SportsGRP
+
+
+# id dd4e9bfb-30ba-46ae-ad22-91e19d53ea51	domain=de
+das _ _ O
+rennen _ _ O
+wurde _ _ O
+von _ _ O
+richard _ _ B-Athlete
+carapaz _ _ I-Athlete
+von _ _ O
+olympische _ _ B-SportsGRP
+sommerspiele _ _ I-SportsGRP
+2020/teilnehmer _ _ I-SportsGRP
+(ecuador) _ _ I-SportsGRP
+gewonnen _ _ O
+. _ _ O
+
+
+# id 6add7fdf-cd79-48ab-a3e8-61a664010268	domain=de
+abgesehen _ _ O
+von _ _ O
+kleinen _ _ O
+blutergüssen _ _ O
+und _ _ O
+schütteln _ _ O
+wurde _ _ O
+niemand _ _ O
+verletzt _ _ O
+aber _ _ O
+die _ _ O
+team _ _ B-SportsGRP
+surtees _ _ I-SportsGRP
+autos _ _ O
+von _ _ O
+mike _ _ B-OtherPER
+hailwood _ _ I-OtherPER
+wurden _ _ O
+josé _ _ B-Athlete
+carlos _ _ I-Athlete
+pace _ _ I-Athlete
+und _ _ O
+jochen _ _ B-OtherPER
+mass _ _ I-OtherPER
+zerschlagen _ _ O
+. _ _ O
+
+
+# id ef2a3dbe-fac2-4189-86e2-4ffd8c01e1fd	domain=de
+gabriel _ _ B-Athlete
+aubry _ _ I-Athlete
+(rennfahrer) _ _ I-Athlete
+würde _ _ O
+das _ _ O
+oreca _ _ B-Vehicle
+07 _ _ I-Vehicle
+von _ _ O
+52 _ _ O
+pr1 _ _ O
+/ _ _ O
+mathiasen _ _ O
+motorsports _ _ O
+auf _ _ O
+dem _ _ O
+dritten _ _ O
+platz _ _ O
+bringen _ _ O
+. _ _ O
+
+
+# id 8c2a82a1-afdc-4a3b-86c2-d326270abd02	domain=de
+es _ _ O
+zeigt _ _ O
+das _ _ O
+band _ _ O
+das _ _ O
+in _ _ O
+den _ _ O
+bergen _ _ O
+klettert _ _ O
+wenn _ _ O
+der _ _ O
+lead _ _ O
+-sänger _ _ O
+till _ _ B-Athlete
+lindemann _ _ I-Athlete
+fällt _ _ O
+und _ _ O
+schwer _ _ O
+verletzt _ _ O
+wird _ _ O
+. _ _ O
+
+
+# id 0fc4528a-3cfb-4353-817a-b50e0485c8b1	domain=de
+dieses _ _ O
+paar _ _ O
+erreichte _ _ O
+das _ _ O
+finale _ _ O
+und _ _ O
+gewann _ _ O
+dieses _ _ O
+turnier _ _ O
+indem _ _ O
+er _ _ O
+den _ _ O
+3 _ _ O
+. _ _ O
+samen _ _ O
+květa _ _ B-Athlete
+hrdličková _ _ I-Athlete
+und _ _ O
+katarina _ _ B-Athlete
+srebotnik _ _ I-Athlete
+4 _ _ O
+- _ _ O
+6 _ _ O
+6 _ _ O
+- _ _ O
+4 _ _ O
+[10 _ _ O
+- _ _ O
+7] _ _ O
+besiegte _ _ O
+. _ _ O
+
+
+# id 956b2e69-4ccd-4fba-ae00-93ebf1640c21	domain=de
+ivan _ _ B-Athlete
+franco _ _ I-Athlete
+capelli _ _ I-Athlete
+boutsen _ _ B-Athlete
+marco _ _ B-Athlete
+apicella _ _ I-Athlete
+naspetti _ _ B-Athlete
+und _ _ O
+eddie _ _ B-Athlete
+irvine _ _ I-Athlete
+alle _ _ O
+wurden _ _ O
+zu _ _ O
+einer _ _ O
+bestimmten _ _ O
+stufe _ _ O
+der _ _ O
+saison _ _ O
+gefahren _ _ O
+. _ _ O
+
+
+# id c5cd3d25-d819-4aa8-9d9f-ce0e7466f37c	domain=de
+der _ _ B-VisualWork
+weg _ _ I-VisualWork
+nach _ _ I-VisualWork
+rio _ _ I-VisualWork
+(1947) _ _ I-VisualWork
+hauptrolle _ _ O
+bing _ _ B-Artist
+crosby _ _ I-Artist
+leslie _ _ B-Athlete
+townes _ _ I-Athlete
+hope _ _ I-Athlete
+und _ _ O
+dorothy _ _ B-Artist
+lamour _ _ I-Artist
+. _ _ O
+
+
+# id 822e3329-2ba6-4a3f-9f7f-b9f7162d5c64	domain=de
+skum _ _ O
+rocks _ _ O
+! _ _ O
+wurde _ _ O
+anscheinend _ _ O
+von _ _ O
+man _ _ B-ORG
+u. _ _ I-ORG
+spieler _ _ O
+ryan _ _ B-SportsManager
+giggs _ _ I-SportsManager
+und _ _ O
+wayne _ _ B-Athlete
+mark _ _ I-Athlete
+rooney _ _ I-Athlete
+genossen _ _ O
+. _ _ O
+
+
+# id 2736fc4f-f4cd-49ff-8f3d-db9f02aa9632	domain=de
+johnny _ _ B-Athlete
+sauter _ _ I-Athlete
+würde _ _ O
+sich _ _ O
+dem _ _ O
+team _ _ O
+für _ _ O
+den _ _ O
+letzten _ _ O
+anschließen _ _ O
+
+
+# id 19134cc9-a4ba-4a7f-9591-d07e33dd0e8f	domain=de
+sie _ _ O
+haben _ _ O
+spieler _ _ O
+wie _ _ O
+olivier _ _ B-Athlete
+giroud _ _ I-Athlete
+ian _ _ B-SportsManager
+edward _ _ I-SportsManager
+wright _ _ I-SportsManager
+und _ _ O
+thierry _ _ B-SportsManager
+daniel _ _ I-SportsManager
+henry _ _ I-SportsManager
+interviewt _ _ O
+. _ _ O
+
+
+# id 32c98ff5-e559-4703-9e4b-5a1a79b438fa	domain=de
+er _ _ O
+übernahm _ _ O
+keine _ _ O
+kickoffs _ _ O
+die _ _ O
+von _ _ O
+punter _ _ O
+brian _ _ B-Athlete
+moorman _ _ I-Athlete
+behandelt _ _ O
+wurden _ _ O
+. _ _ O
+
+
+# id 90a4c264-6008-4fe0-8c06-344ba77711d1	domain=de
+lauda _ _ O
+wurde _ _ O
+durch _ _ O
+die _ _ O
+kombinierten _ _ O
+aktionen _ _ O
+von _ _ O
+mitfahrern _ _ O
+arturo _ _ B-Athlete
+merzario _ _ I-Athlete
+guy _ _ B-OtherPER
+edwards _ _ I-OtherPER
+robert _ _ B-OtherPER
+brett _ _ I-OtherPER
+lunger _ _ I-OtherPER
+und _ _ O
+harald _ _ B-OtherPER
+ertl _ _ I-OtherPER
+gerettet _ _ O
+. _ _ O
+
+
+# id 9a1a521d-5335-41a4-9a47-92bce8ef1939	domain=de
+als _ _ O
+mitglied _ _ O
+von _ _ O
+j _ _ O
+& _ _ O
+j _ _ O
+securityleft _ _ O
+beigetreten _ _ O
+nachdem _ _ O
+er _ _ O
+durch _ _ O
+the _ _ B-Athlete
+beast _ _ I-Athlete
+incarnate _ _ I-Athlete
+verletzt _ _ O
+wurde _ _ O
+
+
+# id 94cdcea0-c01d-48b3-a2fd-5ae62a6e75e1	domain=de
+amers _ _ O
+älterer _ _ O
+bruder _ _ O
+mohd _ _ B-Athlete
+syukur _ _ I-Athlete
+saidin _ _ I-Athlete
+ist _ _ O
+auch _ _ O
+ein _ _ O
+professioneller _ _ O
+fußballer _ _ O
+. _ _ O
+
+
+# id bceac9e9-9874-4dc2-b81a-2368f17f27b3	domain=de
+w _ _ O
+: _ _ O
+al _ _ B-Athlete
+leiter _ _ I-Athlete
+( _ _ O
+1 _ _ O
+- _ _ O
+0 _ _ O
+) _ _ O
+l _ _ O
+: _ _ O
+curt _ _ B-Athlete
+schilling _ _ I-Athlete
+( _ _ O
+0 _ _ O
+- _ _ O
+1 _ _ O
+) _ _ O
+s _ _ O
+: _ _ O
+duane _ _ B-Athlete
+ward _ _ I-Athlete
+
+
+# id 11b074bb-480b-427c-a505-5ffc5c4cb059	domain=de
+randall _ _ B-Athlete
+cobb _ _ I-Athlete
+der _ _ O
+von _ _ O
+der _ _ O
+green _ _ B-SportsGRP
+bay _ _ I-SportsGRP
+packers _ _ I-SportsGRP
+eingezogen _ _ O
+wurde _ _ O
+gehört _ _ O
+zu _ _ O
+den _ _ O
+fußball _ _ O
+-alumni _ _ O
+aus _ _ O
+dieser _ _ O
+meisterschaftsstrecke _ _ O
+. _ _ O
+
+
+# id 0d377501-51b7-4e35-91e3-d6daf19c1659	domain=de
+als _ _ O
+rookie _ _ O
+war _ _ O
+er _ _ O
+ein _ _ O
+backup _ _ O
+zu _ _ O
+blaine _ _ B-Athlete
+francis _ _ I-Athlete
+nye _ _ I-Athlete
+. _ _ O
+
+
+# id 19bec388-1829-4f32-a518-73ac3640d37a	domain=de
+trotz _ _ O
+des _ _ O
+verlusts _ _ O
+hatte _ _ O
+rookie _ _ O
+-sicherheit _ _ O
+jairus _ _ B-Athlete
+keelon _ _ I-Athlete
+byrd _ _ I-Athlete
+erneut _ _ O
+zwei _ _ O
+interceptions _ _ O
+. _ _ O
+
+
+# id a41045ca-4f58-4a0d-b861-4caa58cdf0e8	domain=de
+in _ _ O
+der _ _ O
+mitte _ _ O
+der _ _ O
+hälfte _ _ O
+traf _ _ O
+steven _ _ B-Athlete
+caldwell _ _ I-Athlete
+den _ _ O
+kopfball _ _ O
+aus _ _ O
+einer _ _ O
+ecke _ _ O
+auf _ _ O
+den _ _ O
+fuß _ _ O
+des _ _ O
+pfostens _ _ O
+. _ _ O
+
+
+# id 9787f8fd-f30b-4966-9b4f-0308d000c3c3	domain=de
+ike _ _ B-Athlete
+hilliard _ _ I-Athlete
+breiter _ _ O
+empfänger _ _ O
+für _ _ O
+den _ _ O
+tampa _ _ B-SportsGRP
+bay _ _ I-SportsGRP
+buccaneers _ _ I-SportsGRP
+
+
+# id a5b7e232-557a-4d3e-b0be-ecf3ce280107	domain=de
+er _ _ O
+suchte _ _ O
+dann _ _ O
+nach _ _ O
+sechs _ _ O
+weiteren _ _ O
+wurde _ _ O
+aber _ _ O
+von _ _ O
+owais _ _ B-Athlete
+shah _ _ I-Athlete
+von _ _ O
+einer _ _ O
+robin _ _ B-Athlete
+peterson _ _ I-Athlete
+abgabe _ _ O
+in _ _ O
+der _ _ O
+nähe _ _ O
+der _ _ O
+grenze _ _ O
+gefangen _ _ O
+. _ _ O
+
+
+# id 82ace6b2-df63-413f-8008-2f7a4f50abce	domain=de
+niní _ _ O
+ist _ _ O
+ein _ _ O
+argentinien _ _ B-HumanSettlement
+kinder _ _ O
+telenovela _ _ B-VisualWork
+. _ _ O
+
+
+# id 830bcdd3-884e-4d1e-838f-b9111f0270f2	domain=de
+nachbarn _ _ B-VisualWork
+(fernsehserie) _ _ I-VisualWork
+wird _ _ O
+zum _ _ O
+am _ _ O
+wenigsten _ _ O
+beobachteten _ _ O
+drama _ _ O
+für _ _ O
+das _ _ O
+vierte _ _ O
+jahr _ _ O
+in _ _ O
+lauf _ _ O
+. _ _ O
+
+
+# id 1d6d8ad3-141d-48b2-96f8-e902c3029000	domain=de
+die _ _ O
+wissenschaftlichen _ _ O
+freiheiten _ _ O
+des _ _ O
+films _ _ O
+wurden _ _ O
+kritisiert _ _ O
+insbesondere _ _ O
+im _ _ O
+vergleich _ _ O
+zum _ _ O
+realismus _ _ O
+des _ _ O
+films _ _ O
+2011 _ _ O
+contagion _ _ B-VisualWork
+(film) _ _ I-VisualWork
+. _ _ O
+
+
+# id 15ee1cf5-97ab-44d1-a309-fedfaa939c9d	domain=de
+2003 _ _ O
+- _ _ O
+monica _ _ B-Artist
+bellucci _ _ I-Artist
+- _ _ O
+ricordati _ _ B-VisualWork
+di _ _ I-VisualWork
+me _ _ I-VisualWork
+
+
+# id cfa48504-4d40-4deb-8a49-8637eac5909b	domain=de
+staffel _ _ O
+7 _ _ O
+folge _ _ O
+5 _ _ O
+: _ _ O
+rupaul’s _ _ B-VisualWork
+drag _ _ I-VisualWork
+race/staffel _ _ I-VisualWork
+7 _ _ I-VisualWork
+
+
+# id 17f60c02-a819-44f9-aa14-ef5036f42646	domain=de
+er _ _ O
+spielte _ _ O
+die _ _ O
+rolle _ _ O
+von _ _ O
+petronius _ _ B-Politician
+arbiter _ _ I-Politician
+im _ _ O
+epos _ _ O
+von _ _ O
+1924 _ _ O
+quo _ _ B-VisualWork
+vadis? _ _ I-VisualWork
+einem _ _ O
+seiner _ _ O
+letzten _ _ O
+filme _ _ O
+. _ _ O
+
+
+# id 640be810-ba10-4e66-9c45-d4558f3f2b41	domain=de
+er _ _ O
+war _ _ O
+auch _ _ O
+produzent _ _ O
+( _ _ O
+in _ _ O
+späteren _ _ O
+saisons _ _ O
+ausführender _ _ O
+produzent _ _ O
+) _ _ O
+von _ _ O
+make _ _ B-VisualWork
+room _ _ I-VisualWork
+for _ _ I-VisualWork
+daddy _ _ I-VisualWork
+. _ _ O
+
+
+# id 1dbf3698-6b1c-4773-a3e4-e838bfba5bc5	domain=de
+die _ _ O
+staffel _ _ O
+bestand _ _ O
+aus _ _ O
+zwölf _ _ O
+folgen _ _ O
+die _ _ O
+ersten _ _ O
+beiden _ _ O
+am _ _ O
+selben _ _ O
+tag _ _ O
+ausgestrahlt _ _ O
+und _ _ O
+zeigten _ _ O
+einen _ _ O
+rupaul's _ _ B-VisualWork
+drag _ _ I-VisualWork
+race: _ _ I-VisualWork
+untucked _ _ I-VisualWork
+aftershow _ _ O
+. _ _ O
+
+
+# id 5a5ff4e6-e659-4d3a-b8cc-8e8eef096d6d	domain=de
+der _ _ O
+kurze _ _ O
+dokumentarfilm _ _ O
+2017 _ _ O
+a _ _ B-VisualWork
+night _ _ I-VisualWork
+at _ _ I-VisualWork
+the _ _ I-VisualWork
+garden _ _ I-VisualWork
+handelt _ _ O
+von _ _ O
+der _ _ O
+rallye _ _ O
+. _ _ O
+
+
+# id 7293ca21-ce9b-46f4-be03-6a87dd0a7dd2	domain=de
+1940 _ _ O
+unser _ _ B-VisualWork
+trautes _ _ I-VisualWork
+heim _ _ I-VisualWork
+( _ _ O
+kaufman _ _ O
+und _ _ O
+hart _ _ O
+) _ _ O
+
+
+# id a8b29eff-b23b-4476-9851-9a74e5f2d1c0	domain=de
+biloxi _ _ B-VisualWork
+blues _ _ I-VisualWork
+inszeniert _ _ O
+von _ _ O
+mike _ _ B-Artist
+nichols _ _ I-Artist
+hauptrolle _ _ O
+matthew _ _ B-Artist
+broderick _ _ I-Artist
+und _ _ O
+christopher _ _ B-Artist
+walken _ _ I-Artist
+
+
+# id a09467fe-3ade-4acd-b56a-5d3b4a74f0ba	domain=de
+scrooge _ _ O
+war _ _ O
+auch _ _ O
+eine _ _ O
+hauptfigur _ _ O
+in _ _ O
+drei _ _ O
+verschiedenen _ _ O
+comic _ _ O
+-titeln _ _ O
+die _ _ O
+mit _ _ O
+der _ _ O
+fernsehserie _ _ O
+ducktales _ _ B-VisualWork
+zusammenhängen _ _ O
+. _ _ O
+
+
+# id 9b0c9939-cac1-478f-bedd-2845ec4f2e7a	domain=de
+er _ _ O
+wurde _ _ O
+auch _ _ O
+von _ _ O
+eddy _ _ B-Artist
+mitchell _ _ I-Artist
+in _ _ O
+lelouch _ _ B-Artist
+salaud, _ _ B-VisualWork
+on _ _ I-VisualWork
+t'aime _ _ I-VisualWork
+gespielt _ _ O
+. _ _ O
+
+
+# id cdd7071a-1dea-4b09-b339-4ee34cefa1c0	domain=de
+barretta _ _ O
+war _ _ O
+auch _ _ O
+als _ _ O
+ausführender _ _ O
+produzent _ _ O
+in _ _ O
+der _ _ O
+serie _ _ O
+american _ _ B-ORG
+broadcasting _ _ I-ORG
+company _ _ I-ORG
+the _ _ B-VisualWork
+muppets _ _ I-VisualWork
+tätig _ _ O
+. _ _ O
+
+
+# id b9667824-80dd-454c-b150-84867ef533fa	domain=de
+beide _ _ O
+schauspieler _ _ O
+spielen _ _ O
+ihn _ _ O
+in _ _ O
+verschiedenen _ _ O
+altersgruppen _ _ O
+in _ _ O
+x-men: _ _ B-VisualWork
+zukunft _ _ I-VisualWork
+ist _ _ I-VisualWork
+vergangenheit _ _ I-VisualWork
+. _ _ O
+
+
+# id e233c445-e1e9-4dfd-8ec8-bb61ed0d349a	domain=de
+selena _ _ O
+hat _ _ O
+dieses _ _ O
+lied _ _ O
+auch _ _ O
+im _ _ O
+konzert _ _ O
+aufgeführt _ _ O
+das _ _ O
+in _ _ O
+ihrem _ _ O
+selena: _ _ B-VisualWork
+die _ _ I-VisualWork
+serie _ _ I-VisualWork
+insbesondere _ _ O
+dokumentiert _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 4f803819-a4ce-4a44-8caa-a8f99e4ff304	domain=de
+enthält _ _ O
+auch _ _ O
+ein _ _ B-VisualWork
+duke _ _ I-VisualWork
+kommt _ _ I-VisualWork
+selten _ _ I-VisualWork
+allein _ _ I-VisualWork
+– _ _ I-VisualWork
+familientreffen _ _ I-VisualWork
+der _ _ I-VisualWork
+chaoten _ _ I-VisualWork
+und _ _ O
+ein _ _ B-VisualWork
+duke _ _ I-VisualWork
+kommt _ _ I-VisualWork
+selten _ _ I-VisualWork
+allein _ _ I-VisualWork
+– _ _ I-VisualWork
+hillbillies _ _ I-VisualWork
+in _ _ I-VisualWork
+hollywood _ _ I-VisualWork
+. _ _ O
+
+
+# id dfe80d94-bda2-44b5-b4ac-9ba74fb576c4	domain=de
+der _ _ O
+song _ _ O
+im _ _ O
+film _ _ O
+1987 _ _ O
+pet _ _ B-VisualWork
+shop _ _ I-VisualWork
+boys _ _ I-VisualWork
+– _ _ I-VisualWork
+der _ _ I-VisualWork
+film _ _ I-VisualWork
+in _ _ O
+einer _ _ O
+szene _ _ O
+in _ _ O
+der _ _ O
+sich _ _ O
+ein _ _ O
+mann _ _ O
+in _ _ O
+flammen _ _ O
+auf _ _ O
+den _ _ O
+weg _ _ O
+zur _ _ O
+arbeit _ _ O
+macht _ _ O
+. _ _ O
+
+
+# id e0bfcfd2-95cd-4d2e-8a8d-a50844def026	domain=de
+julius _ _ B-VisualWork
+caesar _ _ I-VisualWork
+dargestellt _ _ O
+von _ _ O
+george _ _ B-Artist
+richard _ _ I-Artist
+chamberlain _ _ I-Artist
+. _ _ O
+
+
+# id e9b72522-cf12-4ed7-8a0a-5c55782a3501	domain=de
+sein _ _ O
+erster _ _ O
+film _ _ O
+war _ _ O
+der _ _ O
+chuck _ _ B-Athlete
+norris _ _ I-Athlete
+film _ _ O
+der _ _ B-VisualWork
+bulldozer _ _ I-VisualWork
+. _ _ O
+
+
+# id 541aac6f-dbb6-41a0-be68-008da553ffcb	domain=de
+konfuzianische _ _ O
+lehren _ _ O
+enthalten _ _ O
+ähnlich _ _ O
+mitte _ _ B-WrittenWork
+und _ _ I-WrittenWork
+maß _ _ I-WrittenWork
+; _ _ O
+die _ _ O
+mitte _ _ O
+. _ _ O
+
+
+# id 9525b73a-825f-4170-9a67-9f8555c32963	domain=de
+leo _ _ B-OtherPER
+burnett _ _ I-OtherPER
+( _ _ O
+1891 _ _ O
+- _ _ O
+1971 _ _ O
+) _ _ O
+wurde _ _ O
+von _ _ O
+time _ _ B-WrittenWork
+als _ _ O
+einer _ _ O
+der _ _ O
+100 _ _ O
+einflussreichsten _ _ O
+personen _ _ O
+des _ _ O
+20 _ _ O
+. _ _ O
+jahrhunderts _ _ O
+benannt _ _ O
+. _ _ O
+
+
+# id 3558c166-b742-45bd-b2cd-e9dea77fb331	domain=de
+ny _ _ B-WrittenWork
+times _ _ I-WrittenWork
+beschrieb _ _ O
+den _ _ O
+film _ _ O
+als _ _ O
+kompetent _ _ O
+verzeichnete _ _ O
+die _ _ O
+handlung _ _ O
+aber _ _ O
+als _ _ O
+zu _ _ O
+unmenschlich _ _ O
+. _ _ O
+
+
+# id 790ccb26-e334-47a0-89c3-6b81135b6852	domain=de
+22 _ _ O
+. _ _ O
+september _ _ O
+- _ _ O
+paul _ _ B-Scientist
+hugh _ _ I-Scientist
+emmett _ _ I-Scientist
+chemieingenieur _ _ O
+( _ _ O
+gestorben _ _ O
+1985 _ _ B-WrittenWork
+in _ _ I-WrittenWork
+den _ _ I-WrittenWork
+vereinigten _ _ I-WrittenWork
+staaten _ _ I-WrittenWork
+von _ _ I-WrittenWork
+amerika _ _ I-WrittenWork
+) _ _ O
+
+
+# id 8528c7c9-5c74-4c85-ad68-7a658cfbf500	domain=de
+es _ _ O
+wurde _ _ O
+1988 _ _ O
+zum _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+hinzugefügt _ _ O
+. _ _ O
+
+
+# id 686d113d-8607-4f71-bbc1-c30f8fc381c1	domain=de
+der _ _ O
+distrikt _ _ O
+wurde _ _ O
+2019 _ _ O
+auf _ _ O
+der _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+aufgeführt _ _ O
+. _ _ O
+
+
+# id 7614eef3-f1ae-4047-9471-0c2429abde08	domain=de
+tv _ _ B-WrittenWork
+guide _ _ I-WrittenWork
+schrieb _ _ O
+ein _ _ O
+schwaches _ _ O
+drehbuch _ _ O
+wird _ _ O
+durch _ _ O
+einige _ _ O
+beeindruckende _ _ O
+kampfszenen _ _ O
+und _ _ O
+authentisch _ _ O
+aussehende _ _ O
+kostüme _ _ O
+gespeichert _ _ O
+. _ _ O
+
+
+# id 5cba340e-3862-41f8-9b09-cd6025e76ea1	domain=de
+das _ _ O
+genre _ _ O
+selbst _ _ O
+hat _ _ O
+wurzeln _ _ O
+in _ _ O
+gebetsarten _ _ B-WrittenWork
+und _ _ O
+schlaf- _ _ B-MusicalWork
+und _ _ O
+wird _ _ O
+auf _ _ O
+diese _ _ O
+weise _ _ O
+von _ _ O
+mutter _ _ O
+zu _ _ O
+baby _ _ O
+weitergegeben _ _ O
+. _ _ O
+
+
+# id 96a22389-469c-4b1a-a25a-7a1087cc9605	domain=de
+er _ _ O
+verweist _ _ O
+als _ _ O
+beispiel _ _ O
+auf _ _ O
+die _ _ O
+arbeiten _ _ O
+von _ _ O
+joseph _ _ B-Artist
+needham _ _ I-Artist
+( _ _ O
+autor _ _ O
+der _ _ O
+langjährigen _ _ O
+bücher _ _ O
+die _ _ O
+science _ _ B-WrittenWork
+and _ _ I-WrittenWork
+civilisation _ _ I-WrittenWork
+in _ _ I-WrittenWork
+china _ _ I-WrittenWork
+) _ _ O
+. _ _ O
+
+
+# id 70ba63e4-f7e5-4aef-962e-9130a51d2bba	domain=de
+5 _ _ O
+. _ _ O
+juni _ _ O
+- _ _ O
+tokugawa _ _ B-Politician
+iesato _ _ I-Politician
+politiker _ _ O
+( _ _ O
+geb _ _ O
+. _ _ O
+1863 _ _ B-WrittenWork
+in _ _ I-WrittenWork
+japan _ _ I-WrittenWork
+) _ _ O
+
+
+# id a46d8a0c-00c7-4620-8b20-ebc1bd90463e	domain=de
+in _ _ O
+einem _ _ O
+aufsatz _ _ O
+von _ _ O
+1996 _ _ O
+the _ _ B-WrittenWork
+new _ _ I-WrittenWork
+yorker _ _ I-WrittenWork
+wurde _ _ O
+behauptet _ _ O
+dass _ _ O
+die _ _ O
+fotos _ _ O
+generalisierte _ _ O
+formen _ _ O
+wie _ _ O
+schatten _ _ O
+und _ _ O
+silhouetten _ _ O
+mit _ _ O
+reichlich _ _ O
+überzeugendem _ _ O
+detail _ _ O
+kombinieren _ _ O
+. _ _ O
+
+
+# id f28ba44d-8b03-43ba-a5e6-28efc3ae152f	domain=de
+william _ _ B-Artist
+bryson _ _ I-Artist
+in _ _ O
+seinem _ _ O
+eine _ _ B-WrittenWork
+kurze _ _ I-WrittenWork
+geschichte _ _ I-WrittenWork
+von _ _ I-WrittenWork
+fast _ _ I-WrittenWork
+allem _ _ I-WrittenWork
+notizen _ _ O
+: _ _ O
+
+
+# id 1b47e93e-2200-44fc-b3ca-a5e7d5e72ecb	domain=de
+llnl _ _ O
+hat _ _ O
+eine _ _ O
+lange _ _ O
+geschichte _ _ O
+in _ _ O
+der _ _ O
+entwicklung _ _ O
+von _ _ O
+computer _ _ O
+computersoftware _ _ B-WrittenWork
+und _ _ O
+systemen _ _ O
+. _ _ O
+
+
+# id 20e4c72c-fe6b-47ea-bf77-b651043bae73	domain=de
+roger _ _ B-Artist
+blin _ _ I-Artist
+als _ _ O
+ich _ _ O
+in _ _ O
+den _ _ O
+frühen _ _ O
+1950er _ _ O
+jahren _ _ O
+inszeniert _ _ O
+hatte _ _ O
+entschied _ _ O
+sich _ _ O
+jedoch _ _ O
+für _ _ O
+warten _ _ B-WrittenWork
+auf _ _ I-WrittenWork
+godot _ _ I-WrittenWork
+da _ _ O
+seine _ _ O
+kleinere _ _ O
+gussgröße _ _ O
+es _ _ O
+einfacher _ _ O
+machte _ _ O
+zu _ _ O
+steigen _ _ O
+. _ _ O
+
+
+# id 490ab25a-c5fc-4357-89f0-7ed3746df241	domain=de
+es _ _ O
+wurde _ _ O
+1972 _ _ O
+zum _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+hinzugefügt _ _ O
+. _ _ O
+
+
+# id d215bc43-e846-49c4-85c1-3dd11877ac66	domain=de
+müller _ _ O
+schlösser _ _ O
+schrieb _ _ O
+die _ _ O
+libretti _ _ B-WrittenWork
+der _ _ O
+oper _ _ O
+. _ _ O
+
+
+# id 5ebfe5bc-ce9d-477c-b338-4f69fe1719d1	domain=de
+es _ _ O
+wurde _ _ O
+1982 _ _ O
+auf _ _ O
+der _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+aufgeführt _ _ O
+. _ _ O
+
+
+# id 180df864-655d-473f-972f-b978f8459101	domain=de
+herausgeber _ _ O
+und _ _ O
+chefredakteur _ _ O
+von _ _ O
+forbes _ _ B-WrittenWork
+magazin _ _ O
+
+
+# id 48510ec3-fc7b-4cfa-81c3-0ab241951e64	domain=de
+der _ _ O
+komplex _ _ O
+wurde _ _ O
+2011 _ _ O
+in _ _ O
+der _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+aufgeführt _ _ O
+. _ _ O
+
+
+# id a951b32b-da06-4ed7-a412-a02c72e058ce	domain=de
+1896 _ _ O
+der _ _ O
+bayerische _ _ B-Vehicle
+aa _ _ I-Vehicle
+i _ _ I-Vehicle
+von _ _ O
+dem _ _ O
+nur _ _ O
+einer _ _ O
+gebaut _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id ed172c61-5491-46ce-baaa-139e434d13f9	domain=de
+tanker _ _ O
+uss _ _ B-Vehicle
+abarenda _ _ I-Vehicle
+für _ _ O
+die _ _ O
+us _ _ B-ORG
+shipping _ _ I-ORG
+board _ _ I-ORG
+im _ _ O
+jahr _ _ O
+1916 _ _ O
+
+
+# id dd3d350f-9c5a-422b-b6e0-6632ccec3efd	domain=de
+schnellst _ _ O
+- _ _ O
+3 _ _ O
+61 _ _ O
+sekunden _ _ O
+- _ _ O
+rimac _ _ B-Vehicle
+c_two _ _ I-Vehicle
+
+
+# id 8a6724ac-3517-467e-8471-b6fbe2cd14f1	domain=de
+es _ _ O
+übertrifft _ _ O
+den _ _ O
+renault _ _ B-Vehicle
+fluence _ _ I-Vehicle
+der _ _ O
+dritte _ _ O
+platz _ _ O
+belegt _ _ O
+. _ _ O
+
+
+# id ec4c2604-2a07-41f4-a58c-35e0bdd0242d	domain=de
+es _ _ O
+gab _ _ O
+weiter _ _ O
+einen _ _ O
+adolf _ _ B-Vehicle
+lüderitz _ _ I-Vehicle
+seinen _ _ O
+namen _ _ O
+und _ _ O
+einen _ _ O
+stempel _ _ O
+von _ _ O
+1934 _ _ O
+kaiserliche _ _ B-ORG
+post _ _ I-ORG
+. _ _ O
+
+
+# id 1040c794-a68d-4e0e-8070-f16216b63364	domain=de
+zwei _ _ O
+schwerer _ _ B-Vehicle
+kreuzer _ _ I-Vehicle
+: _ _ O
+und _ _ O
+; _ _ O
+
+
+# id f1e1c077-6841-44c7-bb15-526637fc1108	domain=de
+als _ _ O
+teil _ _ O
+einiger _ _ O
+ortsnamen _ _ O
+in _ _ O
+denen _ _ O
+es _ _ O
+ein _ _ O
+ruderboot _ _ O
+gibt _ _ O
+oder _ _ O
+war _ _ O
+das _ _ O
+als _ _ O
+fähre _ _ B-Vehicle
+verwendet _ _ O
+wird _ _ O
+
+
+# id 531ba9ff-f05f-4eda-87db-b95173f7c9e4	domain=de
+kategorie _ _ O
+b _ _ O
+: _ _ O
+serienproduktion _ _ O
+automobile _ _ O
+( _ _ O
+wie _ _ O
+der _ _ O
+bugatti _ _ B-Vehicle
+veyron _ _ I-Vehicle
+) _ _ O
+
+
+# id 01bd22cf-fae3-48a7-a7a8-ab13c059ea13	domain=de
+in _ _ O
+den _ _ O
+ersten _ _ O
+zehn _ _ O
+jahren _ _ O
+hatte _ _ O
+der _ _ O
+hof _ _ O
+eine _ _ O
+sehr _ _ O
+bescheidene _ _ O
+produktion _ _ O
+hauptsächlich _ _ O
+dampfstarts _ _ O
+und _ _ O
+dampf _ _ O
+yacht _ _ B-Vehicle
+. _ _ O
+
+
+# id a043d1f1-c794-4e14-91e6-d86ddd816683	domain=de
+der _ _ O
+tourenwagen _ _ B-Vehicle
+der _ _ O
+fünf _ _ O
+sitzend _ _ O
+war _ _ O
+wurde _ _ O
+bei _ _ O
+1695 _ _ O
+us _ _ O
+-dollar _ _ O
+gelistet _ _ O
+. _ _ O
+
+
+# id 5cfa2a53-7b61-4679-b487-41165e7ff53f	domain=de
+robert _ _ B-Scientist
+fulton _ _ I-Scientist
+(ingenieur) _ _ I-Scientist
+( _ _ O
+1765 _ _ O
+- _ _ O
+1815 _ _ O
+) _ _ O
+--geschrieben _ _ O
+der _ _ O
+entwicklung _ _ O
+des _ _ O
+ersten _ _ O
+werbespots _ _ O
+dampfschiffahrt _ _ B-Vehicle
+
+
+# id ce224ea9-55e2-4522-84ef-fbcab5c78d21	domain=de
+der _ _ O
+florida _ _ B-SportsGRP
+panthers _ _ I-SportsGRP
+für _ _ O
+den _ _ O
+ersten _ _ O
+präsidenten _ _ O
+des _ _ O
+teams _ _ O
+bill _ _ B-SportsManager
+torrey _ _ I-SportsManager
+. _ _ O
+
+
+# id 2788a38a-ef24-439a-a11d-cf43eac3ef8f	domain=de
+kelly _ _ O
+unterzeichnete _ _ O
+1984 _ _ O
+einen _ _ O
+fachmann _ _ O
+als _ _ O
+jackie _ _ B-SportsManager
+charlton _ _ I-SportsManager
+als _ _ O
+manager _ _ O
+. _ _ O
+
+
+# id 9b1230e3-09a5-4e56-94c9-467bf71f7024	domain=de
+terry _ _ B-OtherPER
+griffiths _ _ I-OtherPER
+gewann _ _ O
+das _ _ O
+turnier _ _ O
+mit _ _ O
+der _ _ O
+besiegung _ _ O
+von _ _ O
+douglas _ _ B-SportsManager
+james _ _ I-SportsManager
+mountjoy _ _ I-SportsManager
+9 _ _ O
+- _ _ O
+4 _ _ O
+im _ _ O
+finale _ _ O
+. _ _ O
+
+
+# id c2546785-a60e-4bc8-8390-85cc5540cefb	domain=de
+im _ _ O
+jahr _ _ O
+2021 _ _ O
+wechselte _ _ O
+sie _ _ O
+als _ _ O
+co _ _ O
+-coach _ _ O
+william _ _ B-SportsManager
+j. _ _ I-SportsManager
+laimbeer _ _ I-SportsManager
+jr. _ _ I-SportsManager
+im _ _ O
+las _ _ B-SportsGRP
+vegas _ _ I-SportsGRP
+aces _ _ I-SportsGRP
+als _ _ O
+co _ _ O
+-coach _ _ O
+. _ _ O
+
+
+# id 74e4b1ad-ef36-43c1-ad5f-8b9e573f513f	domain=de
+in _ _ O
+diesem _ _ O
+jahr _ _ O
+schrieb _ _ O
+juan _ _ B-SportsManager
+carlos _ _ I-SportsManager
+sánchez _ _ I-SportsManager
+seinen _ _ O
+namen _ _ O
+in _ _ O
+das _ _ O
+buch _ _ O
+der _ _ O
+aufzeichnungen _ _ O
+dieses _ _ O
+prestigeträchtigen _ _ O
+turniers _ _ O
+. _ _ O
+
+
+# id af1fac34-b6c2-431f-aa82-2a8728ca0d5e	domain=de
+der _ _ O
+derzeitige _ _ O
+präsident _ _ O
+des _ _ O
+körpers _ _ O
+ist _ _ O
+hamad _ _ B-SportsManager
+kalkaba _ _ I-SportsManager
+malboum _ _ I-SportsManager
+von _ _ O
+kamerun _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 1c147204-8436-4897-a9ac-4cf3be127dce	domain=de
+bengtsson _ _ O
+begann _ _ O
+seine _ _ O
+karriere _ _ O
+als _ _ O
+co _ _ O
+-coach _ _ O
+unter _ _ O
+sven-göran _ _ B-SportsManager
+eriksson _ _ I-SportsManager
+unter _ _ O
+ifk _ _ B-SportsGRP
+göteborg _ _ I-SportsGRP
+. _ _ O
+
+
+# id 46c0cf98-2f50-4277-a46b-8e5a15af21b8	domain=de
+alex _ _ B-SportsManager
+wood _ _ I-SportsManager
+( _ _ O
+geb _ _ O
+. _ _ O
+1955 _ _ O
+) _ _ O
+college _ _ O
+-fußballtrainer _ _ O
+
+
+# id 8d33de02-ba67-4a76-b100-73758781ad68	domain=de
+er _ _ O
+diente _ _ O
+während _ _ O
+seiner _ _ O
+karriere _ _ O
+unter _ _ O
+drei _ _ O
+nationalen _ _ O
+meisterschaftstrainern _ _ O
+( _ _ O
+ara _ _ B-SportsManager
+raoul _ _ I-SportsManager
+parseghian _ _ I-SportsManager
+dan _ _ B-Athlete
+devine _ _ I-Athlete
+und _ _ O
+lou _ _ B-SportsManager
+holtz _ _ I-SportsManager
+) _ _ O
+. _ _ O
+
+
+# id 724c269d-ae76-4965-8b4e-d860456299fb	domain=de
+portsmouth _ _ B-SportsGRP
+spartans _ _ I-SportsGRP
+: _ _ O
+george _ _ B-SportsManager
+wilson _ _ I-SportsManager
+wurde _ _ O
+durch _ _ O
+harry _ _ B-Athlete
+gilmer _ _ I-Athlete
+ersetzt _ _ O
+. _ _ O
+
+
+# id 70a58d0c-dcc3-49df-a5cd-538397dd5c12	domain=de
+dick _ _ B-SportsManager
+macpherson _ _ I-SportsManager
+fußballtrainer _ _ O
+( _ _ O
+geb _ _ O
+. _ _ O
+1930 _ _ O
+) _ _ O
+
+
+# id d2c5cb57-0936-4172-8c6d-65fb7c0a7856	domain=de
+die _ _ O
+sprachklassifizierung _ _ O
+wird _ _ O
+häufig _ _ O
+innerhalb _ _ O
+von _ _ O
+oper _ _ B-MusicalWork
+verwendet _ _ O
+um _ _ O
+mögliche _ _ O
+rollen _ _ O
+mit _ _ O
+potenziellen _ _ O
+stimmen _ _ O
+zu _ _ O
+verbinden _ _ O
+. _ _ O
+
+
+# id 271afe85-7944-4d3d-a020-1f5e2dcc1fa4	domain=de
+conciererto _ _ O
+ist _ _ O
+nach _ _ O
+der _ _ O
+19 _ _ O
+-minütigen _ _ O
+jazz _ _ O
+-version _ _ O
+des _ _ O
+klassischen _ _ O
+stücks _ _ O
+für _ _ O
+gitarre _ _ O
+concierto _ _ B-MusicalWork
+de _ _ I-MusicalWork
+aranjuez _ _ I-MusicalWork
+von _ _ O
+joaquín _ _ B-Artist
+rodrigo _ _ I-Artist
+benannt _ _ O
+. _ _ O
+
+
+# id db0c54b4-6a6d-41a3-890c-318bc5886f21	domain=de
+er _ _ O
+schloss _ _ O
+die _ _ O
+fünfte _ _ O
+strophe _ _ O
+von _ _ O
+elisabeth _ _ B-Artist
+kreuziger _ _ I-Artist
+hymnus _ _ B-MusicalWork
+ein _ _ O
+. _ _ O
+
+
+# id d488b23c-c6b3-46fb-aa9e-744048f051b8	domain=de
+und _ _ O
+verglichen _ _ O
+das _ _ O
+album _ _ O
+mit _ _ O
+sweet _ _ B-MusicalGRP
+children _ _ I-MusicalGRP
+american _ _ B-MusicalWork
+idiot _ _ I-MusicalWork
+. _ _ O
+
+
+# id 69c82e2a-72a9-490c-98d8-0cef1f5beb48	domain=de
+die _ _ O
+beiden _ _ O
+anderen _ _ O
+einsendungen _ _ O
+von _ _ O
+presley _ _ O
+aus _ _ O
+dem _ _ O
+jahr _ _ O
+1960 _ _ O
+waren _ _ O
+stuck _ _ B-MusicalWork
+on _ _ I-MusicalWork
+you _ _ I-MusicalWork
+(elvis-presley-lied) _ _ I-MusicalWork
+und _ _ O
+a _ _ B-MusicalWork
+mess _ _ I-MusicalWork
+of _ _ I-MusicalWork
+blues _ _ I-MusicalWork
+. _ _ O
+]]] _ _ O
+
+
+# id d187601c-9ba7-44b8-b0ed-19266be98648	domain=de
+beste _ _ O
+single _ _ O
+: _ _ O
+a _ _ B-MusicalWork
+view _ _ I-MusicalWork
+to _ _ I-MusicalWork
+a _ _ I-MusicalWork
+kill _ _ I-MusicalWork
+von _ _ O
+duran _ _ B-MusicalGRP
+duran _ _ I-MusicalGRP
+
+
+# id 5dc8c5de-2aa8-404a-942e-a6e9dff18981	domain=de
+mar _ _ B-MusicalWork
+maroon _ _ I-MusicalWork
+( _ _ O
+11 _ _ O
+. _ _ O
+märz _ _ O
+2009 _ _ O
+) _ _ O
+50 _ _ O
+
+
+# id e0898eed-cf19-41e0-bc1c-2074446add83	domain=de
+es _ _ O
+enthält _ _ O
+eine _ _ O
+stichprobe _ _ O
+des _ _ O
+strings _ _ O
+-zusammenbruchs _ _ O
+von _ _ O
+good _ _ B-MusicalWork
+times _ _ I-MusicalWork
+durch _ _ O
+chic _ _ B-MusicalGRP
+. _ _ O
+
+
+# id 483516a2-bdd9-4bd3-9886-0730d35691f9	domain=de
+from _ _ B-MusicalWork
+a _ _ I-MusicalWork
+distance _ _ I-MusicalWork
+( _ _ O
+julie _ _ B-Artist
+gold _ _ I-Artist
+) _ _ O
+- _ _ O
+4 _ _ O
+: _ _ O
+37 _ _ O
+
+
+# id 2bf223ed-51df-4563-a835-88c8e52b5000	domain=de
+4 _ _ O
+. _ _ O
+november _ _ O
+shania _ _ B-Artist
+veröffentlicht _ _ O
+ihr _ _ O
+drittes _ _ O
+studioalbum _ _ O
+come _ _ B-MusicalWork
+on _ _ I-MusicalWork
+over _ _ I-MusicalWork
+. _ _ O
+
+
+# id 1dc9d1e5-b5b9-46d8-9d73-fccdf643fe96	domain=de
+in _ _ B-MusicalWork
+my _ _ I-MusicalWork
+life _ _ I-MusicalWork
+( _ _ O
+einzelversion _ _ O
+) _ _ O
+( _ _ O
+john _ _ B-Artist
+winston _ _ I-Artist
+lennon _ _ I-Artist
+paul _ _ B-Artist
+mccartney _ _ I-Artist
+) _ _ O
+- _ _ O
+3 _ _ O
+: _ _ O
+12 _ _ O
+
+
+# id c55a5fd3-c4d5-485d-be5b-3e9eb56d8703	domain=de
+hey _ _ B-MusicalWork
+jude _ _ I-MusicalWork
+>> _ _ O
+( _ _ O
+john _ _ B-Artist
+winston _ _ I-Artist
+lennon _ _ I-Artist
+paul _ _ B-Artist
+mccartney _ _ I-Artist
+) _ _ O
+- _ _ O
+3 _ _ O
+: _ _ O
+12 _ _ O
+
+
+# id d3f59f79-4f91-40e4-87ba-acec3c7c9794	domain=de
+1998 _ _ O
+veröffentlichte _ _ O
+die _ _ O
+band _ _ O
+ihr _ _ O
+debüt _ _ O
+in _ _ O
+voller _ _ O
+länge _ _ O
+queens _ _ B-MusicalWork
+of _ _ I-MusicalWork
+the _ _ I-MusicalWork
+stone _ _ I-MusicalWork
+age _ _ I-MusicalWork
+(album) _ _ I-MusicalWork
+. _ _ O
+
+
+# id 93fff765-b6e1-4de2-a495-26fc2bee05b4	domain=de
+dann _ _ O
+verlor _ _ O
+er _ _ O
+in _ _ O
+der _ _ O
+schlacht _ _ O
+in _ _ O
+der _ _ O
+er _ _ O
+stand _ _ B-MusicalWork
+by _ _ I-MusicalWork
+me _ _ I-MusicalWork
+(lied) _ _ I-MusicalWork
+sang _ _ O
+. _ _ O
+
+
+# id 24690cfc-a0df-4cbb-a3e7-f5ac88b6ba10	domain=de
+sean _ _ B-Artist
+john _ _ I-Artist
+( _ _ O
+mit _ _ O
+faith _ _ B-Artist
+evans _ _ I-Artist
+und _ _ O
+112 _ _ B-MusicalGRP
+(band) _ _ I-MusicalGRP
+) _ _ O
+- _ _ O
+i'll _ _ B-MusicalWork
+be _ _ I-MusicalWork
+missing _ _ I-MusicalWork
+you _ _ I-MusicalWork
+
+
+# id 542f956d-f115-48d8-9ab5-23faaa8ec5bb	domain=de
+barrett _ _ B-MusicalWork
+( _ _ O
+mit _ _ O
+gitarrenriff _ _ O
+von _ _ O
+another _ _ B-MusicalWork
+brick _ _ I-MusicalWork
+in _ _ I-MusicalWork
+the _ _ I-MusicalWork
+wall _ _ I-MusicalWork
+) _ _ O
+
+
+# id 07460136-5350-485a-9056-2af9bc30b131	domain=de
+2011 _ _ O
+: _ _ O
+sara _ _ B-Artist
+linn _ _ I-Artist
+evans _ _ I-Artist
+stronger _ _ B-MusicalWork
+( _ _ O
+sony _ _ B-MusicalGRP
+music _ _ I-MusicalGRP
+entertainment _ _ I-MusicalGRP
+) _ _ O
+akustikgitarre _ _ O
+banjo _ _ O
+
+
+# id 03cd2985-9f71-470a-a934-c0af69514a1b	domain=de
+you _ _ B-MusicalWork
+can't _ _ I-MusicalWork
+catch _ _ I-MusicalWork
+me _ _ I-MusicalWork
+( _ _ O
+chuck _ _ B-Artist
+berry _ _ I-Artist
+) _ _ O
+- _ _ O
+4 _ _ O
+: _ _ O
+52 _ _ O
+
+
+# id b3059395-98ee-4055-8267-f90823ae1d2e	domain=de
+milch _ _ B-Drink
+die _ _ O
+landwirtschaft _ _ O
+ist _ _ O
+seit _ _ O
+jahrhunderten _ _ O
+in _ _ O
+diesem _ _ O
+dorf _ _ O
+ein _ _ O
+hobby _ _ O
+für _ _ O
+alle _ _ O
+landwirtschaft _ _ O
+. _ _ O
+
+
+# id e1b03a97-76a5-4fee-9a8e-eb59f985431f	domain=de
+der _ _ O
+begriff _ _ O
+bezieht _ _ O
+sich _ _ O
+auch _ _ O
+auf _ _ O
+die _ _ O
+eröffnung _ _ O
+eines _ _ O
+fass _ _ O
+von _ _ O
+sake _ _ B-Drink
+auf _ _ O
+einer _ _ O
+party _ _ O
+oder _ _ O
+zeremonie _ _ O
+. _ _ O
+
+
+# id c28d0a65-d6b4-4af2-beaa-7b32041818ed	domain=de
+knoppers _ _ O
+ist _ _ O
+eine _ _ O
+marke _ _ O
+von _ _ O
+esspapier _ _ B-Food
+candy _ _ O
+bar _ _ O
+gefüllt _ _ O
+mit _ _ O
+haselnuss _ _ B-Food
+und _ _ O
+milch _ _ B-Drink
+creme _ _ O
+die _ _ O
+von _ _ O
+august _ _ B-ORG
+storck _ _ I-ORG
+produziert _ _ O
+wurden _ _ O
+. _ _ O
+
+
+# id b69f8b55-b323-4348-b5fb-50c26b9c0332	domain=de
+der _ _ O
+po _ _ O
+-chômeur _ _ O
+ist _ _ O
+ein _ _ O
+basis _ _ O
+kuchen _ _ B-Food
+auf _ _ O
+den _ _ O
+ein _ _ O
+heißes _ _ O
+sirup _ _ B-Drink
+oder _ _ O
+karamell _ _ B-Food
+vor _ _ O
+dem _ _ O
+backen _ _ O
+gegossen _ _ O
+wird _ _ O
+. _ _ O
+
+
+# id 075f0089-db09-453e-a423-d2707f07aefd	domain=de
+lemon _ _ B-Drink
+drop _ _ I-Drink
+- _ _ O
+ein _ _ O
+ähnlicher _ _ O
+cocktail _ _ O
+der _ _ O
+mit _ _ O
+wodka _ _ O
+zubereitet _ _ O
+wird _ _ O
+
+
+# id cf9d7da4-dc43-4260-a8b2-9c2942e8d020	domain=de
+rev _ _ O
+a _ _ O
+gorilka _ _ B-Drink
+kühler _ _ O
+aus _ _ O
+kanada]]] _ _ O
+
+
+# id 3c89963e-25f6-45de-9da3-8e23fc9a59a7	domain=de
+arthur _ _ O
+erinnert _ _ O
+sich _ _ O
+dass _ _ O
+seine _ _ O
+tasche _ _ O
+eine _ _ O
+flasche _ _ O
+retsina _ _ B-Drink
+enthält _ _ O
+und _ _ O
+dies _ _ O
+bringt _ _ O
+ihnen _ _ O
+den _ _ O
+eintritt _ _ O
+. _ _ O
+
+
+# id c42ccdae-ea34-481d-8d59-198fc58bc80c	domain=de
+georges _ _ B-OtherPER
+duboeuf _ _ I-OtherPER
+- _ _ O
+innovative _ _ O
+und _ _ O
+große _ _ O
+beaujolais _ _ B-Drink
+abfüller _ _ O
+
+
+# id 0ebce2c2-3eb1-472a-9e89-3feb24be27ff	domain=de
+so _ _ O
+wie _ _ O
+poitin _ _ B-Drink
+auf _ _ O
+dem _ _ O
+festland _ _ O
+unter _ _ O
+verwendung _ _ O
+verschiedener _ _ O
+formeln _ _ O
+hergestellt _ _ O
+wurde _ _ O
+wurde _ _ O
+okolehehao _ _ O
+unter _ _ O
+verwendung _ _ O
+verschiedener _ _ O
+fermentierbarer _ _ O
+zutaten _ _ O
+hergestellt _ _ O
+. _ _ O
+
+
+# id 40dfe79c-3bcc-42c8-9427-a935a6295c11	domain=de
+mint _ _ B-Drink
+julep _ _ I-Drink
+ein _ _ O
+gemischtes _ _ O
+alkoholisches _ _ O
+getränk _ _ O
+oder _ _ O
+cocktail _ _ O
+bestehend _ _ O
+aus _ _ O
+bourbon _ _ O
+( _ _ O
+oder _ _ O
+einem _ _ O
+anderen _ _ O
+geist _ _ O
+) _ _ O
+und _ _ O
+frischer _ _ O
+minze _ _ O
+
+
+# id 96db7f6e-55dc-4750-98e4-f183d2e0fe8c	domain=de
+die _ _ O
+erste _ _ O
+gruppe _ _ O
+aß _ _ O
+nur _ _ O
+weizen _ _ O
+die _ _ O
+zweite _ _ O
+gruppe _ _ O
+aß _ _ O
+nur _ _ O
+weizengrießkleie _ _ B-Food
+die _ _ O
+dritte _ _ O
+gruppe _ _ O
+aß _ _ O
+nur _ _ O
+mais _ _ O
+und _ _ O
+die _ _ O
+letzte _ _ O
+gruppe _ _ O
+aß _ _ O
+eine _ _ O
+mischung _ _ O
+der _ _ O
+anderen _ _ O
+drei _ _ O
+. _ _ O
+
+
+# id f8ba8f0e-9623-493b-8dd4-de19af289f71	domain=de
+der _ _ O
+gedämpfte _ _ O
+klebrige _ _ O
+reis _ _ O
+wird _ _ O
+mit _ _ O
+luk _ _ O
+paeng _ _ O
+gemischt _ _ O
+und _ _ O
+drei _ _ O
+tage _ _ O
+lang _ _ O
+in _ _ O
+einem _ _ O
+fermentationstank _ _ O
+aufbewahrt _ _ O
+da _ _ O
+die _ _ O
+stärke _ _ O
+im _ _ O
+reis _ _ O
+zu _ _ O
+zucker _ _ B-Food
+ändert _ _ O
+. _ _ O
+
+
+# id d2532c3d-9bb3-47d2-92d7-0cad9650e5f4	domain=de
+momo _ _ B-Food
+( _ _ O
+knödel _ _ O
+gefüllt _ _ O
+mit _ _ O
+gehacktem _ _ O
+büffel _ _ O
+oder _ _ O
+hühnerfleisch _ _ O
+) _ _ O
+* _ _ O
+
+
+# id c6c41ee0-84ca-4364-aa78-c44b9b0f854a	domain=de
+das _ _ O
+holz _ _ O
+ist _ _ O
+auch _ _ O
+duftend _ _ O
+mit _ _ O
+hinweisen _ _ O
+auf _ _ O
+muskatnuss _ _ B-Food
+und _ _ O
+cinnamomum _ _ B-Medication/Vaccine
+verum _ _ I-Medication/Vaccine
+( _ _ O
+auch _ _ O
+mitglied _ _ O
+der _ _ O
+lauraceae _ _ O
+) _ _ O
+. _ _ O
+
+
+# id 823f4fce-1dec-4975-ac35-624b4cdc6e8e	domain=de
+mit _ _ O
+avocado _ _ O
+-blättern _ _ O
+werden _ _ O
+lebensmittel _ _ O
+und _ _ O
+gerichte _ _ O
+verwendet _ _ O
+die _ _ O
+häufig _ _ O
+tomaten _ _ O
+tomatillo _ _ B-Food
+nopals _ _ O
+und _ _ O
+eine _ _ O
+pflanze _ _ O
+namens _ _ O
+huanzontle _ _ O
+enthalten _ _ O
+. _ _ O
+
+
+# id 79270a27-c0c6-476b-8209-31a06df845b1	domain=de
+280 _ _ O
+. _ _ O
+000 _ _ O
+tonnen _ _ O
+palmfett _ _ B-Food
+; _ _ O
+
+
+# id 20cc4183-12d8-4d34-9882-766545ee1851	domain=de
+pongal _ _ O
+bezieht _ _ O
+sich _ _ O
+im _ _ O
+allgemeinen _ _ O
+auf _ _ O
+das _ _ O
+herzhafte _ _ O
+venn _ _ O
+pongal _ _ O
+und _ _ O
+wird _ _ O
+manchmal _ _ O
+zum _ _ O
+frühstück _ _ O
+mit _ _ O
+vada _ _ B-Food
+(gericht) _ _ I-Food
+und _ _ O
+mango _ _ B-Food
+chutney _ _ I-Food
+serviert _ _ O
+. _ _ O
+
+
+# id 5b428697-1ff5-4f7d-b655-d9a20a5da3ca	domain=de
+boudin _ _ B-Food
+sausages _ _ I-Food
+- _ _ O
+eine _ _ O
+art _ _ O
+von _ _ O
+verwurster _ _ B-Food
+aus _ _ O
+schweinefleisch _ _ O
+schweinefleischleber _ _ O
+reis _ _ O
+knoblauch _ _ O
+frühlingszwiebeln _ _ B-Food
+und _ _ O
+anderen _ _ O
+gewürzen _ _ O
+. _ _ O
+
+
+# id 2bacaadc-4ef7-4d79-84d4-e37339b11dcc	domain=de
+zu _ _ O
+dieser _ _ O
+zeit _ _ O
+wuchs _ _ O
+ein _ _ O
+duriobaum _ _ B-Food
+baum _ _ O
+neben _ _ O
+dem _ _ O
+fluss _ _ O
+. _ _ O
+
+
+# id 9f412ea6-a410-4034-8c84-3b81ae078558	domain=de
+das _ _ O
+rezept _ _ O
+besteht _ _ O
+aus _ _ O
+weizen _ _ O
+universales _ _ B-Food
+mehl _ _ I-Food
+salzbutter _ _ B-Food
+milch _ _ B-Drink
+oder _ _ O
+kaenemaelk _ _ B-Drink
+cinnamomum _ _ B-Medication/Vaccine
+verum _ _ I-Medication/Vaccine
+und _ _ O
+zucker _ _ B-Food
+. _ _ O
+
+
+# id e2e3c050-4f78-45c5-9d7a-fd1b01e38dc0	domain=de
+diese _ _ O
+insekten _ _ O
+ernähren _ _ O
+sich _ _ O
+von _ _ O
+der _ _ O
+speisestärke _ _ B-Food
+von _ _ O
+papier _ _ O
+und _ _ O
+tapeten _ _ O
+sowie _ _ O
+von _ _ O
+toten _ _ O
+insektenteilen _ _ O
+. _ _ O
+
+
+# id b719d9f4-49f3-4fcf-b82b-72aa444ac52c	domain=de
+1947 _ _ O
+: _ _ O
+zolushka _ _ B-VisualWork
+/ _ _ O
+( _ _ O
+verfilmung _ _ B-VisualWork
+von _ _ O
+aschenputtel _ _ O
+) _ _ O
+
+
+# id 5947cb94-ac04-4088-a017-18bee0d39a96	domain=de
+1955 _ _ O
+verabschiedete _ _ O
+der _ _ O
+europarat _ _ B-ORG
+ein _ _ O
+europafahne _ _ O
+zwölf _ _ O
+goldene _ _ O
+sterne _ _ O
+in _ _ O
+einem _ _ O
+kreis _ _ O
+auf _ _ O
+einem _ _ O
+blauen _ _ O
+feld _ _ O
+. _ _ O
+
+
+# id 6f22a64e-b09a-4ce4-9342-6ee19d640a89	domain=de
+saulus _ _ B-Cleric
+wurde _ _ O
+drei _ _ O
+tage _ _ O
+lang _ _ O
+nach _ _ O
+seinem _ _ O
+damaskuserlebnis _ _ O
+blind _ _ O
+. _ _ O
+
+
+# id 98b85b53-35ed-4f4c-a00e-f3bd5fb1f004	domain=de
+der _ _ O
+song _ _ O
+wurde _ _ O
+in _ _ O
+der _ _ O
+kinotrailer _ _ O
+für _ _ O
+den _ _ O
+2006er _ _ O
+film _ _ O
+atl _ _ B-VisualWork
+– _ _ I-VisualWork
+verloren _ _ I-VisualWork
+in _ _ I-VisualWork
+atlanta _ _ I-VisualWork
+mit _ _ O
+t _ _ O
+. _ _ O
+i _ _ O
+. _ _ O
+. _ _ O
+
+
+# id 90c31555-6f86-48b4-bc75-2722fc7d5bc9	domain=de
+sklavenkirchen _ _ O
+predigten _ _ O
+oft _ _ O
+die _ _ O
+botschaft _ _ O
+von _ _ O
+mose _ _ B-Cleric
+und _ _ O
+dem _ _ O
+exodus _ _ O
+. _ _ O
+
+
+# id df90bac6-ac62-4e0b-bbc5-1baba7620ff5	domain=de
+ihr _ _ O
+nachname _ _ O
+wurde _ _ O
+von _ _ O
+ihrer _ _ O
+affinität _ _ O
+zu _ _ O
+mattel _ _ B-PublicCorp
+barbie _ _ O
+und _ _ O
+ken _ _ O
+puppen _ _ O
+und _ _ O
+kinderspielzeug _ _ O
+inspiriert _ _ O
+. _ _ O
+
+
+# id d0cf6fb5-342d-4cb4-a7bb-23508639f3d5	domain=de
+die _ _ O
+dekoration _ _ O
+umfasst _ _ O
+darstellungen _ _ O
+von _ _ O
+mose _ _ B-Cleric
+isaias _ _ B-Artist
+jeremija _ _ B-Cleric
+und _ _ O
+des _ _ O
+ankündigung _ _ O
+der _ _ O
+geburt _ _ O
+jesu _ _ O
+. _ _ O
+
+
+# id 558c09ae-569f-453b-ab18-8be8a6a860d6	domain=de
+die _ _ O
+band _ _ O
+hat _ _ O
+zur _ _ O
+bekanntheit _ _ O
+und _ _ O
+wiederbelebung _ _ O
+von _ _ O
+huaino _ _ O
+musik _ _ O
+von _ _ O
+central _ _ O
+peru _ _ B-HumanSettlement
+beigetragen _ _ O
+. _ _ O
+
+
+# id 24c7894d-c088-476a-987b-cb5dd75a8227	domain=de
+dies _ _ O
+ließ _ _ O
+seine _ _ O
+älteste _ _ O
+tochter _ _ O
+maria _ _ B-OtherPER
+theresia _ _ I-OtherPER
+als _ _ O
+erbe _ _ O
+österreichisches _ _ B-HumanSettlement
+kaiserreich _ _ I-HumanSettlement
+dessen _ _ O
+lex _ _ O
+salica _ _ O
+aus _ _ O
+der _ _ O
+nachfolge _ _ O
+. _ _ O
+
+
+# id 9d8915d9-26b7-4291-86d9-4f5fb910c69a	domain=de
+sowohl _ _ O
+standard _ _ O
+shogi _ _ O
+als _ _ O
+auch _ _ O
+go _ _ O
+(spiel) _ _ O
+wurden _ _ O
+vom _ _ O
+tokugawa-shōgunat _ _ B-HumanSettlement
+gefördert _ _ O
+. _ _ O
+
+
+# id 35ea1b26-2128-41b2-bebd-d09520062dc8	domain=de
+er _ _ O
+brachte _ _ O
+seinen _ _ O
+schülern _ _ O
+bereits _ _ O
+1947 _ _ O
+bei _ _ O
+dass _ _ O
+die _ _ O
+zunahme _ _ O
+der _ _ O
+atmosphärischen _ _ O
+co2 _ _ B-Medication/Vaccine
+zu _ _ O
+einer _ _ O
+globalen _ _ O
+temperaturerhöhung _ _ O
+führen _ _ O
+würde _ _ O
+. _ _ O
+
+
+# id 9fd092ba-bf41-4bff-befd-3e5aeecb1dc8	domain=de
+die _ _ O
+ergebnisse _ _ O
+könnten _ _ O
+zu _ _ O
+wirksameren _ _ O
+anti-depressiva _ _ B-Medication/Vaccine
+therapien _ _ O
+führen _ _ O
+. _ _ O
+
+
+# id e79ccac7-3674-4743-a7e3-8fbbc1f25883	domain=de
+es _ _ O
+gibt _ _ O
+vorläufige _ _ O
+beweise _ _ O
+dafür _ _ O
+dass _ _ O
+betahistin _ _ B-Medication/Vaccine
+bei _ _ O
+schwindel _ _ O
+helfen _ _ O
+kann _ _ O
+aber _ _ O
+seine _ _ O
+verwendung _ _ O
+ist _ _ O
+im _ _ O
+allgemeinen _ _ O
+nicht _ _ O
+erforderlich _ _ O
+. _ _ O
+
+
+# id 5d4e28d0-9086-4d20-b5e8-5b76d63efc4a	domain=de
+doxifluridin _ _ B-Medication/Vaccine
+ein _ _ O
+nukleosidanalogon _ _ O
+der _ _ O
+zweiten _ _ O
+generation _ _ O
+
+
+# id daec33b4-f442-4783-b25d-65b61e8e9723	domain=de
+es _ _ O
+ist _ _ O
+ein _ _ O
+metabolit _ _ O
+des _ _ O
+antianginalen _ _ O
+arzneimittels _ _ O
+molsidomin _ _ B-Medication/Vaccine
+und _ _ O
+wirkt _ _ O
+durch _ _ O
+die _ _ O
+freigabe _ _ O
+stickstoffmonooxid _ _ B-Medication/Vaccine
+aus _ _ O
+den _ _ O
+endothelzellen _ _ O
+nicht _ _ O
+zymatisch _ _ O
+. _ _ O
+
+
+# id fc7bf130-3765-49a4-a4f9-b1119e4bc121	domain=de
+dexmethylphenidat _ _ B-Medication/Vaccine
+[kontrollierte _ _ O
+freisetzung] _ _ O
+( _ _ O
+ctx _ _ O
+1301 _ _ O
+) _ _ O
+norepinephrin _ _ O
+- _ _ O
+dopamin _ _ O
+-wiederaufnahmehemmer _ _ O
+
+
+# id 883f2c65-5ba0-435f-a275-386afb12eb0f	domain=de
+diphenylhydantoin _ _ O
+üblicherweise _ _ O
+ein _ _ O
+antiepileptikum _ _ O
+verwendet _ _ O
+; _ _ O
+siehe _ _ O
+zentropil _ _ B-Medication/Vaccine
+
+
+# id 8d5f7d58-6ffd-4fe9-a64e-566361c25d78	domain=de
+diacomit _ _ B-Medication/Vaccine
+ein _ _ O
+antikonvulsiva _ _ O
+-medikament _ _ O
+bei _ _ O
+der _ _ O
+behandlung _ _ O
+von _ _ O
+epilepsie _ _ O
+
+
+# id bb7fb53e-b19d-4bcc-af3f-8c32b673437b	domain=de
+estazolam _ _ B-Medication/Vaccine
+wurde _ _ O
+jedoch _ _ O
+als _ _ O
+wirksamer _ _ O
+befunden _ _ O
+. _ _ O
+
+
+# id df793649-bb71-4cd3-898a-d695cd8802dd	domain=de
+polydipsie _ _ O
+ist _ _ O
+auch _ _ O
+ein _ _ O
+symptom _ _ O
+für _ _ O
+anticholinergikum _ _ B-Medication/Vaccine
+vergiftung _ _ O
+. _ _ O
+
+
+# id 1fc90a87-50fd-47c9-a141-8fe7953796e1	domain=de
+die _ _ O
+verwendung _ _ O
+von _ _ O
+corticoide _ _ B-Medication/Vaccine
+ist _ _ O
+umstritten _ _ O
+. _ _ O
+
+
+# id f3a82927-d6ca-4a25-8399-6fe428ae3a4e	domain=de
+dworkin _ _ O
+war _ _ O
+in _ _ O
+dieser _ _ O
+rolle _ _ O
+von _ _ O
+yehuda _ _ B-Cleric
+kalmen _ _ I-Cleric
+marlow _ _ I-Cleric
+erfolgreich _ _ O
+. _ _ O
+
+
+# id 77454bc7-6d59-4d89-89f7-681128dc4641	domain=de
+er _ _ O
+war _ _ O
+ein _ _ O
+urenkel _ _ O
+von _ _ O
+isaac _ _ B-Cleric
+ii. _ _ I-Cleric
+aboab _ _ I-Cleric
+( _ _ O
+gestorben _ _ O
+1493 _ _ O
+) _ _ O
+. _ _ O
+
+
+# id b26ad2bd-188c-4761-8188-d14331528c2b	domain=de
+greg _ _ B-Cleric
+boyle _ _ I-Cleric
+direktor _ _ O
+und _ _ O
+gründer _ _ O
+von _ _ O
+homeboy _ _ B-ORG
+industries _ _ I-ORG
+
+
+# id 309f0898-cb74-40d2-af7b-0520a1081072	domain=de
+der _ _ O
+grabpalast _ _ O
+von _ _ O
+pedamenopet _ _ B-Cleric
+im _ _ O
+thebanische _ _ B-Facility
+nekropole _ _ I-Facility
+. _ _ O
+
+
+# id f96c0309-86da-4509-85f0-82a8ffd3727c	domain=de
+es _ _ O
+wurde _ _ O
+erstmals _ _ O
+1781 _ _ O
+von _ _ O
+ermenegildo _ _ B-Cleric
+pini _ _ I-Cleric
+beschrieben _ _ O
+. _ _ O
+
+
+# id f14fac32-86f0-4300-b4d1-d3c1ddfab2e6	domain=de
+zusammen _ _ O
+mit _ _ O
+den _ _ O
+schriften _ _ O
+von _ _ O
+christine _ _ B-Cleric
+ebner _ _ I-Cleric
+bilden _ _ O
+diese _ _ O
+einen _ _ O
+wichtigen _ _ O
+text _ _ O
+der _ _ O
+im _ _ O
+14 _ _ O
+. _ _ O
+jahrhundert _ _ O
+weibliche _ _ O
+mystik _ _ O
+dokumentiert _ _ O
+. _ _ O
+
+
+# id 6cdd72dc-6458-4b2f-8011-7cecd3ca5b1c	domain=de
+der _ _ O
+von _ _ O
+salomo _ _ B-Cleric
+b. _ _ I-Cleric
+isaak _ _ I-Cleric
+zu _ _ O
+studierene _ _ O
+impuls _ _ O
+hörte _ _ O
+nicht _ _ O
+mit _ _ O
+seinem _ _ O
+tod _ _ O
+auf _ _ O
+; _ _ O
+seine _ _ O
+nachfolger _ _ O
+- _ _ O
+die _ _ O
+mitglieder _ _ O
+seiner _ _ O
+familie _ _ O
+zuerst _ _ O
+unter _ _ O
+ihnen _ _ O
+- _ _ O
+setzten _ _ O
+seine _ _ O
+arbeit _ _ O
+fort _ _ O
+. _ _ O
+
+
+# id e943a6ba-7934-436a-91fb-6176a9506669	domain=de
+herausgegeben _ _ O
+von _ _ O
+elyse _ _ B-Cleric
+goldstein _ _ I-Cleric
+seiten _ _ O
+279 _ _ O
+- _ _ O
+85 _ _ O
+. _ _ O
+
+
+# id eac426a1-39be-4df1-a905-45d134654d3a	domain=de
+in _ _ O
+ereigneten _ _ O
+zeiten _ _ O
+wurden _ _ O
+hochdekorierte _ _ O
+moscheen _ _ O
+basierend _ _ O
+auf _ _ O
+dem _ _ O
+propheten _ _ O
+muhammad _ _ B-Cleric
+eigenes _ _ O
+zuhause _ _ O
+gebaut _ _ O
+. _ _ O
+
+
+# id ffc50996-6631-4aa4-954b-ec28b328e3fa	domain=de
+der _ _ O
+östliche _ _ O
+teil _ _ O
+stammt _ _ O
+aus _ _ O
+1040 _ _ O
+und _ _ O
+enthält _ _ O
+das _ _ O
+grab _ _ O
+von _ _ O
+bruno _ _ B-Cleric
+von _ _ I-Cleric
+würzburg _ _ I-Cleric
+. _ _ O
+
+
+# id a2432e11-8792-4865-a911-3ddf0ac7303e	domain=de
+baphomet _ _ O
+ein _ _ O
+boss _ _ O
+-feind _ _ O
+im _ _ O
+videospiel _ _ O
+von _ _ O
+2002 _ _ O
+ragnarok _ _ B-Software
+online _ _ I-Software
+
+
+# id 0384e794-13ef-479a-967d-a9f8bc5e3fd5	domain=de
+scilab _ _ O
+ist _ _ O
+eine _ _ O
+der _ _ O
+beiden _ _ O
+wichtigsten _ _ O
+open _ _ O
+-source _ _ O
+-alternativen _ _ O
+zu _ _ O
+matlab _ _ B-Software
+die _ _ O
+andere _ _ O
+ist _ _ O
+octave _ _ B-Software
+. _ _ O
+
+
+# id 0e7f38e9-9cdf-42a3-8b52-b3ae783d076b	domain=de
+pc _ _ B-WrittenWork
+gamer _ _ I-WrittenWork
+nominierte _ _ O
+das _ _ O
+spiel _ _ O
+ebenfalls _ _ O
+als _ _ O
+das _ _ O
+beste _ _ O
+sportspiel _ _ O
+des _ _ O
+jahres _ _ O
+1998 _ _ O
+obwohl _ _ O
+es _ _ O
+gegen _ _ O
+nba _ _ B-Software
+live _ _ I-Software
+99 _ _ I-Software
+verlor _ _ O
+. _ _ O
+
+
+# id 7b3ab6ba-873c-4bcc-91d4-b61fe1d9c029	domain=de
+derzeit _ _ O
+hält _ _ O
+es _ _ O
+eine _ _ O
+7 _ _ O
+2 _ _ O
+auf _ _ O
+douban _ _ B-Software
+von _ _ O
+mehr _ _ O
+als _ _ O
+194 _ _ O
+. _ _ O
+000 _ _ O
+benutzerbewertungen _ _ O
+. _ _ O
+
+
+# id 7859afbb-4c57-4c9e-8d82-49f556e5bc7d	domain=de
+systeme _ _ O
+die _ _ O
+in _ _ O
+städtischen _ _ O
+einstellungen _ _ O
+verwendet _ _ O
+werden _ _ O
+integrieren _ _ O
+ein _ _ O
+raumbezogenes _ _ B-Software
+informationssystem _ _ I-Software
+daher _ _ O
+enthält _ _ O
+die _ _ O
+anzeige _ _ O
+eine _ _ O
+karte _ _ O
+und _ _ O
+adresssposition _ _ O
+jedes _ _ O
+vorfalls _ _ O
+. _ _ O
+
+
+# id 5471ffc0-84bf-439b-b8cd-889fd8912704	domain=de
+wechat _ _ B-Software
+ist _ _ O
+ein _ _ O
+mobile _ _ B-Software
+app _ _ I-Software
+mit _ _ O
+sprach- _ _ O
+und _ _ O
+textnachrichten _ _ O
+und _ _ O
+einer _ _ O
+zeitleiste _ _ O
+. _ _ O
+
+
+# id fae4fefe-a16b-454c-8a94-a669d1b9cda1	domain=de
+in _ _ O
+der _ _ O
+mac-betriebssysteme _ _ B-Software
+ist _ _ O
+die _ _ O
+menüleiste _ _ O
+eine _ _ O
+horizontale _ _ O
+balkenstange _ _ O
+die _ _ O
+am _ _ O
+oberen _ _ O
+rand _ _ O
+des _ _ O
+bildschirms _ _ O
+verankert _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id 0a607e12-6547-4b1b-8207-4c24a8570a92	domain=de
+]] _ _ O
+( _ _ O
+die _ _ O
+zuvor _ _ O
+angekündigt _ _ O
+worden _ _ O
+war _ _ O
+um _ _ O
+auf _ _ O
+crunchyroll _ _ B-Software
+zu _ _ O
+streamen _ _ O
+) _ _ O
+. _ _ O
+
+
+# id 7413ffc0-618f-4d95-a736-54181f168030	domain=de
+das _ _ O
+projekt _ _ O
+modernizr _ _ B-Software
+behält _ _ O
+einen _ _ O
+rekord _ _ O
+von _ _ O
+bekannten _ _ O
+nicht _ _ O
+zuständigen _ _ O
+gegenständen _ _ O
+auf _ _ O
+ihrem _ _ O
+wiki _ _ O
+bei _ _ O
+. _ _ O
+
+
+# id 3be8f40a-f436-4b02-872e-91f6e5c4ed72	domain=de
+nakabayashi _ _ B-Artist
+mei _ _ I-Artist
+behandelte _ _ O
+den _ _ O
+song _ _ O
+2017 _ _ O
+für _ _ O
+das _ _ O
+nintendo _ _ B-OtherPROD
+switch _ _ I-OtherPROD
+game _ _ O
+ultra _ _ B-Software
+street _ _ I-Software
+fighter _ _ I-Software
+ii: _ _ I-Software
+the _ _ I-Software
+final _ _ I-Software
+challengers _ _ I-Software
+. _ _ O
+
+
+# id 8a48d7e6-0810-4ef7-9486-40f2999b3e16	domain=de
+frankie _ _ B-OtherPER
+macdonald _ _ I-OtherPER
+amateurwetter _ _ O
+-moderator _ _ O
+und _ _ O
+youtube.com _ _ B-Software
+persönlichkeit _ _ O
+
+
+# id 50a88cbf-6a4a-4104-b796-34bd95e7475b	domain=de
+elite _ _ B-Software
+(computerspiel) _ _ I-Software
+( _ _ O
+1984 _ _ O
+- _ _ O
+vorhanden _ _ O
+) _ _ O
+erstellt _ _ O
+von _ _ O
+david _ _ B-Scientist
+john _ _ I-Scientist
+braben _ _ I-Scientist
+und _ _ O
+ian _ _ B-Scientist
+bell _ _ I-Scientist
+(spieleentwickler) _ _ I-Scientist
+
+
+# id 76931324-bc76-447e-bd60-0ff547cdec33	domain=de
+a _ _ O
+de _ _ B-MusicalGRP
+la _ _ I-MusicalGRP
+soul _ _ I-MusicalGRP
+remixed _ _ O
+-version _ _ O
+des _ _ O
+songs _ _ O
+finden _ _ O
+sie _ _ O
+auf _ _ O
+videospielen _ _ O
+wie _ _ O
+nba _ _ B-Software
+live _ _ I-Software
+10 _ _ I-Software
+und _ _ O
+fifa _ _ B-Software
+soccer _ _ I-Software
+10 _ _ I-Software
+. _ _ O
+
+
+# id cf627cdf-f1cb-43ca-9e7a-93f5e85ee231	domain=de
+horizont _ _ O
+bei _ _ O
+spotify _ _ B-Software
+( _ _ O
+streamed _ _ O
+copy _ _ O
+wo _ _ O
+lizenziert _ _ O
+) _ _ O
+
+
+# id c6c5039e-dd82-4f23-9c90-7b59e1e1d292	domain=de
+andreas _ _ B-Athlete
+mikkelsen _ _ I-Athlete
+und _ _ O
+anders _ _ B-OtherPER
+jæger _ _ I-OtherPER
+vermieden _ _ O
+jedes _ _ O
+drama _ _ O
+um _ _ O
+die _ _ O
+klasse _ _ O
+zu _ _ O
+leiten _ _ O
+. _ _ O
+
+
+# id f7492285-02cb-4de0-a969-ceca697929b7	domain=de
+er _ _ O
+war _ _ O
+der _ _ O
+erste _ _ O
+kunde _ _ O
+von _ _ O
+sportagenten _ _ O
+leigh _ _ B-OtherPER
+steinberg _ _ I-OtherPER
+. _ _ O
+
+
+# id 1a09db71-3c0d-4486-b030-daeb183cc665	domain=de
+zack _ _ B-OtherPER
+gelof _ _ I-OtherPER
+( _ _ O
+geb _ _ O
+. _ _ O
+1999 _ _ O
+) _ _ O
+baseballspieler _ _ O
+
+
+# id 5d012ef1-06a5-40c6-ba99-268766cc85f4	domain=de
+niederlagen _ _ O
+gegen _ _ O
+adrian _ _ B-OtherPER
+lewis _ _ I-OtherPER
+und _ _ O
+peter _ _ B-OtherPER
+wright _ _ I-OtherPER
+sahen _ _ O
+ihn _ _ O
+zum _ _ O
+zweiten _ _ O
+mal _ _ O
+in _ _ O
+folge _ _ O
+in _ _ O
+der _ _ O
+ersten _ _ O
+runde _ _ O
+beider _ _ O
+ereignisse _ _ O
+ausgeschieden _ _ O
+. _ _ O
+
+
+# id 72e90d0e-eb8f-494c-9b5c-c2af2085dab3	domain=de
+michael _ _ B-OtherPER
+mario _ _ I-OtherPER
+andretti _ _ I-OtherPER
+führte _ _ O
+in _ _ O
+der _ _ O
+ersten _ _ O
+halbzeit _ _ O
+45 _ _ O
+runden _ _ O
+an _ _ O
+aber _ _ O
+in _ _ O
+runde _ _ O
+77 _ _ O
+wurde _ _ O
+er _ _ O
+abrupt _ _ O
+aus _ _ O
+dem _ _ O
+rennen _ _ O
+ausgeschieden _ _ O
+. _ _ O
+
+
+# id 9bd41ab7-ad27-4b78-8163-cfa222d4ebb3	domain=de
+er _ _ O
+war _ _ O
+ein _ _ O
+kunde _ _ O
+von _ _ O
+francesco _ _ B-Athlete
+conconi _ _ I-Athlete
+und _ _ O
+luigi _ _ B-OtherPER
+cecchini _ _ I-OtherPER
+. _ _ O
+
+
+# id b1105502-c142-4f6f-863d-675ca53f5ba7	domain=de
+26 _ _ O
+. _ _ O
+januar _ _ O
+- _ _ O
+salvatore _ _ B-OtherPER
+lucania _ _ I-OtherPER
+gangster _ _ O
+( _ _ O
+geb _ _ O
+. _ _ O
+1897 _ _ B-WrittenWork
+in _ _ I-WrittenWork
+italien _ _ I-WrittenWork
+) _ _ O
+
+
+# id ce236a8a-b552-4595-a6a1-1299cc21aa65	domain=de
+es _ _ O
+wurde _ _ O
+durch _ _ O
+tom _ _ B-OtherPER
+elmhirst _ _ I-OtherPER
+bei _ _ O
+electric _ _ B-MusicalGRP
+lady _ _ I-MusicalGRP
+studios _ _ I-MusicalGRP
+in _ _ O
+nyc _ _ B-HumanSettlement
+gemischt _ _ O
+. _ _ O
+
+
+# id b25838e7-e3cb-4660-ad21-c3996bb01381	domain=de
+philip _ _ B-OtherPER
+michael _ _ I-OtherPER
+walden _ _ I-OtherPER
+co _ _ O
+-gründer _ _ O
+von _ _ O
+colcricorn _ _ O
+records _ _ O
+; _ _ O
+manager _ _ O
+von _ _ O
+otis _ _ B-Artist
+ray _ _ I-Artist
+redding, _ _ I-Artist
+jr. _ _ I-Artist
+und _ _ O
+allman _ _ B-MusicalGRP
+brothers _ _ I-MusicalGRP
+band _ _ I-MusicalGRP
+
+
+# id 6d1284cb-debb-417d-9241-0eff4bb522f7	domain=de
+in _ _ O
+der _ _ O
+ersten _ _ O
+reihe _ _ O
+hat _ _ O
+max _ _ B-Athlete
+emilian _ _ I-Athlete
+verstappen _ _ I-Athlete
+einen _ _ O
+besseren _ _ O
+start _ _ O
+als _ _ O
+fernando _ _ B-OtherPER
+alonso _ _ I-OtherPER
+díaz _ _ I-OtherPER
+und _ _ O
+hielt _ _ O
+die _ _ O
+führung _ _ O
+in _ _ O
+kurve _ _ O
+eins _ _ O
+. _ _ O
+
+
+# id 93f691c2-43a2-4f61-8113-56801aabf4fc	domain=de
+es _ _ O
+wurde _ _ O
+1886 _ _ O
+von _ _ O
+heinrich _ _ B-OtherPER
+benno _ _ I-OtherPER
+möschler _ _ I-OtherPER
+beschrieben _ _ O
+. _ _ O
+
+
+# id db09022d-9f3f-4537-87ec-6e84662a0e85	domain=de
+der _ _ O
+adler _ _ O
+von _ _ O
+johannesadler _ _ B-OtherPER
+repräsentiert _ _ O
+den _ _ O
+himmel _ _ O
+den _ _ O
+himmel _ _ O
+und _ _ O
+den _ _ O
+menschlichen _ _ O
+geist _ _ O
+. _ _ O
+
+
+# id 521c3950-7f09-478d-8084-d5af38d22298	domain=de
+die _ _ O
+idee _ _ O
+für _ _ O
+das _ _ O
+neue _ _ O
+track _ _ O
+-layout _ _ O
+basierte _ _ O
+auf _ _ O
+dem _ _ O
+layout _ _ O
+von _ _ O
+bahnhof _ _ B-Station
+shinagawa _ _ I-Station
+in _ _ O
+tokio _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 33d9462d-5003-41ff-a232-1b8f84953261	domain=de
+es _ _ O
+ist _ _ O
+leicht _ _ O
+zu _ _ O
+fuß _ _ O
+von _ _ O
+acton _ _ B-Station
+town _ _ I-Station
+(london _ _ I-Station
+underground) _ _ I-Station
+. _ _ O
+
+
+# id a79933fd-a06c-42c9-b46e-59ac9e5d5cab	domain=de
+ein _ _ O
+bemerkenswertes _ _ O
+beispiel _ _ O
+hierfür _ _ O
+ist _ _ O
+osaka _ _ B-Station
+international _ _ I-Station
+airport _ _ I-Station
+( _ _ O
+flughafen _ _ O
+itami _ _ O
+) _ _ O
+am _ _ O
+stadtrand _ _ O
+von _ _ O
+präfektur _ _ B-ORG
+osaka _ _ I-ORG
+japan _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 8c9c4139-ede8-4b24-995c-2be5ee57654d	domain=de
+es _ _ O
+grenzt _ _ O
+an _ _ O
+die _ _ O
+getrennte _ _ O
+hafen _ _ B-Station
+von _ _ I-Station
+long _ _ I-Station
+beach _ _ I-Station
+. _ _ O
+
+
+# id e3cae3cd-41bc-4414-9e84-807269c1c0f7	domain=de
+es _ _ O
+wird _ _ O
+von _ _ O
+der _ _ O
+stadt _ _ O
+linwood _ _ B-HumanSettlement
+(schottland) _ _ I-HumanSettlement
+nach _ _ O
+westen _ _ O
+und _ _ O
+egpf _ _ B-Station
+im _ _ O
+norden _ _ O
+grenzen _ _ O
+. _ _ O
+
+
+# id 58dd02b6-47b6-4aa5-bbde-e298def15194	domain=de
+das _ _ O
+dorf _ _ O
+stammt _ _ O
+aus _ _ O
+dem _ _ O
+regionaler _ _ B-Station
+verkehrsflughafen _ _ I-Station
+in _ _ O
+ludhiana _ _ B-HumanSettlement
+. _ _ O
+
+
+# id bc358e6f-6bd3-41de-9acb-3851d33d7e69	domain=de
+der _ _ O
+bahnhof _ _ O
+nakodar _ _ O
+ist _ _ O
+der _ _ O
+nächste _ _ O
+bahnhof _ _ B-Station
+. _ _ O
+
+
+# id 3e04a299-fd45-4146-8b0a-19591393e199	domain=de
+der _ _ O
+nächste _ _ O
+flughafen _ _ O
+ist _ _ O
+flughafen _ _ B-Station
+kozhikode _ _ I-Station
+( _ _ O
+kozikode _ _ O
+) _ _ O
+weg _ _ O
+. _ _ O
+
+
+# id b164a33c-13da-4e68-84ec-3529f14856c7	domain=de
+- _ _ O
+francofordia _ _ B-HumanSettlement
+ad _ _ I-HumanSettlement
+viadrum _ _ I-HumanSettlement
+- _ _ O
+lehrter _ _ B-Station
+bahnhof _ _ I-Station
+( _ _ O
+tief _ _ O
+) _ _ O
+- _ _ O
+dortmund _ _ B-Station
+hauptbahnhof _ _ I-Station
+- _ _ O
+hauptbahnhof _ _ B-Station
+köln _ _ I-Station
+
+
+# id fbe8f649-b90b-473c-9cf3-e47044ccbf87	domain=de
+bahnhof _ _ B-Station
+shepherd’s _ _ I-Station
+bush _ _ I-Station
+wurde _ _ O
+2008 _ _ O
+auf _ _ O
+demselben _ _ O
+standort _ _ O
+eröffnet _ _ O
+
+
+# id 69ef3c5f-f064-448b-ae9d-bea6a74a0fb8	domain=de
+sein _ _ O
+erstes _ _ O
+mikrokargeschäft _ _ O
+war _ _ O
+automobiles _ _ B-CarManufacturer
+erad _ _ I-CarManufacturer
+das _ _ O
+1975 _ _ O
+gegründet _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 68ba16ac-bc0e-4631-aa4d-c6e323b9786d	domain=de
+die _ _ O
+hauptunterschiede _ _ O
+im _ _ O
+vergleich _ _ O
+zur _ _ O
+decauville _ _ B-CarManufacturer
+-iserie _ _ O
+waren _ _ O
+: _ _ O
+
+
+# id 5a54dc50-4aab-4b57-9a53-e86995481161	domain=de
+das _ _ O
+resultierende _ _ O
+unternehmen _ _ O
+amc _ _ B-CarManufacturer
+( _ _ O
+amc _ _ O
+) _ _ O
+setzte _ _ O
+es _ _ O
+1987 _ _ O
+fort _ _ O
+bis _ _ O
+chrysler-group _ _ B-CarManufacturer
+es _ _ O
+erwarb _ _ O
+. _ _ O
+
+
+# id 976b6887-d644-4e40-8959-3115d8bd6c68	domain=de
+während _ _ O
+dieses _ _ O
+rennens _ _ O
+würde _ _ O
+er _ _ O
+einen _ _ O
+1964 _ _ O
+chevrolet _ _ B-Vehicle
+chevelle _ _ I-Vehicle
+fahren _ _ O
+nachdem _ _ O
+er _ _ O
+bei _ _ O
+einem _ _ O
+früheren _ _ O
+rennen _ _ O
+ein _ _ O
+ford _ _ B-CarManufacturer
+fahrzeug _ _ O
+gefahren _ _ O
+war _ _ O
+. _ _ O
+
+
+# id 7cf0601c-552c-4948-8e1d-1e9e30ce42f0	domain=de
+audi _ _ B-CarManufacturer
+hatte _ _ O
+ein _ _ O
+parkhilfesystem _ _ O
+auf _ _ O
+dem _ _ O
+audi _ _ B-Vehicle
+c6 _ _ I-Vehicle
+. _ _ O
+
+
+# id 724eeaee-7439-4a26-9d85-96098d9f5c84	domain=de
+ursprünglich _ _ O
+in _ _ O
+den _ _ O
+1960er _ _ O
+jahren _ _ O
+von _ _ O
+chrysler-group _ _ B-CarManufacturer
+gebaut _ _ O
+wurde _ _ O
+jedoch _ _ O
+erst _ _ O
+abgeschlossen _ _ O
+bis _ _ O
+volkswagen _ _ B-ORG
+group _ _ I-ORG
+of _ _ I-ORG
+america _ _ I-ORG
+den _ _ O
+betrieb _ _ O
+begann _ _ O
+. _ _ O
+
+
+# id 436b2fb7-e808-43a1-aed2-e6df5ec8eb30	domain=de
+die _ _ O
+teams _ _ O
+yamaha _ _ B-CarManufacturer
+motor _ _ I-CarManufacturer
+corporation _ _ I-CarManufacturer
+und _ _ O
+suzuki _ _ B-CarManufacturer
+motor _ _ I-CarManufacturer
+corporation _ _ I-CarManufacturer
+waren _ _ O
+in _ _ O
+unordnung _ _ O
+. _ _ O
+
+
+# id 75e3ec5b-c629-4353-a16a-45eb525fbb8e	domain=de
+bis _ _ O
+ende _ _ O
+der _ _ O
+1950er _ _ O
+jahre _ _ O
+bestand _ _ O
+die _ _ O
+flotte _ _ O
+hauptsächlich _ _ O
+aus _ _ O
+frontmotor _ _ O
+ford _ _ B-CarManufacturer
+. _ _ O
+
+
+# id 69b557d3-6f2e-4c2f-b688-8b84b991cc7d	domain=de
+der _ _ O
+bau _ _ O
+eines _ _ O
+general-motors _ _ B-CarManufacturer
+stempel- _ _ O
+und _ _ O
+werkzeugwerks _ _ O
+schuf _ _ O
+jedoch _ _ O
+viele _ _ O
+neue _ _ O
+arbeitsplätze _ _ O
+. _ _ O
+
+
+# id 62e2bc42-5264-4418-a6fa-b55819b4cf44	domain=de
+sein _ _ O
+vater _ _ O
+war _ _ O
+ein _ _ O
+lebenslanger _ _ O
+angestellter _ _ O
+von _ _ O
+general-motors _ _ B-CarManufacturer
+. _ _ O
+
+
+# id 05aed262-d2c7-486f-a100-ce2505871e43	domain=de
+für _ _ O
+noch _ _ O
+größere _ _ O
+volumina _ _ O
+wie _ _ O
+in _ _ O
+einem _ _ O
+staubecken _ _ B-OtherLOC
+wird _ _ O
+das _ _ O
+volumen _ _ O
+des _ _ O
+containers _ _ O
+durch _ _ O
+formen _ _ O
+modelliert _ _ O
+und _ _ O
+unter _ _ O
+verwendung _ _ O
+der _ _ O
+mathematik _ _ O
+berechnet _ _ O
+. _ _ O
+
+
+# id d8471457-d21d-4bd9-b99b-edcdc8bc80e3	domain=de
+23 _ _ O
+. _ _ O
+august _ _ O
+• _ _ O
+comiskey _ _ B-OtherLOC
+park _ _ I-OtherLOC
+• _ _ O
+14 _ _ O
+. _ _ O
+643 _ _ O
+* _ _ O
+26 _ _ O
+. _ _ O
+august _ _ O
+• _ _ O
+kingdome _ _ B-Facility
+• _ _ O
+15 _ _ O
+. _ _ O
+176august _ _ O
+30 _ _ O
+• _ _ O
+wrigley _ _ B-Facility
+field _ _ I-Facility
+• _ _ O
+24 _ _ O
+. _ _ O
+080 _ _ O
+
+
+# id 78f9e03d-e732-4e50-93f3-623d0cdd845e	domain=de
+nach _ _ O
+über _ _ O
+200 _ _ O
+jahren _ _ O
+ist _ _ O
+diese _ _ O
+kollektion _ _ O
+bei _ _ O
+teylers _ _ B-OtherLOC
+museum _ _ I-OtherLOC
+immer _ _ O
+noch _ _ O
+vollständig _ _ O
+und _ _ O
+in _ _ O
+perfektem _ _ O
+zustand _ _ O
+. _ _ O
+
+
+# id 01a94827-a770-4f1f-9404-8392d503a2b9	domain=de
+sie _ _ O
+bestehen _ _ O
+aus _ _ O
+abschnitten _ _ O
+die _ _ O
+zwischen _ _ O
+475 _ _ O
+. _ _ O
+000 _ _ O
+niet _ _ B-OtherLOC
+zusammen _ _ O
+sind _ _ O
+und _ _ O
+enthalten _ _ O
+. _ _ O
+
+
+# id 8e71c617-6369-463d-a8d8-360c315de6fe	domain=de
+gegenstand _ _ O
+zahlreicher _ _ O
+kunstwerke _ _ O
+von _ _ O
+andrew _ _ B-Artist
+wyeth _ _ I-Artist
+einschließlich _ _ O
+christina’s _ _ B-ArtWork
+world _ _ I-ArtWork
+betrieben _ _ O
+vom _ _ O
+farnsworth _ _ B-OtherLOC
+art _ _ I-OtherLOC
+museum _ _ I-OtherLOC
+
+
+# id 942214a4-b5dc-4fb5-8aa1-5bcd3865a04e	domain=de
+ausgestellt _ _ O
+im _ _ O
+national _ _ B-OtherLOC
+museum _ _ I-OtherLOC
+of _ _ I-OtherLOC
+singapore _ _ I-OtherLOC
+und _ _ O
+in _ _ O
+der _ _ O
+australian _ _ B-Facility
+war _ _ I-Facility
+memorial _ _ I-Facility
+. _ _ O
+
+
+# id d740a980-4f80-4564-8e16-b52f4145ab5d	domain=de
+es _ _ O
+ist _ _ O
+der _ _ O
+zweitgrößte _ _ O
+meteorit _ _ O
+der _ _ O
+umgesiedelt _ _ O
+wurde _ _ O
+( _ _ O
+hinter _ _ O
+campo-del-cielo-meteorit _ _ B-OtherLOC
+mit _ _ O
+37 _ _ O
+tonnen _ _ O
+) _ _ O
+. _ _ O
+
+
+# id 58699e64-3972-46ce-8ace-369344dbc33a	domain=de
+er _ _ O
+wurde _ _ O
+fellow _ _ O
+der _ _ O
+the _ _ B-OtherLOC
+linnean _ _ I-OtherLOC
+society _ _ I-OtherLOC
+of _ _ I-OtherLOC
+london _ _ I-OtherLOC
+. _ _ O
+
+
+# id 317804ce-c923-4cd0-8384-73527a63e27f	domain=de
+beide _ _ O
+waren _ _ O
+mitglieder _ _ O
+des _ _ O
+california _ _ B-OtherLOC
+historical _ _ I-OtherLOC
+society _ _ I-OtherLOC
+. _ _ O
+
+
+# id f08e0dff-fd03-465d-a70e-9bd8a264018c	domain=de
+es _ _ O
+ist _ _ O
+auch _ _ O
+häufig _ _ O
+als _ _ O
+museum _ _ O
+für _ _ O
+gebäude _ _ O
+oder _ _ O
+volkskundemuseum _ _ B-OtherLOC
+bekannt _ _ O
+. _ _ O
+
+
+# id 9c32b771-7cae-4b99-9e55-c08cac5b3d2b	domain=de
+eine _ _ O
+gummifabrik _ _ O
+die _ _ O
+gummi _ _ O
+strumpfband _ _ B-Clothing
+für _ _ O
+frauen _ _ O
+in _ _ O
+paris _ _ B-HumanSettlement
+la _ _ B-HumanSettlement
+france _ _ I-HumanSettlement
+im _ _ O
+jahr _ _ O
+1803 _ _ O
+eröffnet _ _ O
+hat _ _ O
+. _ _ O
+
+
+# id 9bc36824-3797-41e2-bd4c-a74c66b8b46d	domain=de
+um _ _ O
+dem _ _ O
+entgegenzuwirken _ _ O
+erhält _ _ O
+ein _ _ O
+spieler _ _ O
+den _ _ O
+turban _ _ B-Clothing
+das _ _ O
+dem _ _ O
+größten _ _ O
+entdecker _ _ O
+des _ _ O
+spielers _ _ O
+zugeordnet _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id d8ea9c59-7da0-46b1-aecd-1818ea84c07c	domain=de
+typische _ _ O
+geschenke _ _ O
+mit _ _ O
+babys _ _ O
+umfassen _ _ O
+höschenwindel _ _ B-Clothing
+decken _ _ O
+milchflasche _ _ B-OtherPROD
+kleidung _ _ O
+und _ _ O
+spielzeug _ _ O
+. _ _ O
+
+
+# id 6f73648f-e9da-4818-9dfc-03a1939c3054	domain=de
+turban _ _ B-Clothing
+sind _ _ O
+kopfbedeckungen _ _ O
+hauptsächlich _ _ O
+für _ _ O
+männer _ _ O
+bestehend _ _ O
+aus _ _ O
+einem _ _ O
+einzigen _ _ O
+stück _ _ O
+stoff _ _ O
+das _ _ O
+in _ _ O
+einer _ _ O
+vielzahl _ _ O
+von _ _ O
+stilen _ _ O
+um _ _ O
+den _ _ O
+kopf _ _ O
+gewickelt _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id 88d7e273-795e-49b3-8d98-5fc9f01e7647	domain=de
+das _ _ O
+revolutionäre _ _ O
+society _ _ B-ORG
+of _ _ I-ORG
+united _ _ I-ORG
+irishmen _ _ I-ORG
+übernommen _ _ O
+grün _ _ O
+als _ _ O
+seine _ _ O
+farbe _ _ O
+und _ _ O
+die _ _ O
+unterstützer _ _ O
+trugen _ _ O
+grüne _ _ O
+kleidungsstücke _ _ O
+bänder _ _ O
+oder _ _ O
+kokarde _ _ B-Clothing
+(abzeichen) _ _ I-Clothing
+. _ _ O
+
+
+# id 2ccc2b58-e014-4213-aa39-0a22781005b1	domain=de
+datei _ _ O
+: _ _ O
+amulette _ _ O
+cochon _ _ O
+06 _ _ O
+. _ _ O
+jpg _ _ O
+| _ _ O
+schutzstein _ _ B-Clothing
+in _ _ O
+form _ _ O
+eines _ _ O
+schweins _ _ O
+. _ _ O
+
+
+# id 56d09808-2b95-48e5-bd3d-eb145a44a847	domain=de
+tänzer _ _ O
+halten _ _ O
+während _ _ O
+des _ _ O
+tanzes _ _ O
+die _ _ O
+zonaria _ _ O
+des _ _ O
+angrenzenden _ _ O
+tänzers _ _ O
+( _ _ O
+gurt _ _ B-Clothing
+) _ _ O
+. _ _ O
+
+
+# id 3dc89be2-f9eb-4b48-8868-251a603d2842	domain=de
+typisch _ _ O
+für _ _ O
+fürstliche _ _ O
+koronetten _ _ O
+es _ _ O
+fehlt _ _ O
+königliche _ _ O
+bögen _ _ O
+und _ _ O
+wird _ _ O
+von _ _ O
+einem _ _ O
+quaste _ _ B-Clothing
+anstelle _ _ O
+eines _ _ O
+königlichen _ _ O
+reichsapfel _ _ O
+oder _ _ O
+einer _ _ O
+kreuzung _ _ O
+überragt _ _ O
+. _ _ O
+
+
+# id c7f2dee3-c42d-4a2a-b7f2-4c26f7515f54	domain=de
+a _ _ O
+gesichtsmaske _ _ B-Clothing
+wird _ _ O
+über _ _ O
+einen _ _ O
+teil _ _ O
+oder _ _ O
+das _ _ O
+gesamte _ _ O
+gesicht _ _ O
+getragen _ _ O
+um _ _ O
+den _ _ O
+träger _ _ O
+häufig _ _ O
+zu _ _ O
+verschleiern _ _ O
+aber _ _ O
+manchmal _ _ O
+um _ _ O
+das _ _ O
+gesicht _ _ O
+zu _ _ O
+schützen _ _ O
+. _ _ O
+
+
+# id f1108e78-8d23-4a7c-aa99-ec24cb00d196	domain=de
+die _ _ O
+patientenhaltung _ _ O
+und _ _ O
+position _ _ O
+können _ _ O
+das _ _ O
+risiko _ _ O
+sowie _ _ O
+binder _ _ B-Clothing
+nach _ _ O
+der _ _ O
+brustoperation _ _ O
+verringern _ _ O
+. _ _ O
+
+
+# id 030fdb02-7490-408f-af88-cc4e195ed916	domain=de
+die _ _ O
+nasopharyngealzyste _ _ O
+bezieht _ _ O
+sich _ _ O
+auf _ _ O
+zyste _ _ B-Disease
+(medizin) _ _ I-Disease
+schwellung _ _ O
+die _ _ O
+sich _ _ O
+aus _ _ O
+der _ _ O
+mittellinie _ _ O
+und _ _ O
+der _ _ O
+seitlichen _ _ O
+wand _ _ O
+des _ _ O
+nasenrachen _ _ B-AnatomicalStructure
+ergibt _ _ O
+. _ _ O
+
+
+# id 7a8fa378-a649-4c10-92c5-609673113266	domain=de
+sie _ _ O
+haben _ _ O
+jeweils _ _ O
+zwei _ _ O
+kerne _ _ O
+und _ _ O
+sind _ _ O
+typischerweise _ _ O
+in _ _ O
+kettenähnlichen _ _ O
+formationen _ _ O
+in _ _ O
+der _ _ O
+aecie _ _ B-AnatomicalStructure
+zu _ _ O
+sehen _ _ O
+. _ _ O
+
+
+# id 8990d737-ed47-43e7-8714-4ef526593989	domain=de
+der _ _ O
+baumrinde _ _ B-AnatomicalStructure
+ist _ _ O
+dunkelgrau _ _ O
+und _ _ O
+die _ _ O
+triebe _ _ O
+sehr _ _ O
+stark _ _ O
+mit _ _ O
+großem _ _ O
+( _ _ O
+1 _ _ O
+- _ _ O
+2 _ _ O
+cm _ _ O
+) _ _ O
+dunkelrotem _ _ O
+klebrigen _ _ O
+harzwinterknospen _ _ O
+. _ _ O
+
+
+# id 8a2d4038-7335-4ca7-b4d7-136206add624	domain=de
+der _ _ O
+iris _ _ B-AnatomicalStructure
+ist _ _ O
+rotbraun _ _ O
+bis _ _ O
+gelblich _ _ O
+braun _ _ O
+. _ _ O
+
+
+# id 277c3ade-a2a7-44fd-ae34-2f148efa1b06	domain=de
+es _ _ O
+ist _ _ O
+bekannt _ _ O
+dass _ _ O
+aniseikonia _ _ O
+mit _ _ O
+bestimmten _ _ O
+retina _ _ B-AnatomicalStructure
+bedingungen _ _ O
+assoziiert _ _ O
+ist _ _ O
+. _ _ O
+
+
+# id 4c12d754-c3e4-434d-bdbc-ce8d933c0c1a	domain=de
+sein _ _ O
+iris _ _ B-AnatomicalStructure
+ist _ _ O
+weiß _ _ O
+und _ _ O
+rot _ _ O
+um _ _ O
+den _ _ O
+pupille _ _ O
+mit _ _ O
+einem _ _ O
+schwarzen _ _ O
+ring _ _ O
+der _ _ O
+ihn _ _ O
+umgibt _ _ O
+. _ _ O
+
+
+# id 3a99034e-a441-435e-ad00-2db30ef8e8de	domain=de
+die _ _ O
+zellen _ _ O
+sind _ _ O
+mit _ _ O
+fibrosierung _ _ B-AnatomicalStructure
+umhüllt _ _ O
+. _ _ O
+
+
+# id cee7c159-0c1a-4880-8ff4-e59ef48ededc	domain=de
+untersuchungen _ _ O
+deuten _ _ O
+darauf _ _ O
+hin _ _ O
+dass _ _ O
+farbkonstanz _ _ O
+verwandte _ _ O
+veränderungen _ _ O
+in _ _ O
+retina _ _ B-AnatomicalStructure
+zellen _ _ O
+sowie _ _ O
+kortikale _ _ O
+bereiche _ _ O
+im _ _ O
+zusammenhang _ _ O
+mit _ _ O
+sehvermögen _ _ O
+sind _ _ O
+. _ _ O
+
+
+# id 1ec41236-b146-4e78-bf15-115278bbd48f	domain=de
+das _ _ O
+subtile _ _ O
+körpermodell _ _ O
+kann _ _ O
+auf _ _ O
+moderne _ _ O
+karten _ _ O
+des _ _ O
+zentrales _ _ B-AnatomicalStructure
+nervensystem _ _ I-AnatomicalStructure
+referenziert _ _ O
+und _ _ O
+in _ _ O
+der _ _ O
+forschung _ _ O
+zur _ _ O
+meditation _ _ O
+angewendet _ _ O
+werden _ _ O
+. _ _ O
+
+
+# id ce4652f1-9f44-49d5-8c50-d37be1f38d78	domain=de
+der _ _ O
+blütenstände _ _ B-AnatomicalStructure
+besteht _ _ O
+aus _ _ O
+2 _ _ O
+8 _ _ O
+weißen _ _ O
+cremefarbenen _ _ O
+gelben _ _ O
+blüten _ _ O
+manchmal _ _ O
+mit _ _ O
+einem _ _ O
+grünlichen _ _ O
+schimmer _ _ O
+auf _ _ O
+einem _ _ O
+stiel _ _ O
+. _ _ O
+
+
+# id fec2f361-fa06-4e94-9d78-6d4712a1eeff	domain=de
+der _ _ O
+garmish _ _ O
+schwimmt _ _ O
+mit _ _ O
+einem _ _ O
+nahezu _ _ O
+starre _ _ O
+körper _ _ O
+der _ _ O
+mit _ _ O
+der _ _ O
+verwendung _ _ O
+des _ _ O
+ferntastsinn _ _ B-AnatomicalStructure
+in _ _ O
+der _ _ O
+fütterung _ _ O
+zusammenhängt _ _ O
+. _ _ O
+
+
+# id d15245e1-eb40-43e3-80cf-8bc507391ea1	domain=de
+der _ _ O
+boom _ _ O
+the _ _ B-AerospaceManufacturer
+boeing _ _ I-AerospaceManufacturer
+company _ _ I-AerospaceManufacturer
+gefolgt _ _ O
+vom _ _ O
+allgemeinen _ _ O
+infrastrukturgebäude _ _ O
+. _ _ O
+
+
+# id f72854b8-5f9c-4b57-b576-d76a12634914	domain=de
+am _ _ O
+ende _ _ O
+gewann _ _ O
+north _ _ B-AerospaceManufacturer
+american _ _ I-AerospaceManufacturer
+aviation _ _ I-AerospaceManufacturer
+den _ _ O
+vertrag _ _ O
+um _ _ O
+das _ _ O
+zu _ _ O
+bauen _ _ O
+was _ _ O
+mit _ _ O
+north _ _ B-OtherPROD
+american _ _ I-OtherPROD
+na-278 _ _ I-OtherPROD
+bezeichnet _ _ O
+wurde _ _ O
+. _ _ O
+
+
+# id 6489246b-033c-4def-af31-5c2e850d7bd7	domain=de
+das _ _ O
+eigentum _ _ O
+an _ _ O
+der _ _ O
+stelle _ _ O
+verabschiedete _ _ O
+sich _ _ O
+zusammen _ _ O
+mit _ _ O
+dem _ _ O
+was _ _ O
+bis _ _ O
+dahin _ _ O
+als _ _ O
+rover _ _ B-ORG
+group _ _ I-ORG
+zu _ _ O
+british _ _ B-AerospaceManufacturer
+aerospace _ _ I-AerospaceManufacturer
+1988 _ _ O
+genannt _ _ O
+wurde _ _ O
+und _ _ O
+anschließend _ _ O
+1994 _ _ O
+zu _ _ O
+bayerische _ _ B-CarManufacturer
+motoren _ _ I-CarManufacturer
+werke _ _ I-CarManufacturer
+aktiengesellschaft _ _ I-CarManufacturer
+. _ _ O
+
+
+# id ca0f7871-18a9-431c-85a0-77d6a428b46d	domain=de
+ein _ _ O
+joint _ _ O
+venture _ _ O
+das _ _ O
+aus _ _ O
+aérospatiale _ _ B-AerospaceManufacturer
+und _ _ O
+mbb _ _ B-AerospaceManufacturer
+bestand _ _ O
+wurde _ _ O
+anschließend _ _ O
+als _ _ O
+bevorzugter _ _ O
+lieferant _ _ O
+ausgewählt _ _ O
+. _ _ O
+
+
+# id ffd6352f-30e1-4f8b-b6d2-99dff3835657	domain=de
+es _ _ O
+wurde _ _ O
+von _ _ O
+north _ _ B-AerospaceManufacturer
+american _ _ I-AerospaceManufacturer
+aviation _ _ I-AerospaceManufacturer
+gebaut _ _ O
+. _ _ O
+
+
+# id 8e62029c-3788-4e60-bb12-782427dfeee6	domain=de
+diane _ _ O
+freut _ _ O
+sich _ _ O
+über _ _ O
+einen _ _ O
+cessna _ _ B-AerospaceManufacturer
+in _ _ O
+der _ _ O
+air _ _ O
+training _ _ O
+school _ _ O
+und _ _ O
+bemerkt _ _ O
+dass _ _ O
+sie _ _ O
+sich _ _ O
+kaum _ _ O
+verändert _ _ O
+haben _ _ O
+. _ _ O
+
+
+# id d12f15e3-7fca-4afa-9a05-dd77f314dd31	domain=de
+1937 _ _ O
+wieder _ _ O
+aufgebaut _ _ O
+. _ _ O
+1954 _ _ O
+aktualisiert _ _ O
+mit _ _ O
+english _ _ B-AerospaceManufacturer
+electric _ _ I-AerospaceManufacturer
+einheiten _ _ O
+. _ _ O
+
+
+# id 7f9de335-0e85-469f-b20f-f5e7afab0b6e	domain=de
+sie _ _ O
+zog _ _ O
+sich _ _ O
+1931 _ _ O
+aus _ _ O
+der _ _ O
+filmindustrie _ _ O
+zurück _ _ O
+und _ _ O
+arbeitete _ _ O
+als _ _ O
+assemblerin _ _ O
+bei _ _ O
+loughead _ _ B-AerospaceManufacturer
+aircraft _ _ I-AerospaceManufacturer
+manufacturing _ _ I-AerospaceManufacturer
+company _ _ I-AerospaceManufacturer
+flugzeugen _ _ O
+. _ _ O
+
+
+# id 87713862-497a-46f9-9a1a-831fb7f57111	domain=de
+der _ _ O
+britische _ _ O
+verteidigungsriese _ _ O
+bae _ _ B-AerospaceManufacturer
+systems _ _ I-AerospaceManufacturer
+hägglunds _ _ I-AerospaceManufacturer
+führt _ _ O
+auch _ _ O
+eine _ _ O
+site _ _ O
+durch _ _ O
+die _ _ O
+eine _ _ O
+hochintegrierte _ _ O
+vernetzte _ _ O
+software _ _ O
+erzeugt _ _ O
+hauptsächlich _ _ O
+für _ _ O
+die _ _ O
+streitkräfte _ _ O
+. _ _ O
+
+
+# id 2a7bfb7c-0fd9-40e2-8446-dc332f02c812	domain=de
+antares _ _ O
+commercial _ _ O
+launch _ _ O
+vehicle _ _ O
+( _ _ O
+im _ _ O
+bild _ _ O
+) _ _ O
+wird _ _ O
+erfolgreich _ _ O
+mit _ _ O
+orbital _ _ B-AerospaceManufacturer
+sciences _ _ I-AerospaceManufacturer
+corporation _ _ I-AerospaceManufacturer
+auf _ _ O
+seinem _ _ O
+jungfrau _ _ O
+-flug _ _ O
+auf _ _ O
+den _ _ O
+markt _ _ O
+gebracht _ _ O
+. _ _ O
+]]] _ _ O
+
+
+# id ca11bbec-a761-4143-b29c-61cf1edb07f7	domain=de
+captive _ _ O
+kowari _ _ O
+ist _ _ O
+bekannt _ _ O
+dass _ _ O
+sie _ _ O
+mit _ _ O
+oralem _ _ O
+weißer _ _ B-Disease
+hautkrebs _ _ I-Disease
+( _ _ O
+sccs _ _ O
+) _ _ O
+assoziiert _ _ O
+sind _ _ O
+. _ _ O
+
+
+# id f7b40634-4ee5-46b0-836d-4fe86b9523de	domain=de
+megaherbs _ _ O
+wurden _ _ O
+als _ _ O
+form _ _ O
+von _ _ O
+hypersomie _ _ B-Disease
+beschrieben _ _ O
+. _ _ O
+
+
+# id 9826f41d-d525-4402-9014-218b52214a51	domain=de
+zu _ _ O
+diesem _ _ O
+zeitpunkt _ _ O
+hatte _ _ O
+er _ _ O
+parkinsonkrankheit _ _ B-Disease
+beginnend _ _ O
+obwohl _ _ O
+er _ _ O
+es _ _ O
+nicht _ _ O
+wusste _ _ O
+. _ _ O
+
+
+# id 9e696600-527a-4a11-8d98-8acd63342513	domain=de
+es _ _ O
+kann _ _ O
+milde _ _ O
+oder _ _ O
+fehlende _ _ O
+magen _ _ O
+-darm _ _ O
+-symptome _ _ O
+eine _ _ O
+große _ _ O
+anzahl _ _ O
+von _ _ O
+systemische _ _ B-Disease
+krankheit _ _ I-Disease
+oder _ _ O
+keine _ _ O
+offensichtlichen _ _ O
+symptome _ _ O
+geben _ _ O
+. _ _ O
+
+
+# id 36bb4cb1-0dd8-4f6a-adb3-3afc7a7f82ff	domain=de
+nachdem _ _ O
+er _ _ O
+radiodermatitis _ _ B-Disease
+und _ _ O
+strahlung _ _ O
+im _ _ O
+zusammenhang _ _ O
+mit _ _ O
+krebs _ _ O
+entwickelt _ _ O
+hatte _ _ O
+wurde _ _ O
+er _ _ O
+zahlreiche _ _ O
+operationen _ _ O
+unterzogen _ _ O
+einschließlich _ _ O
+einer _ _ O
+armamputation _ _ O
+kurz _ _ O
+vor _ _ O
+seinem _ _ O
+tod _ _ O
+. _ _ O
+
+
+# id 19c4e888-000b-4cb2-8bd5-c93a52aa5664	domain=de
+andere _ _ O
+haben _ _ O
+möglicherweise _ _ O
+probleme _ _ O
+mit _ _ O
+dem _ _ O
+urinieren _ _ O
+neurogene _ _ B-Disease
+blase _ _ I-Disease
+oder _ _ O
+pollakisurie _ _ B-Symptom
+. _ _ O
+
+
+# id f21f51eb-7c9d-40a7-950a-02221ab746b3	domain=de
+enge _ _ O
+wechselwirkungen _ _ O
+zwischen _ _ O
+menschen _ _ O
+und _ _ O
+nicht _ _ O
+menschlichen _ _ O
+primaten _ _ O
+( _ _ O
+nhps _ _ O
+) _ _ O
+können _ _ O
+wege _ _ O
+zur _ _ O
+übertragung _ _ O
+von _ _ O
+zoonosen _ _ B-Disease
+erzeugen _ _ O
+. _ _ O
+
+
+# id 62c6e399-e79a-42dd-86d0-1f093136b95e	domain=de
+der _ _ O
+leitende _ _ O
+hörverlust _ _ O
+kann _ _ O
+auch _ _ O
+aus _ _ O
+der _ _ O
+mittelohrentzündung _ _ O
+zurückzuführen _ _ O
+sein _ _ O
+was _ _ O
+zu _ _ O
+einer _ _ O
+flüssigkeit _ _ O
+im _ _ O
+normalerweise _ _ O
+luftgefüllten _ _ O
+raum _ _ O
+führt _ _ O
+beispielsweise _ _ O
+durch _ _ O
+mittelohrentzündung _ _ B-Disease
+. _ _ O
+
+
+# id ef432a26-48dc-4349-a6e1-1045f33d5b28	domain=de
+in _ _ O
+heftigen _ _ O
+zusammenstößen _ _ O
+zwischen _ _ O
+demonstranten _ _ O
+und _ _ O
+gendarmen _ _ O
+wurden _ _ O
+10 _ _ O
+menschen _ _ O
+verletzt _ _ O
+darunter _ _ O
+ein _ _ O
+81 _ _ O
+-jähriger _ _ O
+mann _ _ O
+der _ _ O
+einen _ _ O
+panikattacke _ _ B-Disease
+erlitt _ _ O
+. _ _ O
+
+
+# id 2fa83e5a-1936-4fd2-a787-02f3b71c4926	domain=de
+es _ _ O
+spielt _ _ O
+brad _ _ B-Artist
+leland _ _ I-Artist
+als _ _ O
+strenger _ _ O
+fußballtrainer _ _ O
+der _ _ O
+nach _ _ O
+dem _ _ O
+tod _ _ O
+eines _ _ O
+spielers _ _ O
+mit _ _ O
+hypertrophische _ _ B-Disease
+kardiomyopathie _ _ I-Disease
+mit _ _ O
+der _ _ O
+tragödie _ _ O
+kämpfen _ _ O
+muss _ _ O
+. _ _ O
+
+
+# id b8e6d555-9814-46a5-9cf0-b8fa66e98289	domain=de
+mcv4 _ _ B-Medication/Vaccine
+gegen _ _ O
+meningitis _ _ B-Disease
+für _ _ O
+junge _ _ O
+leute _ _ O
+beginnt _ _ O
+rolout _ _ O
+. _ _ O
+
+
+# id 28869f03-30cc-4394-8c84-77abc8b05950	domain=de
+die _ _ O
+beiden _ _ O
+benachbarten _ _ O
+lager _ _ O
+wurden _ _ O
+mit _ _ O
+hungerrationen _ _ O
+und _ _ O
+voller _ _ O
+krankheiten _ _ O
+geführt _ _ O
+einschließlich _ _ O
+dysenterie _ _ B-Symptom
+. _ _ O
+
+
+# id eb5bd08b-8eb2-4386-8bc4-50c369320b76	domain=de
+chira _ _ O
+- _ _ O
+ein _ _ O
+roman _ _ O
+in _ _ O
+dem _ _ O
+der _ _ O
+protagonist _ _ O
+acquired _ _ B-Symptom
+immune _ _ I-Symptom
+deficiency _ _ I-Symptom
+syndrome _ _ I-Symptom
+diagnostiziert _ _ O
+wird _ _ O
+. _ _ O
+
+
+# id 2ce0e733-b2dd-4217-a6ca-17084735f563	domain=de
+es _ _ O
+erhöht _ _ O
+das _ _ O
+risiko _ _ O
+für _ _ O
+das _ _ O
+metabolisches _ _ B-Symptom
+syndrom _ _ I-Symptom
+und _ _ O
+kann _ _ O
+sich _ _ O
+negativ _ _ O
+auf _ _ O
+die _ _ O
+kardio _ _ O
+-stoffwechselgesundheit _ _ O
+auswirken _ _ O
+. _ _ O
+
+
+# id 65e19a96-702f-4202-aa39-e815e5d39124	domain=de
+andere _ _ O
+5 _ _ O
+ht3 _ _ O
+-antagonisten _ _ O
+werden _ _ O
+zur _ _ O
+behandlung _ _ O
+von _ _ O
+colon _ _ B-Symptom
+irritabile _ _ I-Symptom
+verwendet _ _ O
+: _ _ O
+
+
+# id c3e66390-f8ca-4a55-981a-ca7ab06e4b7a	domain=de
+tenesmus _ _ B-Symptom
+alvi _ _ I-Symptom
+kann _ _ O
+bei _ _ O
+der _ _ O
+rektaltemperatur _ _ O
+bemerkt _ _ O
+werden _ _ O
+. _ _ O
+
+
+# id a9cde8f6-5fbc-4483-a7a8-6c332d2242ec	domain=de
+trotz _ _ O
+der _ _ O
+unklaren _ _ O
+ätiologie _ _ O
+gibt _ _ O
+es _ _ O
+mehrere _ _ O
+risikofaktoren _ _ O
+für _ _ O
+nebennierenblutungen _ _ O
+einschließlich _ _ O
+geburtstrauma _ _ O
+akute _ _ B-Symptom
+organdysfunktion _ _ I-Symptom
+und _ _ O
+hämorrhagischen _ _ O
+störungen _ _ O
+. _ _ O
+
+
+# id fbefd8e4-65ea-45fd-af30-61901ac0f5d9	domain=de
+ersteres _ _ O
+ist _ _ O
+üblicherweise _ _ O
+mit _ _ O
+liegen _ _ B-Symptom
+oder _ _ O
+sekundärer _ _ O
+wirkungen _ _ O
+aus _ _ O
+arzneimitteln _ _ O
+verwandt _ _ O
+die _ _ O
+bei _ _ O
+der _ _ O
+behandlung _ _ O
+der _ _ O
+krankheit _ _ O
+verwendet _ _ O
+werden _ _ O
+. _ _ O
+
+
+# id 3527c9a6-040b-4069-b7ed-5c2b44aa6348	domain=de
+butlers _ _ O
+tod _ _ O
+im _ _ O
+alter _ _ O
+von _ _ O
+60 _ _ O
+jahren _ _ O
+wurde _ _ O
+auf _ _ O
+dropsy _ _ O
+zurückgeführt _ _ O
+ein _ _ O
+archaischer _ _ O
+begriff _ _ O
+für _ _ O
+wasser _ _ B-Symptom
+in _ _ I-Symptom
+den _ _ I-Symptom
+beinen _ _ I-Symptom
+. _ _ O
+
+
+# id 950e6a1f-0915-4cce-9395-6623ea5d57d7	domain=de
+mutationen _ _ O
+in _ _ O
+diesem _ _ O
+gen _ _ O
+sind _ _ O
+mit _ _ O
+hydroletalus-syndrom _ _ B-Symptom
+assoziiert _ _ O
+. _ _ O
+
+
+# id 97818f59-6b13-478c-8bfa-957c9b29abe4	domain=de
+gtx _ _ O
+102 _ _ O
+in _ _ O
+der _ _ O
+klinischen _ _ O
+entwicklung _ _ O
+als _ _ O
+mögliche _ _ O
+behandlungsoption _ _ O
+für _ _ O
+angelman-syndrom _ _ B-Symptom
+eine _ _ O
+seltene _ _ O
+neurogenetische _ _ O
+störung _ _ O
+. _ _ O
+
+
+# id b98506a1-852c-49f4-8cf5-8ef2e3638fd9	domain=de
+datei _ _ O
+: _ _ O
+bramantino _ _ O
+_compianto _ _ O
+. _ _ O
+jpg _ _ O
+| _ _ O
+die _ _ B-ArtWork
+beweinung _ _ I-ArtWork
+christi. _ _ I-ArtWork
+bramantino _ _ B-OtherPER
+214 _ _ O
+× _ _ O
+104 _ _ O
+cm _ _ O
+1515 _ _ O
+- _ _ O
+1520 _ _ O
+. _ _ O
+
+
+# id f38bbe10-49d1-412b-8dee-609766950862	domain=de
+der _ _ O
+autor _ _ O
+war _ _ O
+der _ _ O
+künstler _ _ O
+der _ _ O
+erste _ _ B-ArtWork
+lesung _ _ I-ArtWork
+des _ _ I-ArtWork
+emanzipations-proklamation _ _ I-ArtWork
+von _ _ I-ArtWork
+präsident _ _ I-ArtWork
+lincoln _ _ I-ArtWork
+malte _ _ O
+. _ _ O
+
+
+# id d65f6e4a-f69f-4838-bdbb-ba222575fb64	domain=de
+hier _ _ O
+wurde _ _ O
+ein _ _ B-ArtWork
+sonntagnachmittag _ _ I-ArtWork
+auf _ _ I-ArtWork
+der _ _ I-ArtWork
+insel _ _ I-ArtWork
+la _ _ I-ArtWork
+grande _ _ I-ArtWork
+jatte _ _ I-ArtWork
+gezeigt _ _ O
+. _ _ O
+
+
+# id c68f3a6a-0061-462e-9956-2f74090d0183	domain=de
+der _ _ O
+titel _ _ O
+des _ _ O
+romans _ _ O
+stammt _ _ O
+aus _ _ O
+dem _ _ O
+gemälde _ _ O
+hieronymus _ _ B-ArtWork
+boschs _ _ I-ArtWork
+triptychon _ _ I-ArtWork
+von _ _ O
+jeroen _ _ B-Artist
+bosch _ _ I-Artist
+. _ _ O
+
+
+# id 1efe81a8-5c46-466c-bd07-43584f42c0c4	domain=de
+picassos _ _ O
+les _ _ B-ArtWork
+demoiselles _ _ I-ArtWork
+d'avignon _ _ I-ArtWork
+ist _ _ O
+im _ _ O
+hintergrund _ _ O
+hängen _ _ O
+zu _ _ O
+sehen _ _ O
+
+
+# id 1919c583-ecec-481b-866a-c7805d4ec890	domain=de
+er _ _ O
+kam _ _ O
+zu _ _ O
+dem _ _ O
+schluss _ _ O
+dass _ _ O
+beide _ _ O
+bands _ _ O
+andy _ _ B-Artist
+warhol _ _ I-Artist
+gemälde _ _ O
+der _ _ O
+shot _ _ B-ArtWork
+marilyn _ _ I-ArtWork
+kopiert _ _ O
+hatten _ _ O
+. _ _ O
+
+
+# id ad0f96a9-4207-4179-863e-7cb14f75b25d	domain=de
+die _ _ O
+komposition _ _ O
+macht _ _ O
+es _ _ O
+analog _ _ O
+zu _ _ O
+seinen _ _ O
+früheren _ _ O
+werken _ _ O
+wie _ _ O
+dem _ _ O
+c _ _ O
+. _ _ O
+1480 _ _ O
+der _ _ B-ArtWork
+hl. _ _ I-ArtWork
+hieronymus _ _ I-ArtWork
+liest _ _ I-ArtWork
+in _ _ I-ArtWork
+der _ _ I-ArtWork
+wüste _ _ I-ArtWork
+. _ _ O
+
+
+# id eb7c6257-e272-4633-b887-e42e0872d3a8	domain=de
+nach _ _ O
+dieser _ _ O
+episode _ _ O
+wurde _ _ O
+die _ _ O
+festung _ _ O
+unter _ _ O
+den _ _ O
+schutz _ _ O
+der _ _ O
+ikone _ _ O
+des _ _ O
+gottesmutter _ _ B-ArtWork
+von _ _ I-ArtWork
+kasan _ _ I-ArtWork
+gestellt _ _ O
+. _ _ O
+
+
+# id 5423f197-04af-477a-a507-37651862be6a	domain=de
+er _ _ O
+schien _ _ O
+sie _ _ O
+jedoch _ _ O
+zu _ _ O
+diesem _ _ O
+zeitpunkt _ _ O
+nicht _ _ O
+zu _ _ O
+skizzieren _ _ O
+oder _ _ O
+gemalt _ _ O
+zu _ _ O
+haben _ _ O
+da _ _ O
+er _ _ O
+später _ _ O
+in _ _ O
+solchen _ _ O
+werken _ _ O
+wie _ _ O
+landschaft _ _ B-ArtWork
+bei _ _ I-ArtWork
+auvers _ _ I-ArtWork
+im _ _ I-ArtWork
+regen _ _ I-ArtWork
+( _ _ O
+rechts _ _ O
+) _ _ O
+war _ _ O
+. _ _ O
+
+
+# id 3115c3f2-0f9a-470b-8365-e5c4eca20736	domain=de
+datei _ _ O
+: _ _ O
+fragonard _ _ O
+der _ _ O
+schwung _ _ O
+. _ _ O
+jpg _ _ O
+| _ _ O
+jean _ _ B-Artist
+honoré _ _ I-Artist
+fragonard _ _ I-Artist
+die _ _ B-ArtWork
+schaukel _ _ I-ArtWork
+1767 _ _ O
+
+
+# id 0773907d-8839-4daa-acb1-0e30dcf3088e	domain=de
+gilt _ _ O
+für _ _ O
+alle _ _ O
+vier _ _ O
+originalversionen _ _ O
+von _ _ O
+bell _ _ B-PrivateCorp
+laboratories _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 018ec7ed-4922-409b-b73d-b61fb52f11d2	domain=de
+im _ _ O
+jahr _ _ O
+2020 _ _ O
+erzielte _ _ O
+das _ _ O
+unternehmen _ _ O
+13 _ _ O
+% _ _ O
+seiner _ _ O
+einnahmen _ _ O
+aus _ _ O
+dem _ _ O
+umsatz _ _ O
+auf _ _ O
+marathon _ _ B-PublicCorp
+ashland _ _ I-PublicCorp
+petroleum _ _ I-PublicCorp
+llc _ _ I-PublicCorp
+und _ _ O
+12 _ _ O
+% _ _ O
+seiner _ _ O
+einnahmen _ _ O
+aus _ _ O
+dem _ _ O
+umsatz _ _ O
+auf _ _ O
+koch _ _ B-PrivateCorp
+industries _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 6775bcba-a862-4f1d-a73d-e0c6a3e07916	domain=de
+in _ _ O
+wirklichkeit _ _ O
+ging _ _ O
+er _ _ O
+zur _ _ O
+rivalisierenden _ _ O
+promotion _ _ O
+nwa _ _ B-PrivateCorp
+world _ _ I-PrivateCorp
+championship _ _ I-PrivateCorp
+wrestling _ _ I-PrivateCorp
+( _ _ O
+wcw _ _ O
+) _ _ O
+. _ _ O
+
+
+# id f98f5fb3-0454-44dd-8a37-924dc3bd716f	domain=de
+sie _ _ O
+hat _ _ O
+für _ _ O
+chanel _ _ B-PrivateCorp
+sephora _ _ B-ORG
+und _ _ O
+thomas _ _ B-Artist
+carlyle _ _ I-Artist
+\tom\" _ _ I-Artist
+ford" _ _ I-Artist
+modelliert _ _ O
+. _ _ O
+
+
+# id 35fc36d3-0458-4c87-8244-c7a253f0805d	domain=de
+arbeitete _ _ O
+für _ _ O
+marken _ _ O
+wie _ _ O
+versace _ _ B-PrivateCorp
+burberry _ _ B-PublicCorp
+beats _ _ B-ORG
+electronics, _ _ I-ORG
+llc _ _ I-ORG
+und _ _ O
+maybelline _ _ B-ORG
+. _ _ O
+
+
+# id fae531c6-7a0d-4c2c-9416-b02cc34b6660	domain=de
+der _ _ O
+leuchtturm _ _ O
+wird _ _ O
+von _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+fernbedingt _ _ O
+betrieben _ _ O
+. _ _ O
+
+
+# id 69154559-301c-4336-bb2c-05bef2fcfe64	domain=de
+er _ _ O
+absolvierte _ _ O
+1936 _ _ O
+und _ _ O
+arbeitete _ _ O
+sofort _ _ O
+bei _ _ O
+bell _ _ B-PrivateCorp
+laboratories _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 7741c515-12fc-4b40-b768-b930048f5be2	domain=de
+huawei _ _ B-PrivateCorp
+: _ _ O
+104 _ _ O
+0947 _ _ O
+mio _ _ O
+. _ _ O
+( _ _ O
+7 _ _ O
+3 _ _ O
+% _ _ O
+marktanteil _ _ O
+) _ _ O
+
+
+# id 102bc75f-dc59-4598-8f4c-64e2631dd31d	domain=de
+das _ _ O
+ambiente _ _ O
+wurde _ _ O
+in _ _ O
+paris _ _ O
+chanel _ _ B-PrivateCorp
+in _ _ O
+paris _ _ O
+wiedergegeben _ _ O
+; _ _ O
+die _ _ O
+kleidung _ _ O
+kam _ _ O
+von _ _ O
+mehr _ _ O
+als _ _ O
+50 _ _ O
+designern _ _ O
+. _ _ O
+
+
+# id 460c8b96-005a-4567-b8a1-ba12d012ab69	domain=de
+es _ _ O
+wird _ _ O
+in _ _ O
+proquest _ _ B-PrivateCorp
+abstrahiert _ _ O
+und _ _ O
+indiziert _ _ O
+. _ _ O
+

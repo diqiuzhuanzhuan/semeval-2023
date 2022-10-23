@@ -16,51 +16,53 @@ output_path = root_path/'output'
 wikigaz_file = data_path/'wiki_def'/'wikigaz.tsv.zip'
 
 
-train_data_path = data_path/'training_data'
+train_data_path = data_path/'train_dev'
+validate_data_path = data_path/'train_dev'
+test_data_path = data_path/'train_dev'
 
 train_file = {
-    'English': data_path/'training_data'/'EN-English'/'en_train.conll',
- 	'Spanish': data_path/'training_data'/'ES-Spanish'/'es_train.conll',
-    'Hindi': data_path/'training_data'/'HI-Hindi'/'hi_train.conll',
-	'Bangla': data_path/'training_data'/'BN-Bangla'/'bn_train.conll',
-	'Chinese': data_path/'training_data'/'ZH-Chinese'/'zh_train.conll',
-	'Swedish': data_path/'training_data'/'FA-Farsi'/'fa_train.conll',
-	'Farsi': data_path/'training_data'/'FA-Farsi'/'fa_train.conll',
-	'French': data_path/'training_data'/'FA-Farsi'/'fa_train.conll',
-	'Italian': data_path/'training_data'/'TR-Turkish'/'tr_train.conll',
-	'Portugese': data_path/'training_data'/'TR-Turkish'/'tr_train.conll',
-	'Ukranian': data_path/'training_data'/'RU-Russian'/'ru_train.conll',
-	'German': data_path/'training_data'/'DE-German'/'de_train.conll',
+    'English': train_data_path/'en-train.conll',
+ 	'Spanish': train_data_path/'es-train.conll',
+    'Hindi': train_data_path/'hi-train.conll',
+	'Bangla': train_data_path/'bn-train.conll',
+	'Chinese': train_data_path/'zh-train.conll',
+	'Swedish': train_data_path/'sv-train.conll',
+	'Farsi': train_data_path/'fa-train.conll',
+	'French': train_data_path/'fr-train.conll',
+	'Italian': train_data_path/'it-train.conll',
+	'Portugese': train_data_path/'pt-train.conll',
+	'Ukranian': train_data_path/'uk-train.conll',
+	'German': train_data_path/'de-train.conll',
 }
 
 validate_file = {
-    'English': data_path/'training_data'/'EN-English'/'en_dev.conll',
- 	'Spanish': data_path/'training_data'/'ES-Spanish'/'es_dev.conll',
-    'Hindi': data_path/'training_data'/'HI-Hindi'/'hi_dev.conll',
-	'Bangla': data_path/'training_data'/'BN-Bangla'/'bn_dev.conll',
-	'Chinese': data_path/'training_data'/'ZH-Chinese'/'zh_dev.conll',
-	'Swedish': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'Farsi': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'French': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'Italian': data_path/'training_data'/'TR-Turkish'/'tr_dev.conll',
-	'Portugese': data_path/'training_data'/'TR-Turkish'/'tr_dev.conll',
-	'Ukranian': data_path/'training_data'/'RU-Russian'/'ru_dev.conll',
-	'German': data_path/'training_data'/'DE-German'/'de_dev.conll',
+    'English': validate_data_path/'en-dev.conll',
+ 	'Spanish': validate_data_path/'es-dev.conll',
+    'Hindi': validate_data_path/'hi-dev.conll',
+	'Bangla': validate_data_path/'bn-dev.conll',
+	'Chinese': validate_data_path/'zh-dev.conll',
+	'Swedish': validate_data_path/'sv-dev.conll',
+	'Farsi': validate_data_path/'fa-dev.conll',
+	'French': validate_data_path/'fr-dev.conll',
+	'Italian': validate_data_path/'it-dev.conll',
+	'Portugese': validate_data_path/'pt-dev.conll',
+	'Ukranian': validate_data_path/'uk-dev.conll',
+	'German': validate_data_path/'de-dev.conll',
 }
 
 test_file = {
-    'English': data_path/'training_data'/'EN-English'/'en_dev.conll',
- 	'Spanish': data_path/'training_data'/'ES-Spanish'/'es_dev.conll',
-    'Hindi': data_path/'training_data'/'HI-Hindi'/'hi_dev.conll',
-	'Bangla': data_path/'training_data'/'BN-Bangla'/'bn_dev.conll',
-	'Chinese': data_path/'training_data'/'ZH-Chinese'/'zh_dev.conll',
-	'Swedish': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'Farsi': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'French': data_path/'training_data'/'FA-Farsi'/'fa_dev.conll',
-	'Italian': data_path/'training_data'/'TR-Turkish'/'tr_dev.conll',
-	'Portugese': data_path/'training_data'/'TR-Turkish'/'tr_dev.conll',
-	'Ukranian': data_path/'training_data'/'RU-Russian'/'ru_dev.conll',
-	'German': data_path/'training_data'/'DE-German'/'de_dev.conll',
+	'English': validate_data_path/'en-dev.conll',
+ 	'Spanish': validate_data_path/'es-dev.conll',
+    'Hindi': validate_data_path/'hi-dev.conll',
+	'Bangla': validate_data_path/'bn-dev.conll',
+	'Chinese': validate_data_path/'zh-dev.conll',
+	'Swedish': validate_data_path/'sv-dev.conll',
+	'Farsi': validate_data_path/'fa-dev.conll',
+	'French': validate_data_path/'fr-dev.conll',
+	'Italian': validate_data_path/'it-dev.conll',
+	'Portugese': validate_data_path/'pt-dev.conll',
+	'Ukranian': validate_data_path/'uk-dev.conll',
+	'German': validate_data_path/'de-dev.conll',
 }
 
 performance_log = log_path/'performance.csv'
