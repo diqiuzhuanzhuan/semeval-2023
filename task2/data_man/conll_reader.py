@@ -10,6 +10,7 @@ from transformers import AutoTokenizer
 import os, torch
 import pytorch_lightning as pl
 import ahocorasick
+from intervaltree import IntervalTree, Interval
 from task2.configuration import config
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
@@ -26,9 +27,10 @@ class ConllDataset(Dataset, Registrable):
         self.instances = []
         self.tokenizer = AutoTokenizer.from_pretrained(encoder_model, add_prefix_space=True)
 
-    @overload
     def __getitem__(self, index: Any) -> Any:
-        ...
+        if index >= self.__len__():
+            raise IndexError('index value must be not more than the maximum length.')
+        return self.encode_input(self.instances[index])
 
     @overload
     def encode_input(self, item) -> Any:
@@ -126,7 +128,7 @@ class BaselineDataModule(ConllDataModule):
         attention_mask_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         if label_ids:
             max_label_len = max([len(_) for _ in label_ids])
-            label_ids_tensor = torch.empty(size=[batch_size, max_label_len], dtype=torch.long).fill_(0)
+            label_ids_tensor = torch.empty(size=[batch_size, max_label_len], dtype=torch.long).fill_(-100)
         else:
             label_ids_tensor = None
             gold_spans = None
@@ -177,23 +179,95 @@ class DictionaryFusedDataset(ConllDataset):
         self.entity_automation.make_automaton()
         logging.info('automation is built successfully')
 
-    def _search_entity(self, sentence_str: AnyStr):
-        pass
+    def _search_entity(self, sentence: AnyStr):
+        ans = []
+        words = set(sentence.split(" "))
+        tree = IntervalTree()
 
-    def __getitem__(self, index: Any) -> Any:
-        pass
+        for end_index, (insert_order, original_value) in self.entity_automation.iter(sentence):
+            start_index = end_index - len(original_value) + 1
+            if start_index >= 1 and sentence[start_index-1] != " ":
+                continue
+            if end_index < len(sentence) - 1 and sentence[end_index+1] != " ":
+                continue
+            tree.remove_envelop(start_index, end_index)
+            should_continue = False
+            for item in tree.items():
+                if start_index >= item.begin and end_index <= item.end:
+                    should_continue = True
+                    continue
+            if should_continue:
+                continue
+            if original_value.count(" ") > 0:
+                tree.add(Interval(start_index, end_index)) 
+            elif original_value in words:
+                if len(original_value) > 1:
+                    tree.add(Interval(start_index, end_index)) 
+        for interval in sorted(tree.items()):
+            entity = sentence[interval.begin: interval.end+1]
+            token_pos = (sentence[:interval.begin].count(' '), sentence[:interval.begin].count(' ') + entity.count(' '))
+            ans.append((entity, token_pos))
+            #ans.append("$")
+        if len(ans) and ans[-1] == "$":
+            ans.pop(-1)
+        return ans
+
 
     def encode_input(self, item) -> Any:
-        pass
+        id, tokens, labels = item.id, item.tokens, item.labels
+        sentence = " ".join(tokens)
+        token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
+        entities = self._search_entity(sentence=sentence)
+        # half top
+        input_ids.append(self.tokenizer.cls_token_id)
+        label_ids.append(get_id_by_type('O'))
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
+         
+        for i, token in enumerate(tokens):
+            outputs = self.tokenizer(token.lower())
+            subtoken_len = len(outputs['input_ids']) - 2
+            input_ids.extend(outputs['input_ids'][1:-1])
+            attention_mask.extend(outputs['attention_mask'][1:-1])
+            token_type_ids.extend([0] * subtoken_len)
+            token_masks.extend([True]+ [False] * (subtoken_len-1))
+            if labels is not None:
+                tag = labels[i]
+                sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
+                label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
+        input_ids.append(self.tokenizer.sep_token_id)
+        label_ids.append(get_id_by_type('O'))
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
+        gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
 
+        # half bottom
+        entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity, entity_pos in entities])
+        outputs = self.tokenizer(entity_information.lower())
+        input_ids.extend(outputs['input_ids'][1:-1])
+        attention_mask.extend(outputs['attention_mask'][1:-1])
+        token_type_ids.extend([1] * len(outputs['input_ids'][1:-1]))
+        label_ids.extend([-100 for _ in outputs['input_ids'][1:-1]])
         
+        # the last [SEP]]
+        input_ids.append(self.tokenizer.sep_token_id)
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        label_ids.append(-100)
+
+
+        return id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans
+        
+
 if __name__ == '__main__':
     params = Params({
         'type': 'baseline_dataset',
         'encoder_model': 'xlm-roberta-base' 
     })
     baseline_dataset = ConllDataset.from_params(params)
-    baseline_dataset.read_data('./task2/data/semeval_2021_task_11_trial_data.txt')
+    baseline_dataset.read_data(config.train_file['English'])
     for ele in baseline_dataset:
         print(ele)
         break
@@ -211,3 +285,14 @@ if __name__ == '__main__':
     dm.setup('fit')
     for batch in dm.train_dataloader():
         print(batch)
+        break
+    
+    params = Params({
+        'type': 'dictionary_fused_dataset',
+        'encoder_model': 'xlm-roberta-base' 
+        }
+    )
+    dic_fused_dataset = ConllDataset.from_params(params=params)
+    dic_fused_dataset.read_data(config.train_file['English'])
+    for item in dic_fused_dataset:
+        print(item)

@@ -17,9 +17,9 @@ run()
         do
             for batch_size in 16
             do
-                for model_type in 'baseline_ner_model' 'baseline_crf_model'
+                for model_type in 'baseline_crf_model' 'baseline_ner_model'
                 do
-                    for dataset_type in 'baseline_dataset'
+                    for dataset_type in 'dictionary_fused_dataset' 'baseline_dataset'
                     do
                         for data_module_type in 'baseline_data_module'
                         do
