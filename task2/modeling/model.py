@@ -178,7 +178,7 @@ class BaselineCrfModel(BaselineNerModel):
          
         batch_size = len(id)
         return_dict = dict()
-        crf_mask = torch.ge(label_ids, 0)
+        crf_mask = torch.ge(label_ids, 0).to(self.device)
         if label_ids is not None:
             loss = -self.crf_layer(token_scores, label_ids, crf_mask) / float(batch_size)
             return_dict['loss'] = loss
