@@ -247,7 +247,7 @@ class DictionaryFusedDataset(ConllDataset):
         # the last [SEP]]
         input_ids.append(self.tokenizer.sep_token_id)
         attention_mask.append(1)
-        token_type_ids.append(0)
+        token_type_ids.append(1)
         label_ids.append(-100)
 
 

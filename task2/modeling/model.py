@@ -29,6 +29,7 @@ class NerModel(Registrable, pl.LightningModule):
 
     def configure_optimizers(self):
         optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, weight_decay=0.01)
+        return optimizer
         warmup_steps = self.warmup_steps
         def fn(warmup_steps, step):
             if step < warmup_steps:
@@ -76,6 +77,8 @@ class BaselineNerModel(NerModel):
 
     def forward_step(self, batch: Any):
         id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch
+        if self.encoder.config.type_vocab_size < 2:
+            token_type_ids = None
         outputs = self.encoder(
             input_ids=input_ids,
             token_type_ids=token_type_ids,
@@ -172,7 +175,15 @@ class BaselineCrfModel(BaselineNerModel):
 
     def forward_step(self, batch: Any):
         id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch
-        outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask, labels=label_ids, output_hidden_states=True)
+        if self.encoder.config.type_vocab_size < 2:
+            token_type_ids = None
+        outputs = self.encoder(
+            input_ids=input_ids, 
+            attention_mask=attention_mask, 
+            labels=label_ids, 
+            token_type_ids=token_type_ids,
+            output_hidden_states=True
+            )
         token_scores = outputs.logits
         #token_scores = torch.log_softmax(outputs.logits, dim=-1)  # try or not try
          

@@ -132,7 +132,6 @@ if __name__ == '__main__':
         'type': args.data_module_type,
         'reader': Params({
             'type': args.dataset_type
-            #'type': 'dictionary_fused_dataset'
         }),
         'lang': args.lang,
         'batch_size': args.batch_size
