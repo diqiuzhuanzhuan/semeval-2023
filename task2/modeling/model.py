@@ -161,8 +161,8 @@ class BaselineCrfModel(BaselineNerModel):
     def __init__(
         self,
         encoder_model: AnyStr = 'xlm-roberta-base', 
-        lr: float = 0.00001, 
-        warmup_steps: int = 1000
+        lr: float = 2e-5, 
+        warmup_steps: int = 3000
         ) -> None:
         super().__init__(encoder_model, lr, warmup_steps)
         self.crf_layer = ConditionalRandomField(
