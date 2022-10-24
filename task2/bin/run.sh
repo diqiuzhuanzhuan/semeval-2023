@@ -13,7 +13,7 @@ run()
 
     for encoder_model in  'xlm-roberta-base'
     do
-        for max_epochs in 20
+        for max_epochs in 25
         do
             for batch_size in 16
             do
