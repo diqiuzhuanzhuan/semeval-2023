@@ -46,10 +46,6 @@ class ConllDataset(Dataset, Registrable):
 @ConllDataset.register('baseline_dataset')
 class BaselineDataset(ConllDataset):
 
-    def __getitem__(self, index: Any) -> Any:
-        if index >= self.__len__():
-            raise IndexError('index value must be not more than the maximum length.')
-        return self.encode_input(self.instances[index])
 
     def encode_input(self, item: ConllItem):
         id, tokens, labels = item.id, item.tokens, item.labels
@@ -207,9 +203,6 @@ class DictionaryFusedDataset(ConllDataset):
             entity = sentence[interval.begin: interval.end+1]
             token_pos = (sentence[:interval.begin].count(' '), sentence[:interval.begin].count(' ') + entity.count(' '))
             ans.append((entity, token_pos))
-            #ans.append("$")
-        if len(ans) and ans[-1] == "$":
-            ans.pop(-1)
         return ans
 
 

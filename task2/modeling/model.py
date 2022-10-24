@@ -178,8 +178,9 @@ class BaselineCrfModel(BaselineNerModel):
          
         batch_size = len(id)
         return_dict = dict()
-        crf_mask = torch.ge(label_ids, 0).to(self.device)
         if label_ids is not None:
+            crf_mask = torch.ge(label_ids, 0).to(self.device)
+            label_ids[label_ids==-100] = 0
             loss = -self.crf_layer(token_scores, label_ids, crf_mask) / float(batch_size)
             return_dict['loss'] = loss
         best_path = self.crf_layer.viterbi_tags(token_scores, crf_mask)
