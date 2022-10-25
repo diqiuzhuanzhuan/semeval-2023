@@ -132,7 +132,8 @@ if __name__ == '__main__':
     dm = ConllDataModule.from_params(Params({
         'type': args.data_module_type,
         'reader': Params({
-            'type': args.dataset_type
+            'type': args.dataset_type,
+            'encoder_model': args.encoder_model
         }),
         'lang': args.lang,
         'batch_size': args.batch_size
