@@ -29,6 +29,7 @@ def parse_arguments():
     parser.add_argument('--batch_size', type=int, default=16, help='')
     parser.add_argument('--max_epochs', type=int, default=1, help='')
     parser.add_argument('--lang', type=str, default='English', help='')
+    parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
     
     args = parser.parse_args()
@@ -144,7 +145,9 @@ if __name__ == '__main__':
     ner_model = NerModel.from_params(params=params)
     trainer.fit(model=ner_model, datamodule=dm)
     _, best_checkpoint = save_model(trainer, model_name=args.model_type)
-    val_f1 = get_best_value(best_checkpoint, monitor='val_micro@F1')
-    write_eval_performance(args, {'val_micro@F1': val_f1}, config.performance_log)
+    monitors = args.monitors.split(' ')
+    value_by_monitor = {monitor: get_best_value(best_checkpoint, monitor=monitor) for monitor in monitors}
+    
+    write_eval_performance(args, value_by_monitor, config.performance_log)
     argument_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
     trainer.test(argument_model, datamodule=dm)
