@@ -140,20 +140,21 @@ class BaselineDataModule(ConllDataModule):
         return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, label_ids_tensor, gold_spans
 
     def train_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=4)
+        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
 
     def val_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=4)
+        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 
     def test_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=4)
+        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
     
     def predict_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=4)
+        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 
 
 @ConllDataset.register('dictionary_fused_dataset')        
 class DictionaryFusedDataset(ConllDataset):
+    entity_vocab = None
 
     def __init__(
         self, 
@@ -203,6 +204,7 @@ class DictionaryFusedDataset(ConllDataset):
             entity = sentence[interval.begin: interval.end+1]
             token_pos = (sentence[:interval.begin].count(' '), sentence[:interval.begin].count(' ') + entity.count(' '))
             ans.append((entity, token_pos))
+          
         return ans
 
 
@@ -252,6 +254,25 @@ class DictionaryFusedDataset(ConllDataset):
 
 
         return id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans
+
+
+@ConllDataset.register('span_aware_dataset')
+class SpanAwareDataset(DictionaryFusedDataset):
+    def __init__(
+        self, 
+        encoder_model='bert-base-uncased'
+        ) -> None:
+        super().__init__(encoder_model)
+
+    def encode_input(self, item) -> Any:
+        id, tokens, labels = item.id, item.tokens, item.labels
+        sentence = " ".join(tokens)
+        token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
+        entities = self._search_entity(sentence=sentence)
+        
+        # half top
+
+        return super().encode_input(item)
         
 
 if __name__ == '__main__':
