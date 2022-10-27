@@ -2,6 +2,7 @@
 # author: Feynman
 # email: diqiuzhuanzhuan@gmail.com
 
+from copy import deepcopy
 import logging
 from typing import Any, AnyStr, Union, Optional, overload
 from torch.utils.data import Dataset
@@ -101,9 +102,7 @@ class BaselineDataModule(ConllDataModule):
     
     def setup(self, stage: Optional[str] = None) -> None:
         if stage == 'fit':
-            self.reader.read_data(config.train_file[self.lang])
-        if stage == 'validate':
-            self.reader.read_data(config.validate_file[self.lang])
+            pass
 
         if stage == 'test':
             pass
@@ -140,17 +139,24 @@ class BaselineDataModule(ConllDataModule):
         return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, label_ids_tensor, gold_spans
 
     def train_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
+        self.reader.read_data(config.train_file[self.lang])
+        train_reader = deepcopy(self.reader)
+        return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
 
     def val_dataloader(self):
         self.reader.read_data(config.validate_file[self.lang])
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
+        val_reader = deepcopy(self.reader)
+        return torch.utils.data.DataLoader(val_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 
     def test_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
+        self.reader.read_data(config.test_file[self.lang])
+        test_reader = deepcopy(self.reader)
+        return torch.utils.data.DataLoader(test_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
     
     def predict_dataloader(self):
-        return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
+        self.reader.read_data(config.test_file[self.lang])
+        test_reader = deepcopy(self.reader)
+        return torch.utils.data.DataLoader(test_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 
 
 @ConllDataset.register('dictionary_fused_dataset')        
