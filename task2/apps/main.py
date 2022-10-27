@@ -6,7 +6,7 @@
 import argparse
 from pathlib import Path
 import pandas as pd
-import os, re
+import os, re, sys
 import time
 from typing import AnyStr, Dict, Union
 from allennlp.common.params import Params
@@ -152,3 +152,4 @@ if __name__ == '__main__':
     write_eval_performance(args, value_by_monitor, config.performance_log)
     argument_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
     trainer.test(argument_model, datamodule=dm)
+    sys.exit(0)

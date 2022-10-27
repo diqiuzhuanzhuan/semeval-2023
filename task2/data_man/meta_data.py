@@ -4,7 +4,7 @@
 
 from dataclasses import dataclass
 import itertools
-import logging
+from task2.configuration.config import logging
 from pathlib import Path
 from typing import AnyStr, Dict, List, Union
 import gzip, os
@@ -95,6 +95,7 @@ def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
                 'labels': fields[-1] if len(fields) == 4 else None
                 })
         )
+    logging.info("read {} item from {}.".format(len(ans), str(file)))
     return ans
 
 

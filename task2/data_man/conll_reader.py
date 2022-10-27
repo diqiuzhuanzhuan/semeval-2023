@@ -143,6 +143,7 @@ class BaselineDataModule(ConllDataModule):
         return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
 
     def val_dataloader(self):
+        self.reader.read_data(config.validate_file[self.lang])
         return torch.utils.data.DataLoader(self.reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 
     def test_dataloader(self):
@@ -180,6 +181,7 @@ class DictionaryFusedDataset(ConllDataset):
         ans = []
         words = set(sentence.split(" "))
         tree = IntervalTree()
+        entity_by_pos = dict()
 
         for end_index, (insert_order, original_value) in self.entity_automation.iter(sentence):
             start_index = end_index - len(original_value) + 1
@@ -203,16 +205,18 @@ class DictionaryFusedDataset(ConllDataset):
         for interval in sorted(tree.items()):
             entity = sentence[interval.begin: interval.end+1]
             token_pos = (sentence[:interval.begin].count(' '), sentence[:interval.begin].count(' ') + entity.count(' '))
-            ans.append((entity, token_pos))
+            for i in range(token_pos[0], token_pos[1]+1):
+                entity_by_pos[i] = entity
+            ans.append(entity)
           
-        return ans
+        return ans, entity_by_pos
 
 
     def encode_input(self, item) -> Any:
         id, tokens, labels = item.id, item.tokens, item.labels
         sentence = " ".join(tokens)
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
-        entities = self._search_entity(sentence=sentence)
+        entities, entity_by_pos = self._search_entity(sentence=sentence)
         # half top
         input_ids.append(self.tokenizer.cls_token_id)
         label_ids.append(get_id_by_type('O'))
@@ -239,7 +243,7 @@ class DictionaryFusedDataset(ConllDataset):
         gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
 
         # half bottom
-        entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity, entity_pos in entities])
+        entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity in entities])
         outputs = self.tokenizer(entity_information.lower())
         input_ids.extend(outputs['input_ids'][1:-1])
         attention_mask.extend(outputs['attention_mask'][1:-1])
