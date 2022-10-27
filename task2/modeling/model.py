@@ -78,7 +78,7 @@ class BaselineNerModel(NerModel):
         })
 
     def forward_step(self, batch: Any):
-        id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch
+        id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch
         if self.encoder.config.type_vocab_size < 2:
             token_type_ids = None
         outputs = self.encoder(
@@ -93,16 +93,16 @@ class BaselineNerModel(NerModel):
         }
         if label_ids is not None:
             return_dict['loss'] = outputs.loss
-        return_dict.update(self._compute_token_tags(preds=preds, attention_mask=attention_mask, gold_spans=gold_spans))
+        return_dict.update(self._compute_token_tags(preds=preds, tag_lens=tag_lens, gold_spans=gold_spans))
         
         return return_dict
 
-    def _compute_token_tags(self, preds: torch.Tensor, attention_mask: torch.Tensor, gold_spans: Any):
+    def _compute_token_tags(self, preds: torch.Tensor, tag_lens: Any, gold_spans: Any):
         batch_size = len(preds)
         preds = preds.cpu().numpy()
         pred_results, pred_tags = [], []
         for i in range(batch_size):
-            tag_len = sum(attention_mask[i])
+            tag_len = tag_lens[i]
             tag_seq = preds[i][:tag_len]
             pred_tags.append([get_type_by_id(x) for x in tag_seq])
             pred_results.append(extract_spans(pred_tags[-1]))
@@ -176,7 +176,7 @@ class BaselineCrfModel(BaselineNerModel):
             )
 
     def forward_step(self, batch: Any):
-        id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch
+        id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch
         if self.encoder.config.type_vocab_size < 2:
             token_type_ids = None
         outputs = self.encoder(
@@ -191,8 +191,10 @@ class BaselineCrfModel(BaselineNerModel):
          
         batch_size = len(id)
         return_dict = dict()
+        crf_mask = torch.ones_like(input_ids, device=self.device)
+        for i in range(batch_size):
+            crf_mask[tag_lens[i]:] = 0
         if label_ids is not None:
-            crf_mask = torch.ge(label_ids, 0).to(self.device)
             label_ids[label_ids==-100] = 0
             loss = -self.crf_layer(token_scores, label_ids, crf_mask) / float(batch_size)
             return_dict['loss'] = loss

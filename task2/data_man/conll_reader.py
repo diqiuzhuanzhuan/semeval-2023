@@ -78,8 +78,9 @@ class BaselineDataset(ConllDataset):
         token_type_ids.append(0)
         token_masks.append(False)
         gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
+        tag_len = len(input_ids)
 
-        return id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans
+        return id, input_ids, token_type_ids, attention_mask, token_masks, tag_len, label_ids, gold_spans
 
         
         
@@ -116,7 +117,7 @@ class BaselineDataModule(ConllDataModule):
     def collate_batch(self, batch):
         batch_size = len(batch)
         batch_ = list(zip(*batch))
-        id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans = batch_
+        id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch_
         max_len = max([len(_) for _ in input_ids])
         input_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         token_type_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
@@ -136,7 +137,7 @@ class BaselineDataModule(ConllDataModule):
                 label_ids_length = len(label_ids[i])
                 label_ids_tensor[i][:label_ids_length] = torch.tensor(label_ids[i], dtype=torch.long)
 
-        return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, label_ids_tensor, gold_spans
+        return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, tag_lens, label_ids_tensor, gold_spans
 
     def train_dataloader(self):
         self.reader.read_data(config.train_file[self.lang])
@@ -225,7 +226,8 @@ class DictionaryFusedDataset(ConllDataset):
         entities, entity_by_pos = self._search_entity(sentence=sentence)
         # half top
         input_ids.append(self.tokenizer.cls_token_id)
-        label_ids.append(get_id_by_type('O'))
+        if labels is not None:
+            label_ids.append(get_id_by_type('O'))
         attention_mask.append(1)
         token_type_ids.append(0)
         token_masks.append(False)
@@ -242,11 +244,12 @@ class DictionaryFusedDataset(ConllDataset):
                 sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
                 label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
         input_ids.append(self.tokenizer.sep_token_id)
-        label_ids.append(get_id_by_type('O'))
         attention_mask.append(1)
         token_type_ids.append(0)
         token_masks.append(False)
-        gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
+        if labels is not None:
+            gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
+            label_ids.append(get_id_by_type('O'))
 
         # half bottom
         entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity in entities])
@@ -254,16 +257,18 @@ class DictionaryFusedDataset(ConllDataset):
         input_ids.extend(outputs['input_ids'][1:-1])
         attention_mask.extend(outputs['attention_mask'][1:-1])
         token_type_ids.extend([1] * len(outputs['input_ids'][1:-1]))
-        label_ids.extend([-100 for _ in outputs['input_ids'][1:-1]])
+        if labels is not None:
+            label_ids.extend([-100 for _ in outputs['input_ids'][1:-1]])
         
         # the last [SEP]]
         input_ids.append(self.tokenizer.sep_token_id)
         attention_mask.append(1)
         token_type_ids.append(1)
-        label_ids.append(-100)
+        if labels is not None:
+            label_ids.append(-100)
+        tag_len = len(input_ids)
 
-
-        return id, input_ids, token_type_ids, attention_mask, token_masks, label_ids, gold_spans
+        return id, input_ids, token_type_ids, attention_mask, token_masks, tag_len, label_ids, gold_spans
 
 
 @ConllDataset.register('span_aware_dataset')
