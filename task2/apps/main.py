@@ -8,7 +8,8 @@ from pathlib import Path
 import pandas as pd
 import os, re, sys
 import time
-from typing import AnyStr, Dict, Union
+from typing import AnyStr, Dict, List, Union
+from tqdm import tqdm
 from allennlp.common.params import Params
 import pytorch_lightning as pl
 from task2.data_man.conll_reader import ConllDataModule
@@ -97,6 +98,24 @@ def write_eval_performance(args: argparse.Namespace, eval_performance: Dict, out
         json_data = pd.concat([data, json_data])
     json_data.to_csv(out_file, index=False)
     logging.info('Finished writing evaluation performance for {}'.format(out_file.as_posix()))
+
+def write_test_results(test_results: List, out_file: Union[AnyStr, bytes, os.PathLike]):
+    out_file = Path(out_file)
+    if not out_file.parent.exists():
+        out_file.parent.mkdir()
+    with open(str(out_file), 'w') as f:
+        for id, item in test_results:
+            f.write(id+"\n")
+            [f.write(line+"\n") for line in item]
+            f.write("\n")
+
+def test_model(model: NerModel, data_module: pl.LightningDataModule):
+    test_results = []
+    test_dataloader = data_module.test_dataloader()
+    for batch in tqdm(test_dataloader, total=test_dataloader.__len__()):
+        batch_result = model.predict_tags(batch=batch)
+        test_results.extend(batch_result)
+    return test_results
     
 def get_best_value(checkpoint_file: AnyStr, monitor: AnyStr='val_f1'):
     pattern = r'{}=(.*)-'.format(monitor)
@@ -150,6 +169,9 @@ if __name__ == '__main__':
     value_by_monitor = {monitor: get_best_value(best_checkpoint, monitor=monitor) for monitor in monitors}
     
     write_eval_performance(args, value_by_monitor, config.performance_log)
-    argument_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
-    trainer.test(argument_model, datamodule=dm)
+    ner_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
+    test_results = test_model(ner_model, dm)
+    out_file = config.output_path/args.lang/value_by_monitor[monitors[0]]+".conll"
+    write_test_results(test_results=test_results, out_file=out_file)
+
     sys.exit(0)

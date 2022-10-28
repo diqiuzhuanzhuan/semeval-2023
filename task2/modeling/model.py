@@ -56,6 +56,9 @@ class NerModel(Registrable, pl.LightningModule):
     def forward_step(self, batch):
         raise NotImplementedError()
 
+    def predict_tags(self, batch):
+        raise NotImplementedError()
+
        
 @NerModel.register('baseline_ner_model')  
 class BaselineNerModel(NerModel):
@@ -150,11 +153,10 @@ class BaselineNerModel(NerModel):
         pred_tags = outputs['token_tags']
         id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch
         tag_results = [compress(pred_tags_, mask_) for pred_tags_, mask_ in zip(pred_tags, token_masks)]
-        return tag_results
+        return id, tag_results
 
-    def test_epoch_end(self, outputs) -> None:
-        
-        return super().test_epoch_end(outputs)
+    def test_epoch_end(self, outputs):
+        return outputs
 
     def predict_tags(self, batch: Any):
         return self.test_step(batch=batch, batch_idx=0)
