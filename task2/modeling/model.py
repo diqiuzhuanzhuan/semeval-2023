@@ -148,7 +148,7 @@ class BaselineNerModel(NerModel):
     def test_step(self, batch: Any, batch_idx: int):
         outputs = self.forward_step(batch)
         pred_tags = outputs['token_tags']
-        id, input_ids, token_type_ids, attention_mask, token_masks, token_lens, label_ids, gold_spans = batch
+        id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch
         tag_results = [compress(pred_tags_, mask_) for pred_tags_, mask_ in zip(pred_tags, token_masks)]
         return tag_results
 
