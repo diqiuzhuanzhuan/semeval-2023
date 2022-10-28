@@ -193,7 +193,7 @@ class BaselineCrfModel(BaselineNerModel):
         return_dict = dict()
         crf_mask = torch.ones_like(input_ids, device=self.device)
         for i in range(batch_size):
-            crf_mask[tag_lens[i]:] = 0
+            crf_mask[i][tag_lens[i]:] = 0
         if label_ids is not None:
             label_ids[label_ids==-100] = 0
             loss = -self.crf_layer(token_scores, label_ids, crf_mask) / float(batch_size)
