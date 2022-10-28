@@ -251,6 +251,8 @@ class DictionaryFusedDataset(ConllDataset):
             gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
             label_ids.append(get_id_by_type('O'))
 
+        tag_len = len(input_ids) # only half top need to predict labels
+
         # half bottom
         entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity in entities])
         outputs = self.tokenizer(entity_information.lower())
@@ -266,7 +268,6 @@ class DictionaryFusedDataset(ConllDataset):
         token_type_ids.append(1)
         if labels is not None:
             label_ids.append(-100)
-        tag_len = len(input_ids)
 
         return id, input_ids, token_type_ids, attention_mask, token_masks, tag_len, label_ids, gold_spans
 
