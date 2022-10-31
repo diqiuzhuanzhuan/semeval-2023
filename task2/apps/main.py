@@ -24,7 +24,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='run experiments')
 
     parser.add_argument('--data_module_type', type=str, default='baseline_data_module',help='')
-    parser.add_argument('--dataset_type', type=str, default='baseline_dataset', help='')
+    parser.add_argument('--dataset_type', type=str, default='span_aware_dataset', help='')
     parser.add_argument('--model_type', type=str, default='baseline_ner_model', help='')
     parser.add_argument('--encoder_model', type=str, default='xlm-roberta-base', help='')
     parser.add_argument('--batch_size', type=int, default=16, help='')

@@ -3,16 +3,18 @@
 # email: diqiuzhuanzhuan@gmail.com
 
 from copy import deepcopy
-import logging
-from typing import Any, AnyStr, Union, Optional, overload
+import itertools
+from typing import Any, AnyStr, List, Union, Optional, overload
 from torch.utils.data import Dataset
 from allennlp.common.registrable import Registrable
 from transformers import AutoTokenizer
 import os, torch
+import numpy as np
 import pytorch_lightning as pl
 import ahocorasick
 from intervaltree import IntervalTree, Interval
 from task2.configuration import config
+from task2.configuration.config import logging
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
 from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge
@@ -121,7 +123,10 @@ class BaselineDataModule(ConllDataModule):
         max_len = max([len(_) for _ in input_ids])
         input_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         token_type_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
-        attention_mask_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
+        if len(np.shape(attention_mask[0])) == 2:
+            attention_mask_tensor = torch.empty(size=[batch_size, max_len, max_len], dtype=torch.long).fill_(0)
+        else:
+            attention_mask_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         if label_ids:
             max_label_len = max([len(_) for _ in label_ids])
             label_ids_tensor = torch.empty(size=[batch_size, max_label_len], dtype=torch.long).fill_(-100)
@@ -132,7 +137,10 @@ class BaselineDataModule(ConllDataModule):
             available_length = len(input_ids[i])
             input_ids_tensor[i][0:available_length] = torch.tensor(input_ids[i], dtype=torch.long)
             token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids[i], dtype=torch.long)
-            attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
+            if len(np.shape(attention_mask[0])) == 2:
+                attention_mask_tensor[i][0:available_length, 0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
+            else:
+                attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
             if label_ids_tensor is not None:
                 label_ids_length = len(label_ids[i])
                 label_ids_tensor[i][:label_ids_length] = torch.tensor(label_ids[i], dtype=torch.long)
@@ -280,16 +288,68 @@ class SpanAwareDataset(DictionaryFusedDataset):
         ) -> None:
         super().__init__(encoder_model)
 
+    def calc_mask_value(self, entity: AnyStr, entities: List[AnyStr]):
+        if entity in entities:
+            return entities.index(entity) + 2 # 0 and 1 have been used so we plus 2
+
     def encode_input(self, item) -> Any:
         id, tokens, labels = item.id, item.tokens, item.labels
         sentence = " ".join(tokens)
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
-        entities = self._search_entity(sentence=sentence)
-        
+        entities, entity_by_pos = self._search_entity(sentence=sentence)
         # half top
+        input_ids.append(self.tokenizer.cls_token_id)
+        if labels is not None:
+            label_ids.append(get_id_by_type('O'))
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
 
-        return super().encode_input(item)
-        
+        for i, token in enumerate(tokens):
+            outputs = self.tokenizer(token.lower())
+            subtoken_len = len(outputs['input_ids']) - 2
+            input_ids.extend(outputs['input_ids'][1:-1])
+            if i in entity_by_pos:
+                attention_mask.extend([self.calc_mask_value(entity_by_pos[i], entities)] * subtoken_len)
+            else:
+                attention_mask.extend(outputs['attention_mask'][1:-1])
+            token_type_ids.extend([0] * subtoken_len)
+            token_masks.extend([True]+ [False] * (subtoken_len-1))
+            if labels is not None:
+                tag = labels[i]
+                sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
+                label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
+        input_ids.append(self.tokenizer.sep_token_id)
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
+        if labels is not None:
+            gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
+            label_ids.append(get_id_by_type('O'))
+
+        tag_len = len(input_ids) # only half top need to predict labels
+
+        for entity in entities:
+            entity_type = self.entity_vocab[entity]
+            outputs = self.tokenizer(entity_type.lower())
+            subtoken_len = len(outputs['input_ids']) - 2
+            input_ids.extend(outputs['input_ids'][1:-1])
+            attention_mask.extend([self.calc_mask_value(entity, entities)] * subtoken_len)
+            token_type_ids.extend([1] * subtoken_len)
+            if labels is not None:
+                label_ids.extend([-100] * subtoken_len)
+
+        def _nxor(a, b):
+            if a == b:
+                return 1
+            else:
+                return 0
+        span_aware_attention_mask = [_nxor(i, j) for i, j in itertools.product(attention_mask, attention_mask)]
+        span_aware_attention_mask = np.reshape(span_aware_attention_mask, newshape=[len(attention_mask), len(attention_mask)])
+        span_aware_attention_mask[:tag_len, :tag_len] = 1
+
+        return id, input_ids, token_type_ids, span_aware_attention_mask, token_masks, tag_len, label_ids, gold_spans
+
 
 if __name__ == '__main__':
     params = Params({
@@ -305,7 +365,7 @@ if __name__ == '__main__':
     params = Params({
         'type': 'baseline_data_module',
         'reader': Params({
-            'type': 'baseline_dataset',
+            'type': 'span_aware_dataset',
             'encoder_model': 'xlm-roberta-base' 
             }),
         'lang': 'English',
@@ -325,4 +385,15 @@ if __name__ == '__main__':
     dic_fused_dataset = ConllDataset.from_params(params=params)
     dic_fused_dataset.read_data(config.train_file['English'])
     for item in dic_fused_dataset:
+        print(item)
+        break
+
+    params = Params({
+        'type': 'span_aware_dataset',
+        'encoder_model': 'xlm-roberta-base' 
+        }
+    )
+    span_aware_dataset = ConllDataset.from_params(params=params)
+    span_aware_dataset.read_data(config.train_file['English'])
+    for item in span_aware_dataset:
         print(item)
