@@ -102,7 +102,7 @@ def write_eval_performance(args: argparse.Namespace, eval_performance: Dict, out
 def write_test_results(test_results: List, out_file: Union[AnyStr, bytes, os.PathLike]):
     out_file = Path(out_file)
     if not out_file.parent.exists():
-        out_file.parent.mkdir()
+        out_file.parent.mkdir(parents=True)
     with open(str(out_file), 'w') as f:
         for id, item in test_results:
             f.write(id+"\n")
