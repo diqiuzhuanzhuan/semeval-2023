@@ -108,6 +108,11 @@ def write_test_results(test_results: List, out_file: Union[AnyStr, bytes, os.Pat
             f.write(id+"\n")
             [f.write(line+"\n") for line in item]
             f.write("\n")
+            
+def generate_result_file_parent(args: argparse.Namespace, value_by_monitor: Dict):
+    parent_name = "_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()])
+    name = "_".join(["{}={}".format(k, str(value_by_monitor[k])) for k in value_by_monitor]) + ".conll"
+    return parent_name, name
 
 def test_model(model: NerModel, data_module: pl.LightningDataModule):
     test_results = []
@@ -171,7 +176,8 @@ if __name__ == '__main__':
     write_eval_performance(args, value_by_monitor, config.performance_log)
     ner_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
     test_results = test_model(ner_model, dm)
-    out_file = config.output_path/args.lang/value_by_monitor[monitors[0]]+".conll"
+    parent, file = generate_result_file_parent(args, value_by_monitor)
+    out_file = config.output_path/parent/file
     write_test_results(test_results=test_results, out_file=out_file)
 
     sys.exit(0)
