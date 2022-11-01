@@ -118,8 +118,8 @@ def test_model(model: NerModel, data_module: pl.LightningDataModule):
     test_results = []
     test_dataloader = data_module.test_dataloader()
     for batch in tqdm(test_dataloader, total=test_dataloader.__len__()):
-        batch_result = model.predict_tags(batch=batch)
-        test_results.extend(batch_result)
+        id, tag_result = model.predict_tags(batch=batch)
+        test_results.extend(list(zip(*(id, tag_result))))
     return test_results
     
 def get_best_value(checkpoint_file: AnyStr, monitor: AnyStr='val_f1'):
