@@ -49,7 +49,6 @@ class ConllDataset(Dataset, Registrable):
 @ConllDataset.register('baseline_dataset')
 class BaselineDataset(ConllDataset):
 
-
     def encode_input(self, item: ConllItem):
         id, tokens, labels = item.id, item.tokens, item.labels
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
@@ -59,7 +58,6 @@ class BaselineDataset(ConllDataset):
         attention_mask.append(1)
         token_type_ids.append(0)
         token_masks.append(False)
-
         
         for i, token in enumerate(tokens):
             outputs = self.tokenizer(token.lower())
@@ -73,7 +71,6 @@ class BaselineDataset(ConllDataset):
                 sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
                 label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
 
-
         input_ids.append(self.tokenizer.sep_token_id)
         label_ids.append(get_id_by_type('O'))
         attention_mask.append(1)
@@ -84,7 +81,6 @@ class BaselineDataset(ConllDataset):
 
         return id, input_ids, token_type_ids, attention_mask, token_masks, tag_len, label_ids, gold_spans
 
-        
         
 class ConllDataModule(Registrable, pl.LightningDataModule):
     pass
@@ -102,7 +98,6 @@ class BaselineDataModule(ConllDataModule):
         self.batch_size = batch_size
         self.lang = lang
 
-    
     def setup(self, stage: Optional[str] = None) -> None:
         if stage == 'fit':
             pass
@@ -114,7 +109,6 @@ class BaselineDataModule(ConllDataModule):
             pass
 
         self.stage = stage
-
 
     def collate_batch(self, batch):
         batch_size = len(batch)
@@ -215,7 +209,7 @@ class DictionaryFusedDataset(ConllDataset):
             if original_value.count(" ") > 0:
                 tree.add(Interval(start_index, end_index)) 
             elif original_value in words:
-                if len(original_value) > 1:
+                if len(original_value) > 4:
                     tree.add(Interval(start_index, end_index)) 
         for interval in sorted(tree.items()):
             entity = sentence[interval.begin: interval.end+1]
@@ -386,7 +380,6 @@ if __name__ == '__main__':
     dic_fused_dataset.read_data(config.train_file['English'])
     for item in dic_fused_dataset:
         print(item)
-        break
 
     params = Params({
         'type': 'span_aware_dataset',
