@@ -14,7 +14,13 @@ log_path = root_path/'logs'
 output_path = root_path/'output'
 
 wikigaz_file = data_path/'wiki_def'/'wikigaz.tsv.zip'
+wiki_title_file = {
+	'Chinese': data_path/'wiki_def'/'zhwiki-latest-all-titles.gz'
+}
 
+wiki_title_with_google_type_file = {
+    'Chinese': data_path/'wiki_def'/'chinese_wiki_google_file.gz'
+}
 
 train_data_path = data_path/'train_dev'
 validate_data_path = data_path/'train_dev'
@@ -69,8 +75,8 @@ performance_log = log_path/'performance.csv'
 
 ###### for log ######
 formatter = ColoredFormatter(
-	"%(log_color)s%(levelname)-8s%(reset)s %(blue)s%(message)s",
-	datefmt=None,
+	"%(log_color)s%(levelname)-8s%(reset)s %(blue)s %(filename)s line:%(lineno)d %(message)s",
+	datefmt='%Y-%m-%d %H:%M:%S',
 	reset=True,
 	log_colors={
 		'DEBUG':    'cyan',
