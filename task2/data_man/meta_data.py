@@ -4,6 +4,9 @@
 
 from dataclasses import dataclass
 import itertools
+import json
+import unicodedata
+import pandas as pd
 from task2.configuration.config import logging
 from pathlib import Path
 from typing import AnyStr, Dict, List, Union
@@ -187,6 +190,85 @@ def get_wiki_knowledge(file: Union[AnyStr, bytes, os.PathLike]):
                     entity_vocab[entity.lower()] = entity_type
     logging.info('read wikigaz entity: {} '.format(len(entity_vocab)))
     return entity_vocab
+
+def get_wiki_title_knowledge(file: Union[AnyStr, bytes, os.PathLike]) -> Dict:
+    file = Path(file)
+    entity_vocab = dict()
+    data = pd.read_csv(str(file), delimiter='\t', compression='gzip')
+    for entity in data['page_title']:
+        if len(str(entity)) < 2:
+            continue
+        entity_vocab[str(entity)] = str(entity)
+    logging.info('read wiki title eneity {}'.format(len(entity_vocab)))
+    return entity_vocab
+
+def get_wiki_title_google_type(file: Union[AnyStr, bytes, os.PathLike]) -> Dict:
+    file = Path(file)
+    if file.exists():
+        with gzip.open(str(file), 'r') as f:
+            data = json.loads(f.read().decode('utf-8'))
+    else:
+        data = dict()
+    return data
+
+def write_wiki_title_google_type(file: Union[AnyStr, bytes, os.PathLike], wiki_knowledge: Dict):
+    file = Path(file)
+    with gzip.open(str(file), 'w') as f:
+        f.write(json.dumps(wiki_knowledge).encode('utf-8'))
+
+def is_chinese_char(cp):
+    """Checks whether CP is the codepoint of a CJK character."""
+    # This defines a "chinese character" as anything in the CJK Unicode block:
+    #   https://en.wikipedia.org/wiki/CJK_Unified_Ideographs_(Unicode_block)
+    #
+    # Note that the CJK Unicode block is NOT all Japanese and Korean characters,
+    # despite its name. The modern Korean Hangul alphabet is a different block,
+    # as is Japanese Hiragana and Katakana. Those alphabets are used to write
+    # space-separated words, so they are not treated specially and handled
+    # like the all of the other languages.
+    if '\u4e00' <= cp <= '\u9fa5':
+        return True
+    return False
+
+    if ((cp >= 0x4E00 and cp <= 0x9FFF) or  #
+            (cp >= 0x3400 and cp <= 0x4DBF) or  #
+            (cp >= 0x20000 and cp <= 0x2A6DF) or  #
+            (cp >= 0x2A700 and cp <= 0x2B73F) or  #
+            (cp >= 0x2B740 and cp <= 0x2B81F) or  #
+            (cp >= 0x2B820 and cp <= 0x2CEAF) or
+            (cp >= 0xF900 and cp <= 0xFAFF) or  #
+            (cp >= 0x2F800 and cp <= 0x2FA1F)):  #
+        return True
+
+    return False
+
+
+def join_tokens(tokens: List[AnyStr]) -> AnyStr:
+    sentence = ""
+    state = 0
+    token_begin_index_by_sentence_pos = dict()
+    token_end_index_by_sentence_pos = dict()
+    for i, token in enumerate(tokens):
+        if state == 0:
+            sentence += token
+            state = 1
+        elif state == 1:
+            sentence += token
+            if is_chinese_char(token) or (len(token) == 1 and unicodedata.category(token).startswith("P")):
+                pass
+            else:
+                state = 2
+        elif state == 2:
+            if is_chinese_char(token) or (len(token) == 1 and unicodedata.category(token).startswith("P")):
+                sentence += token
+                state = 1
+            else:
+                sentence += " " + token
+        # [begin, end)
+        token_begin_index_by_sentence_pos[len(sentence)-len(token)] = i
+        token_end_index_by_sentence_pos[len(sentence)] = i
+    
+    return sentence, token_begin_index_by_sentence_pos, token_end_index_by_sentence_pos
 
 
 if __name__ == '__main__':

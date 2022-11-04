@@ -29,7 +29,7 @@ def parse_arguments():
     parser.add_argument('--encoder_model', type=str, default='xlm-roberta-base', help='')
     parser.add_argument('--batch_size', type=int, default=16, help='')
     parser.add_argument('--max_epochs', type=int, default=1, help='')
-    parser.add_argument('--lang', type=str, default='English', help='')
+    parser.add_argument('--lang', type=str, default='Chinese', help='')
     parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
     
@@ -157,7 +157,8 @@ if __name__ == '__main__':
         'type': args.data_module_type,
         'reader': Params({
             'type': args.dataset_type,
-            'encoder_model': args.encoder_model
+            'encoder_model': args.encoder_model,
+            'lang': args.lang
         }),
         'lang': args.lang,
         'batch_size': args.batch_size

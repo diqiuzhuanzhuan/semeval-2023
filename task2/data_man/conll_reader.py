@@ -4,7 +4,7 @@
 
 from copy import deepcopy
 import itertools
-from typing import Any, AnyStr, List, Union, Optional, overload
+from typing import Any, AnyStr, Dict, List, Tuple, Union, Optional, overload
 from torch.utils.data import Dataset
 from allennlp.common.registrable import Registrable
 from transformers import AutoTokenizer
@@ -17,14 +17,15 @@ from task2.configuration import config
 from task2.configuration.config import logging
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
-from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge
+from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge, join_tokens, get_wiki_title_knowledge
 
 
 class ConllDataset(Dataset, Registrable):
     
     def __init__(
         self,
-        encoder_model='bert-base-uncased'
+        encoder_model='bert-base-uncased',
+        lang: AnyStr='English'
         ) -> None:
         super().__init__()
         self.instances = []
@@ -168,10 +169,12 @@ class DictionaryFusedDataset(ConllDataset):
 
     def __init__(
         self, 
-        encoder_model='bert-base-uncased'
+        encoder_model='bert-base-uncased',
+        lang: AnyStr='English'
         ) -> None:
         super().__init__(encoder_model)
         self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
+        self.entity_vocab.update(get_wiki_title_knowledge(config.wiki_title_file[lang]))
         self._make_entity_automation()
         
     def _make_entity_automation(self):
@@ -186,46 +189,52 @@ class DictionaryFusedDataset(ConllDataset):
         self.entity_automation.make_automaton()
         logging.info('automation is built successfully')
 
-    def _search_entity(self, sentence: AnyStr):
+    def _search_entity(self, tokens: List[AnyStr]) -> Tuple[List[AnyStr], Dict]:
         ans = []
-        words = set(sentence.split(" "))
         tree = IntervalTree()
         entity_by_pos = dict()
+        sentence, token_begin_index_by_sentence_pos, token_end_index_by_sentence_pos = join_tokens(tokens=tokens)
 
         for end_index, (insert_order, original_value) in self.entity_automation.iter(sentence):
             start_index = end_index - len(original_value) + 1
-            if start_index >= 1 and sentence[start_index-1] != " ":
+            end_index = end_index + 1 #make [start_index, end_index) ---> so original == sentence[start_index: end_index]
+            start_index = end_index - len(original_value)
+
+            if start_index not in token_begin_index_by_sentence_pos:
                 continue
-            if end_index < len(sentence) - 1 and sentence[end_index+1] != " ":
+            if end_index not in token_end_index_by_sentence_pos:
                 continue
             tree.remove_envelop(start_index, end_index)
-            should_continue = False
+            should_not_add = False
             for item in tree.items():
                 if start_index >= item.begin and end_index <= item.end:
-                    should_continue = True
+                    should_not_add = True
                     continue
-            if should_continue:
+            if should_not_add:
                 continue
-            if original_value.count(" ") > 0:
-                tree.add(Interval(start_index, end_index)) 
-            elif original_value in words:
-                if len(original_value) > 4:
-                    tree.add(Interval(start_index, end_index)) 
+            for item in tree.overlap(start_index, end_index):
+                if (item.end - item.begin) >= (end_index - start_index):
+                    should_not_add = True
+                else:
+                    tree.remove(item)
+            if should_not_add:
+                continue
+            tree.add(Interval(start_index, end_index)) 
+            
         for interval in sorted(tree.items()):
-            entity = sentence[interval.begin: interval.end+1]
-            token_pos = (sentence[:interval.begin].count(' '), sentence[:interval.begin].count(' ') + entity.count(' '))
-            for i in range(token_pos[0], token_pos[1]+1):
+            entity = sentence[interval.begin: interval.end]
+            token_pos = (token_begin_index_by_sentence_pos[interval.begin], token_end_index_by_sentence_pos[interval.end])
+            for i in range(token_pos[0], token_pos[1]):
                 entity_by_pos[i] = entity
-            ans.append(entity)
-          
+            if entity not in ans:
+                ans.append(entity)
         return ans, entity_by_pos
 
 
     def encode_input(self, item) -> Any:
         id, tokens, labels = item.id, item.tokens, item.labels
-        sentence = " ".join(tokens)
-        token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
-        entities, entity_by_pos = self._search_entity(sentence=sentence)
+        token_masks, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], []
+        entities, _ = self._search_entity(tokens)
         # half top
         input_ids.append(self.tokenizer.cls_token_id)
         if labels is not None:
@@ -288,9 +297,8 @@ class SpanAwareDataset(DictionaryFusedDataset):
 
     def encode_input(self, item) -> Any:
         id, tokens, labels = item.id, item.tokens, item.labels
-        sentence = " ".join(tokens)
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
-        entities, entity_by_pos = self._search_entity(sentence=sentence)
+        entities, entity_by_pos = self._search_entity(tokens=tokens)
         # half top
         input_ids.append(self.tokenizer.cls_token_id)
         if labels is not None:
@@ -346,6 +354,7 @@ class SpanAwareDataset(DictionaryFusedDataset):
 
 
 if __name__ == '__main__':
+    """
     params = Params({
         'type': 'baseline_dataset',
         'encoder_model': 'xlm-roberta-base' 
@@ -380,13 +389,23 @@ if __name__ == '__main__':
     dic_fused_dataset.read_data(config.train_file['English'])
     for item in dic_fused_dataset:
         print(item)
+        break
+    """
 
     params = Params({
         'type': 'span_aware_dataset',
         'encoder_model': 'xlm-roberta-base' 
         }
     )
-    span_aware_dataset = ConllDataset.from_params(params=params)
-    span_aware_dataset.read_data(config.train_file['English'])
-    for item in span_aware_dataset:
-        print(item)
+    params = Params({
+        'type': 'baseline_data_module',
+        'reader': Params({
+            'type': 'span_aware_dataset',
+            'encoder_model': 'xlm-roberta-base' 
+            }),
+        'lang': 'English',
+        'batch_size': 2
+    })
+    dm = ConllDataModule.from_params(params=params)
+    for batch in dm.train_dataloader():
+        pass
