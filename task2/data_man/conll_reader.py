@@ -30,6 +30,7 @@ class ConllDataset(Dataset, Registrable):
         super().__init__()
         self.instances = []
         self.tokenizer = AutoTokenizer.from_pretrained(encoder_model, add_prefix_space=True)
+        self.lang = lang
 
     def __getitem__(self, index: Any) -> Any:
         if index >= self.__len__():
@@ -172,7 +173,7 @@ class DictionaryFusedDataset(ConllDataset):
         encoder_model='bert-base-uncased',
         lang: AnyStr='English'
         ) -> None:
-        super().__init__(encoder_model)
+        super().__init__(encoder_model, lang)
         self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
         self.entity_vocab.update(get_wiki_title_knowledge(config.wiki_title_file[lang]))
         self._make_entity_automation()
@@ -287,9 +288,10 @@ class DictionaryFusedDataset(ConllDataset):
 class SpanAwareDataset(DictionaryFusedDataset):
     def __init__(
         self, 
-        encoder_model='bert-base-uncased'
+        encoder_model='bert-base-uncased',
+        lang='English'
         ) -> None:
-        super().__init__(encoder_model)
+        super().__init__(encoder_model, lang)
 
     def calc_mask_value(self, entity: AnyStr, entities: List[AnyStr]):
         if entity in entities:

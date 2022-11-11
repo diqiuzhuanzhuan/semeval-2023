@@ -39,6 +39,7 @@ api_keys = [
     'AIzaSyDvYUjRjM0cTCrSsj2rh2BTtiz0x7ontA0',
     'AIzaSyA9NatGsm5I5Jass3qBdTpi1L4gBOu-Vmo',
     'AIzaSyCZuoVhUC_GvbOkrbV4ykrQm3QF-f1mHM0',
+    'AIzaSyBzKU1gqB9pHJyOkl9ZU6w1UUyIACQZHwE',
 ]
 service_url = 'https://kgsearch.googleapis.com/v1/entities:search'
 
