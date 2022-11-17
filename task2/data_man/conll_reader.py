@@ -17,7 +17,7 @@ from task2.configuration import config
 from task2.configuration.config import logging
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
-from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge, join_tokens, get_wiki_title_knowledge
+from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge, join_tokens, get_wiki_title_knowledge, get_wiki_title_google_type
 
 
 class ConllDataset(Dataset, Registrable):
@@ -174,8 +174,8 @@ class DictionaryFusedDataset(ConllDataset):
         lang: AnyStr='English'
         ) -> None:
         super().__init__(encoder_model, lang)
-        self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
-        self.entity_vocab.update(get_wiki_title_knowledge(config.wiki_title_file[lang]))
+        #self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
+        self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
         self._make_entity_automation()
         
     def _make_entity_automation(self):
@@ -266,7 +266,7 @@ class DictionaryFusedDataset(ConllDataset):
         tag_len = len(input_ids) # only half top need to predict labels
 
         # half bottom
-        entity_information = "$".join([entity + '(' + self.entity_vocab[entity] + ')' for entity in entities])
+        entity_information = "$".join([entity + '(' + "|".join(self.entity_vocab[entity]) + ')' for entity in entities])
         outputs = self.tokenizer(entity_information.lower())
         input_ids.extend(outputs['input_ids'][1:-1])
         attention_mask.extend(outputs['attention_mask'][1:-1])
@@ -334,7 +334,7 @@ class SpanAwareDataset(DictionaryFusedDataset):
         tag_len = len(input_ids) # only half top need to predict labels
 
         for entity in entities:
-            entity_type = self.entity_vocab[entity]
+            entity_type = "|".join(self.entity_vocab[entity])
             outputs = self.tokenizer(entity_type.lower())
             subtoken_len = len(outputs['input_ids']) - 2
             input_ids.extend(outputs['input_ids'][1:-1])
@@ -403,9 +403,10 @@ if __name__ == '__main__':
         'type': 'baseline_data_module',
         'reader': Params({
             'type': 'span_aware_dataset',
-            'encoder_model': 'xlm-roberta-base' 
+            'encoder_model': 'xlm-roberta-base' ,
+            'lang': 'Chinese'
             }),
-        'lang': 'English',
+        'lang': 'Chinese',
         'batch_size': 2
     })
     dm = ConllDataModule.from_params(params=params)

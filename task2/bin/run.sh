@@ -40,7 +40,9 @@ run()
     done
 }
 
-for lang in 'English' 'Spanish' 'Hindi' 'Bangla' 'Chinese' 'Swedish' 'Farsi' 'French' 'Italian' 'Portugese' 'Ukranian' 'German'
+#for lang in 'English' 'Spanish' 'Hindi' 'Bangla' 'Chinese' 'Swedish' 'Farsi' 'French' 'Italian' 'Portugese' 'Ukranian' 'German'
+# test over Chinese dataset
+for lang in 'Chinese'
 do
     echo "run for $lang"
     run $lang
