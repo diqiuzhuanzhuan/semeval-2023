@@ -10,7 +10,7 @@ echo "当前工作路径: $(pwd)"
 
 run()
 {
-    for encoder_model in  'bert-base-multilingual-uncased'
+    for encoder_model in  'bert-base-multilingual-uncased' 'xlm-roberta-base' 'xlm-roberta-large' 'bert-base-chinese' 'hfl/chinese-roberta-wwm-ext' 'hfl/chinese-bert-wwm-ext'
     do
         for max_epochs in 25
         do
