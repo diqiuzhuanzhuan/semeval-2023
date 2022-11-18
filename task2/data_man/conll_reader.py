@@ -231,6 +231,11 @@ class DictionaryFusedDataset(ConllDataset):
                 ans.append(entity)
         return ans, entity_by_pos
 
+    def get_entity_type(self, entity: AnyStr):
+        entity_type = self.entity_vocab.get('type', [])
+        if entity_type is None:
+            entity_type = []
+        return '|'.join(entity_type)
 
     def encode_input(self, item) -> Any:
         id, tokens, labels = item.id, item.tokens, item.labels
@@ -266,7 +271,7 @@ class DictionaryFusedDataset(ConllDataset):
         tag_len = len(input_ids) # only half top need to predict labels
 
         # half bottom
-        entity_information = "$".join([entity + '(' + "|".join(self.entity_vocab[entity]) + ')' for entity in entities])
+        entity_information = "$".join([entity + '(' + self.get_entity_type(entity) + ')' for entity in entities])
         outputs = self.tokenizer(entity_information.lower())
         input_ids.extend(outputs['input_ids'][1:-1])
         attention_mask.extend(outputs['attention_mask'][1:-1])
@@ -334,7 +339,7 @@ class SpanAwareDataset(DictionaryFusedDataset):
         tag_len = len(input_ids) # only half top need to predict labels
 
         for entity in entities:
-            entity_type = "|".join(self.entity_vocab[entity])
+            entity_type = self.get_entity_type(entity)
             outputs = self.tokenizer(entity_type.lower())
             subtoken_len = len(outputs['input_ids']) - 2
             input_ids.extend(outputs['input_ids'][1:-1])
