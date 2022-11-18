@@ -18,7 +18,7 @@ run()
             do
                 for model_type in 'baseline_crf_model' 'baseline_ner_model'
                 do
-                    for dataset_type in 'dictionary_fused_dataset' 'baseline_dataset'
+                    for dataset_type in 'span_aware_dataset' 'dictionary_fused_dataset' 'baseline_dataset'
                     do
                         for data_module_type in 'baseline_data_module'
                         do
