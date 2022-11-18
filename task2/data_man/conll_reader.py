@@ -232,7 +232,7 @@ class DictionaryFusedDataset(ConllDataset):
         return ans, entity_by_pos
 
     def get_entity_type(self, entity: AnyStr):
-        entity_type = self.entity_vocab.get('type', [])
+        entity_type = self.entity_vocab[entity].get('type', [])
         if entity_type is None:
             entity_type = []
         return '|'.join(entity_type)
