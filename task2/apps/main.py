@@ -191,7 +191,7 @@ if __name__ == '__main__':
     out_file = config.output_path/parent/file
     write_test_results(test_results=test_results, out_file=out_file)
     stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)
-    stat_out_file = out_file + ".stat.json"
+    stat_out_file = str(out_file) + ".stat.json"
     write_stat_results(stat_dict=stat_dict, out_file=stat_out_file)
 
     sys.exit(0)

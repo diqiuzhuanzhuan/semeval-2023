@@ -32,5 +32,7 @@ def analyze_badcase(label_file: Union[AnyStr, os.PathLike], pred_file: Union[Any
         
 if __name__ == "__main__":
     from task2.configuration import config
-    stat_map = analyze_badcase(label_file=config.test_file['Chinese'], pred_file='./val_micro@F1=0.719.conll')
+    stat_map = analyze_badcase(label_file=config.test_file['Chinese'], pred_file='./val_micro@F1=0.72.conll')
+    from task2.apps.main import write_stat_results
+    write_stat_results(stat_map, 'a.json')
     print(stat_map)
