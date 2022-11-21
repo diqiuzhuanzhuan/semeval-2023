@@ -23,12 +23,14 @@ def analyze_badcase(label_file: Union[AnyStr, os.PathLike], pred_file: Union[Any
                 key = 'O->' + pred_tag[2:]
                 stat_map[key] += 1
             elif pred_tag == 'O':
-                key = tag[:2] + '->O'
+                key = tag[2:] + '->O'
                 stat_map[key] += 1
             else:
-                key = tag[:2] + pred_tag[2:]
+                key = tag[2:] + '->' + pred_tag[2:]
                 stat_map[key] += 1
     return stat_map
         
 if __name__ == "__main__":
-    pass
+    from task2.configuration import config
+    stat_map = analyze_badcase(label_file=config.test_file['Chinese'], pred_file='./val_micro@F1=0.719.conll')
+    print(stat_map)

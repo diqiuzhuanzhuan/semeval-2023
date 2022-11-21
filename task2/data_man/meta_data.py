@@ -81,7 +81,7 @@ def _is_divider(line: str) -> bool:
 
 def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
     file = Path(file).as_posix()
-    fin = gzip.open(file, 'rt') if file.endswith('.gz') else open(file, 'rt')
+    fin = gzip.open(file, 'rt', encoding='utf-8') if file.endswith('.gz') else open(file, 'rt', encoding='utf-8')
     ans = []
     for is_divider, lines in itertools.groupby(fin, _is_divider):
         if is_divider:
@@ -270,6 +270,24 @@ def join_tokens(tokens: List[AnyStr]) -> AnyStr:
     
     return sentence, token_begin_index_by_sentence_pos, token_end_index_by_sentence_pos
 
+
+########## for auxiliary classifier #################
+@dataclass
+class DescriptionTypeItem:
+    text: AnyStr
+    label: AnyStr
+
+    @classmethod
+    def from_dict(cls, json_dict: Dict):
+        return DescriptionTypeItem(
+            text = json_dict['text'],
+            label = json_dict['label']
+        )
+        
+
+def generate_description_type_item():
+    pass
+    
 
 if __name__ == '__main__':
     for conll_item in read_conll_item_from_file('./task2/data/semeval_2021_task_11_trial_data.txt'):
