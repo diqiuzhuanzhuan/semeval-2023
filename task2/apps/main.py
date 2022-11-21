@@ -116,6 +116,8 @@ def write_stat_results(stat_dict: Dict, out_file: Union[AnyStr, bytes, os.PathLi
         out_file.parent.mkdir(parents=True)
     with open(str(out_file), 'w') as f:
         json.dump(stat_dict, f)
+    logging.info('write stat file: {} done...'.format(str(out_file)))
+
             
 def generate_result_file_parent(args: argparse.Namespace, value_by_monitor: Dict):
     parent_name = "_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()])
