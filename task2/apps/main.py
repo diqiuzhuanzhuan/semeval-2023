@@ -6,7 +6,7 @@
 import argparse
 from pathlib import Path
 import pandas as pd
-import os, re, sys
+import os, re, sys, json
 import time
 from typing import AnyStr, Dict, List, Union
 from tqdm import tqdm
@@ -18,6 +18,7 @@ from task2.configuration.config import logging
 from task2.configuration import config
 import torch
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, LearningRateMonitor
+from task2.data_man.badcases import analyze_badcase
 
 def parse_arguments():
 
@@ -108,6 +109,13 @@ def write_test_results(test_results: List, out_file: Union[AnyStr, bytes, os.Pat
             f.write(id+"\n")
             [f.write(line+"\n") for line in item]
             f.write("\n")
+
+def write_stat_results(stat_dict: Dict, out_file: Union[AnyStr, bytes, os.PathLike]):
+    out_file = Path(out_file)
+    if not out_file.parent.exists():
+        out_file.parent.mkdir(parents=True)
+    with open(str(out_file), 'w') as f:
+        json.dump(stat_dict, f)
             
 def generate_result_file_parent(args: argparse.Namespace, value_by_monitor: Dict):
     parent_name = "_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()])
@@ -180,5 +188,8 @@ if __name__ == '__main__':
     parent, file = generate_result_file_parent(args, value_by_monitor)
     out_file = config.output_path/parent/file
     write_test_results(test_results=test_results, out_file=out_file)
+    stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)
+    stat_out_file = out_file + ".stat.json"
+    write_stat_results(stat_dict=stat_dict, out_file=stat_out_file)
 
     sys.exit(0)
