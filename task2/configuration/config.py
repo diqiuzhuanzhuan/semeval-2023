@@ -22,6 +22,10 @@ wiki_title_with_google_type_file = {
     'Chinese': data_path/'wiki_def'/'chinese_wiki_google_file.gz'
 }
 
+ios_639_1_code = set([
+	'en', 'es', 'hi', 'bn', 'zh', 'sv', 'fa', 'fr', 'it', 'pt', 'uk', 'de'
+])
+
 train_data_path = data_path/'train_dev'
 validate_data_path = data_path/'train_dev'
 test_data_path = data_path/'train_dev'
