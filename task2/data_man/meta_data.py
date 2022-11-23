@@ -216,10 +216,24 @@ def write_wiki_title_google_type(file: Union[AnyStr, bytes, os.PathLike], wiki_k
     with gzip.open(str(file), 'w') as f:
         f.write(json.dumps(wiki_knowledge).encode('utf-8'))
 
+def get_wiki_entities(file: Union[AnyStr, bytes, os.PathLike]) -> Dict[AnyStr, List]:
+    data = read_json_gzip(file)
+    new = dict()
+    for k in data:
+        new[k.lower()] = data[k]
+    logging.info('get wiki entities {}'.format(len(new)))
+    return new
+
 def write_json_gzip(file: Union[AnyStr, bytes, os.PathLike], json_dict: Dict):
     file = Path(file)
     with gzip.open(str(file), 'w') as f:
         f.write(json.dumps(json_dict).encode('utf-8'))
+
+def read_json_gzip(file: Union[AnyStr, bytes, os.PathLike]):
+    file = Path(file)
+    with gzip.open(str(file), 'r') as f:
+        data = json.load(f)
+    return data
 
 def is_chinese_char(cp):
     """Checks whether CP is the codepoint of a CJK character."""
@@ -299,5 +313,6 @@ if __name__ == '__main__':
         print(conll_item)
         break
 
-    entity_vocab = get_wiki_knowledge(config.wikigaz_file)
+    #entity_vocab = get_wiki_knowledge(config.wikigaz_file)
+    entity_vocab = get_wiki_entities(config.wiki_data['English'])
     print(len(entity_vocab))

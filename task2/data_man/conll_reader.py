@@ -17,7 +17,7 @@ from task2.configuration import config
 from task2.configuration.config import logging
 from allennlp.common.params import Params
 from task2.data_man.meta_data import ConllItem, read_conll_item_from_file, get_id_by_type, get_type_by_id, get_id_to_labes_map
-from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge, join_tokens, get_wiki_title_knowledge, get_wiki_title_google_type
+from task2.data_man.meta_data import _assign_ner_tags, extract_spans, get_wiki_knowledge, join_tokens, get_wiki_title_knowledge, get_wiki_title_google_type, get_wiki_entities
 
 
 class ConllDataset(Dataset, Registrable):
@@ -146,7 +146,7 @@ class BaselineDataModule(ConllDataModule):
     def train_dataloader(self):
         self.reader.read_data(config.train_file[self.lang])
         train_reader = deepcopy(self.reader)
-        return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
+        return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=1)
 
     def val_dataloader(self):
         self.reader.read_data(config.validate_file[self.lang])
@@ -175,7 +175,8 @@ class DictionaryFusedDataset(ConllDataset):
         ) -> None:
         super().__init__(encoder_model, lang)
         #self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
-        self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
+        #self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
+        self.entity_vocab = get_wiki_entities(config.wiki_data[lang])
         self._make_entity_automation()
         
     def _make_entity_automation(self):
@@ -232,7 +233,8 @@ class DictionaryFusedDataset(ConllDataset):
         return ans, entity_by_pos
 
     def get_entity_type(self, entity: AnyStr):
-        entity_type = self.entity_vocab[entity].get('type', [])
+        #entity_type = self.entity_vocab[entity].get('type', [])
+        entity_type = self.entity_vocab.get(entity, [])
         if entity_type is None:
             entity_type = []
         return '|'.join(entity_type)
