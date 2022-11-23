@@ -216,6 +216,11 @@ def write_wiki_title_google_type(file: Union[AnyStr, bytes, os.PathLike], wiki_k
     with gzip.open(str(file), 'w') as f:
         f.write(json.dumps(wiki_knowledge).encode('utf-8'))
 
+def write_json_gzip(file: Union[AnyStr, bytes, os.PathLike], json_dict: Dict):
+    file = Path(file)
+    with gzip.open(str(file), 'w') as f:
+        f.write(json.dumps(json_dict).encode('utf-8'))
+
 def is_chinese_char(cp):
     """Checks whether CP is the codepoint of a CJK character."""
     # This defines a "chinese character" as anything in the CJK Unicode block:
