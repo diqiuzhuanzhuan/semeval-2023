@@ -146,7 +146,7 @@ class BaselineDataModule(ConllDataModule):
     def train_dataloader(self):
         self.reader.read_data(config.train_file[self.lang])
         train_reader = deepcopy(self.reader)
-        return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=1)
+        return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
 
     def val_dataloader(self):
         self.reader.read_data(config.validate_file[self.lang])
