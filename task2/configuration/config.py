@@ -22,6 +22,21 @@ wiki_title_with_google_type_file = {
     'Chinese': data_path/'wiki_def'/'chinese_wiki_google_file.gz'
 }
 
+wiki_data = {
+    'English': data_path/'wiki_def'/'person_entities.json.gz',
+ 	'Spanish': data_path/'wiki_def'/'person_entities.json.gz',
+    'Hindi': data_path/'wiki_def'/'person_entities.json.gz',
+	'Bangla': data_path/'wiki_def'/'person_entities.json.gz',
+	'Chinese': data_path/'wiki_def'/'person_entities.json.gz',
+	'Swedish': data_path/'wiki_def'/'person_entities.json.gz',
+	'Farsi': data_path/'wiki_def'/'person_entities.json.gz',
+	'French': data_path/'wiki_def'/'person_entities.json.gz',
+	'Italian': data_path/'wiki_def'/'person_entities.json.gz',
+	'Portugese': data_path/'wiki_def'/'person_entities.json.gz',
+	'Ukranian': data_path/'wiki_def'/'person_entities.json.gz',
+	'German': data_path/'wiki_def'/'person_entities.json.gz'
+}
+
 ios_639_1_code = set([
 	'en', 'es', 'hi', 'bn', 'zh', 'sv', 'fa', 'fr', 'it', 'pt', 'uk', 'de'
 ])
