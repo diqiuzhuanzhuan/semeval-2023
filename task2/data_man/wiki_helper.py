@@ -17,6 +17,7 @@ import wikidata_plain_sparql as wikidata
 #    for k in pd.read_csv('{}.tsv'.format(t), header=None).values.flatten().tolist():
 #        PERSON_TYPE[k] = t
 import sys
+from qwikidata.sparql import get_subclasses_of_item
 from SPARQLWrapper import SPARQLWrapper, JSON, TSV
 
 endpoint_url = "https://query.wikidata.org/sparql"
@@ -32,16 +33,17 @@ def get_results(endpoint_url, query):
         
 P_OCCUPATION = "P106"
 PERSON_TYPE = {
-    #"Q82955": 'politician',
-    #"Q2259532": 'cleric',
-    #"Q901": 'scientist',
+    "Q82955": 'politician',
+    "Q2259532": 'cleric',
+    "Q901": 'scientist',
     "Q483501": 'artist',
-    #"Q2066131": 'athlete',
-    #'Q838476': 'sportsmanager', #体育总监
-    #'Q41583': 'sportsmanager', #教练
+    "Q2066131": 'athlete',
+    'Q838476': 'sportsmanager', #体育总监
+    'Q41583': 'sportsmanager', #教练
 }
 person_vocab = collections.defaultdict(set)
 type_by_id = collections.defaultdict(set)
+
 def query_person(qid):
     query = 'SELECT DISTINCT ?item WHERE {' + \
             '?item p:P106 ?statement0. ' + \
@@ -52,9 +54,14 @@ def query_person(qid):
     for id in ids:
         type_by_id[id] = PERSON_TYPE[qid]
 
+def occupation_query(qid):
+    qids = get_subclasses_of_item(qid)
+    for id in qids:
+        type_by_id[id] = PERSON_TYPE[qid]
+
 for k in PERSON_TYPE:
     logging.info(k)
-    query_person(k)
+    occupation_query(k)
 #out_fname = "person_entities.json.gz"
 #write_json_gzip(out_fname, person_vocab)
 logging.info(len(type_by_id))
@@ -76,8 +83,8 @@ def has_occupation_politician(item: WikidataItem, truthy: bool = True) -> bool:
         return []
     types = set()
     for k in occupation_qids:
-        if k in PERSON_TYPE:
-            types.add(PERSON_TYPE[k])
+        if k in type_by_id:
+            types.add(type_by_id[k])
             break
         if len(types):
             break
@@ -89,6 +96,7 @@ def has_occupation_politician(item: WikidataItem, truthy: bool = True) -> bool:
 
 # create an instance of WikidataJsonDump
 wjd_dump_path = '/Users/malong/Downloads/wikidata-20220103-all.json.gz'
+#wjd_dump_path = '/Users/malong/Downloads/humans.ndjson'
 wjd = WikidataJsonDump(wjd_dump_path)
 
 # create an iterable of WikidataItem representing politicians
