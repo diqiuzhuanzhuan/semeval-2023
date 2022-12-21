@@ -41,31 +41,64 @@ PERSON_TYPE = {
     'Q838476': 'sportsmanager', #体育总监
     'Q41583': 'sportsmanager', #教练
 }
+
 person_vocab = collections.defaultdict(set)
 type_by_id = collections.defaultdict(set)
+
+GROUP_TYPE = {
+    'Q4438121': 'sport organization',  
+    'Q936518': 'aerospace manufacturer',
+    'Q215380': 'musical group',
+    'Q32178211': 'musical group',
+    'Q891723': 'public corporation',
+    'Q7257717': 'public corporation',
+    'Q5621421': 'private corparation',
+    'Q786820': 'automobile manufacturer',
+    'Q18388277': 'technology company',
+    'Q43229':'orginazation',
+    'Q4830453':'orginazation',
+}
 
 def query_person(qid):
     query = 'SELECT DISTINCT ?item WHERE {' + \
             '?item p:P106 ?statement0. ' + \
-            '?statement0 (ps:P106/(wdt:P279*)) wd:'+qid+'.' + \
+            '?statement0 (ps:P106/(wdt:P279*)) wd:'+ qid +'.' + \
             '}' 
     data = get_results(endpoint_url=endpoint_url, query=query)
     ids = [result['item']['value'].replace('http://www.wikidata.org/entity/', '') for result in data["results"]["bindings"]]
     for id in ids:
         type_by_id[id] = PERSON_TYPE[qid]
 
+def group_query(qid):
+    query = 'SELECT ?item WHERE ' + \
+        '{ ?item wdt:P31/wdt:P279* wd:' + qid + '.}'
+    data = get_results(endpoint_url=endpoint_url, query=query)
+    ids = [result['item']['value'].replace('http://www.wikidata.org/entity/', '') for result in data["results"]["bindings"]]
+    for id in ids:
+        if id in type_by_id:
+            if GROUP_TYPE[qid] != 'orginazation':
+                type_by_id[id] = GROUP_TYPE[qid]
+        else:
+            type_by_id[id] = GROUP_TYPE[qid]
+             
+
 def occupation_query(qid):
     qids = get_subclasses_of_item(qid)
     for id in qids:
         type_by_id[id] = PERSON_TYPE[qid]
 
-for k in PERSON_TYPE:
-    logging.info(k)
-    occupation_query(k)
-#out_fname = "person_entities.json.gz"
-#write_json_gzip(out_fname, person_vocab)
-logging.info(len(type_by_id))
-    
+def get_all_id_by_type(type='GROUP'):
+    if type == 'GROUP':
+        for k in GROUP_TYPE:
+            logging.info(k)
+            group_query(k)
+    elif type == 'PERSON':
+        for k in PERSON_TYPE:
+            logging.info(k)
+            occupation_query(k)
+    else:
+        pass
+    logging.info(len(type_by_id))
 
 def has_occupation_politician(item: WikidataItem, truthy: bool = True) -> bool:
     """Return True if the Wikidata Item has occupation politician."""
@@ -93,6 +126,7 @@ def has_occupation_politician(item: WikidataItem, truthy: bool = True) -> bool:
         types.add('person')
     return types
 
+get_all_id_by_type('GROUP')
 
 # create an instance of WikidataJsonDump
 wjd_dump_path = '/Users/malong/Downloads/wikidata-20220103-all.json.gz'
@@ -103,35 +137,62 @@ wjd = WikidataJsonDump(wjd_dump_path)
 person = []
 t1 = time.time()
 person_vocab = collections.defaultdict(set)
-for ii, entity_dict in enumerate(wjd):
-    
-    if entity_dict["type"] == "item":
-        entity = WikidataItem(entity_dict)
-        types = has_occupation_politician(entity)
-        if types:
-            labels = entity._entity_dict.get('labels')
-            for lan in config.ios_639_1_code:
-                value = labels.get(lan, dict()).get('value', '')
-                person_vocab[value].update(set(types)) if value else None
+def enumerate_person():
+    for ii, entity_dict in enumerate(wjd):
+        
+        if entity_dict["type"] == "item":
+            entity = WikidataItem(entity_dict)
+            types = has_occupation_politician(entity)
+            if types:
+                labels = entity._entity_dict.get('labels')
+                aliases = entity._entity_dict.get('aliases')
+                for lan in config.ios_639_1_code:
+                    value = labels.get(lan, dict()).get('value', '')
+                    person_vocab[value].update(set(types)) if value else None
+                    for dic in aliases.get(lan, []):
+                        person_vocab[dic['value']].update(set(types)) if dic['value'] else None
             
-    if ii % 10000 == 0:
-        t2 = time.time()
-        dt = t2 - t1
-        print(
-            "found {} person among {} entities [entities/s: {:.2f}]".format(
-                len(person_vocab), ii, ii / dt
+        if ii % 10000 == 0:
+            t2 = time.time()
+            dt = t2 - t1
+            print(
+                "found {} person among {} entities [entities/s: {:.2f}]".format(
+                    len(person_vocab), ii, ii / dt
+                )
             )
-        )
+
+def enumerate_group():
+    for ii, entity_dict in enumerate(wjd):
+        
+        if entity_dict["type"] == "item":
+            entity = WikidataItem(entity_dict)
+            qid = entity._entity_dict.get('id')
+            if qid in type_by_id:
+                types = [type_by_id[qid]]
+                labels = entity._entity_dict.get('labels')
+                aliases = entity._entity_dict.get('aliases')
+                for lan in config.ios_639_1_code:
+                    value = labels.get(lan, dict()).get('value', '')
+                    person_vocab[value].update(set(types)) if value else None
+                    for dic in aliases.get(lan, []):
+                        person_vocab[dic['value']].update(set(types)) if dic['value'] else None
+            
+        if ii % 10000 == 0:
+            t2 = time.time()
+            dt = t2 - t1
+            print(
+                "found {} person among {} entities [entities/s: {:.2f}]".format(
+                    len(person_vocab), ii, ii / dt
+                )
+            )
+enumerate_group()
 
 print(person_vocab)
-out_fname = "person_entities.json.gz"
-import json
+out_fname = "group_entities.json.gz"
 for k in person_vocab:
     person_vocab[k] = sorted(list(person_vocab[k]))
 
-with open(out_fname, 'w') as f:
-    json.dump(person_vocab, f)
-#dump_entities_to_json(person_vocab, out_fname)
+write_json_gzip(out_fname, person_vocab)
 
 
 # write the iterable of WikidataItem to disk as JSON

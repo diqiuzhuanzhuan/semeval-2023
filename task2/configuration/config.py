@@ -22,6 +22,11 @@ wiki_title_with_google_type_file = {
     'Chinese': data_path/'wiki_def'/'chinese_wiki_google_file.gz'
 }
 
+wiki_entity_data = {
+    'person': data_path/'wiki_def'/'person_entities.json.gz',
+    'group': data_path/'wiki_def'/'group_entities.json.gz',
+}
+
 wiki_data = {
     'English': data_path/'wiki_def'/'person_entities.json.gz',
  	'Spanish': data_path/'wiki_def'/'person_entities.json.gz',

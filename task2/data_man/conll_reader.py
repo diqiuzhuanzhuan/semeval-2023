@@ -3,7 +3,7 @@
 # email: diqiuzhuanzhuan@gmail.com
 
 from copy import deepcopy
-import itertools
+import itertools, collections
 from typing import Any, AnyStr, Dict, List, Tuple, Union, Optional, overload
 from torch.utils.data import Dataset
 from allennlp.common.registrable import Registrable
@@ -177,7 +177,13 @@ class DictionaryFusedDataset(ConllDataset):
         super().__init__(encoder_model, lang)
         #self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
         #self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
-        self.entity_vocab = get_wiki_entities(config.wiki_data[lang])
+        self.entity_vocab = collections.defaultdict(list)
+        
+        for k in config.wiki_entity_data:
+            vocab = get_wiki_entities(config.wiki_entity_data[k])
+            for entity in vocab:
+                self.entity_vocab[entity].extend(vocab[entity])
+
         self._make_entity_automation()
         
     def _make_entity_automation(self):
@@ -309,7 +315,27 @@ class SpanAwareDataset(DictionaryFusedDataset):
         id, tokens, labels = item.id, item.tokens, item.labels
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
         entities, entity_by_pos = self._search_entity(tokens=tokens)
+        ### debug to see how many entities were in the dictionary
+        gold_spans = extract_spans(item.labels)
+        gold_entities = []
+        gold_labels = []
+        for k in gold_spans:
+            if gold_spans[k] == 'O':
+                continue
+            gold_entities.append(join_tokens(tokens[k[0]:k[1]+1])[0])
+            gold_labels.append(labels[k[0]][2:])
+        #logging.info('{}'.format(join_tokens(tokens)[0]))    
+        #logging.info('gold entities: {}'.format(gold_entities))
+        #logging.info('gold labels: {}'.format(gold_labels))
+        for i, entity in enumerate(gold_entities):
+            if entity in entities:
+                pass
+            else:
+                if gold_labels[i] == 'ORG':
+                    logging.info('{}'.format(join_tokens(tokens)[0]))    
+                    logging.info('{}: {} is not in'.format(entity, gold_labels[i]))
         # half top
+
         input_ids.append(self.tokenizer.cls_token_id)
         if labels is not None:
             label_ids.append(get_id_by_type('O'))
