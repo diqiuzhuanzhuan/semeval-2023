@@ -10,6 +10,7 @@ from colorlog import ColoredFormatter
 
 root_path = pathlib.Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 data_path = root_path/'data'
+kfold_data_path = data_path/'kfold'
 log_path = root_path/'logs'
 output_path = root_path/'output'
 
@@ -45,6 +46,21 @@ wiki_data = {
 ios_639_1_code = set([
 	'en', 'es', 'hi', 'bn', 'zh', 'sv', 'fa', 'fr', 'it', 'pt', 'uk', 'de'
 ])
+
+code_by_lang = {
+    'English': 'en',
+    'Spanish': 'es',
+	'Hindi': 'hi',
+	'Bangla': 'bn',
+	'Chinese': 'zh',
+	'Swedish': 'sv',
+	'Farsi': 'fa',
+	'French': 'fr',
+	'Italian': 'it',
+	'Portugese': 'pt',
+	'Ukranian': 'uk',
+	'German': 'de'
+}
 
 train_data_path = data_path/'train_dev'
 validate_data_path = data_path/'train_dev'

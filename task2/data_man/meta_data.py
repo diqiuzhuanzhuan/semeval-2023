@@ -101,6 +101,18 @@ def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
     logging.info("read {} item from {}.".format(len(ans), str(file)))
     return ans
 
+def write_conll_item_to_file(file: Union[AnyStr, bytes, os.PathLike], items: List[ConllItem], lang: AnyStr):
+    file = Path(file)
+    if not file.parent.exists():
+        file.parent.mkdir()
+    fout = gzip.open(str(file), 'wt', encoding='utf-8') if str(file).endswith('.gz') else open(str(file), 'wt', encoding='utf-8')
+    for item in items:
+        lines = ["# id {}	domain={}".format(item.id, config.code_by_lang[lang])]
+        lines.extend([' _ _ '.join([t, l]) for t,l in zip(item.tokens, item.labels)])
+        fout.writelines(lines)
+        fout.write("\n\n")
+    fout.close()
+
 
 def _assign_ner_tags(ner_tag, rep_):
     '''

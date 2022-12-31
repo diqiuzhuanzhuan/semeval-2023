@@ -93,6 +93,8 @@ class BaselineDataModule(ConllDataModule):
     def __init__(
         self,
         reader: ConllDataset,
+        train_file: AnyStr,
+        val_file: AnyStr,
         lang: AnyStr='English',
         batch_size: int=16
         ) -> None:
@@ -100,6 +102,8 @@ class BaselineDataModule(ConllDataModule):
         self.reader = reader
         self.batch_size = batch_size
         self.lang = lang
+        self.train_file = train_file
+        self.val_file = val_file
 
     def setup(self, stage: Optional[str] = None) -> None:
         if stage == 'fit':
@@ -145,12 +149,12 @@ class BaselineDataModule(ConllDataModule):
         return id, input_ids_tensor, token_type_ids_tensor, attention_mask_tensor, token_masks, tag_lens, label_ids_tensor, gold_spans
 
     def train_dataloader(self):
-        self.reader.read_data(config.train_file[self.lang])
+        self.reader.read_data(self.train_file)
         train_reader = deepcopy(self.reader)
         return torch.utils.data.DataLoader(train_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, shuffle=True, num_workers=8)
 
     def val_dataloader(self):
-        self.reader.read_data(config.validate_file[self.lang])
+        self.reader.read_data(self.val_file)
         val_reader = deepcopy(self.reader)
         return torch.utils.data.DataLoader(val_reader, batch_size=self.batch_size, collate_fn=self.collate_batch, num_workers=8)
 

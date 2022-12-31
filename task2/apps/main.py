@@ -6,6 +6,7 @@
 import argparse
 from pathlib import Path
 import pandas as pd
+import numpy as np
 import os, re, sys, json
 import time
 from typing import AnyStr, Dict, List, Union
@@ -13,12 +14,14 @@ from tqdm import tqdm
 from allennlp.common.params import Params
 import pytorch_lightning as pl
 from task2.data_man.conll_reader import ConllDataModule
+from task2.data_man.meta_data import read_conll_item_from_file, write_conll_item_to_file
 from task2.modeling.model import NerModel
 from task2.configuration.config import logging
 from task2.configuration import config
 import torch
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, LearningRateMonitor
 from task2.data_man.badcases import analyze_badcase
+from sklearn.model_selection import KFold
 
 def parse_arguments():
 
@@ -33,10 +36,30 @@ def parse_arguments():
     parser.add_argument('--lang', type=str, default='Chinese', help='')
     parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
+    parser.add_argument('--cross-validation', type=int, default=2, help='make kfold cross validation')
     
     args = parser.parse_args()
 
     return args 
+
+def k_fold(k: int=10, lang: AnyStr='English'):
+    if k == 0:
+        raise ValueError('k should be larger than 0')
+    
+    kf = KFold(n_splits=k, shuffle=True, random_state=42)
+    if not config.kfold_data_path.exists():
+        config.kfold_data_path.mkdir()
+    items = read_conll_item_from_file(config.train_file[lang]) + read_conll_item_from_file(config.validate_file[lang])
+    index = 0
+    for train, val in kf.split(items):
+        train_file = config.kfold_data_path/'{}-train_{}.conll'.format(config.code_by_lang[lang], index)
+        validation_file = config.kfold_data_path/'{}-dev_{}.conll'.format(config.code_by_lang[lang], index)
+        index += 1
+        train_items = np.array(items)[train]
+        write_conll_item_to_file(train_file, train_items, lang)
+        val_items = np.array(items)[val]
+        write_conll_item_to_file(validation_file, val_items, lang)
+        yield train_file, validation_file
 
 
 def get_model_earlystopping_callback(monitor='val_f1', mode:Union['max', 'min']='max', min_delta=0.001):
@@ -159,9 +182,7 @@ def show_args(args):
     log_info = "\n" + "\n".join(['{}: {}'.format(k, v) for k, v in args._get_kwargs()])
     logging.info(log_info)
 
-if __name__ == '__main__':
-    args = parse_arguments()
-    show_args(args)
+def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
     trainer = get_trainer(args)
     dm = ConllDataModule.from_params(Params({
         'type': args.data_module_type,
@@ -171,7 +192,9 @@ if __name__ == '__main__':
             'lang': args.lang
         }),
         'lang': args.lang,
-        'batch_size': args.batch_size
+        'batch_size': args.batch_size,
+        'train_file': train_file,
+        'val_file': val_file
     }))
 
     params = Params({
@@ -193,5 +216,14 @@ if __name__ == '__main__':
     stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)
     stat_out_file = str(out_file) + ".stat.json"
     write_stat_results(stat_dict=stat_dict, out_file=stat_out_file)
+
+if __name__ == "__main__":
+    args = parse_arguments()
+    show_args(args)
+    if args.cross_validation == 1:
+        main(args, config.train_file[args.lang], config.validate_file[args.lang])
+    else:
+        for train_file, val_file in k_fold(args.cross_validation, args.lang):
+            main(args, train_file, val_file)
 
     sys.exit(0)
