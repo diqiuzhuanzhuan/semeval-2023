@@ -30,12 +30,18 @@ def linear_warmup_decay(warmup_steps):
 class NerModel(Registrable, pl.LightningModule):
     lr = 1e-5
     warmup_steps = 1000
+    last_metrics = dict()
 
     def log_metrics(self, pred_results, loss=0.0, suffix='', on_step=False, on_epoch=True):
+        self.last_metrics.clear()
         for key in pred_results:
             self.log(suffix + key, pred_results[key], on_step=on_step, on_epoch=on_epoch, prog_bar=True, logger=True)
+            self.last_metrics[suffix+key] = pred_results[key]
 
         self.log(suffix + 'loss', loss, on_step=on_step, on_epoch=on_epoch, prog_bar=True, logger=True)
+
+    def get_metric(self):
+        return self.last_metrics()
 
     def configure_optimizers(self):
         optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, weight_decay=0.01)

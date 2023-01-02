@@ -36,7 +36,7 @@ def parse_arguments():
     parser.add_argument('--lang', type=str, default='Chinese', help='')
     parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
-    parser.add_argument('--cross-validation', type=int, default=2, help='make kfold cross validation')
+    parser.add_argument('--cross-validation', type=int, default=1, help='make kfold cross validation')
     
     args = parser.parse_args()
 
@@ -142,16 +142,22 @@ def write_stat_results(stat_dict: Dict, out_file: Union[AnyStr, bytes, os.PathLi
     logging.info('write stat file: {} done...'.format(str(out_file)))
 
             
-def generate_result_file_parent(args: argparse.Namespace, value_by_monitor: Dict):
-    parent_name = "_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()])
-    name = "_".join(["{}={}".format(k, str(value_by_monitor[k])) for k in value_by_monitor]) + ".conll"
+def generate_result_file_parent(trainer: pl.Trainer, args: argparse.Namespace, value_by_monitor: Dict):
+    parent_name = Path("_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()]))/('version_'+str(trainer.logger.version))
+    name = "{}={}".format(args.monitor, str(value_by_monitor[args.monitor])) + ".tsv"
     return parent_name, name
 
-def test_model(model: NerModel, data_module: pl.LightningDataModule):
+def validate_model(trainer: pl.Trainer, model: NerModel, data_module: pl.LightningDataModule):
+    val_results = []
+    preds = trainer.predict(model=model, dataloaders=data_module.val_dataloader())
+    for id, tag_result in preds:
+        val_results.extend(list(zip(*(id, tag_result))))
+    return val_results
+
+def test_model(trainer: pl.Trainer, model: NerModel, data_module: pl.LightningDataModule):
     test_results = []
-    test_dataloader = data_module.test_dataloader()
-    for batch in tqdm(test_dataloader, total=test_dataloader.__len__()):
-        id, tag_result = model.predict_tags(batch=batch)
+    preds = trainer.predict(model=model, dataloaders=data_module.test_dataloader())
+    for id, tag_result in preds:
         test_results.extend(list(zip(*(id, tag_result))))
     return test_results
     
@@ -204,13 +210,18 @@ def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
     ner_model = NerModel.from_params(params=params)
     trainer.fit(model=ner_model, datamodule=dm)
     _, best_checkpoint = save_model(trainer, model_name=args.model_type)
-    monitors = args.monitors.split(' ')
-    value_by_monitor = {monitor: get_best_value(best_checkpoint, monitor=monitor) for monitor in monitors}
-    
-    write_eval_performance(args, value_by_monitor, config.performance_log)
     ner_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
-    test_results = test_model(ner_model, dm)
-    parent, file = generate_result_file_parent(args, value_by_monitor)
+    logging.info('recording predictions of validation file....')
+    parent, file = generate_result_file_parent(trainer, args, value_by_monitor)
+    val_results = validate_model(trainer, ner_model, dm)
+    out_file = config.output_path/parent/'val/'/file
+    write_test_results(test_results=val_results, out_file=out_file)
+    value_by_monitor = ner_model.get_metric()
+    write_eval_performance(args, value_by_monitor, config.performance_log)
+    out_file = config.output_path/parent/'metrics.tsv'
+    write_eval_performance(args, value_by_monitor, out_file)
+
+    test_results = test_model(trainer, ner_model, dm)
     out_file = config.output_path/parent/file
     write_test_results(test_results=test_results, out_file=out_file)
     stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)
