@@ -18,6 +18,7 @@ from task2.data_man.meta_data import read_conll_item_from_file, write_conll_item
 from task2.modeling.model import NerModel
 from task2.configuration.config import logging
 from task2.configuration import config
+from task2.apps.ensemble import vote
 import torch
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, LearningRateMonitor
 from task2.data_man.badcases import analyze_badcase
@@ -188,7 +189,7 @@ def show_args(args):
     log_info = "\n" + "\n".join(['{}: {}'.format(k, v) for k, v in args._get_kwargs()])
     logging.info(log_info)
 
-def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
+def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr) -> tuple:
     trainer = get_trainer(args)
     dm = ConllDataModule.from_params(Params({
         'type': args.data_module_type,
@@ -215,9 +216,9 @@ def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
     trainer.validate(model=ner_model, datamodule=dm)
     value_by_monitor = ner_model.get_metric()
     parent, file = generate_result_file_parent(trainer, args, value_by_monitor)
-    out_file = config.output_path/parent/'val/'/file
+    val_out_file = config.output_path/parent/'val/'/file
     val_results = validate_model(trainer, ner_model, dm)
-    write_test_results(test_results=val_results, out_file=out_file)
+    write_test_results(test_results=val_results, out_file=val_out_file)
     write_eval_performance(args, value_by_monitor, config.performance_log)
     out_file = config.output_path/parent/'metrics.tsv'
     write_eval_performance(args, value_by_monitor, out_file)
@@ -228,6 +229,7 @@ def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
     stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)
     stat_out_file = str(out_file) + ".stat.json"
     write_stat_results(stat_dict=stat_dict, out_file=stat_out_file)
+    return val_out_file, out_file
 
 if __name__ == "__main__":
     args = parse_arguments()
@@ -235,7 +237,15 @@ if __name__ == "__main__":
     if args.cross_validation == 1:
         main(args, config.train_file[args.lang], config.validate_file[args.lang])
     else:
+        out_file = config.test_data_path/'{}.pred.conll'.format(args.lang)
+        val_preds_files, val_label_files, test_preds_files = [], [], []
         for train_file, val_file in k_fold(args.cross_validation, args.lang):
-            main(args, train_file, val_file)
+            val_preds_file, test_preds_file = main(args, train_file, val_file)
+            val_label_files.append(val_file)
+            val_preds_files.append(val_preds_file)
+            test_preds_files.append(test_preds_file)
+        vote(val_label_files, val_preds_file, test_preds_file, out_file)
+    
+            
 
     sys.exit(0)

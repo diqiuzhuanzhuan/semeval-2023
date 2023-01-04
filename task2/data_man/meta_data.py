@@ -79,7 +79,7 @@ def _is_divider(line: str) -> bool:
     return False
 
 
-def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
+def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike], just_label=False):
     file = Path(file).as_posix()
     fin = gzip.open(file, 'rt', encoding='utf-8') if file.endswith('.gz') else open(file, 'rt', encoding='utf-8')
     ans = []
@@ -91,13 +91,22 @@ def read_conll_item_from_file(file: Union[AnyStr, bytes, os.PathLike]):
         metadata = lines[0].strip() if lines[0].strip().startswith('# id') else None
         fields = [line.split() for line in lines if not line.startswith('# id')]
         fields = [list(field) for field in zip(*fields)]
-        ans.append(
-            ConllItem.from_dict({
-                'id': metadata,
-                'tokens': fields[0],
-                'labels': fields[-1] if len(fields) == 4 else None
-                })
-        )
+        if not just_label:
+            ans.append(
+                ConllItem.from_dict({
+                    'id': metadata,
+                    'tokens': fields[0],
+                    'labels': fields[-1] if len(fields) == 4 else None
+                    })
+            )
+        else:
+            ans.append(
+                ConllItem.from_dict({
+                    'id': metadata,
+                    'tokens': None,
+                    'labels': fields[-1]
+                    })
+            )
     logging.info("read {} item from {}.".format(len(ans), str(file)))
     return ans
 
