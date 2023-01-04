@@ -212,16 +212,18 @@ def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr):
     _, best_checkpoint = save_model(trainer, model_name=args.model_type)
     ner_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
     logging.info('recording predictions of validation file....')
-    parent, file = generate_result_file_parent(trainer, args, value_by_monitor)
     val_results = validate_model(trainer, ner_model, dm)
+    value_by_monitor = ner_model.get_metric()
+    parent, file = generate_result_file_parent(trainer, args, value_by_monitor)
     out_file = config.output_path/parent/'val/'/file
     write_test_results(test_results=val_results, out_file=out_file)
-    value_by_monitor = ner_model.get_metric()
     write_eval_performance(args, value_by_monitor, config.performance_log)
     out_file = config.output_path/parent/'metrics.tsv'
     write_eval_performance(args, value_by_monitor, out_file)
 
     test_results = test_model(trainer, ner_model, dm)
+    test_results = test_model(ner_model, dm)
+    parent, file = generate_result_file_parent(trainer, args, value_by_monitor)
     out_file = config.output_path/parent/file
     write_test_results(test_results=test_results, out_file=out_file)
     stat_dict = analyze_badcase(label_file=config.test_file[args.lang], pred_file=out_file)

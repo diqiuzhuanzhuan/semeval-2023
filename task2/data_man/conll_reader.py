@@ -320,6 +320,7 @@ class SpanAwareDataset(DictionaryFusedDataset):
         token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
         entities, entity_by_pos = self._search_entity(tokens=tokens)
         ### debug to see how many entities were in the dictionary
+        '''
         gold_spans = extract_spans(item.labels)
         gold_entities = []
         gold_labels = []
@@ -338,6 +339,7 @@ class SpanAwareDataset(DictionaryFusedDataset):
                 if gold_labels[i] == 'ORG':
                     logging.info('{}'.format(join_tokens(tokens)[0]))    
                     logging.info('{}: {} is not in'.format(entity, gold_labels[i]))
+        '''
         # half top
 
         input_ids.append(self.tokenizer.cls_token_id)
