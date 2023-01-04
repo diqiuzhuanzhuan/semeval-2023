@@ -41,7 +41,7 @@ class NerModel(Registrable, pl.LightningModule):
         self.log(suffix + 'loss', loss, on_step=on_step, on_epoch=on_epoch, prog_bar=True, logger=True)
 
     def get_metric(self):
-        return self.last_metrics()
+        return self.last_metrics
 
     def configure_optimizers(self):
         optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, weight_decay=0.01)
@@ -163,6 +163,9 @@ class BaselineNerModel(NerModel):
 
     def test_epoch_end(self, outputs):
         return outputs
+
+    def predict_step(self, batch: Any, batch_idx: int):
+        return self.predict_tags(batch)
 
     def predict_tags(self, batch: Any):
         return self.test_step(batch=batch, batch_idx=0)
