@@ -144,7 +144,7 @@ def write_stat_results(stat_dict: Dict, out_file: Union[AnyStr, bytes, os.PathLi
             
 def generate_result_file_parent(trainer: pl.Trainer, args: argparse.Namespace, value_by_monitor: Dict):
     parent_name = Path("_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()]))/('version_'+str(trainer.logger.version))
-    name = "{}={}".format(args.monitor, str(value_by_monitor[args.monitor])) + ".tsv"
+    name = "{}={}".format(args.monitors, str(value_by_monitor[args.monitors])) + ".tsv"
     return parent_name, name
 
 def validate_model(trainer: pl.Trainer, model: NerModel, data_module: pl.LightningDataModule):
