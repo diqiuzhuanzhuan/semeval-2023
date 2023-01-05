@@ -293,10 +293,10 @@ def join_tokens(tokens: List[AnyStr]) -> AnyStr:
             sentence += token
             state = 1
         elif state == 1:
-            sentence += token
             if is_chinese_char(token) or (len(token) == 1 and unicodedata.category(token).startswith("P")):
-                pass
+                sentence += token
             else:
+                sentence += " " + token
                 state = 2
         elif state == 2:
             if is_chinese_char(token) or (len(token) == 1 and unicodedata.category(token).startswith("P")):

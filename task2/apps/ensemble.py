@@ -8,6 +8,8 @@ import os
 from sklearn.metrics import classification_report
 import itertools
 from task2.data_man.meta_data import get_id_by_type, get_type_by_id, LABEL_NAME, read_conll_item_from_file
+from task2.configuration.config import logging
+from pathlib import Path
 
 def vote(dev_label_files: List[AnyStr], dev_files: List[AnyStr], test_files: List[AnyStr], output_file):
     assert len(dev_files) == len(test_files) == len(dev_label_files)
@@ -49,6 +51,9 @@ def vote(dev_label_files: List[AnyStr], dev_files: List[AnyStr], test_files: Lis
         
     final_res = []
     for dev_file, dev_label_file, test_file in zip(dev_files, dev_label_files, test_files):
+        if not Path(dev_file).exists() or not Path(dev_label_file).exists() or not Path(test_file).exists():
+            logging.warning('{} or {} or {} is not existed.'.format(str(dev_file), str(dev_label_file), str(test_file)))
+            continue
         report_dict = _get_dev_report(dev_file, dev_label_file)
         final_res = _calc_score(test_file, report_dict, final_res)
     final_y_pred = _weight_sum(final_res)

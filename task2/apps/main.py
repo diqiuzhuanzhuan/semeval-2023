@@ -245,6 +245,21 @@ if __name__ == "__main__":
             val_preds_files.append(val_preds_file)
             test_preds_files.append(test_preds_file)
         vote(val_label_files, val_preds_file, test_preds_file, out_file)
+        voted_files = {
+            'val_label_files': val_label_files,
+            'val_preds_files': val_preds_files,
+            'test_preds_files': test_preds_files
+        }
+        can_vote_file = config.test_data_path/'{}_vote_files.csv'.format(args.lang)
+        if not Path(can_vote_file).exists():
+            data = None
+        else:
+            data = pd.read_csv(can_vote_file)
+        all_files = pd.concat([pd.DataFrame.from_dict(voted_files), data])
+        all_files.to_csv(can_vote_file, index=False)
+        all_voted_files = all_files.to_dict()
+        out_file = config.test_data_path/'all_voted_{}.pred.conll'.format(args.lang)
+        vote(all_voted_files['val_label_files'], all_voted_files['val_preds_files'], all_voted_files['test_preds_files'], out_file)
     
             
 
