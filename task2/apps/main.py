@@ -238,8 +238,6 @@ if __name__ == "__main__":
         main(args, config.train_file[args.lang], config.validate_file[args.lang])
     else:
         parent_name = Path(config.test_data_path/"_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()]))
-        if not parent_name.exists():
-            parent_name.mkdir(parents=True)
         out_file = parent_name/'{}.pred.conll'.format(args.lang)
         val_preds_files, val_label_files, test_preds_files = [], [], []
         for train_file, val_file in k_fold(args.cross_validation, args.lang):
@@ -247,7 +245,9 @@ if __name__ == "__main__":
             val_label_files.append(val_file)
             val_preds_files.append(val_preds_file)
             test_preds_files.append(test_preds_file)
-        vote(val_label_files, val_preds_file, test_preds_file, out_file)
+        if not parent_name.exists():
+            parent_name.mkdir(parents=True)
+        vote(val_label_files, val_preds_files, test_preds_files, out_file)
         voted_files = {
             'val_label_files': val_label_files,
             'val_preds_files': val_preds_files,
