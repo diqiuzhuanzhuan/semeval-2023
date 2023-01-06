@@ -37,7 +37,7 @@ def parse_arguments():
     parser.add_argument('--lang', type=str, default='Chinese', help='')
     parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
-    parser.add_argument('--cross-validation', type=int, default=1, help='make kfold cross validation')
+    parser.add_argument('--cross-validation', type=int, default=2, help='make kfold cross validation')
     
     args = parser.parse_args()
 
@@ -237,7 +237,10 @@ if __name__ == "__main__":
     if args.cross_validation == 1:
         main(args, config.train_file[args.lang], config.validate_file[args.lang])
     else:
-        out_file = config.test_data_path/'{}.pred.conll'.format(args.lang)
+        parent_name = Path(config.test_data_path/"_".join(["{}={}".format(k, v) for k, v in args._get_kwargs()]))
+        if not parent_name.exists():
+            parent_name.mkdir(parents=True)
+        out_file = parent_name/'{}.pred.conll'.format(args.lang)
         val_preds_files, val_label_files, test_preds_files = [], [], []
         for train_file, val_file in k_fold(args.cross_validation, args.lang):
             val_preds_file, test_preds_file = main(args, train_file, val_file)

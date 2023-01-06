@@ -116,9 +116,9 @@ def write_conll_item_to_file(file: Union[AnyStr, bytes, os.PathLike], items: Lis
         file.parent.mkdir()
     fout = gzip.open(str(file), 'wt', encoding='utf-8') if str(file).endswith('.gz') else open(str(file), 'wt', encoding='utf-8')
     for item in items:
-        lines = ["# id {}	domain={}".format(item.id, config.code_by_lang[lang])]
+        lines = ["{}".format(item.id)]
         lines.extend([' _ _ '.join([t, l]) for t,l in zip(item.tokens, item.labels)])
-        fout.writelines(lines)
+        fout.write("\n".join(lines))
         fout.write("\n\n")
     fout.close()
 
