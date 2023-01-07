@@ -396,6 +396,71 @@ class SpanAwareDataset(DictionaryFusedDataset):
 
         return id, input_ids, token_type_ids, span_aware_attention_mask, token_masks, tag_len, label_ids, gold_spans
 
+@ConllDataset.register('gemnet_fused_dataset')
+class GemnetFusedDataset(DictionaryFusedDataset):
+
+    def __init__(
+        self, 
+        encoder_model='bert-base-uncased',
+        lang='English'
+        ) -> None:
+        super().__init__(encoder_model, lang)
+        self.gemnet_code = [0] * len(get_id_to_labes_map)
+
+    def encode_input(self, item) -> Any:
+        id, tokens, labels = item.id, item.tokens, item.labels
+        token_masks, new_labels, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], [], []
+        entities, entity_by_pos = self._search_entity(tokens=tokens)
+        id, tokens, labels = item.id, item.tokens, item.labels
+        token_masks, input_ids, token_type_ids, attention_mask, label_ids = [], [], [], [], []
+        entities, _ = self._search_entity(tokens)
+        # half top
+        input_ids.append(self.tokenizer.cls_token_id)
+        if labels is not None:
+            label_ids.append(get_id_by_type('O'))
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
+         
+        for i, token in enumerate(tokens):
+            outputs = self.tokenizer(token.lower())
+            subtoken_len = len(outputs['input_ids']) - 2
+            input_ids.extend(outputs['input_ids'][1:-1])
+            attention_mask.extend(outputs['attention_mask'][1:-1])
+            token_type_ids.extend([0] * subtoken_len)
+            token_masks.extend([True]+ [False] * (subtoken_len-1))
+            if labels is not None:
+                tag = labels[i]
+                sub_tags = [tag] + [tag.replace('B-', 'I-')] * (subtoken_len-1)
+                label_ids.extend([get_id_by_type(sub_tag) for sub_tag in sub_tags])
+        input_ids.append(self.tokenizer.sep_token_id)
+        attention_mask.append(1)
+        token_type_ids.append(0)
+        token_masks.append(False)
+        if labels is not None:
+            gold_spans = extract_spans([get_type_by_id(label_id) for label_id in label_ids])
+            label_ids.append(get_id_by_type('O'))
+
+        tag_len = len(input_ids) # only half top need to predict labels
+
+        # half bottom
+        entity_information = "$".join([entity + '(' + self.get_entity_type(entity) + ')' for entity in entities if self.get_entity_type(entity)])
+        outputs = self.tokenizer(entity_information.lower())
+        input_ids.extend(outputs['input_ids'][1:-1])
+        attention_mask.extend(outputs['attention_mask'][1:-1])
+        token_type_ids.extend([1] * len(outputs['input_ids'][1:-1]))
+        if labels is not None:
+            label_ids.extend([-100 for _ in outputs['input_ids'][1:-1]])
+        
+        # the last [SEP]]
+        input_ids.append(self.tokenizer.sep_token_id)
+        attention_mask.append(1)
+        token_type_ids.append(1)
+        if labels is not None:
+            label_ids.append(-100)
+
+        return id, input_ids, token_type_ids, attention_mask, token_masks, tag_len, label_ids, gold_spans
+         
 
 if __name__ == '__main__':
     """
