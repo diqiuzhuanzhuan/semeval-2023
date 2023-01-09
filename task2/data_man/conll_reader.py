@@ -187,8 +187,8 @@ class DictionaryFusedDataset(ConllDataset):
             vocab = get_wiki_entities(config.wiki_entity_data[k])
             for entity in vocab:
                 self.entity_vocab[entity].extend(vocab[entity])
-                self.all_types.difference_update(set(vocab[entity]))
-                
+                self.all_types.update(set(vocab[entity]))
+
         self.tokenizer.add_tokens(list(self.all_types))
         self._make_entity_automation()
         
