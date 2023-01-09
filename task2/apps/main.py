@@ -37,7 +37,7 @@ def parse_arguments():
     parser.add_argument('--lang', type=str, default='Chinese', help='')
     parser.add_argument('--monitors', type=str, default='val_micro@F1', help='the monitors you care about, use space as delimiter if many')
     parser.add_argument('--gpus', type=int, default=-1, help='')
-    parser.add_argument('--cross-validation', type=int, default=2, help='make kfold cross validation')
+    parser.add_argument('--cross_validation', type=int, default=2, help='make kfold cross validation')
     
     args = parser.parse_args()
 

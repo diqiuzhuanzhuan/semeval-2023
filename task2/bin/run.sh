@@ -30,6 +30,7 @@ run()
                             --dataset_type $dataset_type \
                             --data_module_type $data_module_type \
                             --gpus -1 \
+                            --cross_validation 1 \
                             --lang $1
 
                         done
