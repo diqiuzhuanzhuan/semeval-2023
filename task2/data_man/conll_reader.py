@@ -172,6 +172,7 @@ class BaselineDataModule(ConllDataModule):
 @ConllDataset.register('dictionary_fused_dataset')        
 class DictionaryFusedDataset(ConllDataset):
     entity_vocab = None
+    all_types = set()
 
     def __init__(
         self, 
@@ -182,12 +183,13 @@ class DictionaryFusedDataset(ConllDataset):
         #self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
         #self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
         self.entity_vocab = collections.defaultdict(list)
-        
         for k in config.wiki_entity_data:
             vocab = get_wiki_entities(config.wiki_entity_data[k])
             for entity in vocab:
                 self.entity_vocab[entity].extend(vocab[entity])
-
+                self.all_types.difference_update(set(vocab[entity]))
+                
+        self.tokenizer.add_tokens(list(self.all_types))
         self._make_entity_automation()
         
     def _make_entity_automation(self):
@@ -514,6 +516,8 @@ if __name__ == '__main__':
             'lang': 'Chinese'
             }),
         'lang': 'Chinese',
+        'train_file': config.train_file['Chinese'],
+        'val_file': config.validate_file['Chinese'],
         'batch_size': 2
     })
     dm = ConllDataModule.from_params(params=params)
