@@ -79,7 +79,7 @@ class BaselineNerModel(NerModel):
         super().__init__()
         self.encoder = AutoModelForTokenClassification.from_pretrained(encoder_model, num_labels=get_num_labels())
         if vocab_size:
-            self.encoder.encoder.resize_token_embeddings(vocab_size)
+            self.encoder.resize_token_embeddings(vocab_size)
             
         self.lr = lr
         self.warmup_steps = warmup_steps
