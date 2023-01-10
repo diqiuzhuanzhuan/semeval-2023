@@ -73,17 +73,22 @@ class BaselineNerModel(NerModel):
         self, 
         encoder_model: AnyStr='xlm-roberta-base',
         lr: float=1e-5,
-        warmup_steps: int=1000
+        warmup_steps: int=1000,
+        vocab_size: int=None
         ) -> None:
         super().__init__()
         self.encoder = AutoModelForTokenClassification.from_pretrained(encoder_model, num_labels=get_num_labels())
+        if vocab_size:
+            self.encoder.encoder.resize_token_embeddings(vocab_size)
+            
         self.lr = lr
         self.warmup_steps = warmup_steps
         self.metric = SpanF1()
         self.save_hyperparameters({
             'encoder_model': encoder_model,
             'lr': lr,
-            'warmup_steps': warmup_steps
+            'warmup_steps': warmup_steps,
+            'vocab_size': vocab_size
         })
 
     def forward_step(self, batch: Any):
@@ -178,9 +183,10 @@ class BaselineCrfModel(BaselineNerModel):
         self,
         encoder_model: AnyStr = 'xlm-roberta-base', 
         lr: float = 2e-5, 
-        warmup_steps: int = 3000
+        warmup_steps: int = 3000,
+        vocab_size: int = None
         ) -> None:
-        super().__init__(encoder_model, lr, warmup_steps)
+        super().__init__(encoder_model, lr, warmup_steps, vocab_size)
         self.crf_layer = ConditionalRandomField(
             num_tags=get_num_labels(),
             constraints=allowed_transitions(constraint_type="BIO", labels=get_id_to_labes_map())

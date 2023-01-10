@@ -206,10 +206,10 @@ def main(args: argparse.Namespace, train_file: AnyStr, val_file: AnyStr) -> tupl
 
     params = Params({
         'type': args.model_type,
-        'encoder_model': args.encoder_model
+        'encoder_model': args.encoder_model,
+        'vocab_size': len(dm.reader.tokenizer)
     })
     ner_model = NerModel.from_params(params=params)
-    ner_model.encoder.resize_token_embeddings(len(dm.reader.tokenizer))
     trainer.fit(model=ner_model, datamodule=dm)
     _, best_checkpoint = save_model(trainer, model_name=args.model_type)
     ner_model = load_model(NerModel.by_name(args.model_type), model_file=best_checkpoint)
