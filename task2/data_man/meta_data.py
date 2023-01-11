@@ -27,6 +27,16 @@ LABEL_NAME = [
     'I-Politician', 'I-PrivateCorp', 'I-PublicCorp', 'I-Scientist', 'I-Software', 'I-SportsGRP', 'I-SportsManager', 'I-Station',
     'I-Symptom', 'I-Vehicle', 'I-VisualWork', 'I-WrittenWork', 'O'
     ]
+    # 'OtherCw', 'OtherCorp', 'TechCorp' don't emerge
+
+LABEL_BY_TOP_CATEGORY = {
+    'Person': {'OtherPER', 'SportsManager', 'Cleric', 'Politician', 'Athlete', 'Artist', 'Scientist'},
+    'Product': {'OtherPROD', 'Drink', 'Food', 'Vehicle', 'Clothing'},
+    'Medical': {'Disease', 'Symptom', 'AnatomicalStructure', 'Medication/Vaccine', 'MedicalProcedure'},
+    'Location': {'Facility', 'OtherLOC', 'HumanSettlement', 'Station'},
+    'Creative Works': {'VisualWork', 'MusicalWork', 'WrittenWork', 'ArtWork', 'Software', 'OtherCW'},
+    'Group': {'MusicalGRP', 'PublicCorp', 'PrivateCorp', 'OtherCorp', 'AerospaceManufacturer', 'SportsGRP', 'CarManufacturer', 'TechCorp', 'ORG'}
+}
 
 return_map = dict()
 for i, ele in enumerate(LABEL_NAME):
@@ -248,7 +258,7 @@ def get_wiki_entities(file: Union[AnyStr, bytes, os.PathLike]) -> Dict[AnyStr, L
 def write_json_gzip(file: Union[AnyStr, bytes, os.PathLike], json_dict: Dict):
     file = Path(file)
     with gzip.open(str(file), 'w') as f:
-        f.write(json.dumps(json_dict).encode('utf-8'))
+        f.write(json.dumps(json_dict, ensure_ascii=True).encode('utf-8'))
 
 def read_json_gzip(file: Union[AnyStr, bytes, os.PathLike]):
     file = Path(file)

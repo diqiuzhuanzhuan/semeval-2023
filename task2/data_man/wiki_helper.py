@@ -9,7 +9,7 @@ from qwikidata.json_dump import WikidataJsonDump
 import time
 from qwikidata.utils import dump_entities_to_json
 from task2.configuration import config
-from task2.data_man.meta_data import extract_spans, join_tokens, write_json_gzip, read_conll_item_from_file
+from task2.data_man.meta_data import extract_spans, join_tokens, write_json_gzip, read_conll_item_from_file, LABEL_BY_TOP_CATEGORY
 import collections
 import pandas as pd
 import wikidata_plain_sparql as wikidata
@@ -43,8 +43,6 @@ PERSON_TYPE = {
     'Q41583': 'sportsmanager', #教练
 }
 
-person_vocab = collections.defaultdict(set)
-type_by_id = collections.defaultdict(set)
 
 GROUP_TYPE = {
     'Q4438121': 'sport organization',  
@@ -154,7 +152,7 @@ def enumerate_person(wjd):
         
         if entity_dict["type"] == "item":
             entity = WikidataItem(entity_dict)
-            types = has_occupation_of_what(entity, type_by_id)
+            types = has_occupation_of_what(entity)
             if types:
                 labels = entity._entity_dict.get('labels')
                 aliases = entity._entity_dict.get('aliases')
@@ -172,10 +170,9 @@ def enumerate_person(wjd):
                     len(person_vocab), ii, ii / dt
                 )
             )
-            break
     return person_vocab
 
-def enumerate_group(wjd, type_by_id):
+def enumerate_item(wjd, type_by_id):
     t1 = time.time()
     group_vocab = collections.defaultdict(set)
     for ii, entity_dict in enumerate(wjd):
@@ -197,16 +194,16 @@ def enumerate_group(wjd, type_by_id):
             t2 = time.time()
             dt = t2 - t1
             print(
-                "found {} group among {} entities [entities/s: {:.2f}]".format(
+                "found {}  among {} entities [entities/s: {:.2f}]".format(
                     len(group_vocab), ii, ii / dt
                 )
             )
     return group_vocab
 
 
-def find_person(conll_file: AnyStr) -> Dict:
+def find_by_top_category(conll_file: AnyStr, category: AnyStr) -> Dict:
     conll_items = read_conll_item_from_file(conll_file)
-    type_by_person = dict()
+    type_by_entity = dict()
     for item in conll_items:
         gold_spans = extract_spans(item.labels)
         gold_entities = []
@@ -221,38 +218,48 @@ def find_person(conll_file: AnyStr) -> Dict:
         #logging.info('gold labels: {}'.format(gold_labels))
         for i, entity in enumerate(gold_entities):
             label = gold_labels[i]
-            type_by_person[entity] = label
-    return type_by_person
+            if label in LABEL_BY_TOP_CATEGORY[category]:
+                type_by_entity[entity] = label
+    return type_by_entity
 
 def main(wjd: WikidataJsonDump):
     type_by_person = dict()
     for lang in config.code_by_lang:
-        type_by_person.update(find_person(config.train_file[lang]))
-        type_by_person.update(find_person(config.validate_file[lang]))
+        type_by_person.update(find_by_top_category(config.train_file[lang], 'Person'))
+        type_by_person.update(find_by_top_category(config.validate_file[lang], 'Person'))
     person_vocab = enumerate_person(wjd)
-    #write_json_gzip('person.bak.gz', person_vocab)
-    has_query_ids = set()
+    new_person_vocab = dict()
+    for k in person_vocab:
+        new_person_vocab[k] = list(person_vocab[k])
+    write_json_gzip('person.bak.gz', new_person_vocab)
     type_by_occupation_id = dict()
     for person in type_by_person: 
         if person not in person_vocab:
             continue
         occupation_ids = person_vocab[person]
         for id in occupation_ids:
-            if id in has_query_ids:
+            if id in type_by_occupation_id:
                 continue
             qids = occupation_query(id)
-            has_query_ids.add(id)
+            time.sleep(0.5)
             for qid in qids:
                 type_by_occupation_id[qid] = type_by_person[person]
     for person in person_vocab:
-        person_vocab[person] = [type_by_occupation_id[id] for id in person_vocab[person]]
+        person_vocab[person] = [type_by_occupation_id[id] for id in person_vocab[person] if id in type_by_occupation_id]
         if not person_vocab[person]:
-            person_vocab[person] = ['Other-PER']
+            person_vocab[person] = ['OtherPER']
     
-    write_json_gzip('person_entities.json.gzip', person_vocab)
+    write_json_gzip('person_entities.json.gz', person_vocab)
         
     
-        
+def main_category(wjd: WikidataJsonDump, category: AnyStr):
+    type_by_entity = dict()
+    for lang in config.code_by_lang:
+        type_by_entity.update(find_by_top_category(config.train_file[lang], category))
+        type_by_entity.update(find_by_top_category(config.validate_file[lang], category))
+
+    enumerate_item(wjd,)
+    
 
 
 
@@ -268,7 +275,7 @@ def main(wjd: WikidataJsonDump):
 
 if __name__ == "__main__":
     # create an instance of WikidataJsonDump
-    wjd_dump_path = 'E:\wikidata-20220103-all.json.gz'
+    wjd_dump_path = '/Users/malong/Downloads/wikidata-20220103-all.json.gz'
     #wjd_dump_path = '/Users/malong/Downloads/humans.ndjson'
     wjd = WikidataJsonDump(wjd_dump_path)
     main(wjd=wjd)
