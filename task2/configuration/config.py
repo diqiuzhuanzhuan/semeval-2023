@@ -83,6 +83,7 @@ train_file = {
 	'Portugese': train_data_path/'pt-train.conll',
 	'Ukranian': train_data_path/'uk-train.conll',
 	'German': train_data_path/'de-train.conll',
+    'All': train_data_path/'all-train.conll',
 }
 
 validate_file = {
@@ -98,6 +99,7 @@ validate_file = {
 	'Portugese': validate_data_path/'pt-dev.conll',
 	'Ukranian': validate_data_path/'uk-dev.conll',
 	'German': validate_data_path/'de-dev.conll',
+	'All': validate_data_path/'all-dev.conll',
 }
 
 test_file = {

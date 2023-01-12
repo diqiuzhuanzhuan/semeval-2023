@@ -261,9 +261,9 @@ if __name__ == "__main__":
             data = pd.read_csv(can_vote_file)
         all_files = pd.concat([pd.DataFrame.from_dict(voted_files), data])
         all_files.to_csv(can_vote_file, index=False)
-        all_voted_files = all_files.to_dict()
+        all_voted_files = all_files
         out_file = config.test_data_path/'all_voted_{}.pred.conll'.format(args.lang)
-        vote(all_voted_files['val_label_files'], all_voted_files['val_preds_files'], all_voted_files['test_preds_files'], out_file)
+        vote(all_voted_files['val_label_files'].to_list(), all_voted_files['val_preds_files'].to_list(), all_voted_files['test_preds_files'].to_list(), out_file)
     
             
 
