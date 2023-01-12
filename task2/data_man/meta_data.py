@@ -38,6 +38,15 @@ LABEL_BY_TOP_CATEGORY = {
     'Group': {'MusicalGRP', 'PublicCorp', 'PrivateCorp', 'OtherCorp', 'AerospaceManufacturer', 'SportsGRP', 'CarManufacturer', 'TechCorp', 'ORG'}
 }
 
+DEFAULT_LABEL_BY_TOP_CAGEGORY = {
+    'Person': 'OtherPER',
+    'Product': 'OtherPROD',
+    'Medical': 'Medication/Vaccine',
+    'Location': 'OtherLOC',
+    'Creative Works': 'OtherCW',
+    'Group': 'ORG'
+}
+
 return_map = dict()
 for i, ele in enumerate(LABEL_NAME):
     return_map[ele] = i

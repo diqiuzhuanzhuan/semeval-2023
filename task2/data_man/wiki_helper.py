@@ -6,10 +6,11 @@ from typing import AnyStr, Dict
 from task2.configuration.config import logging
 from qwikidata.entity import WikidataItem
 from qwikidata.json_dump import WikidataJsonDump
+from pathlib import Path
 import time
 from qwikidata.utils import dump_entities_to_json
 from task2.configuration import config
-from task2.data_man.meta_data import extract_spans, join_tokens, write_json_gzip, read_conll_item_from_file, LABEL_BY_TOP_CATEGORY
+from task2.data_man.meta_data import extract_spans, join_tokens, write_json_gzip, read_conll_item_from_file, LABEL_BY_TOP_CATEGORY, DEFAULT_LABEL_BY_TOP_CAGEGORY, read_json_gzip
 import collections
 import pandas as pd
 import wikidata_plain_sparql as wikidata
@@ -172,33 +173,40 @@ def enumerate_person(wjd):
             )
     return person_vocab
 
-def enumerate_item(wjd, type_by_id):
+def enumerate_item(wjd, cared_class_ids):
     t1 = time.time()
-    group_vocab = collections.defaultdict(set)
+    class_id_by_entity = collections.defaultdict(set)
     for ii, entity_dict in enumerate(wjd):
         
         if entity_dict["type"] == "item":
             entity = WikidataItem(entity_dict)
             qid = entity._entity_dict.get('id')
-            if qid in type_by_id:
-                types = [type_by_id[qid]]
-                labels = entity._entity_dict.get('labels')
-                aliases = entity._entity_dict.get('aliases')
-                for lan in config.ios_639_1_code:
-                    value = labels.get(lan, dict()).get('value', '')
-                    group_vocab[value].update(set(types)) if value else None
-                    for dic in aliases.get(lan, []):
-                        group_vocab[dic['value']].update(set(types)) if dic['value'] else None
+            try:
+                is_instance_of_class_id = entity._entity_dict['claims']['P31'][0]['mainsnak']['datavalue']['value']['id']
+            except Exception as e:
+                logging.error(e)
+                continue
+            if is_instance_of_class_id not in cared_class_ids:
+                continue
+
+            labels = entity._entity_dict.get('labels')
+            aliases = entity._entity_dict.get('aliases')
+            for lan in config.ios_639_1_code:
+                value = labels.get(lan, dict()).get('value', '')
+                class_id_by_entity[value].update(set([is_instance_of_class_id])) if value else None
+                for dic in aliases.get(lan, []):
+                    class_id_by_entity[value].update(set([is_instance_of_class_id])) if value else None
+                    class_id_by_entity[dic['value']].update(set([is_instance_of_class_id])) if dic['value'] else None
             
         if ii % 10000 == 0:
             t2 = time.time()
             dt = t2 - t1
             print(
                 "found {}  among {} entities [entities/s: {:.2f}]".format(
-                    len(group_vocab), ii, ii / dt
+                    len(class_id_by_entity), ii, ii / dt
                 )
             )
-    return group_vocab
+    return class_id_by_entity
 
 
 def find_by_top_category(conll_file: AnyStr, category: AnyStr) -> Dict:
@@ -227,12 +235,15 @@ def main(wjd: WikidataJsonDump):
     for lang in config.code_by_lang:
         type_by_person.update(find_by_top_category(config.train_file[lang], 'Person'))
         type_by_person.update(find_by_top_category(config.validate_file[lang], 'Person'))
-    person_vocab = enumerate_person(wjd)
-    new_person_vocab = dict()
-    for k in person_vocab:
-        new_person_vocab[k] = list(person_vocab[k])
-    write_json_gzip('person.bak.gz', new_person_vocab)
-    type_by_occupation_id = dict()
+    if Path('person.bak.gz').exists():
+        person_vocab = read_json_gzip('person.bak.gz')
+    else:
+        person_vocab = enumerate_person(wjd)
+        new_person_vocab = dict()
+        for k in person_vocab:
+            new_person_vocab[k] = list(person_vocab[k])
+        write_json_gzip('person.bak.gz', new_person_vocab)
+    type_by_occupation_id = collections.defaultdict(set)
     for person in type_by_person: 
         if person not in person_vocab:
             continue
@@ -243,9 +254,14 @@ def main(wjd: WikidataJsonDump):
             qids = occupation_query(id)
             time.sleep(0.5)
             for qid in qids:
-                type_by_occupation_id[qid] = type_by_person[person]
+                if qid == 'Q177220':
+                    print(qid)
+                if qid in type_by_occupation_id and type_by_person[person] not in type_by_occupation_id[qid]:
+                    logging.error("{}-{}-{}-{}--{}".format(id, qid, person, type_by_occupation_id[qid], type_by_person[person]))
+                type_by_occupation_id[qid].add(type_by_person[person])
     for person in person_vocab:
-        person_vocab[person] = [type_by_occupation_id[id] for id in person_vocab[person] if id in type_by_occupation_id]
+        import itertools
+        person_vocab[person] = list(set(list(itertools.chain(*[list(type_by_occupation_id[id]) for id in person_vocab[person] if id in type_by_occupation_id]))))
         if not person_vocab[person]:
             person_vocab[person] = ['OtherPER']
     
@@ -257,8 +273,36 @@ def main_category(wjd: WikidataJsonDump, category: AnyStr):
     for lang in config.code_by_lang:
         type_by_entity.update(find_by_top_category(config.train_file[lang], category))
         type_by_entity.update(find_by_top_category(config.validate_file[lang], category))
+    
+    if category == 'Group':
+        # the class id of the highest level
+        qids = get_subclasses_of_item('Q43229')
+        class_id_by_entity = enumerate_item(wjd, set(qids))
+    new_vocab = dict()
+    for k in class_id_by_entity:
+        new_vocab[k] = list(class_id_by_entity[k])
+    write_json_gzip('{}.bak.gz'.format(category), new_vocab)
+    del new_vocab
+    type_by_class_id = dict()
+    for entity in class_id_by_entity:
+        if entity not in type_by_entity:
+            continue
+        class_ids = class_id_by_entity[entity]
+        for class_id in class_ids:
+            if class_id in type_by_class_id:
+                continue
+            qids = get_subclasses_of_item(class_id)
+            time.sleep(0.5)
+            for qid in qids:
+                type_by_class_id[qid] = type_by_entity[entity]
+                
+    for entity in class_id_by_entity:
+        class_id_by_entity[entity] = list(set([type_by_class_id[id] for id in class_id_by_entity[entity] if id in type_by_class_id]))
+        if not class_id_by_entity[entity]:
+            class_id_by_entity[entity] = DEFAULT_LABEL_BY_TOP_CAGEGORY[category]
+    
+    write_json_gzip(config.wiki_entity_data[str(category).lower()], class_id_by_entity)
 
-    enumerate_item(wjd,)
     
 
 
