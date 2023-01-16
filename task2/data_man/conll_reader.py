@@ -49,8 +49,6 @@ class ConllDataset(Dataset, Registrable):
         self.instances = read_conll_item_from_file(conll_file)
 
     def get_model_max_length(self) -> int:
-        if self.tokenizer.model_max_length > 1e-10:
-            return -1
         return self.tokenizer.model_max_length
 
         
@@ -126,7 +124,7 @@ class BaselineDataModule(ConllDataModule):
         batch_size = len(batch)
         batch_ = list(zip(*batch))
         id, input_ids, token_type_ids, attention_mask, token_masks, tag_lens, label_ids, gold_spans = batch_
-        max_len = max([len(_) for _ in input_ids] + [self.reader.get_model_max_length()])
+        max_len = min(max([len(_) for _ in input_ids]), self.reader.get_model_max_length())
         input_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         token_type_ids_tensor = torch.empty(size=[batch_size, max_len], dtype=torch.long).fill_(0)
         if len(np.shape(attention_mask[0])) == 2:
