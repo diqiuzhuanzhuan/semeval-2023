@@ -138,13 +138,13 @@ class BaselineDataModule(ConllDataModule):
             label_ids_tensor = None
             gold_spans = None
         for i in range(batch_size):
-            available_length = len(input_ids[i])
-            input_ids_tensor[i][0:available_length] = torch.tensor(input_ids[i], dtype=torch.long)
-            token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids[i], dtype=torch.long)
+            available_length = min(len(input_ids[i]), max_len)
+            input_ids_tensor[i][0:available_length] = torch.tensor(input_ids[i][0:available_length], dtype=torch.long)
+            token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids[i][0:available_length], dtype=torch.long)
             if len(np.shape(attention_mask[0])) == 2:
-                attention_mask_tensor[i][0:available_length, 0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
+                attention_mask_tensor[i][0:available_length, 0:available_length] = torch.tensor(attention_mask[i][0:available_length][0:available_length], dtype=torch.long)
             else:
-                attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i], dtype=torch.long)
+                attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i][0:available_length], dtype=torch.long)
             if label_ids_tensor is not None:
                 label_ids_length = len(label_ids[i])
                 label_ids_tensor[i][:label_ids_length] = torch.tensor(label_ids[i], dtype=torch.long)
@@ -174,7 +174,7 @@ class BaselineDataModule(ConllDataModule):
 
 @ConllDataset.register('dictionary_fused_dataset')        
 class DictionaryFusedDataset(ConllDataset):
-    entity_vocab = None
+    entity_vocab = collections.defaultdict(list)
     all_types = set()
 
     def __init__(
@@ -185,12 +185,12 @@ class DictionaryFusedDataset(ConllDataset):
         super().__init__(encoder_model, lang)
         #self.entity_vocab = get_wiki_knowledge(config.wikigaz_file)
         #self.entity_vocab = get_wiki_title_google_type(config.wiki_title_with_google_type_file[lang])
-        self.entity_vocab = collections.defaultdict(list)
-        for k in config.wiki_entity_data:
-            vocab = get_wiki_entities(config.wiki_entity_data[k])
-            for entity in vocab:
-                self.entity_vocab[entity].extend(vocab[entity])
-                self.all_types.update(set(vocab[entity]))
+        if len(self.entity_vocab) == 0:
+            for k in config.wiki_entity_data:
+                vocab = get_wiki_entities(config.wiki_entity_data[k])
+                for entity in vocab:
+                    self.entity_vocab[entity].extend(vocab[entity])
+                    self.all_types.update(set(vocab[entity]))
 
         self.tokenizer.add_tokens(list(self.all_types))
         self._make_entity_automation()
