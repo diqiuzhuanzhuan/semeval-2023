@@ -158,10 +158,11 @@ def enumerate_person(wjd):
                 labels = entity._entity_dict.get('labels')
                 aliases = entity._entity_dict.get('aliases')
                 for lan in config.ios_639_1_code:
+                    description = entity.get_description(lan) or ""
                     value = labels.get(lan, dict()).get('value', '')
-                    person_vocab[value].add(types) if value else None
+                    person_vocab[value].add(description) if value else None
                     for dic in aliases.get(lan, []):
-                        person_vocab[dic['value']].add(types) if dic['value'] else None
+                        person_vocab[dic['value']].add(description) if dic['value'] else None
             
         if ii % 10000 == 0:
             t2 = time.time()
