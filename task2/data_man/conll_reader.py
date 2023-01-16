@@ -142,7 +142,7 @@ class BaselineDataModule(ConllDataModule):
             input_ids_tensor[i][0:available_length] = torch.tensor(input_ids[i][0:available_length], dtype=torch.long)
             token_type_ids_tensor[i][0:available_length] = torch.tensor(token_type_ids[i][0:available_length], dtype=torch.long)
             if len(np.shape(attention_mask[0])) == 2:
-                attention_mask_tensor[i][0:available_length, 0:available_length] = torch.tensor(attention_mask[i][0:available_length][0:available_length], dtype=torch.long)
+                attention_mask_tensor[i][0:available_length, 0:available_length] = torch.tensor(attention_mask[i][0:available_length, 0:available_length], dtype=torch.long)
             else:
                 attention_mask_tensor[i][0:available_length] = torch.tensor(attention_mask[i][0:available_length], dtype=torch.long)
             if label_ids_tensor is not None:
@@ -190,9 +190,10 @@ class DictionaryFusedDataset(ConllDataset):
                 vocab = get_wiki_entities(config.wiki_entity_data[k])
                 for entity in vocab:
                     self.entity_vocab[entity].extend(vocab[entity])
-                    self.all_types.update(set(vocab[entity]))
-
-        self.tokenizer.add_tokens(list(self.all_types))
+                    if k != 'person':
+                        self.all_types.update(set(vocab[entity]))
+        for type in self.all_types:
+            self.tokenizer.add_tokens(str(type).split(' '))
         self._make_entity_automation()
         
     def _make_entity_automation(self):
