@@ -26,10 +26,10 @@ wiki_title_with_google_type_file = {
 wiki_entity_data = {
     'person': data_path/'wiki_def'/'person_entities.json.gz',
     'group': data_path/'wiki_def'/'group_entities.json.gz',
-    'medicine': data_path/'wiki_def'/'medicine_entities.json.gz',
+    'medical': data_path/'wiki_def'/'medicine_entities.json.gz',
 	'location': data_path/'wiki_def'/'location_entities.json.gz',
 	'product': data_path/'wiki_def'/'product_entities.json.gz',
-	'creative work': data_path/'wiki_def'/'creative_work_entities.json.gz'
+	'creative works': data_path/'wiki_def'/'creative_work_entities.json.gz'
 }
 
 wiki_data = {
